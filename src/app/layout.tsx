@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import SideNavigation from "@/components/ui/SideNavigation";
+import SideNav from "@/components/ui/nav/SideNav";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Ahmed Lukman | Portfolio",
@@ -19,11 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Providers>
           <div className="flex h-screen">
-            <SideNavigation />
-            <main className="basis-10/12 min-h-screen overflow-y-auto">{children}</main>
+            <SideNav />
+            <main className="basis-10/12  rounded-tl-lg relative p-20 min-h-screen overflow-y-hidden">
+              <div className=" absolute inset-0 top-3 left-0.5 shadow shadow-gray-800">
+                {children}
+              </div>
+            </main>
           </div>
         </Providers>
       </body>
