@@ -116,3 +116,20 @@ export const TECH_STACK = [
     alt: "Vercel",
   },
 ];
+
+export const PROJECTS = [
+  {
+    title: "Cinemania",
+    description:
+      "Discover and interact in a world of movies and TV shows at your fingertips! Dive into synopsis, rating and more in cinemania today!",
+    image: "/assets/images/cinemania.png",
+    homepage: "https://cinemania-ahmed.vercel.app/movie",
+  },
+  {
+    title: "Portfolio",
+    description:
+      "My personal portfolio website, where I showcase my diverse skills, innovative projects, and my detailed CV.",
+    image: "/assets/images/portfolio.png",
+    homepage: "https://portfolio-ahmedlukman.vercel.app/",
+  },
+];
