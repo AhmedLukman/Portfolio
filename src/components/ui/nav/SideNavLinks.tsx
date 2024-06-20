@@ -9,7 +9,9 @@ const SideNavLinks = () => {
         <h2 className="text-white">Pages</h2>
         <ul className="flex flex-col gap-3">
           {PAGE_LINKS.map((link) => (
-            <SideNavLinkButton key={link.path} link={link} />
+            <li>
+              <SideNavLinkButton key={link.path} link={link} />
+            </li>
           ))}
         </ul>
       </div>
@@ -18,7 +20,9 @@ const SideNavLinks = () => {
         <h2 className="text-white">Socials</h2>
         <ul className="flex flex-col gap-3">
           {SOCIAL_LINKS.map((link) => (
-            <SideNavLinkButton key={link.path} link={link} isSocial />
+            <li>
+              <SideNavLinkButton key={link.path} link={link} isSocial />
+            </li>
           ))}
         </ul>
       </div>
