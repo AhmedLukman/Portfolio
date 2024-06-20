@@ -7,13 +7,13 @@ import { Tooltip } from "@nextui-org/react";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-2xl flex h-full py-20 flex-col">
+    <div className="mx-auto max-w-2xl flex h-screen py-20 flex-col">
       <section>
         <h1 className="text-3xl text-slate-200 text-center font-bold tracking-wide mb-1">
-          Ahmed Lukman | Full Stack Developer
+          Ahmed Lukman <span className="purple-gradient-text">| Full Stack Developer</span>
         </h1>
         <GradientBorder />
-        <p className=" text-slate-400 mt-8">
+        <p className=" text-slate-300 mt-8">
           I&apos;m a self-taught developer with a Distinction in Business
           Information Technology Diploma. I excel academically, hold numerous
           certifications from courses and boot-camps, and have been featured in
