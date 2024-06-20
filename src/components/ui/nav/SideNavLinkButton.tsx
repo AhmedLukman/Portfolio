@@ -38,7 +38,7 @@ const SideNavLinkButton = ({
       href={link.path}
       variant={pathname === link.path ? "solid" : "light"}
       color="secondary"
-      className={cn("!text-slate-400 group hover:!text-white justify-start", {
+      className={cn("!text-slate-400 group hover:!text-white w-full justify-start", {
         "hover:!opacity-100 shadow-md shadow-gray-900 !bg-transparent bg-gradient-to-b from-purple-700/20 to-purple-500/20 !pointer-events-none !text-white":
           pathname === link.path,
       })}
