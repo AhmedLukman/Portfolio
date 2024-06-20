@@ -3,9 +3,9 @@ import Image from "next/image";
 import { FlipWords } from "@/components/ui/FlipWords";
 import GradientBorder from "@/components/ui/GradientBorder";
 import { TECH_STACK, WEB_QUALITIES } from "@/lib/constants";
+import { Tooltip } from "@nextui-org/react";
 
 export default function Home() {
-
   return (
     <div className="mx-auto max-w-2xl flex h-full py-20 flex-col">
       <section>
@@ -26,17 +26,13 @@ export default function Home() {
         <h2 className=" text-xl text-slate-200 font-bold">Tech Stack</h2>
         <div className="flex items-center gap-5 flex-wrap">
           {TECH_STACK.map((tech) => (
-            <Image
-              key={tech.src}
-              alt={tech.alt}
-              width={32}
-              height={32}
-              src={tech.src}
-            />
+            <Tooltip color="secondary" key={tech.src} content={tech.alt}>
+              <Image alt={tech.alt} width={32} height={32} src={tech.src} />
+            </Tooltip>
           ))}
         </div>
       </section>
-      
+
       <section className="mt-auto">
         <p className=" text-slate-400 text-2xl">Let&apos;s build </p>
         <FlipWords className="text-white text-2xl" words={WEB_QUALITIES} />
