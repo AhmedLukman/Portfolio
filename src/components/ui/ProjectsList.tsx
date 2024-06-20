@@ -25,12 +25,14 @@ const ProjectsList = () => {
                 >
                   {description}
                 </CardItem>
-                <CardItem translateZ="100" className="w-full h-48 group mt-4">
+                <CardItem translateZ="100" className="group mt-4">
                   <Image
+                    priority
                     src={image}
-                    fill
+                    height={400}
+                    width={650}
                     className=" object-contain rounded-xl group-hover/card:shadow-xl"
-                    alt="thumbnail"
+                    alt={title}
                   />
                 </CardItem>
               </Link>
