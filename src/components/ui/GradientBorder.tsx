@@ -1,14 +1,36 @@
-import React from 'react'
+import { cn } from "@nextui-org/react";
+import React from "react";
 
-const GradientBorder = () => {
+const GradientBorder = ({
+  insetClass = 'inset-x-20',
+  pinkHeightClass = 'h-[5px]',
+}: {
+  insetClass?: string;
+  pinkHeightClass?: string;
+}) => {
   return (
-    <div className=" relative bg-red-500">
-      <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-purple-500 to-transparent h-[2px] w-3/4 blur-sm" />
-      <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-purple-500 to-transparent h-px w-3/4" />
-      <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-pink-500 to-transparent h-[5px] w-1/4 blur-sm" />
-      <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-pink-500 to-transparent h-px w-1/4" />
+    <div className=" relative">
+      <div
+        className={cn(
+          "absolute top-0 bg-gradient-to-r from-transparent via-purple-500 to-transparent h-[2px]  blur-sm",
+          insetClass
+        )}
+      />
+      <div
+        className={cn(
+          "absolute top-0 bg-gradient-to-r from-transparent via-purple-500 to-transparent h-px",
+          insetClass
+        )}
+      />
+      <div
+        className={cn(
+          "absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-pink-500 to-transparent blur-sm",
+          pinkHeightClass
+        )}
+      />
+      <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-pink-500 to-transparent h-px" />
     </div>
   );
-}
+};
 
-export default GradientBorder
+export default GradientBorder;
