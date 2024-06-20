@@ -24,10 +24,7 @@ export default function RootLayout({
           <div className="flex h-screen">
             <SideNav />
             <main className="basis-10/12 rounded-tl-lg min-h-screen overflow-y-auto">
-              <div className="relative min-h-screen">
-                <div className=" absolute inset-0 top-3 left-0.5 shadow shadow-gray-800" />
-                {children}
-              </div>
+              {children}
             </main>
           </div>
         </Providers>
