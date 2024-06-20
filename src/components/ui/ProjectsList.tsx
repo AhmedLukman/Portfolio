@@ -31,7 +31,7 @@ const ProjectsList = () => {
                     src={image}
                     height={400}
                     width={650}
-                    className=" object-contain rounded-xl group-hover/card:shadow-xl"
+                    className=" object-cover rounded-xl group-hover/card:shadow-xl"
                     alt={title}
                   />
                 </CardItem>
