@@ -20,9 +20,12 @@ const SideNavLinkButton = ({
       key={link.path}
       startContent={
         <FontAwesomeIcon
-          className={cn("!text-slate-400 group-hover:!text-white h-4 mr-1", {
-            "!text-white": pathname === link.path,
-          })}
+          className={cn(
+            "!text-slate-400 group-hover:!text-white !transition-all !duration-200 h-4 mr-1",
+            {
+              "!text-white": pathname === link.path,
+            }
+          )}
           icon={link.icon}
         />
       }
@@ -38,10 +41,13 @@ const SideNavLinkButton = ({
       href={link.path}
       variant={pathname === link.path ? "solid" : "light"}
       color="secondary"
-      className={cn("!text-slate-400 group hover:!text-white w-full justify-start", {
-        "hover:!opacity-100 shadow-md shadow-gray-900 !bg-transparent bg-gradient-to-b from-purple-700/20 to-purple-500/20 !pointer-events-none !text-white":
-          pathname === link.path,
-      })}
+      className={cn(
+        "!text-slate-400 group hover:!text-white hover:!bg-[#262c35] !ml-0 hover:!ml-5 !transition-all !duration-200 w-full justify-start",
+        {
+          "hover:!opacity-100 shadow shadow-gray-800 bg-transparent border border-gray-800 from-purple-700/20 to-purple-500/20 !pointer-events-none !text-white":
+            pathname === link.path,
+        }
+      )}
       isExternal={isSocial}
     >
       {link.name}
