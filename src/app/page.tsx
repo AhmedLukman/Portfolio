@@ -4,6 +4,7 @@ import { FlipWords } from "@/components/ui/FlipWords";
 import GradientBorder from "@/components/ui/GradientBorder";
 import { TECH_STACK, WEB_QUALITIES } from "@/lib/constants";
 import { Tooltip } from "@nextui-org/react";
+import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip";
 
 export default function Home() {
   return (
@@ -23,23 +24,9 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="mt-10 space-y-5">
+      <section className="mt-10 space-y-5 z-20">
         <h2 className=" text-xl text-slate-200 font-bold">Tech Stack</h2>
-        <ul className="flex items-center gap-5 flex-wrap">
-          {TECH_STACK.map((tech) => (
-            <li key={tech.src} className="z-10">
-              <Tooltip color="secondary" className="z-10" content={tech.alt}>
-                <Image
-                  priority
-                  alt={tech.alt}
-                  width={32}
-                  height={32}
-                  src={tech.src}
-                />
-              </Tooltip>
-            </li>
-          ))}
-        </ul>
+        <AnimatedTooltip items={TECH_STACK} />
       </section>
 
       <section className="mt-auto">
