@@ -27,7 +27,7 @@ export default function Home() {
         <div className="flex items-center gap-5 flex-wrap">
           {TECH_STACK.map((tech) => (
             <Tooltip color="secondary" key={tech.src} content={tech.alt}>
-              <Image alt={tech.alt} width={32} height={32} src={tech.src} />
+              <Image priority alt={tech.alt} width={32} height={32} src={tech.src} />
             </Tooltip>
           ))}
         </div>
