@@ -45,7 +45,7 @@ const SideNavLinkButton = ({
       className={cn(
         "!text-slate-400 group hover:!text-white hover:!bg-[#262c35] !ml-0 hover:!ml-5 !transition-all !duration-200 w-full justify-start",
         {
-          "hover:!opacity-100 shadow shadow-gray-800 bg-[#262c35] border border-gray-800 from-purple-700/20 to-purple-500/20 !text-white":
+          "hover:!opacity-100 shadow shadow-gray-800 bg-[#262c35] hover:!ml-0 border border-gray-800 from-purple-700/20 to-purple-500/20 !text-white":
             isActive,
         }
       )}
