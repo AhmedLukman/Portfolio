@@ -36,9 +36,9 @@ export const AnimatedTooltip = ({
   };
 
   return (
-    <>
+    <ul className="flex gap-3 flex-wrap z-20">
       {items.map((item, idx) => (
-        <div
+        <li
           className="-mr-  relative group"
           key={item.alt}
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -82,8 +82,8 @@ export const AnimatedTooltip = ({
             alt={item.alt}
             className="object-contain !m-0 p-1.5 object-center rounded-xl h-11 w-11 border group-hover:scale-105 group-hover:z-30 border-slate-600  relative transition duration-500"
           />
-        </div>
+        </li>
       ))}
-    </>
+    </ul>
   );
 };
