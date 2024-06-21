@@ -132,6 +132,32 @@ export const PROJECTS = [
       "Discover and interact in a world of movies and TV shows at your fingertips! Dive into synopsis, rating and more in cinemania today!",
     image: "/assets/images/cinemania.png",
     homepage: "https://cinemania-ahmed.vercel.app/movie",
+    techStack: [
+      {
+        alt: "Next Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "Auth Js",
+        src: "/assets/images/authjs.svg",
+      },
+      {
+        alt: "Prisma",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      },
+      {
+        alt: "PostgreSQL",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+      },
+    ],
   },
   {
     title: "Portfolio",
@@ -139,5 +165,19 @@ export const PROJECTS = [
       "My personal portfolio website, where I showcase my diverse skills, innovative projects, and my detailed CV.",
     image: "/assets/images/portfolio.png",
     homepage: "https://portfolio-ahmedlukman.vercel.app/",
+    techStack: [
+      {
+        alt: "Next Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+    ],
   },
 ];
