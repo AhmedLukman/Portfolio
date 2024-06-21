@@ -13,7 +13,7 @@ export const PAGE_LINKS = [
     icon: faHouse,
   },
   {
-    name: "about",
+    name: "About",
     path: "/about",
     icon: faInfoCircle,
   },
