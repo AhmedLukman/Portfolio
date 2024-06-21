@@ -76,6 +76,10 @@ export const TECH_STACK = [
     alt: "TypeScript",
   },
   {
+    src: "/assets/images/authjs.svg",
+    alt: "Auth Js",
+  },
+  {
     src: "/assets/images/zod.svg",
     alt: "Zod",
   },
