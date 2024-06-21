@@ -8,7 +8,7 @@ const ProjectsList = () => {
   return (
     <ul className="flex justify-between w-full mt-10 flex-wrap">
       {PROJECTS.map(({ title, description, image, homepage }) => (
-        <li key={title}>
+        <li key={title} className="z-10">
           <CardContainer>
             <CardBody className="  relative group/card shadow-[0_8px_16px_rgb(0_0_0/0.3)] border border-white/[0.1] w-[22rem] md:w-[23rem] xl:w-[26rem] h-auto rounded-xl p-6   ">
               <Link target="_blank" href={homepage} className="block">
