@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import SideNav from "@/components/ui/nav/SideNav";
+import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -23,8 +24,9 @@ export default function RootLayout({
         <Providers>
           <div className="flex h-screen">
             <SideNav />
-            <main className="basis-10/12 rounded-tl-lg min-h-screen overflow-y-auto">
+            <main className="basis-10/12 relative rounded-tl-lg min-h-screen overflow-y-auto">
               {children}
+              <BackgroundBeams className="opacity-60" />
             </main>
           </div>
         </Providers>
