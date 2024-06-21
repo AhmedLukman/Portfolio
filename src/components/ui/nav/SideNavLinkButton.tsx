@@ -15,6 +15,7 @@ const SideNavLinkButton = ({
   isSocial?: boolean;
 }) => {
   const pathname = usePathname();
+  const isActive = pathname === link.path;
   return (
     <Button
       key={link.path}
@@ -23,7 +24,7 @@ const SideNavLinkButton = ({
           className={cn(
             "!text-slate-400 group-hover:!text-white !transition-all !duration-200 h-4 mr-1",
             {
-              "!text-white": pathname === link.path,
+              "!text-white": isActive,
             }
           )}
           icon={link.icon}
@@ -39,13 +40,13 @@ const SideNavLinkButton = ({
       }
       as={Link}
       href={link.path}
-      variant={pathname === link.path ? "solid" : "light"}
+      variant={isActive ? "solid" : "light"}
       color="secondary"
       className={cn(
         "!text-slate-400 group hover:!text-white hover:!bg-[#262c35] !ml-0 hover:!ml-5 !transition-all !duration-200 w-full justify-start",
         {
-          "hover:!opacity-100 shadow shadow-gray-800 bg-transparent border border-gray-800 from-purple-700/20 to-purple-500/20 !text-white":
-            pathname === link.path,
+          "hover:!opacity-100 shadow shadow-gray-800 bg-[#262c35] border border-gray-800 from-purple-700/20 to-purple-500/20 !text-white":
+            isActive,
         }
       )}
       isExternal={isSocial}
