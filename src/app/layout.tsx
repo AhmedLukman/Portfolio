@@ -24,10 +24,10 @@ export default function RootLayout({
         <Providers>
           <div className="flex h-screen">
             <SideNav />
-            <main className="basis-10/12 relative rounded-tl-lg min-h-screen overflow-y-auto">
+            <main className="basis-10/12 relative z-10 rounded-tl-lg min-h-screen overflow-y-auto">
               {children}
-              <BackgroundBeams className="opacity-60" />
             </main>
+            <BackgroundBeams className="opacity-60" />
           </div>
         </Providers>
       </body>

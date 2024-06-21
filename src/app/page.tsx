@@ -24,7 +24,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="mt-10 space-y-5 z-20">
+      <section className="mt-10 space-y-5">
         <h2 className=" text-xl text-slate-200 font-bold">Tech Stack</h2>
         <AnimatedTooltip items={TECH_STACK} />
       </section>
