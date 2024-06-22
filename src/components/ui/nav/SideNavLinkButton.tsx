@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +15,10 @@ const SideNavLinkButton = ({
   isSocial?: boolean;
 }) => {
   const pathname = usePathname();
-  const isActive = pathname === link.path;
+  const isActive =
+    link.path === "/"
+      ? pathname === link.path
+      : pathname.startsWith(link.path);
   return (
     <Button
       key={link.path}
@@ -45,7 +48,7 @@ const SideNavLinkButton = ({
       className={cn(
         "!text-slate-400 group hover:!text-white hover:!bg-[#262c35] !ml-0 hover:!ml-5 !transition-all !duration-200 w-full justify-start",
         {
-          "hover:!opacity-100 shadow !ml-5 shadow-[0_8px_16px_rgb(0_0_0/0.3)] bg-[#262c35] !text-white":
+          "hover:!opacity-100 !ml-5 shadow-[0_8px_16px_rgb(0_0_0/0.3)] bg-[#262c35] !text-white":
             isActive,
         }
       )}
