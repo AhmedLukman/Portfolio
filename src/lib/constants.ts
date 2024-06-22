@@ -131,7 +131,10 @@ export const PROJECTS = [
     description:
       "Discover and interact in a world of movies and TV shows at your fingertips! Dive into synopsis, rating and more in cinemania today!",
     image: "/assets/images/cinemania.png",
-    homepage: "https://cinemania-ahmed.vercel.app/movie",
+    route: "/projects/cinemania",
+    site: "https://cinemania-ahmedlukman.vercel.app/movie",
+    source: "https://github.com/AhmedLukman/Cinemania",
+    slug: "cinemania",
     techStack: [
       {
         alt: "Next Js",
@@ -164,7 +167,10 @@ export const PROJECTS = [
     description:
       "My personal portfolio website, where I showcase my diverse skills, innovative projects, and my detailed CV.",
     image: "/assets/images/portfolio.png",
-    homepage: "https://portfolio-ahmedlukman.vercel.app/",
+    route: "/projects/portfolio",
+    site: "https://portfolio-ahmedlukman.vercel.app",
+    source: "https://github.com/AhmedLukman/Portfolio",
+    slug: "portfolio",
     techStack: [
       {
         alt: "Next Js",
@@ -185,7 +191,10 @@ export const PROJECTS = [
     description:
       "I explored and mastered the use of Next Auth v5 for authentication, together with prisma as an ORM to efficiently authenticate and store data in an online database.",
     image: "/assets/images/napt.png",
-    homepage: "https://portfolio-ahmedlukman.vercel.app/",
+    route: "/projects/next-auth-prisma-training",
+    site: "https://next-auth-prisma-training.vercel.app",
+    source: "https://github.com/AhmedLukman/next_auth_prisma_training",
+    slug: "next-auth-prisma-training",
     techStack: [
       {
         alt: "Next Js",
