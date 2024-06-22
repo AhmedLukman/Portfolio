@@ -180,4 +180,37 @@ export const PROJECTS = [
       },
     ],
   },
+  {
+    title: "Next Auth Prisma Training",
+    description:
+      "I explored and mastered the use of Next Auth v5 for authentication, together with prisma as an ORM to efficiently authenticate and store data in an online database.",
+    image: "/assets/images/napt.png",
+    homepage: "https://portfolio-ahmedlukman.vercel.app/",
+    techStack: [
+      {
+        alt: "Next Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        alt: "Auth Js",
+        src: "/assets/images/authjs.svg",
+      },
+      {
+        alt: "Supabase",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+      },
+      {
+        alt: "Prisma",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      },
+    ],
+  },
 ];
