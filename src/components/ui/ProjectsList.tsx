@@ -22,7 +22,7 @@ const ProjectsList = () => {
                 <CardItem
                   as="div"
                   translateZ="60"
-                  className="text-slate-400 w-full  flex items-center justify-between text-sm mt-2"
+                  className="text-slate-400 w-full  flex items-center !line-clamp-2 justify-between text-sm mt-2"
                 >
                   {description}
                 </CardItem>
