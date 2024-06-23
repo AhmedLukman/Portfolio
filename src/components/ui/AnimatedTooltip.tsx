@@ -83,7 +83,7 @@ export const AnimatedTooltip = ({ items }: { items: TooltipItem[] }) => {
               className="object-contain !m-0 p-1.5 object-center rounded-xl h-11 w-11 border group-hover:scale-105 group-hover:z-30 border-slate-600  relative transition duration-500"
             />
             {item.score && (
-              <span className="text-sm text-slate-200">{item.score}</span>
+              <span className="text-sm text-pink-200">{item.score}</span>
             )}
           </div>
         </li>
