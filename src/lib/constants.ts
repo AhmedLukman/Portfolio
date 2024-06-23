@@ -88,6 +88,10 @@ export const TECH_STACK = [
     alt: "Tailwind CSS",
   },
   {
+    src: "/assets/images/nextui.png",
+    alt: "Next UI",
+  },
+  {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
     alt: "Figma",
   },
