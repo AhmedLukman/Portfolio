@@ -10,4 +10,9 @@ type Project = {
     alt: string;
     src: string;
   }[];
+  metrics: {
+    alt: string;
+    src: string;
+    score: string;
+  }[];
 };

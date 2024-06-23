@@ -9,14 +9,13 @@ import {
   useSpring,
 } from "framer-motion";
 
-export const AnimatedTooltip = ({
-  items,
-}: {
-  items: {
-    alt: string;
-    src: string;
-  }[];
-}) => {
+type TooltipItem = {
+  alt: string;
+  src: string;
+  score?: string;
+};
+
+export const AnimatedTooltip = ({ items }: { items: TooltipItem[] }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0); // going to set this value on mouse move
@@ -74,14 +73,19 @@ export const AnimatedTooltip = ({
               </motion.div>
             )}
           </AnimatePresence>
-          <Image
-            onMouseMove={handleMouseMove}
-            height={100}
-            width={100}
-            src={item.src}
-            alt={item.alt}
-            className="object-contain !m-0 p-1.5 object-center rounded-xl h-11 w-11 border group-hover:scale-105 group-hover:z-30 border-slate-600  relative transition duration-500"
-          />
+          <div className=" flex flex-col items-center justify-center gap-2">
+            <Image
+              onMouseMove={handleMouseMove}
+              height={100}
+              width={100}
+              src={item.src}
+              alt={item.alt}
+              className="object-contain !m-0 p-1.5 object-center rounded-xl h-11 w-11 border group-hover:scale-105 group-hover:z-30 border-slate-600  relative transition duration-500"
+            />
+            {item.score && (
+              <span className="text-sm text-slate-200">{item.score}</span>
+            )}
+          </div>
         </li>
       ))}
     </ul>

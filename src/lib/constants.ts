@@ -161,6 +161,28 @@ export const PROJECTS = [
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
       },
     ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "90",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
+      },
+    ],
   },
   {
     title: "Portfolio",
@@ -183,6 +205,28 @@ export const PROJECTS = [
       {
         alt: "TypeScript",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "100",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
       },
     ],
   },
@@ -219,6 +263,28 @@ export const PROJECTS = [
       {
         alt: "Prisma",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "100",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
       },
     ],
   },

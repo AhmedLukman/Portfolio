@@ -4,7 +4,7 @@ import Image from "next/image";
 import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip";
 
 const ProjectOverview = ({
-  project: { description, image, site, source, techStack },
+  project: { description, image, site, source, techStack, metrics },
 }: {
   project: Project
 }) => {
@@ -25,9 +25,8 @@ const ProjectOverview = ({
         </div>
         <div className="flex flex-col gap-3">
           <h2 className="text-slate-200 text-xl font-bold">Metrics</h2>
-          {/* TODO: Add metrics */}
           <AnimatedTooltip
-            items={techStack}
+            items={metrics}
           />
         </div>
         <div className="flex gap-5 mt-5">
