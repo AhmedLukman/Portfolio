@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Link, Tooltip } from "@nextui-org/react";
 import Image from "next/image";
 import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip";
+import { TextGenerateEffect } from "./TextGenerateEffect";
 
 const ProjectOverview = ({
   project: { description, image, site, source, techStack, metrics },
@@ -17,7 +18,7 @@ const ProjectOverview = ({
       <div className="flex flex-col basis-1/2 justify-between gap-8">
         <div className="flex flex-col gap-1">
           <h2 className="text-slate-200 text-xl font-bold">Description</h2>
-          <p className="text-slate-300">{description}</p>
+          <TextGenerateEffect words={description} />
         </div>
         <div className="flex flex-col gap-3">
           <h2 className="text-slate-200 text-xl font-bold">Tech Stack</h2>
