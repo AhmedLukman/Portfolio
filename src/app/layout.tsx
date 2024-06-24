@@ -10,7 +10,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 export const metadata: Metadata = {
   title: "Ahmed Lukman | Portfolio",
   description:
-    "Ahmed Lukman's portfolio showcaing his tech projects and skills",
+    "Ahmed Lukman's portfolio showcasing his tech projects and skills",
 };
 
 export default function RootLayout({
