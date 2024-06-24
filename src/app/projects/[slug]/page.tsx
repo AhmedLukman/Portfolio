@@ -4,6 +4,17 @@ import { PROJECTS } from "@/lib/constants";
 import { notFound } from "next/navigation";
 import React from "react";
 
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+  const project = PROJECTS.find((project) => project.slug === params.slug);
+
+  if (!project) notFound();
+
+  return {
+    title: `Ahmed Lukman | ${project.title}`,
+    description: project.description,
+  };
+};
+
 const ProjectDetailsPage = ({
   params: { slug },
 }: {
