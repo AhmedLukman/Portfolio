@@ -1,4 +1,5 @@
 import GradientBorder from "@/components/ui/GradientBorder";
+import PageWrapper from "@/components/ui/PageWrapper";
 import ProjectsList from "@/components/ui/ProjectsList";
 import { Metadata } from "next";
 import React from "react";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 const ProjectsPage = () => {
   return (
-    <div className="mx-auto max-w-4xl py-20">
+    <PageWrapper>
       <h1 className="text-3xl text-slate-200 text-center font-bold tracking-wide mb-1">
         My Projects
       </h1>
@@ -19,7 +20,7 @@ const ProjectsPage = () => {
         <GradientBorder />
       </div>
       <ProjectsList />
-    </div>
+    </PageWrapper>
   );
 };
 

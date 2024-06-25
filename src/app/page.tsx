@@ -7,10 +7,11 @@ import { Tooltip } from "@nextui-org/react";
 import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
+import PageWrapper from "@/components/ui/PageWrapper";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-4xl flex min-h-screen py-20 flex-col">
+    <PageWrapper>
       <section>
         <h1 className="text-3xl text-slate-200 text-center font-bold tracking-wide mb-1">
           Ahmed Lukman{" "}
@@ -24,8 +25,8 @@ export default function Home() {
               <FontAwesomeIcon icon={faMedal} /> in Diploma in Business
               Information Technology. I excel academically, hold numerous
               certifications from courses and boot-camps, and have been featured
-              in national media. My commitment to continuous learning and problem solving drives my
-              passion as a programmer.
+              in national media. My commitment to continuous learning and
+              problem solving drives my passion as a programmer.
             </p>
           </div>
           <div className="relative basis-1/2">
@@ -43,10 +44,10 @@ export default function Home() {
         <AnimatedTooltip items={TECH_STACK} />
       </section>
 
-      <section className="mt-24">
+      <section className="mt-20">
         <p className=" text-slate-400 text-2xl">Let&apos;s build </p>
         <FlipWords className="text-white text-2xl" words={WEB_QUALITIES} />
       </section>
-    </div>
+    </PageWrapper>
   );
 }
