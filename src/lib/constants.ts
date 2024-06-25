@@ -129,6 +129,12 @@ export const TECH_STACK = [
   },
 ];
 
+export enum Status {
+  Completed = "Completed",
+  Pending = "Pending",
+  Cancelled = "Cancelled",
+}
+
 export const PROJECTS = [
   {
     title: "Cinemania",
@@ -138,6 +144,7 @@ export const PROJECTS = [
     route: "/projects/cinemania",
     site: "https://cinemania-ahmedlukman.vercel.app/movie",
     source: "https://github.com/AhmedLukman/Cinemania",
+    status: Status.Completed,
     slug: "cinemania",
     techStack: [
       {
@@ -196,6 +203,7 @@ export const PROJECTS = [
     route: "/projects/portfolio",
     site: "https://portfolio-ahmedlukman.vercel.app",
     source: "https://github.com/AhmedLukman/Portfolio",
+    status: Status.Pending,
     slug: "portfolio",
     techStack: [
       {
@@ -242,6 +250,7 @@ export const PROJECTS = [
     route: "/projects/next-auth-prisma-training",
     site: "https://next-auth-prisma-training.vercel.app",
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
+    status: Status.Completed,
     slug: "next-auth-prisma-training",
     techStack: [
       {
