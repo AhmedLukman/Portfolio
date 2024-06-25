@@ -4,12 +4,14 @@ import React from "react";
 const GradientBorder = ({
   insetClass = 'inset-x-20',
   pinkHeightClass = 'h-[5px]',
+  className
 }: {
   insetClass?: string;
   pinkHeightClass?: string;
+  className?: string;
 }) => {
   return (
-    <div className=" relative">
+    <div className={"relative " + className}>
       <div
         className={cn(
           "absolute top-0 bg-gradient-to-r from-transparent via-purple-500 to-transparent h-[2px]  blur-sm",
