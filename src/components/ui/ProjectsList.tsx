@@ -3,7 +3,6 @@ import { PROJECTS } from "@/lib/constants";
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3DCard";
 import Link from "next/link";
-import { AnimatedTooltip } from "./AnimatedTooltip";
 
 const ProjectsList = () => {
   return (
@@ -22,7 +21,7 @@ const ProjectsList = () => {
                 <CardItem
                   as="div"
                   translateZ="60"
-                  className="text-slate-400 w-full  flex items-center !line-clamp-2 justify-between text-sm mt-2"
+                  className="text-slate-400 w-full  flex items-center !line-clamp-3 justify-between text-sm mt-2"
                 >
                   {description}
                 </CardItem>
@@ -35,9 +34,6 @@ const ProjectsList = () => {
                     className=" object-cover rounded-xl group-hover/card:shadow-xl"
                     alt={title}
                   />
-                </CardItem>
-                <CardItem className="flex mt-5" translateZ="100">
-                  <AnimatedTooltip items={techStack} />
                 </CardItem>
               </Link>
             </CardBody>
