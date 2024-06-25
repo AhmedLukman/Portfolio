@@ -5,31 +5,45 @@ import GradientBorder from "@/components/ui/GradientBorder";
 import { TECH_STACK, WEB_QUALITIES } from "@/lib/constants";
 import { Tooltip } from "@nextui-org/react";
 import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMedal } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-2xl flex h-screen py-20 flex-col">
+    <div className="mx-auto max-w-4xl flex min-h-screen py-20 flex-col">
       <section>
         <h1 className="text-3xl text-slate-200 text-center font-bold tracking-wide mb-1">
           Ahmed Lukman{" "}
           <span className="purple-gradient-text">| Full Stack Developer</span>
         </h1>
-        <GradientBorder />
-        <p className=" text-slate-300 mt-8">
-          I&apos;m a self-taught developer with a Distinction in Business
-          Information Technology Diploma. I excel academically, hold numerous
-          certifications from courses and boot-camps, and have been featured in
-          national media. My commitment to continuous learning and educating
-          drives my passion as a programmer.
-        </p>
+        <GradientBorder className="max-w-2xl mx-auto" />
+        <div className="flex justify-between mt-14 h-64">
+          <div className="basis-1/2 flex items-center">
+            <p className=" text-slate-300">
+              I&apos;m a modern developer with a distinction{" "}
+              <FontAwesomeIcon icon={faMedal} /> in Diploma in Business
+              Information Technology. I excel academically, hold numerous
+              certifications from courses and boot-camps, and have been featured
+              in national media. My commitment to continuous learning and problem solving drives my
+              passion as a programmer.
+            </p>
+          </div>
+          <div className="relative basis-1/2">
+            <Image
+              fill
+              src="/assets/images/me.svg"
+              alt="Cartoon look alike male sitting on a desk that has a computer"
+            />
+          </div>
+        </div>
       </section>
 
-      <section className="mt-10 space-y-5">
+      <section className="mt-14 space-y-5">
         <h2 className=" text-xl text-slate-200 font-bold">Tech Stack</h2>
         <AnimatedTooltip items={TECH_STACK} />
       </section>
 
-      <section className="mt-auto">
+      <section className="mt-24">
         <p className=" text-slate-400 text-2xl">Let&apos;s build </p>
         <FlipWords className="text-white text-2xl" words={WEB_QUALITIES} />
       </section>
