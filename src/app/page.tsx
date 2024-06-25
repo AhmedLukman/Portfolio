@@ -19,7 +19,7 @@ export default function Home() {
         </h1>
         <GradientBorder className="max-w-2xl mx-auto" />
         <div className="flex justify-between mt-14 h-64">
-          <div className="basis-1/2 flex items-center">
+          <div className="basis-1/2 flex items-center animate-slideInFromLeft">
             <p className=" text-slate-300">
               I&apos;m a modern developer with a distinction{" "}
               <FontAwesomeIcon icon={faMedal} /> in Diploma in Business
@@ -29,7 +29,7 @@ export default function Home() {
               problem solving drives my passion as a programmer.
             </p>
           </div>
-          <div className="relative basis-1/2">
+          <div className="relative basis-1/2 animate-slideInFromRight">
             <Image
               fill
               src="/assets/images/me.svg"
@@ -39,12 +39,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-14 space-y-5">
+      <section className="mt-14 space-y-5 animate-slideInFromBottom delay-1000 opacity-0">
         <h2 className=" text-xl text-slate-200 font-bold">Tech Stack</h2>
         <AnimatedTooltip items={TECH_STACK} />
       </section>
 
-      <section className="mt-20">
+      <section className="mt-20 animate-slideInFromBottom delay-1000 opacity-0">
         <p className=" text-slate-400 text-2xl">Let&apos;s build </p>
         <FlipWords className="text-white text-2xl" words={WEB_QUALITIES} />
       </section>

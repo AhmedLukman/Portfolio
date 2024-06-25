@@ -19,10 +19,64 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        slideInFromLeft: {
+          "0%": {
+            transform: "translateX(-20%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        slideInFromRight: {
+          "0%": {
+            transform: "translateX(20%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        slideInFromBottom: {
+          "0%": {
+            transform: "translateY(40%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
+      },
+      animation: {
+        slideInFromLeft: "slideInFromLeft 1s ease-out forwards",
+        slideInFromRight: "slideInFromRight 1s ease-out forwards",
+        slideInFromBottom: "slideInFromBottom 1s ease-out forwards",
+      },
     },
   },
   darkMode: "class",
-  plugins: [nextui(), addVariablesForColors],
+  plugins: [
+    nextui(),
+    addVariablesForColors,
+    function ({ addUtilities }: { addUtilities: any}) {
+      const newAnimationDelays = {
+        ".delay-0": {
+          animationDelay: "0s",
+        },
+        ".delay-500": {
+          animationDelay: "0.5s",
+        },
+        ".delay-1000": {
+          animationDelay: "1s",
+        },
+      };
+      addUtilities(newAnimationDelays, ["responsive", "hover"]);
+    },
+  ],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {
@@ -37,4 +91,3 @@ function addVariablesForColors({ addBase, theme }: any) {
 }
 
 export default config;
-
