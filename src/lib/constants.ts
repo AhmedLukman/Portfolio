@@ -301,4 +301,358 @@ export const PROJECTS = [
       },
     ],
   },
+  {
+    title: "Sample 1",
+    description:
+      "I explored and mastered the use of Next Auth v5 for authentication, together with prisma as an ORM to efficiently authenticate and store data in an online database.",
+    image: "/assets/images/portfolio.png",
+    route: "/projects/next-auth-prisma-training",
+    site: "https://next-auth-prisma-training.vercel.app",
+    source: "https://github.com/AhmedLukman/next_auth_prisma_training",
+    status: Status.Completed,
+    slug: "next-auth-prisma-training",
+    techStack: [
+      {
+        alt: "Next Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        alt: "Auth Js",
+        src: "/assets/images/authjs.svg",
+      },
+      {
+        alt: "Supabase",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+      },
+      {
+        alt: "Prisma",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "100",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
+      },
+    ],
+  },
+  {
+    title: "Sample 2",
+    description:
+      "I explored and mastered the use of Next Auth v5 for authentication, together with prisma as an ORM to efficiently authenticate and store data in an online database.",
+    image: "/assets/images/portfolio.png",
+    route: "/projects/next-auth-prisma-training",
+    site: "https://next-auth-prisma-training.vercel.app",
+    source: "https://github.com/AhmedLukman/next_auth_prisma_training",
+    status: Status.Completed,
+    slug: "next-auth-prisma-training",
+    techStack: [
+      {
+        alt: "Next Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        alt: "Auth Js",
+        src: "/assets/images/authjs.svg",
+      },
+      {
+        alt: "Supabase",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+      },
+      {
+        alt: "Prisma",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "100",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
+      },
+    ],
+  },
+  {
+    title: "Sample 3",
+    description:
+      "I explored and mastered the use of Next Auth v5 for authentication, together with prisma as an ORM to efficiently authenticate and store data in an online database.",
+    image: "/assets/images/cinemania.png",
+    route: "/projects/next-auth-prisma-training",
+    site: "https://next-auth-prisma-training.vercel.app",
+    source: "https://github.com/AhmedLukman/next_auth_prisma_training",
+    status: Status.Completed,
+    slug: "next-auth-prisma-training",
+    techStack: [
+      {
+        alt: "Next Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        alt: "Auth Js",
+        src: "/assets/images/authjs.svg",
+      },
+      {
+        alt: "Supabase",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+      },
+      {
+        alt: "Prisma",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "100",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
+      },
+    ],
+  },
+  {
+    title: "Sample 4",
+    description:
+      "I explored and mastered the use of Next Auth v5 for authentication, together with prisma as an ORM to efficiently authenticate and store data in an online database.",
+    image: "/assets/images/portfolio.png",
+    route: "/projects/next-auth-prisma-training",
+    site: "https://next-auth-prisma-training.vercel.app",
+    source: "https://github.com/AhmedLukman/next_auth_prisma_training",
+    status: Status.Completed,
+    slug: "next-auth-prisma-training",
+    techStack: [
+      {
+        alt: "Next Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        alt: "Auth Js",
+        src: "/assets/images/authjs.svg",
+      },
+      {
+        alt: "Supabase",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+      },
+      {
+        alt: "Prisma",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "100",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
+      },
+    ],
+  },
+  {
+    title: "Sample 5",
+    description:
+      "I explored and mastered the use of Next Auth v5 for authentication, together with prisma as an ORM to efficiently authenticate and store data in an online database.",
+    image: "/assets/images/napt.png",
+    route: "/projects/next-auth-prisma-training",
+    site: "https://next-auth-prisma-training.vercel.app",
+    source: "https://github.com/AhmedLukman/next_auth_prisma_training",
+    status: Status.Completed,
+    slug: "next-auth-prisma-training",
+    techStack: [
+      {
+        alt: "Next Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        alt: "Auth Js",
+        src: "/assets/images/authjs.svg",
+      },
+      {
+        alt: "Supabase",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+      },
+      {
+        alt: "Prisma",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "100",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
+      },
+    ],
+  },
+  {
+    title: "Sample 6",
+    description:
+      "I explored and mastered the use of Next Auth v5 for authentication, together with prisma as an ORM to efficiently authenticate and store data in an online database.",
+    image: "/assets/images/portfolio.png",
+    route: "/projects/next-auth-prisma-training",
+    site: "https://next-auth-prisma-training.vercel.app",
+    source: "https://github.com/AhmedLukman/next_auth_prisma_training",
+    status: Status.Completed,
+    slug: "next-auth-prisma-training",
+    techStack: [
+      {
+        alt: "Next Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        alt: "Auth Js",
+        src: "/assets/images/authjs.svg",
+      },
+      {
+        alt: "Supabase",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+      },
+      {
+        alt: "Prisma",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "100",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
+      },
+    ],
+  },
 ];
