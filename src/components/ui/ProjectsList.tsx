@@ -10,6 +10,7 @@ import {
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import { Tooltip } from "@nextui-org/react";
+import ProjectItemWrapper from "./ProjectItemWrapper";
 
 const ProjectsList = () => {
   const renderStatus = (status: Status) => {
@@ -41,10 +42,11 @@ const ProjectsList = () => {
       </>
     );
   };
+
   return (
     <ul className="flex justify-between w-full mt-10 flex-wrap">
-      {PROJECTS.map(({ title, description, image, route, status }) => (
-        <li key={title} className="z-10">
+      {PROJECTS.map(({ title, description, image, route, status }, index) => (
+        <ProjectItemWrapper key={title} index={index}>
           <CardContainer>
             <CardBody className="  relative group/card shadow-[0_8px_16px_rgb(0_0_0/0.3)] border border-white/[0.1] w-[22rem] md:w-[23rem] xl:w-[26rem] h-auto rounded-xl p-6   ">
               <Link href={route} className="block">
@@ -75,7 +77,7 @@ const ProjectsList = () => {
               </Link>
             </CardBody>
           </CardContainer>
-        </li>
+        </ProjectItemWrapper>
       ))}
     </ul>
   );
