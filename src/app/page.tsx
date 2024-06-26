@@ -31,9 +31,10 @@ export default function Home() {
           </div>
           <div className="relative basis-1/2 animate-slideInFromRight">
             <Image
+              priority
               fill
               src="/assets/images/me.svg"
-              alt="Cartoon look alike male sitting on a desk that has a computer"
+              alt="Animated picture of a white male sitting on a desk that has a computer"
             />
           </div>
         </div>

@@ -75,6 +75,7 @@ export const AnimatedTooltip = ({ items }: { items: TooltipItem[] }) => {
           </AnimatePresence>
           <div className=" flex flex-col items-center justify-center gap-2">
             <Image
+              priority
               onMouseMove={handleMouseMove}
               height={100}
               width={100}
