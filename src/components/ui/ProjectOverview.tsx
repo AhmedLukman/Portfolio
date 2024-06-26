@@ -8,32 +8,36 @@ import { Project } from "@/lib/types";
 const ProjectOverview = ({
   project: { description, image, site, source, techStack, metrics, title },
 }: {
-  project: Project
+  project: Project;
 }) => {
   const isSitePortfolio = site === "https://portfolio-ahmedlukman.vercel.app";
   return (
     <section className="flex gap-14 justify-between mt-10">
       <div className="basis-1/2 relative">
-        <Image src={image} alt={title} fill priority className="object-contain" />
+        <Image
+          src={image}
+          alt={title}
+          fill
+          priority
+          className="object-contain"
+        />
       </div>
       <div className="flex flex-col basis-1/2 justify-between gap-8">
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 animate-slideInFromBottom">
           <h2 className="text-slate-200 text-xl font-bold">Description</h2>
-          <TextGenerateEffect words={description} />
+          <p className="text-slate-300">{description}</p>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 opacity-0 animate-slideInFromBottom delay-500">
           <h2 className="text-slate-200 text-xl font-bold">Tech Stack</h2>
           <AnimatedTooltip items={techStack} />
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 opacity-0 animate-slideInFromBottom delay-1000">
           <h2 className="text-slate-200 text-xl font-bold">Metrics</h2>
-          <AnimatedTooltip
-            items={metrics}
-          />
+          <AnimatedTooltip items={metrics} />
         </div>
         <div className="flex gap-5 mt-5">
           <Button
-            className="text-white hover:text-black flex-grow"
+            className="text-white hover:text-black flex-grow opacity-0 animate-slideInFromLeft delay-1500"
             isExternal
             variant="ghost"
             as={Link}
@@ -50,7 +54,7 @@ const ProjectOverview = ({
             <Button
               isExternal
               disabled={isSitePortfolio}
-              className=" flex-grow"
+              className=" flex-grow opacity-0 animate-slideInFromRight delay-1500"
               as={Link}
               href={isSitePortfolio ? undefined : site}
             >
