@@ -21,12 +21,13 @@ export default function Home() {
         <div className="flex justify-between mt-14 h-64">
           <div className="basis-1/2 flex items-center animate-slideInFromLeft">
             <p className=" text-slate-300">
-              I&apos;m a modern developer with a distinction{" "}
-              <FontAwesomeIcon icon={faMedal} /> in Diploma in Business
-              Information Technology. I excel academically, hold numerous
-              certifications from courses and boot-camps, and have been featured
-              in national media. My commitment to continuous learning and
-              problem solving drives my passion as a programmer.
+              I&apos;m a{" "}
+              <span className="purple-gradient-text">modern developer </span>
+              with a distinction <FontAwesomeIcon icon={faMedal} /> in Diploma
+              in Business Information Technology. I excel academically, hold
+              numerous certifications from courses and boot-camps, and have been
+              featured in national media. My commitment to continuous learning
+              and problem solving drives my passion as a programmer.
             </p>
           </div>
           <div className="relative basis-1/2 animate-slideInFromRight">
@@ -40,7 +41,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-14 space-y-5 animate-slideInFromBottom delay-1000 opacity-0">
+      <section className="mt-14 space-y-5 animate-slideInFromBottom delay-500 opacity-0">
         <h2 className=" text-xl text-slate-200 font-bold">Tech Stack</h2>
         <AnimatedTooltip items={TECH_STACK} />
       </section>
