@@ -38,7 +38,7 @@ export const AnimatedTooltip = ({ items }: { items: TooltipItem[] }) => {
     <ul className="flex gap-3 flex-wrap z-20">
       {items.map((item, idx) => (
         <li
-          className="-mr-  relative group"
+          className="relative group"
           key={item.alt}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
