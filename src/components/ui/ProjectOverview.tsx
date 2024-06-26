@@ -24,15 +24,21 @@ const ProjectOverview = ({
       </div>
       <div className="flex flex-col basis-1/2 justify-between gap-8">
         <div className="flex flex-col gap-1 animate-slideInFromBottom">
-          <h2 className="text-slate-200 text-xl font-bold">Description</h2>
+          <h2 className="text-xl font-bold">
+            <span className="purple-gradient-text">Description</span>
+          </h2>
           <p className="text-slate-300">{description}</p>
         </div>
         <div className="flex flex-col gap-3 opacity-0 animate-slideInFromBottom delay-500">
-          <h2 className="text-slate-200 text-xl font-bold">Tech Stack</h2>
+          <h2 className="text-xl font-bold">
+            <span className="purple-gradient-text">Tech Stack</span>
+          </h2>
           <AnimatedTooltip items={techStack} />
         </div>
         <div className="flex flex-col gap-3 opacity-0 animate-slideInFromBottom delay-1000">
-          <h2 className="text-slate-200 text-xl font-bold">Metrics</h2>
+          <h2 className="text-xl font-bold">
+            <span className="purple-gradient-text">Metrics</span>
+          </h2>
           <AnimatedTooltip items={metrics} />
         </div>
         <div className="flex gap-5 mt-5">
