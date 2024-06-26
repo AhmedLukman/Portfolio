@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "./TextGenerateEffect";
 import { Project } from "@/lib/types";
 
 const ProjectOverview = ({
-  project: { description, image, site, source, techStack, metrics },
+  project: { description, image, site, source, techStack, metrics, title },
 }: {
   project: Project
 }) => {
@@ -14,7 +14,7 @@ const ProjectOverview = ({
   return (
     <section className="flex gap-14 justify-between mt-10">
       <div className="basis-1/2 relative">
-        <Image src={image} alt="" fill priority className="object-contain" />
+        <Image src={image} alt={title} fill priority className="object-contain" />
       </div>
       <div className="flex flex-col basis-1/2 justify-between gap-8">
         <div className="flex flex-col gap-1">
