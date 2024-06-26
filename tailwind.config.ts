@@ -73,6 +73,12 @@ const config: Config = {
         ".delay-1000": {
           animationDelay: "1s",
         },
+        ".delay-1500": {
+          animationDelay: "1.5s",
+        },
+        ".delay-2000": {
+          animationDelay: "2s",
+        },
       };
       addUtilities(newAnimationDelays, ["responsive", "hover"]);
     },
