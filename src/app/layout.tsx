@@ -6,6 +6,7 @@ import SideNav from "@/components/ui/nav/SideNav";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import Footer from "@/components/ui/Footer";
 
 // Prevent Font Awesome from adding its CSS since we did it manually above
 config.autoAddCss = false;
@@ -29,9 +30,10 @@ export default function RootLayout({
         <Providers>
           <div className="flex h-screen">
             <SideNav />
-            <main className="basis-10/12 relative z-10 rounded-tl-lg min-h-screen overflow-y-auto">
-              {children}
-            </main>
+            <div className="basis-10/12 min-h-screen overflow-y-auto z-10">
+              <main className=" relative rounded-tl-lg">{children}</main>
+              <Footer />
+            </div>
             <BackgroundBeams className="opacity-60" />
           </div>
         </Providers>
