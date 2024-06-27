@@ -16,9 +16,7 @@ const ProjectsPage = () => {
       <h1 className="text-3xl text-slate-200 text-center font-bold tracking-wide mb-1">
         My Projects
       </h1>
-      <div className="max-w-xl mx-auto">
-        <GradientBorder />
-      </div>
+      <GradientBorder className="max-w-xl mx-auto" />
       <ProjectsList />
     </PageWrapper>
   );

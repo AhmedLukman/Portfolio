@@ -27,9 +27,7 @@ const ProjectDetailsPage = ({
       <h1 className="text-3xl text-slate-200 text-center font-bold tracking-wide mb-1">
         {project.title}
       </h1>
-      <div className="max-w-xl mx-auto">
-        <GradientBorder />
-      </div>
+      <GradientBorder className="max-w-xl mx-auto" />
       <ProjectOverview project={project} />
     </div>
   );
