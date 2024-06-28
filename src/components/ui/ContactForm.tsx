@@ -1,28 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { Input, Textarea } from "@nextui-org/react";
 import { useFormState } from "react-dom";
 import { sendEmail } from "@/lib/actions";
 import toast from "react-hot-toast";
 import SubmitButton from "./SubmitButton";
+import { initialFormState } from "@/lib/constants";
 
 const ContactForm = () => {
   const [
     {
-      errors: { form },
+      errors: { db, email, message, name},
     },
     formAction,
-  ] = useFormState(sendEmail, {
-    errors: {
-      form: "",
-    },
-  });
-  if (form)
-    if (form === "success") toast.success("Message sent successfully");
-    else toast.error(form);
+  ] = useFormState(sendEmail, initialFormState);
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  if (db)
+    if (db === "success") {
+      toast.success("Message sent successfully");
+      formRef.current?.reset();
+    } else toast.error(db);
+
   return (
-    <form action={formAction} className="max-w-xl mx-auto mt-10 space-y-6">
+    <form
+      ref={formRef}
+      action={formAction}
+      className="max-w-xl mx-auto mt-10 space-y-6"
+    >
       <div className="flex gap-6">
         <Input
           isRequired
@@ -30,6 +37,8 @@ const ContactForm = () => {
           label="Name"
           variant="bordered"
           className="animate-slideInFromLeft opacity-0"
+          isInvalid={!!name}
+          errorMessage={name}
           classNames={{
             inputWrapper:
               "border-slate-400 focus-within:!border-slate-300 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
@@ -39,9 +48,10 @@ const ContactForm = () => {
         <Input
           isRequired
           className="animate-slideInFromRight opacity-0"
+          isInvalid={!!email}
+          errorMessage={email}
           name="email"
           label="Email"
-          type="email"
           variant="bordered"
           classNames={{
             inputWrapper:
@@ -52,6 +62,8 @@ const ContactForm = () => {
       </div>
       <Textarea
         className="animate-slideInFromBottom opacity-0"
+        isInvalid={!!message}
+        errorMessage={message}
         isRequired
         name="message"
         label="Message"
