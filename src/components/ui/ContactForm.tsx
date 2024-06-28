@@ -1,9 +1,11 @@
 "use client";
 
 import React from "react";
-import { Button, Input, Textarea } from "@nextui-org/react";
+import { Input, Textarea } from "@nextui-org/react";
 import { useFormState } from "react-dom";
 import { sendEmail } from "@/lib/actions";
+import toast from "react-hot-toast";
+import SubmitButton from "./SubmitButton";
 
 const ContactForm = () => {
   const [
@@ -16,15 +18,18 @@ const ContactForm = () => {
       form: "",
     },
   });
+  if (form)
+    if (form === "success") toast.success("Message sent successfully");
+    else toast.error(form);
   return (
-    <form action={formAction} className="max-w-xl mx-auto mt-10 space-y-5">
-      <div className="flex gap-5">
+    <form action={formAction} className="max-w-xl mx-auto mt-10 space-y-6">
+      <div className="flex gap-6">
         <Input
           isRequired
           name="name"
           label="Name"
-          size="sm"
           variant="bordered"
+          className="animate-slideInFromLeft opacity-0"
           classNames={{
             inputWrapper:
               "border-slate-400 focus-within:!border-slate-300 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
@@ -33,9 +38,9 @@ const ContactForm = () => {
         />
         <Input
           isRequired
+          className="animate-slideInFromRight opacity-0"
           name="email"
           label="Email"
-          size="sm"
           type="email"
           variant="bordered"
           classNames={{
@@ -46,26 +51,19 @@ const ContactForm = () => {
         />
       </div>
       <Textarea
-        // isRequired
+        className="animate-slideInFromBottom opacity-0"
+        isRequired
         name="message"
         label="Message"
-        minRows={10}
         classNames={{
           inputWrapper:
-            "border-slate-400 focus-within:!border-slate-300 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
+            "border-slate-400 focus-within:!border-slate-300 !h-56 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
           input: "text-slate-300",
         }}
         variant="bordered"
       />
       <div className="flex justify-center pt-5">
-        <Button
-          type="submit"
-          size="lg"
-          className="bg-slate-400 shadow-[0_8px_16px_rgb(0_0_0/0.3)]"
-        >
-          Send
-        </Button>
-        {form && <p className="text-red-500">{form}</p>}
+        <SubmitButton />
       </div>
     </form>
   );
