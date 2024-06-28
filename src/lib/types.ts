@@ -23,12 +23,3 @@ export type Project = {
 };
 
 export type ContactForm = z.infer<typeof contactFormSchema>;
-
-export type ContactFormState = {
-  errors: {
-    name: string;
-    email: string;
-    message: string;
-    db: string;
-  };
-};

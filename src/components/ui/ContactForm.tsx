@@ -9,12 +9,10 @@ import SubmitButton from "./SubmitButton";
 import { initialFormState } from "@/lib/constants";
 
 const ContactForm = () => {
-  const [
-    {
-      errors: { db, email, message, name},
-    },
-    formAction,
-  ] = useFormState(sendEmail, initialFormState);
+  const [{ db, email, message, name }, formAction] = useFormState(
+    sendEmail,
+    initialFormState
+  );
 
   const formRef = useRef<HTMLFormElement>(null);
 

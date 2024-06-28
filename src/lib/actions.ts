@@ -3,30 +3,28 @@
 import nodemailer from "nodemailer";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
 import { contactFormSchema } from "./schemas";
-import { ContactFormState } from "./types";
 import { initialFormState } from "./constants";
+import type { ContactForm } from "./types";
 
 export const sendEmail = async (
-  formState: ContactFormState,
+  formState: ContactForm,
   formData: FormData
-): Promise<ContactFormState> => {
+): Promise<ContactForm> => {
   const name = formData.get("name");
   const recipientEmail = formData.get("email");
   const message = formData.get("message");
 
-  const {success, data, error} = contactFormSchema.safeParse({
+  const { success, data, error } = contactFormSchema.safeParse({
     name,
     email: recipientEmail,
     message,
   });
   if (!success) {
     return {
-      errors: {
-        ...initialFormState.errors,
-        name: error.flatten().fieldErrors.name?.[0] ?? "",
-        email: error.flatten().fieldErrors.email?.[0] ?? "",
-        message: error.flatten().fieldErrors.message?.[0] ?? "",
-      },
+      ...initialFormState,
+      name: error.flatten().fieldErrors.name?.[0] ?? "",
+      email: error.flatten().fieldErrors.email?.[0] ?? "",
+      message: error.flatten().fieldErrors.message?.[0] ?? "",
     };
   }
 
@@ -70,17 +68,13 @@ export const sendEmail = async (
   try {
     await transporter.sendMail(mailOptions);
     return {
-      errors: {
-        ...initialFormState.errors,
-        db: "success",
-      },
+      ...initialFormState,
+      db: "success",
     };
   } catch (error) {
     return {
-      errors: {
-        ...initialFormState.errors,
-        db: "Error sending email, please try again",
-      },
+      ...initialFormState,
+      db: "Error sending email, please try again",
     };
   }
 };

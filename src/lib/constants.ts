@@ -43,12 +43,10 @@ export const SOCIAL_LINKS = [
 ];
 
 export const initialFormState = {
-  errors: {
-    name: "",
-    email: "",
-    message: "",
-    db: "",
-  },
+  name: "",
+  email: "",
+  message: "",
+  db: "",
 };
 
 export const WEB_QUALITIES = [
