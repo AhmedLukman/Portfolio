@@ -2,20 +2,30 @@
 
 import nodemailer from "nodemailer";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
+import { contactFormSchema } from "./schemas";
+import { ContactFormState } from "./types";
+import { initialFormState } from "./constants";
 
 export const sendEmail = async (
-  formState: { errors: { form: string } },
+  formState: ContactFormState,
   formData: FormData
-) => {
-  const name = formData.get("name") as string;
-  const resEmail = formData.get("email") as string;
-  const message = formData.get("message") as string;
+): Promise<ContactFormState> => {
+  const name = formData.get("name");
+  const recipientEmail = formData.get("email");
+  const message = formData.get("message");
 
-  // Validate form inputs
-  if (!name || !resEmail || !message) {
+  const {success, data, error} = contactFormSchema.safeParse({
+    name,
+    email: recipientEmail,
+    message,
+  });
+  if (!success) {
     return {
       errors: {
-        form: "One or more fields is incorrect, please try again.",
+        ...initialFormState.errors,
+        name: error.flatten().fieldErrors.name?.[0] ?? "",
+        email: error.flatten().fieldErrors.email?.[0] ?? "",
+        message: error.flatten().fieldErrors.message?.[0] ?? "",
       },
     };
   }
@@ -37,7 +47,7 @@ export const sendEmail = async (
     from: email,
     to: email,
     subject: `Portfolio Contact Form Submission from ${name}`,
-    text: message,
+    text: data.message,
     html: `
         <div style="max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 10px; overflow: hidden;">
           <header style="background-color: #657786; padding: 20px; border-radius: 10px;  border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
@@ -45,7 +55,7 @@ export const sendEmail = async (
           </header>
           <main style="padding: 20px; padding-top: 25px; padding-bottom: 25px; background-color: #fff;">
                 <p><strong style="color: #262c35; padding-left: 20px;">Name:</strong> ${name}</p>
-                <p><strong style="color: #262c35; padding-left: 20px;">Email:</strong> ${resEmail}</p>
+                <p><strong style="color: #262c35; padding-left: 20px;">Email:</strong> ${recipientEmail}</p>
                 <strong style="color: #262c35; padding-left: 20px;">Message:</strong>
                 <p style="padding-left: 20px; margin-top: 0">
                 ${message}
@@ -53,24 +63,24 @@ export const sendEmail = async (
           </main>
         </div>
     `,
-    replyTo: resEmail,
+    replyTo: data.email,
   };
 
   // Send the email
   try {
     await transporter.sendMail(mailOptions);
-  } catch (error) {
-    console.error("Email sending error:", error);
     return {
       errors: {
-        form: "Something went wrong, please try again.",
+        ...initialFormState.errors,
+        db: "success",
+      },
+    };
+  } catch (error) {
+    return {
+      errors: {
+        ...initialFormState.errors,
+        db: "Error sending email, please try again",
       },
     };
   }
-
-  return {
-    errors: {
-      form: "success",
-    },
-  };
 };
