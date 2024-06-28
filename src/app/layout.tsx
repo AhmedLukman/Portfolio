@@ -7,6 +7,7 @@ import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Footer from "@/components/ui/Footer";
+import { Toaster } from "react-hot-toast";
 
 // Prevent Font Awesome from adding its CSS since we did it manually above
 config.autoAddCss = false;
@@ -36,6 +37,7 @@ export default function RootLayout({
             </div>
             <BackgroundBeams className="opacity-60" />
           </div>
+          <Toaster toastOptions={{ className: "!bg-slate-200" }} />
         </Providers>
       </body>
     </html>
