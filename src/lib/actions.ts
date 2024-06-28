@@ -1,6 +1,7 @@
 "use server";
 
 import nodemailer from "nodemailer";
+import SMTPTransport from "nodemailer/lib/smtp-transport";
 
 export const sendEmail = async (
   formState: { errors: { form: string } },
@@ -23,7 +24,6 @@ export const sendEmail = async (
   const email = process.env.EMAIL;
   const pass = process.env.PASS;
 
-
   // Set up nodemailer transporter
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -33,16 +33,30 @@ export const sendEmail = async (
     },
   });
 
-  const mailOptions = {
+  const mailOptions: SMTPTransport.MailOptions = {
     from: email,
     to: email,
-    subject: `Contact Form Submission from ${name}`,
+    subject: `Portfolio Contact Form Submission from ${name}`,
     text: message,
-    html: message,
-    replyTo: resEmail, 
+    html: `
+        <div style="max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 10px; overflow: hidden;">
+          <header style="background-color: #657786; padding: 20px; border-radius: 10px;  border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+                <h1 style="margin: 0; color: #fff; font-size: 20px;">Contact</h1>
+          </header>
+          <main style="padding: 20px; padding-top: 25px; padding-bottom: 25px; background-color: #fff;">
+                <p><strong style="color: #262c35; padding-left: 20px;">Name:</strong> ${name}</p>
+                <p><strong style="color: #262c35; padding-left: 20px;">Email:</strong> ${resEmail}</p>
+                <strong style="color: #262c35; padding-left: 20px;">Message:</strong>
+                <p style="padding-left: 20px; margin-top: 0">
+                ${message}
+                </p>
+          </main>
+        </div>
+    `,
+    replyTo: resEmail,
   };
 
-  // Attempt to send the email
+  // Send the email
   try {
     await transporter.sendMail(mailOptions);
   } catch (error) {
@@ -56,7 +70,7 @@ export const sendEmail = async (
 
   return {
     errors: {
-      form: "no error",
+      form: "success",
     },
   };
 };
