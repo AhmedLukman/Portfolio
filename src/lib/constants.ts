@@ -107,10 +107,6 @@ export const TECH_STACK = [
     alt: "Figma",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
-    alt: "GitHub",
-  },
-  {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
     alt: "Prisma",
   },
@@ -137,6 +133,22 @@ export const TECH_STACK = [
   {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
     alt: "Vercel",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eslint/eslint-original.svg",
+    alt: "ESLint",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg",
+    alt: "NPM",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    alt: "Git",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    alt: "GitHub",
   },
 ];
 
