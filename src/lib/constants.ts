@@ -99,6 +99,10 @@ export const TECH_STACK = [
     alt: "Next UI",
   },
   {
+    src: "/assets/images/aceternity.webp",
+    alt: "Aceternity UI",
+  },
+  {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
     alt: "Figma",
   },
@@ -151,7 +155,7 @@ export const PROJECTS = [
     route: "/projects/cinemania",
     site: "https://cinemania-ahmedlukman.vercel.app/movie",
     source: "https://github.com/AhmedLukman/Cinemania",
-    status: Status.Completed,
+    status: Status.Pending,
     slug: "cinemania",
     techStack: [
       {
@@ -224,6 +228,14 @@ export const PROJECTS = [
       {
         alt: "TypeScript",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        src: "/assets/images/aceternity.webp",
+        alt: "Aceternity UI",
+      },
+      {
+        src: "/assets/images/nextui.png",
+        alt: "Next UI",
       },
     ],
     metrics: [
