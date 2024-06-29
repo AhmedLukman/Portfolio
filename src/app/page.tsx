@@ -8,6 +8,7 @@ import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import PageWrapper from "@/components/ui/PageWrapper";
+import Testimonials from "@/components/ui/Testimonials";
 
 export default function Home() {
   return (
@@ -41,12 +42,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-14 space-y-5 animate-slideInFromBottom delay-500 opacity-0">
+      <section className="mt-24 space-y-6">
         <h2 className=" text-xl text-slate-200 font-bold">Tech Stack</h2>
         <AnimatedTooltip items={TECH_STACK} />
       </section>
 
-      <section className="mt-20 animate-slideInFromBottom delay-1000 opacity-0">
+      <Testimonials />
+
+      <section className="mt-24">
         <p className=" text-slate-400 text-2xl">Let&apos;s build </p>
         <FlipWords className="text-white text-2xl" words={WEB_QUALITIES} />
       </section>
