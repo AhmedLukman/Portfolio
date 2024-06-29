@@ -20,6 +20,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
         slideInFromLeft: {
           "0%": {
             transform: "translateX(-20%)",
@@ -52,6 +57,8 @@ const config: Config = {
         },
       },
       animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         slideInFromLeft: "slideInFromLeft 1s ease-out forwards",
         slideInFromRight: "slideInFromRight 1s ease-out forwards",
         slideInFromBottom: "slideInFromBottom 1s ease-out forwards",
@@ -62,7 +69,7 @@ const config: Config = {
   plugins: [
     nextui(),
     addVariablesForColors,
-    function ({ addUtilities }: { addUtilities: any}) {
+    function ({ addUtilities }: { addUtilities: any }) {
       const newAnimationDelays = {
         ".delay-0": {
           animationDelay: "0s",
