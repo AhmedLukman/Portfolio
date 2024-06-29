@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import PageWrapper from "@/components/ui/PageWrapper";
 import Testimonials from "@/components/ui/Testimonials";
+import CTA from "@/components/ui/CTA";
 
 export default function Home() {
   return (
@@ -42,12 +43,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-24 space-y-6">
+      <section className="mt-20 space-y-6">
         <h2 className=" text-xl text-slate-200 font-bold">Tech Stack</h2>
         <AnimatedTooltip items={TECH_STACK} />
       </section>
 
       <Testimonials />
+
+      <CTA />
 
       <section className="mt-24">
         <p className=" text-slate-400 text-2xl">Let&apos;s build </p>
