@@ -50,12 +50,12 @@ export default function Home() {
 
       <Testimonials />
 
-      <CTA />
-
       <section className="mt-24">
         <p className=" text-slate-400 text-2xl">Let&apos;s build </p>
         <FlipWords className="text-white text-2xl" words={WEB_QUALITIES} />
       </section>
+
+      <CTA />
     </PageWrapper>
   );
 }
