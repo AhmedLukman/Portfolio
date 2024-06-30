@@ -1,3 +1,4 @@
+import CaseStudy from "@/components/ui/CaseStudy";
 import GradientBorder from "@/components/ui/GradientBorder";
 import ProjectOverview from "@/components/ui/ProjectOverview";
 import { PROJECTS } from "@/lib/constants";
@@ -29,6 +30,7 @@ const ProjectDetailsPage = ({
       </h1>
       <GradientBorder className="max-w-xl mx-auto" />
       <ProjectOverview project={project} />
+      <CaseStudy project={project} />
     </div>
   );
 };
