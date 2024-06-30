@@ -10,7 +10,7 @@ const CTA = () => {
         <p className="text-xl text-slate-200 font-bold text-center">
           Let&apos;s Work Together
         </p>
-        <p className="text-lg text-slate-300 text-center mb-2">
+        <p className="text-lg text-slate-300 text-center mb-2 max-w-prose">
           Excited to start a new project? Collaborate on an existing one? Or
           just have a chat? Get in touch today!
         </p>
