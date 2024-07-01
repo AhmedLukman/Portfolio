@@ -2,7 +2,7 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { BorderContainer } from "./MovingBorder";
-import ProjectItemWrapper from "./ProjectItemWrapper";
+import ListItemWrapper from "./ListItemWrapper";
 
 const Features = () => {
   return (
@@ -11,7 +11,7 @@ const Features = () => {
         Features
       </h2>
       <ol className="text-slate-300 grid grid-cols-2 gap-5">
-        <ProjectItemWrapper index={0}>
+        <ListItemWrapper index={0}>
           <BorderContainer
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.5rem"
@@ -24,12 +24,13 @@ const Features = () => {
             <div className="flex gap-3 items-center w-full p-5">
               <FontAwesomeIcon size="xl" icon={faCircleCheck} />
               <p className="text-white">
-                Protects user data with cutting-edge encryption and security protocols.
+                Protects user data with cutting-edge encryption and security
+                protocols.
               </p>
             </div>
           </BorderContainer>
-        </ProjectItemWrapper>
-        <ProjectItemWrapper index={1}>
+        </ListItemWrapper>
+        <ListItemWrapper index={1}>
           <BorderContainer
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.5rem"
@@ -47,8 +48,8 @@ const Features = () => {
               </p>
             </div>
           </BorderContainer>
-        </ProjectItemWrapper>
-        <ProjectItemWrapper index={2}>
+        </ListItemWrapper>
+        <ListItemWrapper index={2}>
           <BorderContainer
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.5rem"
@@ -66,8 +67,8 @@ const Features = () => {
               </p>
             </div>
           </BorderContainer>
-        </ProjectItemWrapper>
-        <ProjectItemWrapper index={3}>
+        </ListItemWrapper>
+        <ListItemWrapper index={3}>
           <BorderContainer
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.5rem"
@@ -80,11 +81,12 @@ const Features = () => {
             <div className="flex gap-3 items-center w-full p-5">
               <FontAwesomeIcon size="xl" icon={faCircleCheck} />
               <p className="text-white">
-                Delivers instant feedback and updates ensuring users are highly informed.
+                Delivers instant feedback and updates ensuring users are highly
+                informed.
               </p>
             </div>
           </BorderContainer>
-        </ProjectItemWrapper>
+        </ListItemWrapper>
       </ol>
     </section>
   );

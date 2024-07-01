@@ -4,7 +4,7 @@ import { cn } from "@nextui-org/react";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 
-const ProjectItemWrapper = ({
+const ListItemWrapper = ({
   children,
   index,
 }: {
@@ -28,4 +28,4 @@ const ProjectItemWrapper = ({
   );
 };
 
-export default ProjectItemWrapper;
+export default ListItemWrapper;
