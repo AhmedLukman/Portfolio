@@ -4,6 +4,9 @@ import Image from "next/image";
 import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip";
 import { TextGenerateEffect } from "./TextGenerateEffect";
 import { Project } from "@/lib/types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectOverview = ({
   project: { description, image, site, source, techStack, metrics, title },
@@ -48,6 +51,7 @@ const ProjectOverview = ({
             variant="ghost"
             as={Link}
             href={source}
+            endContent={<FontAwesomeIcon icon={faGithub} />}
           >
             Source code
           </Button>
@@ -63,6 +67,7 @@ const ProjectOverview = ({
               className=" flex-grow opacity-0 animate-slideInFromRight delay-1500"
               as={Link}
               href={isSitePortfolio ? undefined : site}
+              endContent={<FontAwesomeIcon icon={faGlobe} />}
             >
               Explore site
             </Button>
