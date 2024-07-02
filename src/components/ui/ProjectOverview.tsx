@@ -77,7 +77,10 @@ const ProjectOverview = ({
               <span className="purple-gradient-text">Start Date</span>
             </h2>
             <div className="flex items-center gap-2">
-              <FontAwesomeIcon icon={faCalendarAlt} className="text-slate-300" />
+              <FontAwesomeIcon
+                icon={faCalendarAlt}
+                className="text-slate-300"
+              />
               <time className="text-slate-300">2024-9-5</time>
             </div>
           </div>
@@ -86,7 +89,10 @@ const ProjectOverview = ({
               <span className="purple-gradient-text">End Date</span>
             </h2>
             <div className="flex items-center gap-2">
-              <FontAwesomeIcon icon={faCalendarAlt} className="text-slate-300" />
+              <FontAwesomeIcon
+                icon={faCalendarAlt}
+                className="text-slate-300"
+              />
               <time className="text-slate-300">2024-11-7</time>
             </div>
           </div>
@@ -117,7 +123,7 @@ const ProjectOverview = ({
             <Button
               isExternal
               disabled={isSitePortfolio}
-              className=" flex-grow opacity-0 animate-slideInFromRight delay-2000"
+              className=" flex-grow opacity-0 animate-slideInFromRight delay-2000 hover:!opacity-80"
               as={Link}
               href={isSitePortfolio ? undefined : site}
               endContent={<FontAwesomeIcon icon={faGlobe} />}
