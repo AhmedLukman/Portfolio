@@ -4,15 +4,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@nextui-org/react";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 const CaseStudyCard = ({
   title,
   children,
   className,
+  icon,
   des,
 }: {
   title: string;
   children?: React.ReactNode;
+  icon: IconDefinition;
   className?: string;
   des: string;
 }) => {
@@ -46,9 +50,10 @@ const CaseStudyCard = ({
       <div className="relative z-20 px-10">
         <div
           className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
-        group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex items-center justify-center"
+        group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex items-center gap-2 justify-center"
         >
-          <h2 className="text-white">{title}</h2>
+          <h2 className="text-white text-lg">{title}</h2>
+          <FontAwesomeIcon icon={icon} className="text-white" />
         </div>
         <p
           className="text-sm opacity-0 group-hover/canvas-card:opacity-100
