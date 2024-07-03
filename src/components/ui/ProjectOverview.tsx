@@ -6,8 +6,13 @@ import { TextGenerateEffect } from "./TextGenerateEffect";
 import { Project } from "@/lib/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faCalendar, faCalendarAlt, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendar,
+  faCalendarAlt,
+  faGlobe,
+} from "@fortawesome/free-solid-svg-icons";
 import { Status } from "@/lib/constants";
+import { LinkPreview } from "./LinkPreview";
 
 const ProjectOverview = ({
   project: {
@@ -23,18 +28,23 @@ const ProjectOverview = ({
 }: {
   project: Project;
 }) => {
-
   const renderStatus = (status: Status) => {
     return (
       <>
         {status === Status.Completed && (
-          <Chip color="success" className="text-white">Completed</Chip>
+          <Chip color="success" className="text-white">
+            Completed
+          </Chip>
         )}
         {status === Status.Pending && (
-          <Chip color="warning" className="text-white">{status}</Chip>
+          <Chip color="warning" className="text-white">
+            {status}
+          </Chip>
         )}
         {status === Status.Cancelled && (
-          <Chip color="danger" className="text-white">{status}</Chip>
+          <Chip color="danger" className="text-white">
+            {status}
+          </Chip>
         )}
       </>
     );
@@ -104,33 +114,40 @@ const ProjectOverview = ({
           </div>
         </div>
         <div className="flex gap-5 mt-5">
-          <Button
-            className="text-white hover:text-black flex-grow opacity-0 animate-slideInFromLeft delay-2000"
-            isExternal
-            variant="ghost"
-            as={Link}
-            href={source}
-            endContent={<FontAwesomeIcon icon={faGithub} />}
-          >
-            Source code
-          </Button>
-          <Tooltip
-            color="secondary"
-            offset={15}
-            content={isSitePortfolio ? "Already viewing this site" : ""}
-            isDisabled={!isSitePortfolio}
-          >
+          <LinkPreview url={source} className="font-bold flex-grow">
             <Button
-              isExternal
-              disabled={isSitePortfolio}
-              className=" flex-grow opacity-0 animate-slideInFromRight delay-2000 hover:!opacity-80"
-              as={Link}
-              href={isSitePortfolio ? undefined : site}
-              endContent={<FontAwesomeIcon icon={faGlobe} />}
+              className="text-white w-full hover:text-black  opacity-0 animate-slideInFromLeft delay-2000"
+              variant="ghost"
+              endContent={<FontAwesomeIcon icon={faGithub} />}
             >
-              Explore site
+              Source code
             </Button>
-          </Tooltip>
+          </LinkPreview>
+          {isSitePortfolio && (
+            <Tooltip
+              color="secondary"
+              offset={15}
+              content="Already viewing this site"
+            >
+              <Button
+                className="flex-grow opacity-0 animate-slideInFromRight delay-2000"
+                endContent={<FontAwesomeIcon icon={faGlobe} />}
+                disabled
+              >
+                Explore site
+              </Button>
+            </Tooltip>
+          )}
+          {!isSitePortfolio && (
+            <LinkPreview url={site} className="font-bold flex-grow">
+              <Button
+                className="  w-full opacity-0 animate-slideInFromRight delay-2000 hover:!opacity-80"
+                endContent={<FontAwesomeIcon icon={faGlobe} />}
+              >
+                Explore site
+              </Button>
+            </LinkPreview>
+          )}
         </div>
       </div>
     </section>
