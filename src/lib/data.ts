@@ -6,6 +6,7 @@ export const WEB_QUALITIES = [
   "Aesthetic",
   "Functional",
   "Accessible",
+  "Semantic",
 ];
 
 export const TECH_AND_TOOLS = [
@@ -102,7 +103,6 @@ export const TECH_AND_TOOLS = [
     alt: "GitHub",
   },
 ];
-
 
 export const PROJECTS = [
   {
