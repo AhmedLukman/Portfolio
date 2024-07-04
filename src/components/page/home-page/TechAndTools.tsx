@@ -1,5 +1,5 @@
 import { AnimatedTooltip } from '@/components/ui/AnimatedTooltip';
-import { TECH_STACK } from '@/lib/constants';
+import { TECH_AND_TOOLS } from '@/lib/data';
 import React from 'react'
 
 const TechAndTools = () => {
@@ -8,7 +8,7 @@ const TechAndTools = () => {
       <h2 className=" text-xl text-slate-200 font-bold">
         Technologies and Tools
       </h2>
-      <AnimatedTooltip items={TECH_STACK} />
+      <AnimatedTooltip items={TECH_AND_TOOLS} />
     </section>
   );
 }

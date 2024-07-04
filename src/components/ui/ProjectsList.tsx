@@ -1,5 +1,5 @@
 import React from "react";
-import { PROJECTS, Status } from "@/lib/constants";
+import { Status } from "@/lib/constants";
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3DCard";
 import Link from "next/link";
@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Tooltip } from "@nextui-org/react";
 import ListItemWrapper from "./ListItemWrapper";
+import { PROJECTS } from "@/lib/data";
 
 const ProjectsList = () => {
   const renderStatus = (status: Status) => {

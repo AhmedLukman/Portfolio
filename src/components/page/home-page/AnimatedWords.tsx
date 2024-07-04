@@ -1,5 +1,5 @@
 import { FlipWords } from '@/components/ui/FlipWords';
-import { WEB_QUALITIES } from '@/lib/constants';
+import { WEB_QUALITIES } from '@/lib/data';
 import React from 'react'
 
 const AnimatedWords = () => {
