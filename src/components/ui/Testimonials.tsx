@@ -1,11 +1,12 @@
 import React from "react";
 import { InfiniteMovingCards } from "./InfiniteMovingCards";
 import { TESTIMONIALS } from "@/lib/data";
+import SectionHeader from "./SectionHeader";
 
 const Testimonials = () => {
   return (
-    <section className="mt-24 space-y-6">
-      <h2 className=" text-xl text-slate-200 font-bold">Testimonials</h2>
+    <section className="mt-24 space-y-8">
+      <SectionHeader>Testimonials</SectionHeader>
       <InfiniteMovingCards
         items={TESTIMONIALS}
         direction="right"
