@@ -34,7 +34,7 @@ export const FlipWords = ({
         setIsAnimating(false);
       }}
     >
-      <motion.div
+      <motion.em
         initial={{
           opacity: 0,
           y: 10,
@@ -59,7 +59,7 @@ export const FlipWords = ({
           position: "absolute",
         }}
         className={cn(
-          "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 ",
+          "z-10 inline-block relative text-left",
           className
         )}
         key={currentWord}
@@ -73,12 +73,13 @@ export const FlipWords = ({
               delay: index * 0.08,
               duration: 0.4,
             }}
-            className="inline-block"
+            className="inline-block text-slate-200"
+            style={{ fontStyle: "normal" }} // Ensure font style is normal
           >
             {letter}
           </motion.span>
         ))}
-      </motion.div>
+      </motion.em>
     </AnimatePresence>
   );
 };
