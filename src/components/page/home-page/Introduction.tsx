@@ -9,7 +9,7 @@ const Introduction = () => {
       <div className="basis-1/2 flex items-center animate-slideInFromLeft">
         <p className=" text-slate-300">
           I&apos;m a
-          <span className="purple-gradient-text"> modern developer </span>
+          <strong className="purple-gradient-text"> modern developer </strong>
           with a distinction <FontAwesomeIcon icon={faMedal} /> in Diploma in
           Business Information Technology. I excel academically, hold numerous
           certifications from courses and boot-camps, and have been featured in
