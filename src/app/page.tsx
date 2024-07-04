@@ -8,6 +8,7 @@ import Testimonials from "@/components/ui/Testimonials";
 import CTA from "@/components/ui/CTA";
 import Introduction from "@/components/page/home-page/Introduction";
 import GradientBorder from "@/components/ui/GradientBorder";
+import TechAndTools from "@/components/page/home-page/TechAndTools";
 
 export default function Home() {
   return (
@@ -20,10 +21,7 @@ export default function Home() {
 
       <Introduction />
 
-      <section className="mt-20 space-y-6">
-        <h2 className=" text-xl text-slate-200 font-bold">Tech Stack</h2>
-        <AnimatedTooltip items={TECH_STACK} />
-      </section>
+      <TechAndTools />
 
       <Testimonials />
 
