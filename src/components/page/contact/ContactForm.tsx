@@ -5,7 +5,7 @@ import { Input, Textarea } from "@nextui-org/react";
 import { useFormState } from "react-dom";
 import { sendEmail } from "@/lib/actions";
 import toast from "react-hot-toast";
-import SubmitButton from "./SubmitButton";
+import SubmitButton from "../../ui/SubmitButton";
 import { initialFormState } from "@/lib/constants";
 
 const ContactForm = () => {

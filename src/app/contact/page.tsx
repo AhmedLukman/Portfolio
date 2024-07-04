@@ -1,5 +1,5 @@
+import ContactForm from "@/components/page/contact/ContactForm";
 import ContactHeader from "@/components/page/contact/ContactHeader";
-import ContactForm from "@/components/ui/ContactForm";
 import GradientBorder from "@/components/ui/GradientBorder";
 import PageWrapper from "@/components/ui/PageWrapper";
 import Image from "next/image";
