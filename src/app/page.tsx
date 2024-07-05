@@ -5,12 +5,15 @@ import CTA from "@/components/ui/CTA";
 import Introduction from "@/components/page/home-page/Introduction";
 import TechAndTools from "@/components/page/home-page/TechAndTools";
 import AnimatedWords from "@/components/page/home-page/AnimatedWords";
-import HomeHeader from "@/components/page/home-page/HomeHeader";
+import PageHeader from "@/components/ui/PageHeader";
 
 export default function Home() {
   return (
     <PageWrapper>
-      <HomeHeader />
+      <PageHeader className="max-w-2xl">
+        Ahmed Lukman{" "}
+        <span className="purple-gradient-text">| Full Stack Developer</span>
+      </PageHeader>
       <Introduction />
       <TechAndTools />
       <Testimonials />

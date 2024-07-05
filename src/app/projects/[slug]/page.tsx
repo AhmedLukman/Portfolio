@@ -1,6 +1,6 @@
 import CaseStudy from "@/components/ui/CaseStudy";
 import Features from "@/components/ui/Features";
-import GradientBorder from "@/components/ui/GradientBorder";
+import PageHeader from "@/components/ui/PageHeader";
 import ProjectOverview from "@/components/ui/ProjectOverview";
 import { PROJECTS } from "@/lib/data";
 import { notFound } from "next/navigation";
@@ -26,10 +26,7 @@ const ProjectDetailsPage = ({
   if (!project) notFound();
   return (
     <div className="px-14 py-10">
-      <h1 className="text-3xl text-slate-200 text-center font-bold tracking-wide mb-1">
-        {project.title}
-      </h1>
-      <GradientBorder className="max-w-xl mx-auto" />
+      <PageHeader>{project.title}</PageHeader>
       <ProjectOverview project={project} />
       <CaseStudy project={project} />
       <Features />
