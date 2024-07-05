@@ -10,7 +10,7 @@ const Features = ({ project: { features } }: { project: Project }) => {
   return (
     <section className="mt-20">
       <SectionHeader className="text-center">Features</SectionHeader>
-      <ul className="text-slate-300 grid grid-cols-2 gap-5 mt-10 overflow-x-hidden">
+      <ul className="text-slate-300 grid grid-cols-2 gap-5 mt-10">
         {features.map((feature, index) => (
           <ListItemWrapper key={index} index={index}>
             <BorderContainer
