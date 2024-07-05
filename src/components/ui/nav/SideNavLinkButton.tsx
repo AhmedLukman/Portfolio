@@ -36,7 +36,7 @@ const SideNavLinkButton = ({
       endContent={
         isSocial && (
           <FontAwesomeIcon
-            className="group-hover:block hidden ml-auto"
+            className="ml-auto !opacity-0 group-hover:!opacity-100 !transition !duration-200"
             icon={faArrowUpRightFromSquare}
           />
         )
