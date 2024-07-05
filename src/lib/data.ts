@@ -111,7 +111,7 @@ export const PROJECTS = [
       "Discover and interact in a world of movies and TV shows at your fingertips! Dive into synopsis, rating and more in cinemania today!",
     image: "/assets/images/cinemania.png",
     route: "/projects/cinemania",
-    site: "https://cinemania-ahmedlukman.vercel.app/movie",
+    site: "https://cinemania-ahmedlukman.vercel.app",
     source: "https://github.com/AhmedLukman/Cinemania",
     status: Status.Pending,
     slug: "cinemania",
