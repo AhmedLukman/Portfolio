@@ -100,9 +100,9 @@ export const InfiniteMovingCards = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               <span className=" relative z-20 text-sm leading-[1.6] text-slate-200 font-normal">
-                &quot;{item.quote}&quot;
+                {item.quote}
               </span>
-              <div className="relative z-20 pt-6 flex gap-3 flex-row mt-auto items-center">
+              <div className="relative z-20 pt-10 flex gap-3 flex-row mt-auto items-center">
                 <Avatar src="https://avatars.githubusercontent.com/u/4723117?v=4" />
                 <span className="flex flex-col">
                   <span className=" leading-[1.6] text-slate-300 font-normal">
