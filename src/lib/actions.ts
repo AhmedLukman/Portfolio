@@ -1,10 +1,9 @@
 "use server";
 
-import nodemailer from "nodemailer";
-import SMTPTransport from "nodemailer/lib/smtp-transport";
 import { contactFormSchema } from "./schemas";
 import { initialFormState } from "./constants";
 import type { ContactForm } from "./types";
+import { Resend } from "resend";
 
 export const sendEmail = async (
   formState: ContactForm,
@@ -19,6 +18,7 @@ export const sendEmail = async (
     email: recipientEmail,
     message,
   });
+
   if (!success) {
     return {
       ...initialFormState,
@@ -28,45 +28,15 @@ export const sendEmail = async (
     };
   }
 
-  // Retrieve email credentials from environment variables
-  const email = process.env.EMAIL;
-  const pass = process.env.PASS;
-
-  // Set up nodemailer transporter
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: email,
-      pass,
-    },
-  });
-
-  const mailOptions: SMTPTransport.MailOptions = {
-    from: email,
-    to: email,
-    subject: `Portfolio Contact Form Submission from ${name}`,
-    text: data.message,
-    html: `
-        <div style="max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 10px; overflow: hidden;">
-          <header style="background-color: #657786; padding: 20px; border-radius: 10px;  border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
-                <h1 style="margin: 0; color: #fff; font-size: 20px;">Contact</h1>
-          </header>
-          <main style="padding: 20px; padding-top: 25px; padding-bottom: 25px; background-color: #fff;">
-                <p><strong style="color: #262c35; padding-left: 20px;">Name:</strong> ${name}</p>
-                <p><strong style="color: #262c35; padding-left: 20px;">Email:</strong> ${recipientEmail}</p>
-                <strong style="color: #262c35; padding-left: 20px;">Message:</strong>
-                <p style="padding-left: 20px; margin-top: 0">
-                ${message}
-                </p>
-          </main>
-        </div>
-    `,
-    replyTo: data.email,
-  };
-
-  // Send the email
   try {
-    await transporter.sendMail(mailOptions);
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    await resend.emails.send({
+      from: "Contact Form <onboarding@resend.dev>",
+      to: process.env.MY_EMAIL!,
+      subject: "Contact form submission from " + data.name,
+      text: data.message,
+      reply_to: data.email,
+    });
     return {
       ...initialFormState,
       db: "success",
