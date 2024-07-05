@@ -12,6 +12,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: ["bg-emerald-800", "bg-sky-600", "bg-pink-900"],
   theme: {
     extend: {
       backgroundImage: {
