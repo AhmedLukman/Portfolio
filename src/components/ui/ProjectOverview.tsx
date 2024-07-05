@@ -1,18 +1,13 @@
 import React from "react";
-import { Button, Chip, Link, Tooltip } from "@nextui-org/react";
+import { Button, Tooltip } from "@nextui-org/react";
 import Image from "next/image";
 import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip";
-import { TextGenerateEffect } from "./TextGenerateEffect";
 import { Project } from "@/lib/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import {
-  faCalendar,
-  faCalendarAlt,
-  faGlobe,
-} from "@fortawesome/free-solid-svg-icons";
-import { Status } from "@/lib/constants";
+import { faCalendarAlt, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { LinkPreview } from "./LinkPreview";
+import StatusChip from "./StatusChip";
 
 const ProjectOverview = ({
   project: {
@@ -28,28 +23,6 @@ const ProjectOverview = ({
 }: {
   project: Project;
 }) => {
-  const renderStatus = (status: Status) => {
-    return (
-      <>
-        {status === Status.Completed && (
-          <Chip color="success" className="text-white">
-            Completed
-          </Chip>
-        )}
-        {status === Status.Pending && (
-          <Chip color="warning" className="text-white">
-            {status}
-          </Chip>
-        )}
-        {status === Status.Cancelled && (
-          <Chip color="danger" className="text-white">
-            {status}
-          </Chip>
-        )}
-      </>
-    );
-  };
-
   const isSitePortfolio = site === "https://portfolio-ahmedlukman.vercel.app";
   return (
     <section className="flex gap-14 justify-between mt-12">
@@ -110,7 +83,7 @@ const ProjectOverview = ({
             <h2 className="text-xl font-bold">
               <span className="purple-gradient-text">Status</span>
             </h2>
-            {renderStatus(status)}
+            <StatusChip status={status} />
           </div>
         </div>
         <div className="flex gap-5 mt-5">
