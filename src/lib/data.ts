@@ -144,6 +144,14 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/Cinemania",
     status: Status.Pending,
     slug: "cinemania",
+    features: [
+      "Protects user data with cutting-edge encryption and security protocols.",
+      "Ensures a responsive and seamless user experience across all devices.",
+      "Offers an easy-to-navigate interface for enhanced user engagement",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+    ],
     caseStudy: [
       {
         ...problemCaseStudy,
@@ -220,6 +228,14 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/Portfolio",
     status: Status.Pending,
     slug: "portfolio",
+    features: [
+      "Protects user data with cutting-edge encryption and security protocols.",
+      "Ensures a responsive and seamless user experience across all devices.",
+      "Offers an easy-to-navigate interface for enhanced user engagement",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+    ],
     caseStudy: [
       {
         ...problemCaseStudy,
@@ -292,6 +308,14 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    features: [
+      "Protects user data with cutting-edge encryption and security protocols.",
+      "Ensures a responsive and seamless user experience across all devices.",
+      "Offers an easy-to-navigate interface for enhanced user engagement",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+    ],
     caseStudy: [
       {
         ...problemCaseStudy,
@@ -368,6 +392,14 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    features: [
+      "Protects user data with cutting-edge encryption and security protocols.",
+      "Ensures a responsive and seamless user experience across all devices.",
+      "Offers an easy-to-navigate interface for enhanced user engagement",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+    ],
     caseStudy: [
       {
         ...problemCaseStudy,
@@ -444,6 +476,14 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    features: [
+      "Protects user data with cutting-edge encryption and security protocols.",
+      "Ensures a responsive and seamless user experience across all devices.",
+      "Offers an easy-to-navigate interface for enhanced user engagement",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+    ],
     caseStudy: [
       {
         ...problemCaseStudy,
@@ -520,6 +560,14 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    features: [
+      "Protects user data with cutting-edge encryption and security protocols.",
+      "Ensures a responsive and seamless user experience across all devices.",
+      "Offers an easy-to-navigate interface for enhanced user engagement",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+    ],
     caseStudy: [
       {
         ...problemCaseStudy,
@@ -596,6 +644,14 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    features: [
+      "Protects user data with cutting-edge encryption and security protocols.",
+      "Ensures a responsive and seamless user experience across all devices.",
+      "Offers an easy-to-navigate interface for enhanced user engagement",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+    ],
     caseStudy: [
       {
         ...problemCaseStudy,
@@ -672,6 +728,14 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    features: [
+      "Protects user data with cutting-edge encryption and security protocols.",
+      "Ensures a responsive and seamless user experience across all devices.",
+      "Offers an easy-to-navigate interface for enhanced user engagement",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+    ],
     caseStudy: [
       {
         ...problemCaseStudy,
@@ -748,6 +812,14 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    features: [
+      "Protects user data with cutting-edge encryption and security protocols.",
+      "Ensures a responsive and seamless user experience across all devices.",
+      "Offers an easy-to-navigate interface for enhanced user engagement",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Delivers instant feedback and updates ensuring users are highly informed.",
+    ],
     caseStudy: [
       {
         ...problemCaseStudy,

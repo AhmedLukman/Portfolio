@@ -29,7 +29,7 @@ const ProjectDetailsPage = ({
       <PageHeader>{project.title}</PageHeader>
       <ProjectOverview project={project} />
       <CaseStudy project={project} />
-      <Features />
+      <Features project={project} />
     </div>
   );
 };

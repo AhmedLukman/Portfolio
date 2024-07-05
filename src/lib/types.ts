@@ -21,6 +21,7 @@ export type Project = {
     src: string;
     score: string;
   }[];
+  features: string[];
   caseStudy: {
     title: string;
     description: string;
