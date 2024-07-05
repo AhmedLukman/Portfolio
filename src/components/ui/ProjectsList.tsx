@@ -1,50 +1,12 @@
 import React from "react";
-import { Status } from "@/lib/constants";
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3DCard";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBan,
-  faCheckCircle,
-  faClock,
-} from "@fortawesome/free-solid-svg-icons";
-import { Tooltip } from "@nextui-org/react";
 import ListItemWrapper from "./ListItemWrapper";
 import { PROJECTS } from "@/lib/data";
+import StatusIcon from "./StatusIcon";
 
 const ProjectsList = () => {
-  // refactor renderStatus fn (ask gpt whre to put it)
-  const renderStatus = (status: Status) => {
-    return (
-      <>
-        {status === Status.Completed && (
-          <Tooltip content={Status.Completed} color="success">
-            <FontAwesomeIcon icon={faCheckCircle} className="text-green-500" />
-          </Tooltip>
-        )}
-        {status === Status.Pending && (
-          <Tooltip content={Status.Pending} color="warning">
-            <FontAwesomeIcon
-              title="Pending"
-              icon={faClock}
-              className="text-yellow-500"
-            />
-          </Tooltip>
-        )}
-        {status === Status.Cancelled && (
-          <Tooltip content={Status.Cancelled} color="danger">
-            <FontAwesomeIcon
-              title="Cancelled"
-              icon={faBan}
-              className="text-red-500"
-            />
-          </Tooltip>
-        )}
-      </>
-    );
-  };
-
   return (
     <ul className="flex justify-between w-full mt-16 flex-wrap">
       {PROJECTS.map(({ title, description, image, route, status }, index) => (
@@ -57,7 +19,7 @@ const ProjectsList = () => {
                   className="text-xl font-bold w-full text-slate-200 flex justify-between items-center"
                 >
                   <h2>{title}</h2>
-                  {renderStatus(status)}
+                  <StatusIcon status={status} />
                 </CardItem>
                 <CardItem
                   as="div"
