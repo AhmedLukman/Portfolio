@@ -7,13 +7,14 @@ import {
   faLightbulb,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
+import SectionHeader from "./SectionHeader";
 
 const CaseStudy = ({ project }: { project: Project }) => {
   return (
     <section className="mt-20">
-      <h2 className=" text-2xl text-center text-slate-200 font-bold">
+      <SectionHeader className="text-center">
         Case Study
-      </h2>
+      </SectionHeader>
       <div className="mt-10 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         <CaseStudyCard
           icon={faExclamationTriangle}

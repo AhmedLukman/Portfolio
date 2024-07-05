@@ -3,14 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { BorderContainer } from "./MovingBorder";
 import ListItemWrapper from "./ListItemWrapper";
+import SectionHeader from "./SectionHeader";
 
 const Features = () => {
   return (
     <section className="mt-20">
-      <h2 className=" text-2xl text-center mb-10 text-slate-200 font-bold">
+      <SectionHeader className="text-center">
         Features
-      </h2>
-      <ol className="text-slate-300 grid grid-cols-2 gap-5">
+      </SectionHeader>
+      <ol className="text-slate-300 grid grid-cols-2 gap-5 mt-10">
         <ListItemWrapper index={0}>
           <BorderContainer
             duration={Math.floor(Math.random() * 10000) + 10000}
