@@ -26,7 +26,7 @@ const ContactForm = () => {
     <form
       ref={formRef}
       action={formAction}
-      className="max-w-xl mx-auto mt-10 space-y-6"
+      className="max-w-xl mx-auto mt-16 space-y-6"
     >
       <div className="flex gap-6">
         <Input

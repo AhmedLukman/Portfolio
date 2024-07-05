@@ -13,7 +13,7 @@ const ContactPage = () => {
       <ContactForm />
       <Image
         src="/assets/images/shakehands.png"
-        className="object-contain absolute right-0 bottom-0"
+        className="object-contain absolute right-0 top-24"
         priority
         width={300}
         height={480}

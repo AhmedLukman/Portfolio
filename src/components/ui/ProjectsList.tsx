@@ -14,6 +14,7 @@ import ListItemWrapper from "./ListItemWrapper";
 import { PROJECTS } from "@/lib/data";
 
 const ProjectsList = () => {
+  // refactor renderStatus fn (ask gpt whre to put it)
   const renderStatus = (status: Status) => {
     return (
       <>
@@ -45,7 +46,7 @@ const ProjectsList = () => {
   };
 
   return (
-    <ul className="flex justify-between w-full mt-10 flex-wrap">
+    <ul className="flex justify-between w-full mt-16 flex-wrap">
       {PROJECTS.map(({ title, description, image, route, status }, index) => (
         <ListItemWrapper key={title} index={index}>
           <CardContainer>

@@ -52,7 +52,7 @@ const ProjectOverview = ({
 
   const isSitePortfolio = site === "https://portfolio-ahmedlukman.vercel.app";
   return (
-    <section className="flex gap-14 justify-between mt-10">
+    <section className="flex gap-14 justify-between mt-12">
       <div className="basis-1/2 relative">
         <Image
           src={image}
@@ -62,7 +62,7 @@ const ProjectOverview = ({
           className="object-contain animate-slideInFromLeft"
         />
       </div>
-      <div className="flex flex-col basis-1/2 justify-between gap-8">
+      <div className="flex flex-col basis-1/2 justify-between gap-10">
         <div className="flex flex-col gap-1 animate-slideInFromBottom">
           <h2 className="text-xl font-bold">
             <span className="purple-gradient-text">Description</span>
