@@ -25,6 +25,7 @@
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
     "react-intersection-observer": "^9.10.3",
+    "resend": "^3.4.0",
     "three": "^0.166.0",
     "zod": "^3.23.8"
   },
