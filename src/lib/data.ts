@@ -1,3 +1,8 @@
+import {
+  faExclamationTriangle,
+  faLightbulb,
+  faThumbsUp,
+} from "@fortawesome/free-solid-svg-icons";
 import { Status } from "./constants";
 
 export const WEB_QUALITIES = [
@@ -104,6 +109,30 @@ export const TECH_AND_TOOLS = [
   },
 ];
 
+const problemCaseStudy = {
+  title: "Problem",
+  icon: faExclamationTriangle,
+  colors: [
+    [255, 166, 158],
+    [221, 255, 247],
+  ],
+  bgColor: "bg-pink-900",
+};
+
+const solutionCaseStudy = {
+  title: "Solution",
+  icon: faLightbulb,
+  bgColor: "bg-sky-600",
+  colors: [[125, 211, 252]],
+};
+
+const outcomeCaseStudy = {
+  title: "Outcome",
+  icon: faThumbsUp,
+  colors: [[125, 211, 252]],
+  bgColor: "bg-emerald-800",
+};
+
 export const PROJECTS = [
   {
     title: "Cinemania",
@@ -115,6 +144,23 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/Cinemania",
     status: Status.Pending,
     slug: "cinemania",
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+      },
+    ],
     techStack: [
       {
         alt: "Next Js",
@@ -174,6 +220,23 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/Portfolio",
     status: Status.Pending,
     slug: "portfolio",
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+      },
+    ],
     techStack: [
       {
         alt: "Next Js",
@@ -229,6 +292,23 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+      },
+    ],
     techStack: [
       {
         alt: "Next Js",
@@ -288,6 +368,23 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+      },
+    ],
     techStack: [
       {
         alt: "Next Js",
@@ -347,6 +444,23 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+      },
+    ],
     techStack: [
       {
         alt: "Next Js",
@@ -406,6 +520,23 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+      },
+    ],
     techStack: [
       {
         alt: "Next Js",
@@ -465,6 +596,23 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+      },
+    ],
     techStack: [
       {
         alt: "Next Js",
@@ -524,6 +672,23 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+      },
+    ],
     techStack: [
       {
         alt: "Next Js",
@@ -583,6 +748,23 @@ export const PROJECTS = [
     source: "https://github.com/AhmedLukman/next_auth_prisma_training",
     status: Status.Completed,
     slug: "next-auth-prisma-training",
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+      },
+    ],
     techStack: [
       {
         alt: "Next Js",
