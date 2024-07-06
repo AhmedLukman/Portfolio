@@ -3,6 +3,7 @@ import { BackgroundGradient } from "./BackgroundGradient";
 import { Button, Link } from "@nextui-org/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SOCIAL_LINKS } from "@/lib/constants";
+import { faMessage } from "@fortawesome/free-regular-svg-icons";
 
 const CTA = () => {
   return (
@@ -20,8 +21,8 @@ const CTA = () => {
         <footer className="flex w-full">
           <div className="basis-1/3" />
           <div className="flex basis-1/3 justify-center">
-            <Button as={Link} href="/contact">
-              Contact me now
+            <Button as={Link} href="/contact" endContent={<FontAwesomeIcon icon={faMessage} />}>
+              Contact me
             </Button>
           </div>
           <div className="basis-1/3 flex justify-end gap-1.5">
