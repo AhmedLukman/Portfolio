@@ -30,7 +30,7 @@ const ProjectsList = () => {
                 </CardItem>
                 <CardItem translateZ="99" className="group mt-4">
                   <Image
-                    priority
+                    priority = {index < 2 ? true : false}
                     src={image}
                     height={400}
                     width={650}
