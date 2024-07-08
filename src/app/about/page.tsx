@@ -6,11 +6,11 @@ import { WobbleCard } from "@/components/ui/WobbleCard";
 import {
   Card,
   CardHeader,
-  Image,
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@nextui-org/react";
+import Image from "next/image";
 import React from "react";
 
 const globeConfig = {
@@ -446,16 +446,16 @@ const AboutPage = () => {
                     Front-End
                   </h4>
                 </CardHeader>
-                <div className="inset-0 absolute bg-slate-900/60 z-10" />
+                <div className="inset-0 absolute bg-black/60 z-10" />
                 <Image
-                  removeWrapper
-                  alt="Relaxing app background"
+                  fill
+                  alt=""
                   className="z-0 w-full h-full object-cover object-right"
-                  src="/assets/images/design2.jpg"
+                  src="/assets/images/frontend.jpg"
                 />
               </Card>
             </PopoverTrigger>
-            <PopoverContent className="bg-[#0a0e14] text-white">
+            <PopoverContent className="bg-purple-900 text-white">
               <p className="p-2 max-w-xs">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Eveniet cupiditate mollitia saepe sunt error numquam distinctio?
@@ -468,16 +468,16 @@ const AboutPage = () => {
                 <CardHeader className="absolute z-20 top-1 flex-col items-start">
                   <h4 className="text-slate-200 font-bold text-xl">Back-End</h4>
                 </CardHeader>
-                <div className="inset-0 absolute bg-slate-900/60 z-10" />
+                <div className="inset-0 absolute bg-black/60 z-10" />
                 <Image
-                  removeWrapper
-                  alt="Relaxing app background"
+                  fill
+                  alt=""
                   className="z-0 w-full h-full object-cover"
                   src="/assets/images/backend.jpg"
                 />
               </Card>
             </PopoverTrigger>
-            <PopoverContent className="bg-[#0a0e14] text-white">
+            <PopoverContent className="bg-purple-900 text-white">
               <p className="p-2 max-w-xs">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Eveniet cupiditate mollitia saepe sunt error numquam distinctio?
@@ -490,16 +490,16 @@ const AboutPage = () => {
                 <CardHeader className="absolute z-20 top-1 flex-col items-start">
                   <h4 className="text-slate-200 font-bold text-xl">UI/UX</h4>
                 </CardHeader>
-                <div className="inset-0 absolute bg-slate-900/60 z-10" />
+                <div className="inset-0 absolute bg-black/60 z-10" />
                 <Image
-                  removeWrapper
-                  alt="Relaxing app background"
+                  fill
+                  alt=""
                   className="z-0 w-full h-full object-cover"
                   src="/assets/images/design.jpg"
                 />
               </Card>
             </PopoverTrigger>
-            <PopoverContent className="bg-[#0a0e14] text-white">
+            <PopoverContent className="bg-purple-900 text-white">
               <p className="p-2 max-w-xs">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Eveniet cupiditate mollitia saepe sunt error numquam distinctio?
@@ -509,13 +509,13 @@ const AboutPage = () => {
         </div>
       </section>
       <section className="mt-14">
-        <SectionHeader className="text-center">Why Choose Me</SectionHeader>
+        <SectionHeader className="text-center">Why i am fit</SectionHeader>
         <div className="grid grid-cols-1 lg:grid-cols-3 mt-8 gap-4 max-w-7xl mx-auto w-full">
           <WobbleCard
             containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
             className=""
           >
-            <div className="max-w-xs">
+            <div className="m ">
               <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
                 Up-to-Date with Evolving Technology
               </h2>
@@ -524,13 +524,6 @@ const AboutPage = () => {
                 technology, continuously enhancing my skills to bring the best
                 solutions to the table.
               </p>
-            </div>
-            <div className="absolute w-1/3 -top-5 right-0 inset-y-0">
-              <Image
-                src="/assets/images/frontend2.jpg"
-                alt="linear demo image"
-                className="object-contain rounded-2xl rounded-br-none"
-              />
             </div>
           </WobbleCard>
           <WobbleCard containerClassName="col-span-1 min-h-[300px]">
