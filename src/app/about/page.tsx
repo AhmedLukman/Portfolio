@@ -12,6 +12,7 @@ const AboutPage = () => {
     <PageWrapper>
       <PageHeader>About me</PageHeader>
       <Introduction />
+      <Mastery />
     </PageWrapper>
   );
 };
