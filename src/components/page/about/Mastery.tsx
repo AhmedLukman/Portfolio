@@ -1,88 +1,72 @@
-import React from 'react'
-import {
-  Card,
-  CardHeader,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@nextui-org/react";
+import React from "react";
+import { Card, CardBody, CardHeader } from "@nextui-org/react";
 
 import Image from "next/image";
-import SectionHeader from '@/components/ui/SectionHeader';
+import SectionHeader from "@/components/ui/SectionHeader";
 const Mastery = () => {
   return (
     <section className="mt-14">
       <SectionHeader className="text-center">Mastery</SectionHeader>
       <div className="flex gap-5 mt-8">
-        <Popover offset={10} placement="bottom">
-          <PopoverTrigger>
-            <Card isPressable className="w-full h-72">
-              <CardHeader className="absolute z-20 top-1 flex-col items-start">
-                <h4 className="text-slate-200 font-bold text-xl">Front-End</h4>
-              </CardHeader>
-              <div className="inset-0 absolute bg-black/60 z-10" />
-              <Image
-                fill
-                alt=""
-                className="z-0 w-full h-full object-cover object-right"
-                src="/assets/images/frontend.jpg"
-              />
-            </Card>
-          </PopoverTrigger>
-          <PopoverContent className="bg-purple-900 text-white">
-            <p className="p-2 max-w-xs">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              cupiditate mollitia saepe sunt error numquam distinctio?
+        <Card className="w-full h-72 group">
+          <CardHeader className="absolute z-20 top-1 flex-col items-start">
+            <h3 className="text-slate-200 font-bold text-xl">Front-End</h3>
+          </CardHeader>
+          <CardBody className="z-20 absolute top-14 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-slate-300">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
+              aliquam.
             </p>
-          </PopoverContent>
-        </Popover>
-        <Popover offset={10} placement="bottom">
-          <PopoverTrigger>
-            <Card isPressable className="w-full h-72">
-              <CardHeader className="absolute z-20 top-1 flex-col items-start">
-                <h4 className="text-slate-200 font-bold text-xl">Back-End</h4>
-              </CardHeader>
-              <div className="inset-0 absolute bg-black/60 z-10" />
-              <Image
-                fill
-                alt=""
-                className="z-0 w-full h-full object-cover"
-                src="/assets/images/backend.jpg"
-              />
-            </Card>
-          </PopoverTrigger>
-          <PopoverContent className="bg-purple-900 text-white">
-            <p className="p-2 max-w-xs">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              cupiditate mollitia saepe sunt error numquam distinctio?
+          </CardBody>
+          <div className="inset-0 absolute bg-black/60 z-10" />
+          <Image
+            priority
+            fill
+            alt=""
+            className="z-0 w-full h-full object-cover object-right"
+            src="/assets/images/frontend.jpg"
+          />
+        </Card>
+
+        <Card isPressable className="w-full h-72">
+          <CardHeader className="absolute z-20 top-1 flex-col items-start">
+            <h4 className="text-slate-200 font-bold text-xl">Back-End</h4>
+          </CardHeader>
+          <CardBody className="z-20 absolute top-14 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-slate-300">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
+              aliquam.
             </p>
-          </PopoverContent>
-        </Popover>
-        <Popover placement="bottom" offset={10}>
-          <PopoverTrigger>
-            <Card isPressable className="w-full h-72">
-              <CardHeader className="absolute z-20 top-1 flex-col items-start">
-                <h4 className="text-slate-200 font-bold text-xl">UI/UX</h4>
-              </CardHeader>
-              <div className="inset-0 absolute bg-black/60 z-10" />
-              <Image
-                fill
-                alt=""
-                className="z-0 w-full h-full object-cover"
-                src="/assets/images/design.jpg"
-              />
-            </Card>
-          </PopoverTrigger>
-          <PopoverContent className="bg-purple-900 text-white">
-            <p className="p-2 max-w-xs">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              cupiditate mollitia saepe sunt error numquam distinctio?
+          </CardBody>
+          <div className="inset-0 absolute bg-black/60 z-10" />
+          <Image
+            fill
+            alt=""
+            className="z-0 w-full h-full object-cover"
+            src="/assets/images/backend.jpg"
+          />
+        </Card>
+        <Card isPressable className="w-full h-72">
+          <CardHeader className="absolute z-20 top-1 flex-col items-start">
+            <h4 className="text-slate-200 font-bold text-xl">UI/UX</h4>
+          </CardHeader>
+          <CardBody className="z-20 absolute top-14 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-slate-300">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
+              aliquam.
             </p>
-          </PopoverContent>
-        </Popover>
+          </CardBody>
+          <div className="inset-0 absolute bg-black/60 z-10" />
+          <Image
+            fill
+            alt=""
+            className="z-0 w-full h-full object-cover"
+            src="/assets/images/design.jpg"
+          />
+        </Card>
       </div>
     </section>
   );
-}
+};
 
-export default Mastery
+export default Mastery;
