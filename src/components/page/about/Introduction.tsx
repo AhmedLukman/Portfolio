@@ -2,35 +2,31 @@ import React from 'react'
 
 const Introduction = () => {
   return (
-    <section className="mt-16">
-      <p className="text-slate-300">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et recusandae
-        perferendis accusantium deserunt natus soluta veniam mollitia obcaecati
-        animi ad ducimus, beatae similique aliquid distinctio non eos asperiores
-        placeat magni. Odio enim iste magnam aliquid alias exercitationem
-        molestias at, maiores numquam saepe dignissimos similique accusantium
-        fugit, dolores ratione modi aperiam nisi placeat reprehenderit officiis
-        minus! Quae iure excepturi quam! Possimus!
+    <section className="mt-14 text-slate-300">
+      <p>
+        From a very young age, I have always been fascinated by computing, even
+        before I can remember. My uncle, a tech and networking enthusiast, owned
+        an old LCD display. Whenever he came home, he would teach me how to type
+        and navigate a personal computer. In his absence, I practiced what I had
+        learned. I learned how to browse the internet, play games using the
+        keyboard and mouse, download files via BitTorrent, and write documents,
+        among other skills.
       </p>
       <br />
-      <p className="text-slate-300">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
-        eligendi distinctio molestiae ab culpa natus libero, rem aliquam?
-        Obcaecati eaque sit ratione ab laudantium deleniti ipsum est. Est, quas
-        recusandae! Autem quis distinctio beatae temporibus, quibusdam
-        excepturi. A ut maiores minus quod omnis aperiam, aut esse maxime
-        quibusdam libero illum mollitia incidunt adipisci tenetur beatae
-        similique dolores. Dolores, eum obcaecati.
+      <p>
+        As time went by, I was introduced to the concept of programming.
+        Initially, I struggled to grasp it, but I gave it another try during my
+        first year in high school. I started with front-end web technologies
+        like HTML and CSS. As the years passed, I progressed to JavaScript.
+        During my first year at university, I was introduced to frameworks like
+        Flutter and libraries like React.
       </p>
       <br />
-      <p className="text-slate-300">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem natus
-        amet commodi architecto ratione doloribus quos, inventore sit dolorem
-        consequuntur nisi, velit odio libero. Obcaecati sit quam id adipisci
-        debitis. Aperiam fuga officiis recusandae consectetur facilis, et enim
-        autem vitae doloribus, mollitia itaque earum accusamus nostrum. Corrupti
-        placeat amet corporis vitae veniam tenetur laudantium at cumque animi?
-        Dolor, magnam ex.
+      <p>
+        Today, I utilize over five top libraries and the latest tech stack to
+        build elegant and efficient full stack web applications. I build cutting edge projects as a hobby. My journey from basic
+        computer skills to advanced programming has been driven by a deep
+        passion for technology and continuous learning.
       </p>
     </section>
   );
