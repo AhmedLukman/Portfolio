@@ -1,3 +1,4 @@
+import Certifications from "@/components/page/about/Certifications";
 import Experience from "@/components/page/about/Experience";
 import Introduction from "@/components/page/about/Introduction";
 import Mastery from "@/components/page/about/Mastery";
@@ -14,6 +15,7 @@ const AboutPage = () => {
       <Mastery />
       <WhyChoose />
       <Experience />
+      <Certifications />
     </PageWrapper>
   );
 };

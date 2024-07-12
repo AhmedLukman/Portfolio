@@ -19,7 +19,7 @@ const ExperienceList = () => {
           <ListItemWrapper index={index} key={index}>
             <Card className="bg-transparent border hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-200 border-slate-500">
               <CardHeader as="header" className="flex justify-between">
-                <h3 className="text-slate-200 text-xl">{title}</h3>
+                <h3 className="purple-gradient-text text-xl">{title}</h3>
                 <div className="space-x-3">
                   <Chip variant="bordered" className="text-slate-300">
                     {type}
