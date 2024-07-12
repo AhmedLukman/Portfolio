@@ -1,16 +1,16 @@
 import React from "react";
 import { Card, CardBody, CardHeader } from "@nextui-org/react";
-
 import Image from "next/image";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { MASTERY } from "@/lib/data";
+
 const Mastery = () => {
   return (
     <section className="mt-14">
       <SectionHeader className="text-center">Mastery</SectionHeader>
-      <div className="flex gap-5 mt-8">
+      <ul className="flex gap-5 mt-8">
         {MASTERY.map(({description, title,src}) => (
-          <Card key={title} className="w-full h-72 group">
+          <Card as="li" key={title} className="w-full h-72 group">
             <CardHeader className="absolute z-20 top-1 flex-col items-start">
               <h3 className="text-slate-200 font-bold text-xl">{title}</h3>
             </CardHeader>
@@ -23,13 +23,13 @@ const Mastery = () => {
             <Image
               priority
               fill
-              alt=""
+              alt={title}
               className="z-0 w-full h-full object-cover"
               src={src}
             />
           </Card>
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

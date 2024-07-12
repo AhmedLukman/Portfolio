@@ -1298,19 +1298,19 @@ export const MASTERY = [
   {
     title: "Front-End",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam.",
+      "Expert in creating beautiful, high-performance, responsive, and user-friendly web applications.",
     src: "/assets/images/frontend.jpg",
   },
   {
     title: "Back-End",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam.",
+      "Skilled in developing robust, scalable, and secure server-side applications.",
     src: "/assets/images/backend.jpg",
   },
   {
     title: "UI/UX",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam.",
+      "Focused on creating intuitive, engaging, and visually captivating user interfaces that enhance user experience.",
     src: "/assets/images/design.jpg",
   },
 ];
