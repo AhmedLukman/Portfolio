@@ -1314,3 +1314,24 @@ export const MASTERY = [
     src: "/assets/images/design.jpg",
   },
 ];
+
+export const EXPERIENCE = [
+  {
+    title: "Next JS Developer",
+    type: "Intership",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam. ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam ",
+    company: "@iLabAfrica",
+    startDate: "2022-5-3",
+    endDate: "2022-8-3",
+  },
+  {
+    title: "Next JS Developer",
+    type: "Internship",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam. ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam",
+    company: "Trinetium DMCC",
+    startDate: "2023-5-3",
+    endDate: "2023-8-3",
+  },
+];

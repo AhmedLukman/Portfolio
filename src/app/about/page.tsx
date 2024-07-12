@@ -1,3 +1,4 @@
+import Experience from "@/components/page/about/Experience";
 import Introduction from "@/components/page/about/Introduction";
 import Mastery from "@/components/page/about/Mastery";
 import WhyChoose from "@/components/page/about/WhyChoose";
@@ -12,6 +13,7 @@ const AboutPage = () => {
       <Introduction />
       <Mastery />
       <WhyChoose />
+      <Experience />
     </PageWrapper>
   );
 };
