@@ -1293,3 +1293,24 @@ export const SAMPLE_ARCS = [
     color: colors[Math.floor(Math.random() * (colors.length - 1))],
   },
 ];
+
+export const MASTERY = [
+  {
+    title: "Front-End",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam.",
+    src: "/assets/images/frontend.jpg",
+  },
+  {
+    title: "Back-End",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam.",
+    src: "/assets/images/backend.jpg",
+  },
+  {
+    title: "UI/UX",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam.",
+    src: "/assets/images/design.jpg",
+  },
+];
