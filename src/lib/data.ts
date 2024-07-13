@@ -1317,21 +1317,23 @@ export const MASTERY = [
 
 export const EXPERIENCE = [
   {
-    title: "Next JS Developer",
+    title: "Full Stack Developer",
     type: "Intership",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam. ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam ",
+      "Front End Web and Mobile Developer, collaborated adeptly with UI/UX designers and engineers to craft clean, high-performance full-stack web solutions. Key contributions to projects like Adapta, SSAMS, Digital Learning, and Next Events. Recognized as the Lead Intern, entrusted with independent design responsibilities due to a trusted sense of aesthetic.",
     company: "@iLabAfrica",
-    startDate: "2022-5-3",
-    endDate: "2022-8-3",
+    startDate: "2023-03",
+    endDate: "2023-08",
+    status: Status.Completed
   },
   {
     title: "Next JS Developer",
     type: "Internship",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam. ipsum dolor sit amet, consectetur adipisicing elit. Illum, aliquam",
+      "Developed aesthetically pleasing UI components for the web, integrating dynamic features such as drag and drop, and seamlessly incorporated APIs using Next JS and Express. Recognized for achieving high performance and receiving praise for design excellence.",
     company: "Trinetium DMCC",
-    startDate: "2023-5-3",
-    endDate: "2023-8-3",
+    startDate: "2022-8",
+    endDate: "2022-10",
+    status: Status.Completed
   },
 ];
