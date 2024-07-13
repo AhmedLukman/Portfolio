@@ -8,13 +8,13 @@ const Introduction = () => {
     <section className="flex justify-between mt-14 h-64">
       <div className="basis-1/2 flex items-center animate-slideInFromLeft">
         <p className=" text-slate-300">
-          I&apos;m a
-          <strong className="purple-gradient-text"> modern developer </strong>
-          with a distinction <FontAwesomeIcon icon={faMedal} /> in Diploma in
-          Business Information Technology. I excel academically, hold numerous
-          certifications from courses and boot-camps, and have been featured in
-          national media. My commitment to continuous learning and problem
-          solving drives my passion as a programmer.
+          I&apos;m a <strong className="purple-gradient-text"> modern developer </strong>
+          with a distinguished Diploma in Business Information Technology{" "}
+          <FontAwesomeIcon icon={faMedal} /> . Beyond academic excellence, I
+          possess a rich tapestry of certifications from top-tier courses and
+          boot-camps, alongside recognition in national media. My unwavering
+          dedication to mastering new skills and solving complex problems fuels
+          my passion for programming, making me an ideal candidate anywhere.
         </p>
       </div>
       <div className="relative basis-1/2 animate-slideInFromRight">
