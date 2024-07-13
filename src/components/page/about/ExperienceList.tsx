@@ -13,7 +13,7 @@ import React from "react";
 
 const ExperienceList = () => {
   return (
-    <ul className="w-full mt-16 space-y-8">
+    <ul className="w-full mt-8 space-y-8">
       {EXPERIENCE.map(
         ({ company, description, title, type, startDate, endDate }, index) => (
           <ListItemWrapper index={index} key={index}>
@@ -33,9 +33,9 @@ const ExperienceList = () => {
               <CardFooter as="footer" className="flex justify-between">
                 <p className="text-slate-300">{company}</p>
                 <div>
-                  <time className="text-slate-300">{startDate}</time>{" "}
+                  <time dateTime={startDate} className="text-slate-300">{startDate}</time>{" "}
                   <span className="text-slate-300">| </span>
-                  <time className="text-slate-300">{endDate}</time>
+                  <time dateTime={endDate} className="text-slate-300">{endDate}</time>
                 </div>
               </CardFooter>
             </Card>

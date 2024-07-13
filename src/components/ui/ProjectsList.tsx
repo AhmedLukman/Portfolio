@@ -8,7 +8,7 @@ import StatusIcon from "./StatusIcon";
 
 const ProjectsList = () => {
   return (
-    <ul className="flex justify-between w-full mt-16 flex-wrap">
+    <ul className="flex justify-between w-full mt-8 flex-wrap">
       {PROJECTS.map(({ title, description, image, route, status }, index) => (
         <ListItemWrapper key={title} index={index}>
           <CardContainer>
@@ -30,7 +30,7 @@ const ProjectsList = () => {
                 </CardItem>
                 <CardItem translateZ="99" className="group mt-4">
                   <Image
-                    priority = {index < 2 ? true : false}
+                    priority={index < 2 ? true : false}
                     src={image}
                     height={400}
                     width={650}
