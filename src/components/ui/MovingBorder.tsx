@@ -9,14 +9,16 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "@nextui-org/react";
+import { Button as NextButton } from "@nextui-org/react";
 
-export function BorderContainer({
+export function Button({
   borderRadius = "1.75rem",
   children,
   containerClassName,
   borderClassName,
   duration,
   className,
+  file,
   ...otherProps
 }: {
   borderRadius?: string;
@@ -26,13 +28,16 @@ export function BorderContainer({
   borderClassName?: string;
   duration?: number;
   className?: string;
+  file: string;
   [key: string]: any;
 }) {
   return (
-    <div
+    <NextButton
+      as="a"
+      href={`/assets/files/${file}`}
+      download={file}
       className={cn(
-        // remove h-16 w-40, add  md:col-span-2
-        "bg-transparent relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1",
+        "bg-transparent relative text-xl  h-10 w-32 p-[1px] overflow-hidden ",
         containerClassName
       )}
       style={{
@@ -41,13 +46,13 @@ export function BorderContainer({
       {...otherProps}
     >
       <div
-        className="absolute inset-0 rounde-[1.75rem]"
+        className="absolute inset-0"
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(#CBACF9_40%,transparent_60%)]",
+              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]",
               borderClassName
             )}
           />
@@ -56,7 +61,7 @@ export function BorderContainer({
 
       <div
         className={cn(
-          "relative bg-slate-900/[0.] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
+          "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
           className
         )}
         style={{
@@ -65,7 +70,7 @@ export function BorderContainer({
       >
         {children}
       </div>
-    </div>
+    </NextButton>
   );
 }
 

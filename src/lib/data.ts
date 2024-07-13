@@ -1324,7 +1324,6 @@ export const EXPERIENCE = [
     company: "@iLabAfrica",
     startDate: "2023-03",
     endDate: "2023-08",
-    status: Status.Completed
   },
   {
     title: "Next JS Developer",
@@ -1334,6 +1333,56 @@ export const EXPERIENCE = [
     company: "Trinetium DMCC",
     startDate: "2022-8",
     endDate: "2022-10",
-    status: Status.Completed
+  },
+];
+
+export const CERTIFICATIONS = [
+  {
+    title: "Diploma in Business Information Technology",
+    organization: "Strathmore Institute",
+    date: "2023",
+    file: "Diploma_Certificate",
+    description:
+      "Graduated with distinction and honored as the Best Student in the course. Mastered fundamental Business concepts and advanced Information Technology topics. Developed a robust foundation in programming, database management, data structures, networking, and web development, making me a well-rounded and highly capable professional ready to tackle complex challenges in the tech industry.",
+  },
+  {
+    title: "Fron End Developer - HTML",
+    organization: "Great Learning Academy",
+    date: "2023",
+    file: "HTML",
+    description:
+      "Equipped me with the foundational skills to create well-structured and accessible websites, setting a strong base for advanced front-end development.",
+  },
+  {
+    title: "Fron End Developer - CSS",
+    organization: "Great Learning Academy",
+    date: "2023",
+    file: "CSS",
+    description:
+      "Specialized in CSS to create visually appealing and responsive web designs. Mastered modern styling techniques, ensuring sleek and professional website aesthetics.",
+  },
+  {
+    title: "Introduction to JavaScript",
+    organization: "Great Learning Academy",
+    date: "2023",
+    file: "JS",
+    description:
+      "Acquired foundational JavaScript skills, enabling dynamic and interactive web content. Developed a solid understanding of core concepts, setting the stage for advanced programming and application development.",
+  },
+  {
+    title: "React JS Tutorial",
+    organization: "Great Learning Academy",
+    date: "2023",
+    file: "REACT",
+    description:
+      "Gained expertise in building efficient and dynamic web applications by utilizing React's component-based architecture and state management.",
+  },
+  {
+    title: "Web Development",
+    organization: "SoloLearn",
+    date: "2023",
+    file: "Web_Development",
+    description:
+      "Completed a comprehensive web development course on SoloLearn, mastering essential skills in HTML, CSS, and JavaScript. Developed proficiency in front-end, ready to tackle real-world web projects with confidence.",
   },
 ];

@@ -1,20 +1,16 @@
 import ListItemWrapper from "@/components/ui/ListItemWrapper";
-import { EXPERIENCE } from "@/lib/data";
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-} from "@nextui-org/react";
+import { Button } from "@/components/ui/MovingBorder";
+import { CERTIFICATIONS } from "@/lib/data";
+import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
 import React from "react";
 
 const CertificationsList = () => {
   return (
     <ul className="w-full mt-8 space-y-8">
-      {EXPERIENCE.map(
-        ({ company, description, title, type, startDate, endDate }, index) => (
+      {CERTIFICATIONS.map(
+        ({ organization, description, title, date, file }, index) => (
           <ListItemWrapper index={index} key={index}>
-            <Card className="bg-transparent border hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-200 border-slate-500">
+            <Card className="bg-transparent border hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-300 border-slate-500">
               <CardHeader as="header">
                 <h3 className="purple-gradient-text text-xl">{title}</h3>
               </CardHeader>
@@ -22,8 +18,17 @@ const CertificationsList = () => {
                 <p className="text-slate-300">{description}</p>
               </CardBody>
               <CardFooter as="footer" className="flex justify-between">
-                <p className="text-slate-300">{company}</p>
-                <time className="text-slate-300">{startDate}</time>
+                <p className="text-slate-300">{organization}</p>
+                <div className="space-x-6">
+                  <time className="text-slate-300">{date}</time>
+                  <Button
+                    file={`${file}.pdf`}
+                    borderRadius="2rem"
+                    className="bg-[#0a0e14] border-slate-800"
+                  >
+                    Download
+                  </Button>
+                </div>
               </CardFooter>
             </Card>
           </ListItemWrapper>
