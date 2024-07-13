@@ -1,7 +1,7 @@
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { BorderContainer } from "./MovingBorder";
+import { BorderContainer } from "./BorderContainer";
 import ListItemWrapper from "./ListItemWrapper";
 import SectionHeader from "./SectionHeader";
 import { Project } from "@/lib/types";
