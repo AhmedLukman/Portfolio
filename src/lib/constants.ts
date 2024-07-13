@@ -54,3 +54,10 @@ export enum Status {
   Pending = "Pending",
   Cancelled = "Cancelled",
 }
+
+export enum JobType {
+  FullTime = "Full Time",
+  PartTime = "Part Time",
+  Contract = "Contract",
+  Internship = "Internship",
+}

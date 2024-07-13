@@ -3,7 +3,7 @@ import {
   faLightbulb,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
-import { Status } from "./constants";
+import { JobType, Status } from "./constants";
 
 export const WEB_QUALITIES = [
   "Performant",
@@ -1318,7 +1318,7 @@ export const MASTERY = [
 export const EXPERIENCE = [
   {
     title: "Full Stack Developer",
-    type: "Intership",
+    type: JobType.Internship,
     description:
       "Front End Web and Mobile Developer, collaborated adeptly with UI/UX designers and engineers to craft clean, high-performance full-stack web solutions. Key contributions to projects like Adapta, SSAMS, Digital Learning, and Next Events. Recognized as the Lead Intern, entrusted with independent design responsibilities due to a trusted sense of aesthetic.",
     company: "@iLabAfrica",
@@ -1327,7 +1327,7 @@ export const EXPERIENCE = [
   },
   {
     title: "Next JS Developer",
-    type: "Internship",
+    type: JobType.Internship,
     description:
       "Developed aesthetically pleasing UI components for the web, integrating dynamic features such as drag and drop, and seamlessly incorporated APIs using Next JS and Express. Recognized for achieving high performance and receiving praise for design excellence.",
     company: "Trinetium DMCC",
