@@ -1,5 +1,5 @@
 import ListItemWrapper from "@/components/ui/ListItemWrapper";
-import { Button } from "@/components/ui/MovingBorder";
+import { BorderButton } from "@/components/ui/BorderButton";
 import { CERTIFICATIONS } from "@/lib/data";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
 import React from "react";
@@ -21,13 +21,13 @@ const CertificationsList = () => {
                 <p className="text-slate-300">{organization}</p>
                 <div className="space-x-6">
                   <time className="text-slate-300">{date}</time>
-                  <Button
+                  <BorderButton
                     file={`${file}.pdf`}
                     borderRadius="2rem"
                     className="bg-[#0a0e14] border-slate-800"
                   >
                     Download
-                  </Button>
+                  </BorderButton>
                 </div>
               </CardFooter>
             </Card>

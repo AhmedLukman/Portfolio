@@ -11,7 +11,7 @@ import { useRef } from "react";
 import { cn } from "@nextui-org/react";
 import { Button as NextButton } from "@nextui-org/react";
 
-export function Button({
+export function BorderButton({
   borderRadius = "1.75rem",
   children,
   containerClassName,
