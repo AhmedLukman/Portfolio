@@ -1346,7 +1346,7 @@ export const CERTIFICATIONS = [
       "Graduated with distinction and honored as the Best Student in the course. Mastered fundamental Business concepts and advanced Information Technology topics. Developed a robust foundation in programming, database management, data structures, networking, and web development, making me a well-rounded and highly capable professional ready to tackle complex challenges in the tech industry.",
   },
   {
-    title: "Fron End Developer - HTML",
+    title: "Front End Developer - HTML",
     organization: "Great Learning Academy",
     date: "2023",
     file: "HTML",
@@ -1354,7 +1354,7 @@ export const CERTIFICATIONS = [
       "Equipped me with the foundational skills to create well-structured and accessible websites, setting a strong base for advanced front-end development.",
   },
   {
-    title: "Fron End Developer - CSS",
+    title: "Front End Developer - CSS",
     organization: "Great Learning Academy",
     date: "2023",
     file: "CSS",
