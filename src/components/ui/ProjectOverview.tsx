@@ -11,14 +11,9 @@ import StatusChip from "./StatusChip";
 
 const ProjectOverview = ({
   project: {
-    description,
-    image,
-    site,
-    source,
+    overview: { description, image, site, source, title, status },
     techStack,
     metrics,
-    title,
-    status,
   },
 }: {
   project: Project;

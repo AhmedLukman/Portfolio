@@ -4,13 +4,15 @@ import { contactFormSchema } from "./schemas";
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 
 export type Project = {
-  title: string;
-  description: string;
-  image: string;
+  overview: {
+    title: string;
+    description: string;
+    image: string;
+    site: string;
+    source: string;
+    status: (typeof Status)[keyof typeof Status];
+  };
   route: string;
-  site: string;
-  source: string;
-  status: (typeof Status)[keyof typeof Status];
   slug: string;
   techStack: {
     alt: string;

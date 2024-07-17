@@ -12,8 +12,8 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   if (!project) notFound();
 
   return {
-    title: `Ahmed Lukman | ${project.title}`,
-    description: project.description,
+    title: `Ahmed Lukman | ${project.overview.title}`,
+    description: project.overview.description,
   };
 };
 
@@ -26,7 +26,7 @@ const ProjectDetailsPage = ({
   if (!project) notFound();
   return (
     <div className="px-14 py-10">
-      <PageHeader>{project.title}</PageHeader>
+      <PageHeader>{project.overview.title}</PageHeader>
       <ProjectOverview project={project} />
       <CaseStudy project={project} />
       <Features project={project} />
