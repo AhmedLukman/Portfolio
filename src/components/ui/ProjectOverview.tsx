@@ -72,7 +72,7 @@ const ProjectOverview = ({
                 icon={faCalendarAlt}
                 className="text-slate-300"
               />
-              <time dateTime={endDate} className="text-slate-300">{endDate || 'N/A'}</time>
+              <time dateTime={endDate} className="text-slate-300">{endDate ? convertDate(endDate) : 'N/A'}</time>
             </div>
           </div>
           <div className="flex flex-col gap-1">
