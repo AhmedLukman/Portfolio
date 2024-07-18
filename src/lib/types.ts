@@ -14,6 +14,7 @@ export type Project = {
     startDate: string;
     endDate?: string;
   };
+  image: string;
   route: string;
   slug: string;
   techStack: {
