@@ -8,10 +8,11 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faCalendarAlt, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { LinkPreview } from "./LinkPreview";
 import StatusChip from "./StatusChip";
+import { convertDate } from "@/lib/utils";
 
 const ProjectOverview = ({
   project: {
-    overview: { description, image, site, source, title, status },
+    overview: { description, image, site, source, title, status, startDate, endDate },
     techStack,
     metrics,
   },
@@ -59,7 +60,7 @@ const ProjectOverview = ({
                 icon={faCalendarAlt}
                 className="text-slate-300"
               />
-              <time className="text-slate-300">2024-9-5</time>
+              <time dateTime={startDate} className="text-slate-300">{convertDate(startDate)}</time>
             </div>
           </div>
           <div className="flex flex-col gap-1">
@@ -71,7 +72,7 @@ const ProjectOverview = ({
                 icon={faCalendarAlt}
                 className="text-slate-300"
               />
-              <time className="text-slate-300">2024-11-7</time>
+              <time dateTime={endDate} className="text-slate-300">{endDate || 'N/A'}</time>
             </div>
           </div>
           <div className="flex flex-col gap-1">

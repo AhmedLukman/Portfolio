@@ -11,6 +11,8 @@ export type Project = {
     site: string;
     source: string;
     status: (typeof Status)[keyof typeof Status];
+    startDate: string;
+    endDate?: string;
   };
   route: string;
   slug: string;
