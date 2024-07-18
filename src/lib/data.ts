@@ -139,44 +139,60 @@ export const PROJECTS: Project[] = [
       title: "Cinemania",
       description:
         "Discover and interact in a world of movies and TV shows at your fingertips! Dive into synopsis, rating and more in cinemania today!",
-      image: "/assets/images/cinemania.png",
+      image: "/assets/images/cinemania-laptop.png",
       site: "https://cinemania-ahmedlukman.vercel.app",
       status: Status.Pending,
       source: "https://github.com/AhmedLukman/Cinemania",
       startDate: "2024-06",
     },
-    image: "",
+    image: "/assets/images/cinemania.png",
     route: "/projects/cinemania",
     slug: "cinemania",
     features: [
       "Protects user data with cutting-edge encryption and security protocols.",
-      "Ensures a responsive and seamless user experience across all devices.",
-      "Offers an easy-to-navigate interface for enhanced user engagement",
-      "Delivers instant feedback and updates ensuring users are highly informed.",
-      "Delivers instant feedback and updates ensuring users are highly informed.",
-      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Comprehensive details for each movie, TV show, and person, including cast, crew, trailers, reviews, and ratings.",
+      "A real-time feed of trending, popular and upcoming films, ensuring users are always up-to-date with the latest content.",
+      "Secure login and registration with options for social media authentication to streamline the sign-up process.",
+      "Optimized performance to ensure quick loading times for all pages and content, providing a smooth user experience.",
+      "Allow users to create and manage favorite collections for quick access.",
+      "Advanced search functionality with multiple filters (genre, year, rating, etc.) to help users find exactly what they’re looking for.",
+      "A platform for users to leave reviews, fostering a community of movie and TV enthusiasts.",
+      "Easy, engaging and interactive user interface.",
+      "A fully responsive design that provides a seamless experience across desktops, tablets, and mobile devices.",
     ],
     caseStudy: [
       {
         ...problemCaseStudy,
         description:
-          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+          "Despite the abundance of streaming platforms like Netflix, users often struggle to find a centralized hub that provides detailed, real-time information on a wide array of films and celebrities across multiple sources in an efficient manner. These platforms usually focus on streaming, leaving a gap for users who want comprehensive details regarding the industry and an interactive community experience that goes beyond streaming alone.",
       },
       {
         ...solutionCaseStudy,
         description:
-          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+          "Leveraging the TMDB API to build a web app that offer an all-encompassing entertainment hub including detailed information on movies, TV shows, and celebrities. It provides users with a holistic view of the entertainment landscape that transcends the limitations of individual streaming platforms.",
       },
       {
         ...outcomeCaseStudy,
         description:
-          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+          "Cinemania revolutionizes the way users discover and interact with entertainment content by providing a unique, all-in-one entertainment hub. This comprehensive approach boosts user engagement and satisfaction, positioning Cinemania as the premier platform for entertainment enthusiasts. Users experience reduced search times and increased satisfaction, making content discovery more efficient and enjoyable.",
       },
     ],
     techStack: [
       {
         alt: "Next Js",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "React Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      },
+      {
+        alt: "HTML5",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      },
+      {
+        alt: "CSS3",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       },
       {
         alt: "TypeScript",
@@ -234,7 +250,7 @@ export const PROJECTS: Project[] = [
       startDate: "2024-06",
       endDate: "2024-07",
     },
-    image: "",
+    image: "/assets/images/portfolio.png",
     route: "/projects/portfolio",
     slug: "portfolio",
     features: [
@@ -269,6 +285,14 @@ export const PROJECTS: Project[] = [
       {
         alt: "React Js",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      },
+      {
+        alt: "HTML5",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      },
+      {
+        alt: "CSS3",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       },
       {
         alt: "Tailwind CSS",
