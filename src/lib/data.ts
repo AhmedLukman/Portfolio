@@ -143,8 +143,9 @@ export const PROJECTS: Project[] = [
       site: "https://cinemania-ahmedlukman.vercel.app",
       status: Status.Pending,
       source: "https://github.com/AhmedLukman/Cinemania",
-      startDate: "2023-06",
+      startDate: "2024-06",
     },
+    image: "",
     route: "/projects/cinemania",
     slug: "cinemania",
     features: [
@@ -233,6 +234,7 @@ export const PROJECTS: Project[] = [
       startDate: "2024-06",
       endDate: "2024-07",
     },
+    image: "",
     route: "/projects/portfolio",
     slug: "portfolio",
     features: [
@@ -313,43 +315,56 @@ export const PROJECTS: Project[] = [
       title: "Next Auth Prisma Training",
       description:
         "I explored and mastered the use of Next Auth v5 for authentication, together with prisma as an ORM to efficiently authenticate and store data in an online database.",
-      image: "/assets/images/napt.png",
+      image: "/assets/images/napt-laptop.png",
       site: "https://next-auth-prisma-training.vercel.app",
       source: "https://github.com/AhmedLukman/next_auth_prisma_training",
       status: Status.Completed,
-      startDate: "2023-06",
+      startDate: "2024-05",
+      endDate: "2024-06",
     },
+    image: "/assets/images/napt.png",
     route: "/projects/next-auth-prisma-training",
     slug: "next-auth-prisma-training",
     features: [
       "Protects user data with cutting-edge encryption and security protocols.",
+      "Seamlessly authenticate users via popular platforms like Google and Github.",
       "Ensures a responsive and seamless user experience across all devices.",
-      "Offers an easy-to-navigate interface for enhanced user engagement",
-      "Delivers instant feedback and updates ensuring users are highly informed.",
-      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Offers an easy-to-navigate interface for enhanced user engagement.",
       "Delivers instant feedback and updates ensuring users are highly informed.",
     ],
     caseStudy: [
       {
         ...problemCaseStudy,
         description:
-          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+          "The need to know how to implement secure user authentication using cutting-edge technologies for web applications.",
       },
       {
         ...solutionCaseStudy,
         description:
-          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+          "Implemented a robust authentication system that streamlined user login and registration processes. Integrating Prisma ensured efficient data handling, allowing seamless storage and retrieval of user authentication data in an online database. ",
       },
       {
         ...outcomeCaseStudy,
         description:
-          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+          "Mastered Next Auth v5 and Prisma which empowered me to develop reliable, secure and efficient authentication workflows for web applications, paving the way for future projects requiring similar functionalities.",
       },
     ],
     techStack: [
       {
         alt: "Next Js",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "React Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      },
+      {
+        alt: "HTML5",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      },
+      {
+        alt: "CSS3",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       },
       {
         alt: "Tailwind CSS",

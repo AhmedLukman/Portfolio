@@ -10,7 +10,7 @@ const ProjectsList = () => {
   return (
     <ul className="flex justify-between w-full mt-8 flex-wrap">
       {PROJECTS.map(
-        ({ overview: { title, description, image, status }, route }, index) => (
+        ({ overview: { title, description, status }, image, route }, index) => (
           <ListItemWrapper key={title} index={index}>
             <CardContainer>
               <CardBody className="  relative group/card shadow-[0_8px_16px_rgb(0_0_0/0.3)] border border-white/[0.1] w-[22rem] md:w-[23rem] xl:w-[26rem] h-auto rounded-xl p-6   ">
