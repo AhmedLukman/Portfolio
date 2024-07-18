@@ -4,6 +4,7 @@ import {
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { JobType, Status } from "./constants";
+import { Project } from "./types";
 
 export const WEB_QUALITIES = [
   "Performant",
@@ -132,7 +133,7 @@ const outcomeCaseStudy = {
   colors: [[125, 211, 252]],
   bgColor: "bg-emerald-800",
 };
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
   {
     overview: {
       title: "Cinemania",
@@ -142,6 +143,7 @@ export const PROJECTS = [
       site: "https://cinemania-ahmedlukman.vercel.app",
       status: Status.Pending,
       source: "https://github.com/AhmedLukman/Cinemania",
+      startDate: "2023-06",
     },
     route: "/projects/cinemania",
     slug: "cinemania",
@@ -227,39 +229,44 @@ export const PROJECTS = [
       image: "/assets/images/portfolio.png",
       site: "https://portfolio-ahmedlukman.vercel.app",
       source: "https://github.com/AhmedLukman/Portfolio",
-      status: Status.Pending,
+      status: Status.Completed,
+      startDate: "2024-06",
+      endDate: "2024-07",
     },
     route: "/projects/portfolio",
     slug: "portfolio",
     features: [
-      "Protects user data with cutting-edge encryption and security protocols.",
-      "Ensures a responsive and seamless user experience across all devices.",
-      "Offers an easy-to-navigate interface for enhanced user engagement",
-      "Delivers instant feedback and updates ensuring users are highly informed.",
-      "Delivers instant feedback and updates ensuring users are highly informed.",
-      "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Enjoy a responsive and seamless browsing experience across all devices.",
+      "Top-notch SEO practices boosting visibility thus easy discovery in search engines.",
+      "Effortlessly find what you are looking for with intuitive and user-friendly navigation.",
+      "Dedicated contact form functionality and social media links for easy reach.",
+      "Clean, stylish, and visually appealing custom design.",
     ],
     caseStudy: [
       {
         ...problemCaseStudy,
         description:
-          "Small retail businesses often struggle with managing their inventory efficiently, leading to stockouts or overstock situations. The existing manual inventory processes are time-consuming and prone to errors, resulting in lost sales and increased operational costs.",
+          "I needed a platform to showcase my diverse technical skills, innovative projects, and professional achievements that highlights my expertise and attracts potential employers or clients.",
       },
       {
         ...solutionCaseStudy,
         description:
-          "Developed an automated inventory management system that integrates with the point-of-sale system to provide real-time inventory tracking and analytics.",
+          "I designed and developed a sleek, modern portfolio website using Next.js for its powerful performance and SEO capabilities, React for a dynamic user interface, UI libraries for beautiful and interactive animations.",
       },
       {
         ...outcomeCaseStudy,
         description:
-          "Reduced stockouts by 30% and overstock by 20%, saving an average of 15 hours per month in manual inventory management tasks.",
+          "The website effectively showcases my skills and projects in a professional and engaging manner. It has received commendations for its performance, intuitive design and smooth navigation, reflecting my attention to detail and commitment to user experience.",
       },
     ],
     techStack: [
       {
         alt: "Next Js",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "React Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       },
       {
         alt: "Tailwind CSS",
@@ -310,6 +317,7 @@ export const PROJECTS = [
       site: "https://next-auth-prisma-training.vercel.app",
       source: "https://github.com/AhmedLukman/next_auth_prisma_training",
       status: Status.Completed,
+      startDate: "2023-06",
     },
     route: "/projects/next-auth-prisma-training",
     slug: "next-auth-prisma-training",
