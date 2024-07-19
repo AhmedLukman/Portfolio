@@ -159,6 +159,7 @@ export const PROJECTS: Project[] = [
       "A platform for users to leave reviews, fostering a community of movie and TV enthusiasts.",
       "Easy, engaging and interactive user interface.",
       "A fully responsive design that provides a seamless experience across desktops, tablets, and mobile devices.",
+      "Accessible and adheres to the best practices of modern web development.",
     ],
     caseStudy: [
       {
@@ -259,6 +260,7 @@ export const PROJECTS: Project[] = [
       "Effortlessly find what you are looking for with intuitive and user-friendly navigation.",
       "Dedicated contact form functionality and social media links for easy reach.",
       "Clean, stylish, and visually appealing custom design.",
+      "Accessible and adheres to the best practices of modern web development.",
     ],
     caseStudy: [
       {
@@ -336,6 +338,93 @@ export const PROJECTS: Project[] = [
   },
   {
     overview: {
+      title: "Digital Learning",
+      description:
+        "A website meant to inspire a revamp of @ilabafrica's official website. Utilizes Next JS and TypeScript.",
+      site: "https://digital-learning-ahmedlukman.vercel.app/",
+      source: "https://github.com/AhmedLukman/digital-learning",
+      image: "/assets/images/digitalLearning-laptop.png",
+      status: Status.Cancelled,
+      startDate: "2023-03",
+      endDate: "2023-04",
+    },
+    image: "/assets/images/digitalLearning.png",
+    route: "/projects/digital-learning",
+    slug: "digital-learning",
+    features: [
+      "Ensures a responsive and seamless user experience across all devices.",
+      "Offers an easy-to-navigate interface for enhanced user engagement.",
+      "Fast loading time providing a smooth user experience.",
+      "Accessible and adheres to the best practices of modern web development.",
+    ],
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "@iLabAfrica's Digital Learning website lacked modern features and a user-friendly interface, resulting in a suboptimal user experience and engagement.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Develop a revamped website using modern technologies, incorporating modern design principles to create an intuitive and engaging user experience and establish a more professional online presence.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Although the initial design did not meet all the requirements due to specific preferences for 3D effects, the project showcased my commitment to learning and improving my skills, setting the stage for future projects.",
+      },
+    ],
+    techStack: [
+      {
+        alt: "Next Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "React Js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      },
+      {
+        alt: "HTML5",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      },
+      {
+        alt: "CSS3",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "100",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "89",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "96",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "82",
+      },
+    ],
+  },
+  {
+    overview: {
       title: "Next Auth Prisma Training",
       description:
         "I explored and mastered the use of Next Auth v5 for authentication, together with prisma as an ORM to efficiently authenticate and store data in an online database.",
@@ -355,6 +444,7 @@ export const PROJECTS: Project[] = [
       "Ensures a responsive and seamless user experience across all devices.",
       "Offers an easy-to-navigate interface for enhanced user engagement.",
       "Delivers instant feedback and updates ensuring users are highly informed.",
+      "Accessible and adheres to the best practices of modern web development.",
     ],
     caseStudy: [
       {
