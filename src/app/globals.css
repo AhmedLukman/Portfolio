@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .purple-gradient {
+    @apply bg-gradient-to-r from-[#ffc0cb] via-[#ffc0cb] to-[#7a5299] text-transparent bg-clip-text
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px; /* Width of the scrollbar */
 }
