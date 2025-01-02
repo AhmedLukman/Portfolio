@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-gradient-to-r from-[#0a0e14] to-[#262c35];
-}
-
 ::-webkit-scrollbar {
   width: 10px; /* Width of the scrollbar */
 }
