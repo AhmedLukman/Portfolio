@@ -6,7 +6,7 @@ const Introduction = () => {
   return (
     <section className="flex md:flex-row justify-between mt-14 gap-5 md:gap-0 flex-col-reverse">
       <div className="md:basis-1/2 self-center">
-        <p className=" text-slate-300 text-center md:text-left">
+        <p className=" text-slate-300">
           I&apos;m a{" "}
           <strong className="purple-gradient"> modern developer </strong>
           with a distinguished Diploma in Business Information Technology{" "}
