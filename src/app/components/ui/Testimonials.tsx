@@ -2,13 +2,14 @@ import React from "react";
 import SectionHeader from "./SectionHeader";
 import { TESTIMONIALS } from "@/app/lib/data";
 import { AnimatedTestimonials } from "./AnimatedTestimonials";
+import SectionWrapper from "../wrappers/SectionWrapper";
 
 const Testimonials = () => {
   return (
-    <section className="mt-24 space-y-8">
+    <SectionWrapper>
       <SectionHeader>Testimonials</SectionHeader>
       <AnimatedTestimonials testimonials={TESTIMONIALS} />
-    </section>
+    </SectionWrapper>
   );
 };
 
