@@ -1,15 +1,16 @@
 import { WEB_QUALITIES } from "@/app/lib/data";
 import React from "react";
 import { FlipWords } from "./FlipWords";
+import SectionWrapper from "../../wrappers/SectionWrapper";
 
 const AnimatedWords = () => {
   return (
-    <section className="mt-24">
+    <SectionWrapper>
       <p className="text-slate-400 text-2xl">
         Let&apos;s build <br />
         <FlipWords words={WEB_QUALITIES} />
       </p>
-    </section>
+    </SectionWrapper>
   );
 };
 
