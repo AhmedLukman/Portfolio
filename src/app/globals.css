@@ -8,15 +8,16 @@
   }
 }
 
-::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar-track {
+  background: transparent;  /* makes the track transparent */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:  #653e80; /* Purple color for the thumb */
-  border-radius: 10px; /* Rounded corners for the thumb */
+  background: #653e80;  /* color of the scroll thumb */
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #4d3263;
+/* For Firefox */
+* {
+  scrollbar-color: #653e80 transparent;  /* thumb and track color */
 }
