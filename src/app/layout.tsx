@@ -3,6 +3,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import Footer from "./components/ui/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +24,8 @@ export default function RootLayout({
       <body
         className={`${poppins.className} antialiased min-h-screen bg-gradient-to-r from-[#0a0e14] to-[#262c35]`}
       >
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
