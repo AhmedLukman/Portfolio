@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Footer from "./components/ui/Footer";
+import { BackgroundBeams } from "./components/ui/BackgroundBeams";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,6 +27,7 @@ export default function RootLayout({
       >
         <main>{children}</main>
         <Footer />
+        <BackgroundBeams />
       </body>
     </html>
   );

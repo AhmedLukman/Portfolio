@@ -1,5 +1,21 @@
 import {nextui} from '@nextui-org/theme';
 import type { Config } from "tailwindcss";
+const {
+  default: flattenColorPalette,
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const addVariablesForColors = ({ addBase, theme }: any) => {
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
 
 export default {
   content: [
@@ -16,5 +32,5 @@ export default {
       },
     },
   },
-  plugins: [nextui()],
+  plugins: [nextui(), addVariablesForColors],
 } satisfies Config;
