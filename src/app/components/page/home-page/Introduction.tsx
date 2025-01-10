@@ -17,7 +17,7 @@ const Introduction = () => {
           my passion for programming, making me an ideal candidate anywhere.
         </p>
       </div>
-      <div className="relative md:basis-1/2 h-52 z-10 md:h-64">
+      <div className="relative md:basis-1/2 h-52 md:h-64">
         <Image
           priority
           sizes="(min-width: 768px) 50vw, 100vw"

@@ -25,7 +25,7 @@ export default function RootLayout({
       <body
         className={`${poppins.className} antialiased min-h-screen bg-gradient-to-r from-[#0a0e14] to-[#262c35]`}
       >
-        <main>{children}</main>
+        <main className="relative z-10">{children}</main>
         <Footer />
         <BackgroundBeams />
       </body>
