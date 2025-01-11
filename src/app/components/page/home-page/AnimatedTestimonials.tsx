@@ -87,10 +87,11 @@ export const AnimatedTestimonials = ({
                   <Image
                     src={testimonial.src}
                     alt={testimonial.name}
-                    width={500}
-                    height={500}
+                    sizes="(min-width: 768px) 50vw, 100vw"
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
+                    fill
+                    className=" rounded-3xl object-cover object-center"
+                    priority={index === 0}
                   />
                 </motion.div>
               ))}
@@ -152,6 +153,7 @@ export const AnimatedTestimonials = ({
           <div className="flex justify-center sm:justify-start gap-4 pt-12 md:pt-0">
             <Button
               onPress={handlePrev}
+              aria-label="Previous testimonial"
               isIconOnly
               className="group/button"
             >
@@ -163,6 +165,7 @@ export const AnimatedTestimonials = ({
             <Button
               isIconOnly
               onPress={handleNext}
+              aria-label="Next testimonial"
               className="group/button"
             >
               <FontAwesomeIcon
