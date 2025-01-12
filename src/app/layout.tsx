@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Footer from "./components/ui/Footer";
 import { BackgroundBeams } from "./components/ui/BackgroundBeams";
+import SideNav from "./components/ui/side-nav/SideNav";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,10 +24,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased min-h-screen bg-gradient-to-r from-[#0a0e14] to-[#262c35]`}
+        className={`${poppins.className} bg-gradient-to-r from-[#0a0e14] to-[#262c35]`}
       >
-        <main className="relative z-10">{children}</main>
-        <Footer />
+        <div className="md:flex">
+          <SideNav />
+          <div className="relative z-10 basis-10/12 h-screen overflow-y-auto">
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </div>
         <BackgroundBeams />
       </body>
     </html>
