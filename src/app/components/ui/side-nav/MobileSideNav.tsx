@@ -31,9 +31,11 @@ const MobileSideNav = () => {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-0 w-full h-full bg-[#0a0e14]/50 backdrop-blur-xl z-40 lg:hidden flex flex-col justify-between p-6 overflow-y-auto"
+            className="fixed inset-0 w-full h-full bg-[#0a0e14]/50 backdrop-blur-xl z-40 lg:hidden"
           >
-            <SideNavContent />
+            <div className="flex flex-col justify-between p-6 h-full max-w-sm mx-auto">
+              <SideNavContent />
+            </div>
           </motion.aside>
         )}
       </AnimatePresence>
