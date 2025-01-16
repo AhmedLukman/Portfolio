@@ -1,4 +1,4 @@
-export const TECH_AND_TOOLS = [
+export const FRONT_END_TECHS = [
   {
     name: "HTML5",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
@@ -12,36 +12,44 @@ export const TECH_AND_TOOLS = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg",
   },
   {
-    name: "React Js",
+    name: "React.js",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
   },
   {
-    name: "Next Js",
+    name: "Next.js",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "Svelte",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg",
   },
   {
     name: "TypeScript",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
   },
   {
-    name: "Auth Js",
-    src: "/assets/images/authjs.svg",
+    name: "Tailwind CSS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    name: "HeroUI",
+    src: "/assets/images/heroui.png",
+  },
+  {
+    name: "Aceternity UI",
+    src: "/assets/images/aceternity.webp",
   },
   {
     name: "Zod",
     src: "/assets/images/zod.svg",
   },
+];
+
+
+export const BACKEND_TECHS = [
   {
-    name: "Tailwind CSS",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-  },
-  {
-    name: "Next UI",
-    src: "/assets/images/nextui.png",
-  },
-  {
-    name: "Aceternity UI",
-    src: "/assets/images/aceternity.webp",
+    name: "Auth.js",
+    src: "/assets/images/authjs.svg",
   },
   {
     name: "Prisma",
@@ -56,9 +64,12 @@ export const TECH_AND_TOOLS = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
   },
   {
-    name: "MongoDB",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+    name: "SQL",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
   },
+];
+
+export const DEV_TOOLS = [
   {
     name: "VSCode",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
