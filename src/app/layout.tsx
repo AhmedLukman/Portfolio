@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={`${poppins.className} bg-gradient-to-r from-[#0a0e14] to-[#262c35]`}
       >
-        <div className="md:flex">
+        <div className="lg:flex">
           <SideNav />
           <div className="relative z-10 basis-10/12 h-screen overflow-y-auto">
             <main>{children}</main>
