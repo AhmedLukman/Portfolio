@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import { Link } from "@nextui-org/link";
 
 const Introduction = () => {
   return (
@@ -11,8 +12,27 @@ const Introduction = () => {
           <strong className="purple-gradient"> modern developer </strong>
           with a distinguished Diploma in Business Information Technology{" "}
           <FontAwesomeIcon icon={faMedal} /> Beyond academic excellence, I
-          possess a rich tapestry of certifications from top-tier courses and
-          boot-camps, alongside recognition in national media. My unwavering
+          possess a rich tapestry of{" "}
+          <Link
+            showAnchorIcon
+            underline="always"
+            isExternal
+            href="/about#certifications"
+            color="foreground"
+          >
+            certifications
+          </Link>{" "}
+          from top-tier courses and boot-camps, alongside{" "}
+          <Link
+            showAnchorIcon
+            underline="always"
+            isExternal
+            href="/about#recognition"
+            color="foreground"
+          >
+            recognition
+          </Link>{" "}
+          in various platforms, including national media. My unwavering
           dedication to mastering new skills and solving complex problems fuels
           my passion for programming, making me an ideal candidate anywhere.
         </p>
