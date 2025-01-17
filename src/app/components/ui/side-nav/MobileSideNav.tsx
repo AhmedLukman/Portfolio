@@ -15,10 +15,15 @@ const MobileSideNav = () => {
         <Button
           isIconOnly
           variant="light"
+          aria-haspopup="menu"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
           onPress={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="bg-[#262c35]/80 text-white"
         >
           <FontAwesomeIcon
+            aria-hidden="true"
             icon={isMobileMenuOpen ? faXmark : faBars}
             className="h-5 w-5"
           />
@@ -27,6 +32,8 @@ const MobileSideNav = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.aside
+            aria-label="Mobile navigation menu"
+            id="mobile-navigation"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
