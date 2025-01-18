@@ -44,7 +44,7 @@ const SideNavLinkButton = ({
       href={link.path}
       variant={isActive ? "solid" : "light"}
       className={cn(
-        "!text-slate-400 group lg:hover:!text-white lg:hover:!bg-[#7a5299] !ml-0 lg:hover:!ml-5 !transition-all !duration-200 w-full justify-start",
+        "!text-slate-400 group !bg-transparent lg:hover:!text-white lg:hover:!bg-gradient-to-b lg:hover:!from-[#653e80] lg:hover:!to-[#7a5299] !ml-0 lg:hover:!ml-5 !transition-all !duration-200 w-full justify-start",
         {
           "lg:hover:!opacity-100 lg:!ml-5 shadow-[0_8px_16px_rgb(0_0_0/0.3)] bg-gradient-to-b from-[#653e80] to-[#7a5299] !text-white":
             isActive,
