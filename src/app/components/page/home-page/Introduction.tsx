@@ -9,7 +9,7 @@ const Introduction = () => {
       <div className="md:basis-1/2 self-center">
         <p className=" text-slate-300">
           I&apos;m a{" "}
-          <strong className="purple-gradient"> modern developer </strong>
+          <strong className="purple-gradient font-normal"> modern developer </strong>
           with a distinguished Diploma in Business Information Technology{" "}
           <FontAwesomeIcon icon={faMedal} /> Beyond academic excellence, I
           possess a rich tapestry of{" "}
