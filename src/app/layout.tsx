@@ -28,7 +28,7 @@ export default function RootLayout({
       >
         <div className="lg:flex">
           <SideNav />
-          <div className="relative z-10 basis-10/12 h-screen overflow-y-auto">
+          <div className="relative z-10 basis-10/12 h-screen flex flex-col justify-between overflow-y-auto">
             <main>{children}</main>
             <Footer />
           </div>
