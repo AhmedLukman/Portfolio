@@ -12,7 +12,7 @@ const Introduction = () => {
       <p>
         My programming journey began in high school, starting with HTML and CSS
         before advancing to JavaScript. University opened new doors as I
-        embraced modern frameworks like Flutter and React, expanding my
+        embraced modern frameworks like Flutter and libraries like React, expanding my
         development capabilities significantly.
       </p>
       <br />
