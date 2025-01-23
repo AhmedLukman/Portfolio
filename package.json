@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@nextui-org/avatar": "^2.2.6",
     "@nextui-org/button": "^2.2.9",
+    "@nextui-org/card": "^2.2.9",
     "@nextui-org/link": "^2.2.7",
     "@nextui-org/system": "^2.4.6",
     "@nextui-org/theme": "^2.4.5",
