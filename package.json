@@ -20,10 +20,14 @@
     "@nextui-org/link": "^2.2.7",
     "@nextui-org/system": "^2.4.6",
     "@nextui-org/theme": "^2.4.5",
+    "@react-three/drei": "^9.121.3",
+    "@react-three/fiber": "^9.0.0-alpha.8",
     "framer-motion": "^12.0.1",
     "next": "15.1.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "three": "^0.172.0",
+    "three-globe": "^2.41.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
