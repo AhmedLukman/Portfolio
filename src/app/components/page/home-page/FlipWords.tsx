@@ -1,7 +1,7 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { cn } from "@nextui-org/theme";
+import { cn } from "@heroui/theme";
 
 export const FlipWords = ({
   words,

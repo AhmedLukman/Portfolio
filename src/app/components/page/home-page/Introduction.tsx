@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import { Link } from "@nextui-org/link";
+import { Link } from "@heroui/link";
 
 const Introduction = () => {
   return (

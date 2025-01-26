@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "@nextui-org/theme";
+import { cn } from "@heroui/theme";
 
 export const BackgroundGradient = ({
   children,

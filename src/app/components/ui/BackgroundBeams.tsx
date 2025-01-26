@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "@nextui-org/theme";
+import { cn } from "@heroui/theme";
 
 export const BackgroundBeams = React.memo(
   ({ className }: { className?: string }) => {

@@ -3,9 +3,9 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
-import { cn } from "@nextui-org/theme";
+import { Button } from "@heroui/button";
+import { Link } from "@heroui/link";
+import { cn } from "@heroui/theme";
 import { usePathname } from "next/navigation";
 
 const SideNavLinkButton = ({
