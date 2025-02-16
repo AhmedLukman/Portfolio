@@ -1,7 +1,6 @@
-import { GLOBAL_WORLD_CONFIG, SAMPLE_ARCS } from "@/app/lib/data";
 import SectionHeader from "../../wrappers/SectionHeader";
 import { WobbleCard } from "./WobbleCard";
-import { WorldWithNoSSR } from "./WorldWithNoSSR";
+import HeatMap from "./HeatMap";
 
 export default function WhyStandOut() {
   return (
@@ -28,26 +27,19 @@ export default function WhyStandOut() {
           </p>
         </WobbleCard>
         <WobbleCard containerClassName="col-span-1 sm:col-span-2 lg:col-span-3 bg-blue-900">
-          <div className="flex flex-col sm:flex-row">
             <div className="sm:w-1/2">
               <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-slate-100">
                 Flexible with different Time Zone
               </h2>
-              <p className="mt-6 text-left text-base/6 text-slate-200">
+              <p className="mt-6 mb-20 text-left text-base/6 text-slate-200">
                 I am adept at accommodating various time zones, ensuring
                 seamless collaboration with global teams and clients regardless
                 of the hour.
               </p>
             </div>
-            <div className="sm:w-1/2 relative overflow-hidden flex items-center justify-center h-[19rem] px-4">
-              <div className="absolute w-full h-96 z-10">
-                <WorldWithNoSSR
-                  data={SAMPLE_ARCS}
-                  globeConfig={GLOBAL_WORLD_CONFIG}
-                />
+              <div className="absolute inset-0 z-10">
+                <HeatMap />
               </div>
-            </div>
-          </div>
         </WobbleCard>
       </div>
     </section>
