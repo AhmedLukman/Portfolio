@@ -7,7 +7,6 @@ import Footer from "./components/ui/Footer";
 import { BackgroundBeams } from "./components/ui/BackgroundBeams";
 import SideNav from "./components/ui/side-nav/SideNav";
 import { Providers } from "./providers";
-import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -37,7 +36,6 @@ export default function RootLayout({
             </div>
           </div>
           <BackgroundBeams />
-          <Toaster toastOptions={{ className: "!bg-slate-200" }} />
         </Providers>
       </body>
     </html>
