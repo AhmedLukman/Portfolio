@@ -1,3 +1,4 @@
+import Experience from "../components/page/about-page/Experience";
 import Introduction from "../components/page/about-page/Introduction";
 import Mastery from "../components/page/about-page/Mastery";
 import { WhyStandOutWithNoSSR } from "../components/page/about-page/WhyStandOutWithNoSSR";
@@ -11,6 +12,7 @@ const AboutPage = () => {
       <Introduction />
       <Mastery />
       <WhyStandOutWithNoSSR />
+      <Experience />
     </PageWrapper>
   );
 };
