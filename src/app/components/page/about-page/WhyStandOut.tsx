@@ -1,7 +1,7 @@
 import { GLOBAL_WORLD_CONFIG, SAMPLE_ARCS } from "@/app/lib/data";
 import SectionHeader from "../../wrappers/SectionHeader";
-import { World } from "./Globe";
 import { WobbleCard } from "./WobbleCard";
+import { WorldWithNoSSR } from "./WorldWithNoSSR";
 
 export default function WhyStandOut() {
   return (
@@ -41,7 +41,10 @@ export default function WhyStandOut() {
             </div>
             <div className="sm:w-1/2 relative overflow-hidden flex items-center justify-center h-[19rem] px-4">
               <div className="absolute w-full h-96 z-10">
-                <World data={SAMPLE_ARCS} globeConfig={GLOBAL_WORLD_CONFIG} />
+                <WorldWithNoSSR
+                  data={SAMPLE_ARCS}
+                  globeConfig={GLOBAL_WORLD_CONFIG}
+                />
               </div>
             </div>
           </div>
