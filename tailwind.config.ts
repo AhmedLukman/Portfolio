@@ -22,7 +22,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@heroui/theme/dist/components/(avatar|button|card|chip|link|ripple|spinner).js"
+    "./node_modules/@heroui/theme/dist/components/(avatar|button|card|chip|link|ripple|spinner).js",
   ],
   theme: {
     extend: {
@@ -30,7 +30,75 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+        slideInFromLeft: {
+          "0%": {
+            transform: "translateX(-20%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        slideInFromRight: {
+          "0%": {
+            transform: "translateX(20%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        slideInFromBottom: {
+          "0%": {
+            transform: "translateY(40%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
+      },
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        slideInFromLeft: "slideInFromLeft 1s ease-out forwards",
+        slideInFromRight: "slideInFromRight 1s ease-out forwards",
+        slideInFromBottom: "slideInFromBottom 1s ease-out forwards",
+      },
     },
   },
-  plugins: [heroui(), addVariablesForColors],
+  plugins: [
+    heroui(),
+    addVariablesForColors,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    function ({ addUtilities }: { addUtilities: any }) {
+      const newAnimationDelays = {
+        ".delay-0": {
+          animationDelay: "0s",
+        },
+        ".delay-500": {
+          animationDelay: "0.5s",
+        },
+        ".delay-1000": {
+          animationDelay: "1s",
+        },
+        ".delay-1500": {
+          animationDelay: "1.5s",
+        },
+        ".delay-2000": {
+          animationDelay: "2s",
+        },
+      };
+      addUtilities(newAnimationDelays, ["responsive", "hover"]);
+    },
+  ],
 } satisfies Config;
