@@ -17,6 +17,7 @@
     "@heroui/avatar": "2.2.7",
     "@heroui/button": "2.2.10",
     "@heroui/card": "2.2.10",
+    "@heroui/chip": "^2.2.7",
     "@heroui/link": "2.2.8",
     "@heroui/system": "2.4.7",
     "@heroui/theme": "2.4.6",
@@ -42,6 +43,9 @@
   },
   "overrides": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "@react-three/drei": {
+      "@react-three/fiber": "^9.0.0-alpha.8"
+    }
   }
 }
