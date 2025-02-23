@@ -105,7 +105,7 @@ const ContactForm = () => {
             ? "Email successfully sent!"
             : "Error sending email, please try again."
         }
-        title={db}
+        title={db === DB_STATE.SUCCESS ? "Success" : "Error"}
         hideIconWrapper
       />
     </>
