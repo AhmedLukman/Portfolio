@@ -41,3 +41,14 @@ export const PAGE_LINKS = [
     icon: faContactBook,
   },
 ];
+
+export const initialFormState = {
+  name: "",
+  recipientEmail: "",
+  message: "",
+} as const;
+
+export const DB_STATE = {
+  SUCCESS: "success",
+  ERROR: "danger",
+} as const;
