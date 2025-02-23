@@ -7,7 +7,7 @@ import { EmailTemplate } from "../components/ui/EmailTemplate";
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
-  recipientEmail: z.string().email("Invalid email address"),
+  recipientEmail: z.string().min(1, "Email is required").email("Invalid email address"),
   message: z.string().min(1, "Message is required"),
   db: z.enum([DB_STATE.SUCCESS, DB_STATE.ERROR]).optional(),
 });
