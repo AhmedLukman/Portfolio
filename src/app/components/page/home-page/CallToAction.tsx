@@ -31,7 +31,7 @@ const CallToAction = () => {
               Contact me
             </Button>
           </div>
-          <div className="basis-1/3 flex justify-end gap-1.5">
+          <div className="basis-1/3 flex justify-end">
             {SOCIAL_LINKS.map((link) => (
               <Button
                 key={link.name}
