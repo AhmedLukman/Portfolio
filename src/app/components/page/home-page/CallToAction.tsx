@@ -5,7 +5,6 @@ import { Link } from "@heroui/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMessage } from "@fortawesome/free-regular-svg-icons";
 import SectionWrapper from "../../wrappers/SectionWrapper";
-import { SOCIAL_LINKS } from "@/app/lib/constants";
 
 const CallToAction = () => {
   return (
@@ -20,9 +19,7 @@ const CallToAction = () => {
           Excited to start a new project? Collaborate on an existing one? Or
           just have a chat? Get in touch today!
         </p>
-        <footer className="flex w-full">
-          <div className="basis-1/3" />
-          <div className="flex basis-1/3 justify-center">
+        <footer className="flex justify-center">
             <Button
               as={Link}
               href="/contact"
@@ -30,26 +27,6 @@ const CallToAction = () => {
             >
               Contact me
             </Button>
-          </div>
-          <div className="basis-1/3 flex justify-end">
-            {SOCIAL_LINKS.map((link) => (
-              <Button
-                key={link.name}
-                variant="light"
-                as={Link}
-                href={link.path}
-                isExternal
-                isIconOnly
-                aria-label={link.name}
-              >
-                <FontAwesomeIcon
-                  size="xl"
-                  className="text-slate-200"
-                  icon={link.icon}
-                />
-              </Button>
-            ))}
-          </div>
         </footer>
       </BackgroundGradient>
     </SectionWrapper>
