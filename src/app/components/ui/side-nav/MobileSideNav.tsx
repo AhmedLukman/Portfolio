@@ -5,10 +5,11 @@ import { Button } from "@heroui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import SideNavContent from "./SideNavContent";
-import { useState } from "react";
+import { useNavigation } from "@/app/lib/contexts/NavigationContext";
 
 const MobileSideNav = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isMobileMenuOpen, setIsMobileMenuOpen } = useNavigation();
+  
   return (
     <>
       <div className="lg:hidden fixed top-4 right-4 z-50">
