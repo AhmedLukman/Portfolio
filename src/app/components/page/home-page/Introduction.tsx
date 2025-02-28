@@ -43,7 +43,7 @@ const Introduction = () => {
           sizes="(min-width: 768px) 50vw, 100vw"
           fill
           src="/assets/images/man-near-computer.svg"
-          alt="Animated picture of a white male sitting on a desk that has a computer"
+          alt="Developer sitting on a desk that has a computer"
         />
       </div>
     </section>
