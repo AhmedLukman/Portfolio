@@ -38,12 +38,12 @@ const Experience = () => {
                 } hidden lg:block`}></div>
                 
                 {/* Card container - full width on mobile, alternating on desktop */}
-                <div className={`w-full lg:w-[45%] px-4 ${index % 2 === 0 ? 'lg:mr-auto lg:pr-8' : 'lg:ml-auto lg:pl-8'}`}>
+                <div className={`w-full lg:w-[45%] ${index % 2 === 0 ? 'lg:mr-auto lg:pr-8' : 'lg:ml-auto lg:pl-8'}`}>
                   <ListItemWrapper index={index}>
                     <Card className="bg-transparent border hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-200 border-slate-500">
-                      <CardHeader as="header" className="flex justify-between flex-wrap">
+                      <CardHeader as="header" className="flex justify-between flex-wrap gap-2">
                         <h3 className="purple-gradient text-xl">{title}</h3>
-                        <Chip variant="bordered" className="text-slate-300 lg:mt-2 xl:mt-0">
+                        <Chip variant="bordered" className="text-slate-300">
                           {type}
                         </Chip>
                       </CardHeader>
