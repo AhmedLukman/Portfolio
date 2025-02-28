@@ -1,12 +1,13 @@
 "use client";
 
+import { useNavigation } from "@/app/lib/contexts/NavigationContext";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import { cn } from "@heroui/theme";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const SideNavLinkButton = ({
   link,
@@ -16,6 +17,9 @@ const SideNavLinkButton = ({
   isSocial?: boolean;
 }) => {
   const pathname = usePathname();
+  const router = useRouter();
+  const { closeMobileMenu } = useNavigation();
+
   const isActive =
     link.path === "/" ? pathname === link.path : pathname.startsWith(link.path);
 
@@ -35,6 +39,18 @@ const SideNavLinkButton = ({
   const externalIconClasses =
     "ml-auto !opacity-0 group-hover:!opacity-100 !transition !duration-200";
 
+  const handlePress = () => {
+    closeMobileMenu();
+
+    if (isSocial) {
+      // For social links, open in a new tab
+      window.open(link.path, '_blank', 'noopener,noreferrer');
+    } else {
+      // For internal links, use Next.js router
+      router.push(link.path);
+    }
+  };
+
   return (
     <Button
       startContent={
@@ -50,6 +66,7 @@ const SideNavLinkButton = ({
       }
       as={Link}
       href={link.path}
+      onPress={handlePress}
       variant={isActive ? "solid" : "light"}
       className={cn(baseButtonClasses, transitionClasses, hoverClasses, {
         [activeClasses]: isActive,
