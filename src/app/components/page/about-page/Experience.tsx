@@ -52,7 +52,7 @@ const Experience = () => {
                       </CardBody>
                       <CardFooter as="footer" className="flex justify-between flex-wrap">
                         <p className="text-slate-300">{company}</p>
-                        <div className="mt-1 lg:mt-0">
+                        <div className="lg:mt-0">
                           <time dateTime={startDate} className="text-slate-300">
                             {convertDate(startDate)}
                           </time>{" "}
