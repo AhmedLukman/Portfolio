@@ -15,10 +15,6 @@ export const metadata: Metadata = {
     "Modern, experienced full stack developer creating beautiful, high-performance, responsive web applications.",
   authors: [{ name: "Ahmed Lukman", url: "https://ahmedlukman.dev" }],
   creator: "Ahmed Lukman",
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600", "700"] });
