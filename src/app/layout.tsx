@@ -8,6 +8,7 @@ import { BackgroundBeams } from "./components/ui/BackgroundBeams";
 import SideNav from "./components/ui/side-nav/SideNav";
 import { Providers } from "./providers";
 import PersonSchema from "./components/ui/PersonSchema";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Ahmed Lukman | Full Stack Developer",
@@ -42,6 +43,7 @@ export default function RootLayout({
           </div>
           <BackgroundBeams />
         </Providers>
+        <SpeedInsights />
       </body>
     </html>
   );
