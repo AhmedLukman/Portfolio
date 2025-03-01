@@ -7,6 +7,7 @@ import Footer from "./components/ui/Footer";
 import { BackgroundBeams } from "./components/ui/BackgroundBeams";
 import SideNav from "./components/ui/side-nav/SideNav";
 import { Providers } from "./providers";
+import PersonSchema from "./components/ui/PersonSchema";
 
 export const metadata: Metadata = {
   title: "Ahmed Lukman | Full Stack Developer",
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={`${poppins.className} antialiased bg-gradient-to-r from-[#0a0e14] to-[#262c35]`}
       >
+        <PersonSchema />
         <Providers>
           <div className="lg:flex">
             <SideNav />
