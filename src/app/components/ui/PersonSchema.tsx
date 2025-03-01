@@ -24,6 +24,10 @@ export default function PersonSchema() {
           "alumniOf": {
             "@type": "EducationalOrganization",
             "name": "Strathmore University"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ahmedlukman.dev"
           }
         }
       `}
