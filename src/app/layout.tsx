@@ -10,7 +10,14 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Ahmed Lukman | Full Stack Developer",
-  description: "Modern, experienced full stack developer creating beautiful, high-performance, responsive web applications.",
+  description:
+    "Modern, experienced full stack developer creating beautiful, high-performance, responsive web applications.",
+  authors: [{ name: "Ahmed Lukman", url: "https://ahmedlukman.dev" }],
+  creator: "Ahmed Lukman",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600", "700"] });
