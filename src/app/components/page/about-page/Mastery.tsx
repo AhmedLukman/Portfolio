@@ -9,7 +9,11 @@ const Mastery = () => {
       <SectionHeader className="text-center">Mastery</SectionHeader>
       <ul className="flex flex-col sm:flex-row gap-5 mt-8">
         {MASTERY.map(({ description, title, src }) => (
-          <Card as="li" key={title} className="w-full h-72 group">
+          <Card
+            as="li"
+            key={title}
+            className="w-full h-72 group border border-slate-300"
+          >
             <CardHeader className="absolute z-20 top-1 flex-col items-start">
               <h3 className="text-slate-200 text-xl">{title}</h3>
             </CardHeader>
