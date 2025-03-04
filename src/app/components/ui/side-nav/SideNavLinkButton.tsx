@@ -64,7 +64,6 @@ const SideNavLinkButton = ({
       }
       as={Link}
       href={link.path}
-      variant={isActive ? "solid" : "light"}
       className={cn(baseButtonClasses, transitionClasses, hoverClasses, {
         [activeClasses]: isActive,
       })}
