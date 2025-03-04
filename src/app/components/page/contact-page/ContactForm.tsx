@@ -34,16 +34,16 @@ const ContactForm = () => {
     <>
       <Form
         onSubmit={onSubmit}
-        className="max-w-xl mx-auto mt-14 space-y-6"
+        className="max-w-lg sm:max-w-xl mx-auto mt-14 flex flex-col gap-6"
         validationErrors={errors}
       >
-        <div className="flex gap-6 w-full">
+        <div className="flex flex-col sm:flex-row gap-6 w-full">
           <Input
             isRequired
             name="name"
             label="Name"
             variant="bordered"
-            className="animate-slideInFromLeft opacity-0"
+            className="animate-slideInFromLeft opacity-0 delay-500 sm:delay-0"
             classNames={{
               inputWrapper:
                 "border-slate-400 focus-within:!border-slate-300 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
@@ -52,7 +52,7 @@ const ContactForm = () => {
           />
           <Input
             isRequired
-            className="animate-slideInFromRight opacity-0"
+            className="animate-slideInFromRight opacity-0 delay-1000 sm:delay-0"
             name="recipientEmail"
             type="email"
             label="Email"
@@ -66,7 +66,7 @@ const ContactForm = () => {
         </div>
         <Textarea
           isRequired
-          className="animate-slideInFromBottom opacity-0"
+          className="animate-slideInFromBottom opacity-0 delay-1500 sm:delay-0"
           name="message"
           label="Message"
           classNames={{
@@ -76,13 +76,13 @@ const ContactForm = () => {
           }}
           variant="bordered"
         />
-        <div className="flex justify-center w-full pt-5">
+        <div className="flex justify-center w-full">
           <Button
             type="submit"
             isLoading={isPending}
             size="lg"
             className={cn(
-              "bg-slate-400 font-bold animate-slideInFromBottom opacity-0 delay-1000 shadow-[0_8px_16px_rgb(0_0_0/0.3)] hover:!opacity-80",
+              "bg-slate-400 font-bold animate-slideInFromBottom opacity-0 delay-2000 sm:delay-1000 shadow-[0_8px_16px_rgb(0_0_0/0.3)] hover:!opacity-80",
               {
                 "!opacity-80": isPending,
               }
