@@ -34,12 +34,11 @@ const SideNavLinkButton = ({
     link.path === "/" ? pathname === link.path : pathname.startsWith(link.path);
 
   const baseButtonClasses =
-    "!text-slate-400 group !bg-transparent w-full justify-start";
-  const transitionClasses = "!transition-all !duration-200";
+    "!text-slate-400 group !bg-transparent w-full justify-start lg:hover:!opacity-100";
   const hoverClasses =
-    "lg:hover:!text-white lg:hover:!bg-gradient-to-b lg:hover:!from-[#653e80] lg:hover:!to-[#7a5299] !ml-0 lg:hover:!ml-5";
+    "lg:hover:!text-white lg:hover:!bg-gradient-to-b lg:hover:!from-[#653e80] lg:hover:!to-[#7a5299] !ml-0 lg:hover:!ml-5 !transition-[margin,background] !duration-200";
   const activeClasses =
-    "lg:hover:!opacity-100 lg:!ml-5 shadow-[0_8px_16px_rgb(0_0_0/0.3)] bg-gradient-to-b from-[#653e80] to-[#7a5299] !text-white";
+    "lg:!ml-5 shadow-[0_8px_16px_rgb(0_0_0/0.3)] bg-gradient-to-b from-[#653e80] to-[#7a5299] !text-white";
 
   const iconClasses = cn(
     "!text-slate-400 group-hover:!text-white !transition-all !duration-200 h-4 mr-1",
@@ -64,7 +63,7 @@ const SideNavLinkButton = ({
       }
       as={Link}
       href={link.path}
-      className={cn(baseButtonClasses, transitionClasses, hoverClasses, {
+      className={cn(baseButtonClasses, hoverClasses, {
         [activeClasses]: isActive,
       })}
       isExternal={isSocial}
