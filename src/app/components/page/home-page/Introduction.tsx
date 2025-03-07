@@ -10,7 +10,7 @@ const Introduction = () => {
       <div className="md:basis-1/2 self-center">
         <p className=" text-slate-300">
           I&apos;m a{" "}
-          <strong className="purple-gradient font-normal">
+          <strong className="purple-gradient">
             {" "}
             modern developer{" "}
           </strong>
