@@ -6,7 +6,7 @@ import { BorderButton } from "./BorderButton";
 
 const CertificationsList = () => {
   return (
-    <ul className="w-full mt-8 space-y-8">
+    <ul className="w-full space-y-8">
       {CERTIFICATIONS.map(
         ({ organization, description, title, date, file }, index) => (
           <ListItemWrapper index={index} key={index}>

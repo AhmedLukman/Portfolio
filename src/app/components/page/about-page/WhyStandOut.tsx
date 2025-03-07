@@ -1,12 +1,13 @@
 import SectionHeader from "../../wrappers/SectionHeader";
 import { WobbleCard } from "./WobbleCard";
 import HeatMap from "./HeatMap";
+import SectionWrapper from "../../wrappers/SectionWrapper";
 
 export default function WhyStandOut() {
   return (
-    <section className="mt-14">
+    <SectionWrapper>
       <SectionHeader className="text-center">Why I stand out</SectionHeader>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <WobbleCard containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800">
           <h3 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-slate-100">
             Up-to-Date with Evolving Technology
@@ -42,6 +43,6 @@ export default function WhyStandOut() {
               </div>
         </WobbleCard>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

@@ -1,7 +1,12 @@
-import { PropsWithChildren } from "react";
+import { cn } from "@heroui/theme";
 
-const SectionWrapper = ({ children }: PropsWithChildren) => {
-  return <section className="mt-20 space-y-8">{children}</section>;
+type SectionWrapperProps = {
+  children: React.ReactNode;
+  className?: string
+};
+
+const SectionWrapper = ({ children, className }: SectionWrapperProps) => {
+  return <section className={cn("mt-16 space-y-8", className)}>{children}</section>;
 };
 
 export default SectionWrapper;

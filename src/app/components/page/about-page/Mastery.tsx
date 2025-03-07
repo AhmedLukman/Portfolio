@@ -2,12 +2,13 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import Image from "next/image";
 import SectionHeader from "../../wrappers/SectionHeader";
 import { MASTERY } from "@/app/lib/data";
+import SectionWrapper from "../../wrappers/SectionWrapper";
 
 const Mastery = () => {
   return (
-    <section className="mt-14">
+    <SectionWrapper>
       <SectionHeader className="text-center">Mastery</SectionHeader>
-      <ul className="flex flex-col sm:flex-row gap-5 mt-8">
+      <ul className="flex flex-col sm:flex-row gap-5">
         {MASTERY.map(({ description, title, src }) => (
           <Card
             as="li"
@@ -38,7 +39,7 @@ const Mastery = () => {
           </Card>
         ))}
       </ul>
-    </section>
+    </SectionWrapper>
   );
 };
 

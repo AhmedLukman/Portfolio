@@ -5,12 +5,13 @@ import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
 import ListItemWrapper from "./ListItemWrapper";
 import { convertDate } from "@/app/lib/utils";
+import SectionWrapper from "../../wrappers/SectionWrapper";
 
 const Experience = () => {
   return (
-    <section className="mt-14">
+    <SectionWrapper>
       <SectionHeader className="text-center">Experience</SectionHeader>
-      <div className="relative w-full mt-8">
+      <div className="relative w-full">
         {/* Timeline center line - hidden on mobile */}
         <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-slate-500 hidden lg:block"></div>
         
@@ -70,7 +71,7 @@ const Experience = () => {
           )}
         </ul>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 
