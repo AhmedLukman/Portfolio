@@ -11,8 +11,8 @@ const CertificationsList = () => {
         ({ organization, description, title, date, file }, index) => (
           <ListItemWrapper index={index} key={index}>
             <Card className="bg-transparent border hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-300 border-slate-500">
-              <CardHeader as="h3" className="purple-gradient text-xl">
-                {title}
+              <CardHeader as="h3">
+                <span className="purple-gradient text-xl">{title}</span>
               </CardHeader>
               <CardBody as="p" className="text-slate-300">
                 {description}
