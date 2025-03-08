@@ -1,8 +1,8 @@
-import { FRONT_END_TECHS, BACKEND_TECHS, DEV_TOOLS } from "@/app/lib/data";
 import React from "react";
 import SectionHeader from "../../wrappers/SectionHeader";
 import { AnimatedTooltip } from "../../ui/AnimatedTooltip";
 import SectionWrapper from "../../wrappers/SectionWrapper";
+import { BACKEND_TECHS, DEV_TOOLS, FRONT_END_TECHS } from "@/lib/data";
 
 const TechAndTools = () => {
   return (

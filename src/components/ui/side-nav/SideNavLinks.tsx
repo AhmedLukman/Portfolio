@@ -1,4 +1,4 @@
-import { PAGE_LINKS, SOCIAL_LINKS } from "@/app/lib/constants";
+import { PAGE_LINKS, SOCIAL_LINKS } from "@/lib/constants";
 import SideNavLinkButton from "./SideNavLinkButton";
 
 const SideNavLinks = () => {

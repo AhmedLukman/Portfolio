@@ -3,7 +3,7 @@
 import { DB_STATE, initialFormState } from "./constants";
 import { Resend } from "resend";
 import { z } from "zod";
-import { EmailTemplate } from "../components/ui/EmailTemplate";
+import { EmailTemplate } from "../components/page/contact-page/EmailTemplate";
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),

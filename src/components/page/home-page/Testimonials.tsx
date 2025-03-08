@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeader from "../../wrappers/SectionHeader";
-import { TESTIMONIALS } from "@/app/lib/data";
+import { TESTIMONIALS } from "@/lib/data";
 import { AnimatedTestimonials } from "../../page/home-page/AnimatedTestimonials";
 import SectionWrapper from "../../wrappers/SectionWrapper";
 

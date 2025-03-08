@@ -1,7 +1,7 @@
 import React from "react";
 import ListItemWrapper from "./ListItemWrapper";
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
-import { CERTIFICATIONS } from "@/app/lib/data";
+import { CERTIFICATIONS } from "@/lib/data";
 import { BorderButton } from "./BorderButton";
 
 const CertificationsList = () => {

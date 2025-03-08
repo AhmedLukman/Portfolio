@@ -1,10 +1,10 @@
 import React from "react";
 import SectionHeader from "../../wrappers/SectionHeader";
-import { EXPERIENCE } from "@/app/lib/data";
+import { EXPERIENCE } from "@/lib/data";
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
 import ListItemWrapper from "./ListItemWrapper";
-import { convertDate } from "@/app/lib/utils";
+import { convertDate } from "@/lib/utils";
 import SectionWrapper from "../../wrappers/SectionWrapper";
 
 const Experience = () => {

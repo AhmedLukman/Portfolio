@@ -1,6 +1,6 @@
 "use client"
 
-import { SOCIAL_LINKS } from "@/app/lib/constants";
+import { SOCIAL_LINKS } from "@/lib/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";

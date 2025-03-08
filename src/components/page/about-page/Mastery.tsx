@@ -1,7 +1,7 @@
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import Image from "next/image";
 import SectionHeader from "../../wrappers/SectionHeader";
-import { MASTERY } from "@/app/lib/data";
+import { MASTERY } from "@/lib/data";
 import SectionWrapper from "../../wrappers/SectionWrapper";
 
 const Mastery = () => {

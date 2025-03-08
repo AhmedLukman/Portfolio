@@ -3,11 +3,11 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import Footer from "./components/ui/Footer";
-import { BackgroundBeams } from "./components/ui/BackgroundBeams";
-import SideNav from "./components/ui/side-nav/SideNav";
+import Footer from "../components/ui/Footer";
+import { BackgroundBeams } from "../components/ui/BackgroundBeams";
+import SideNav from "../components/ui/side-nav/SideNav";
 import { Providers } from "./providers";
-import PersonSchema from "./components/ui/PersonSchema";
+import PersonSchema from "../lib/schemas/PersonSchema";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 

@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { HeroUIProvider } from "@heroui/system";
-import { NavigationProvider } from "./lib/contexts/NavigationContext";
+import { NavigationProvider } from "../lib/contexts/NavigationContext";
 
 declare module "@react-types/shared" {
   interface RouterConfig {

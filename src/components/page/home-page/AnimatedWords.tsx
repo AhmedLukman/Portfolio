@@ -1,7 +1,7 @@
-import { WEB_QUALITIES } from "@/app/lib/data";
 import React from "react";
 import { FlipWords } from "./FlipWords";
 import SectionWrapper from "../../wrappers/SectionWrapper";
+import { WEB_QUALITIES } from "@/lib/data";
 
 const AnimatedWords = () => {
   return (

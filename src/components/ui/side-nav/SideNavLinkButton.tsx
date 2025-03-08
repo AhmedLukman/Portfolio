@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useNavigation } from "@/app/lib/contexts/NavigationContext";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +8,7 @@ import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import { cn } from "@heroui/theme";
 import { usePathname } from "next/navigation";
+import { useNavigation } from "@/lib/contexts/NavigationContext";
 
 const SideNavLinkButton = ({
   link,

@@ -7,9 +7,9 @@ import { Form } from "@heroui/form";
 import { Button } from "@heroui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { DB_STATE, initialFormState } from "@/app/lib/constants";
+import { DB_STATE, initialFormState } from "@/lib/constants";
 import { cn } from "@heroui/theme";
-import { sendEmail } from "@/app/lib/actions";
+import { sendEmail } from "@/lib/actions";
 
 const ContactForm = () => {
   const [errors, formAction, isPending] = useActionState(

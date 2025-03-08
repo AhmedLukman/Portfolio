@@ -5,7 +5,7 @@ import { Button } from "@heroui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import SideNavContent from "./SideNavContent";
-import { useNavigation } from "@/app/lib/contexts/NavigationContext";
+import { useNavigation } from "@/lib/contexts/NavigationContext";
 
 const MobileSideNav = () => {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useNavigation();
