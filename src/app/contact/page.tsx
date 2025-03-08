@@ -1,8 +1,8 @@
 import Image from "next/image";
-import PageHeader from "../components/wrappers/PageHeader";
-import PageWrapper from "../components/wrappers/PageWrapper";
-import ContactForm from "../components/page/contact-page/ContactForm";
 import type { Metadata } from "next";
+import PageWrapper from "@/components/wrappers/PageWrapper";
+import PageHeader from "@/components/wrappers/PageHeader";
+import ContactForm from "@/components/page/contact-page/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Ahmed Lukman | Full Stack Developer",
