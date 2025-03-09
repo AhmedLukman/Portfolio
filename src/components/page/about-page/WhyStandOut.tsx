@@ -12,7 +12,7 @@ export default function WhyStandOut() {
           <h3 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-slate-100">
             Up-to-Date with Evolving Technology
           </h3>
-          <p className="mt-4 text-left text-base/6 text-slate-200">
+          <p className="mt-4 text-left text-base/6">
             I stay current with the latest trends and advancements in
             technology, continuously enhancing my skills to bring the best
             solutions to the table.
@@ -22,25 +22,25 @@ export default function WhyStandOut() {
           <h3 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-slate-100">
             User centric
           </h3>
-          <p className="mt-4 text-left text-base/6 text-slate-200">
+          <p className="mt-4 text-left text-base/6">
             I create intuitive, user-focused solutions by blending technical
             skill with a deep understanding of user behavior.
           </p>
         </WobbleCard>
         <WobbleCard containerClassName="col-span-1 sm:col-span-2 lg:col-span-3 bg-blue-900">
-            <div className="sm:w-1/2">
-              <h3 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-slate-100">
-                Flexible with different Time Zone
-              </h3>
-              <p className="mt-6 mb-20 text-left text-base/6 text-slate-200">
-                I am adept at accommodating various time zones, ensuring
-                seamless collaboration with global teams and clients regardless
-                of the hour.
-              </p>
-            </div>
-              <div className="absolute inset-0 z-10">
-                <HeatMap />
-              </div>
+          <div className="sm:w-1/2">
+            <h3 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-slate-100">
+              Flexible with different Time Zone
+            </h3>
+            <p className="mt-6 mb-20 text-left text-base/6">
+              I am adept at accommodating various time zones, ensuring seamless
+              collaboration with global teams and clients regardless of the
+              hour.
+            </p>
+          </div>
+          <div className="absolute inset-0 z-10">
+            <HeatMap />
+          </div>
         </WobbleCard>
       </div>
     </SectionWrapper>

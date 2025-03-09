@@ -2,22 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  p {
+    @apply text-body;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-heading;
+  }
+}
+
 @layer components {
   .purple-gradient {
-    @apply bg-gradient-to-r from-[#ffc0cb] via-[#ffc0cb] to-[#7a5299] text-transparent bg-clip-text
+    @apply bg-gradient-to-r from-[#ffc0cb] via-[#ffc0cb] to-[#7a5299] text-transparent bg-clip-text;
   }
 }
 
 /* For Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar-track {
-  background: transparent;  /* makes the track transparent */
+  background: transparent; /* makes the track transparent */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #653e80;  /* color of the scroll thumb */
+  background: #653e80; /* color of the scroll thumb */
 }
 
 /* For Firefox */
 * {
-  scrollbar-color: #653e80 transparent;  /* thumb and track color */
+  scrollbar-color: #653e80 transparent; /* thumb and track color */
 }

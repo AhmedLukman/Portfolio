@@ -8,12 +8,9 @@ const Introduction = () => {
   return (
     <SectionWrapper className="flex md:flex-row justify-between gap-5 space-y-0 md:gap-0 flex-col-reverse">
       <div className="md:basis-1/2 self-center">
-        <p className=" text-slate-300">
+        <p>
           I&apos;m a{" "}
-          <strong className="purple-gradient">
-            {" "}
-            modern developer{" "}
-          </strong>
+          <strong className="purple-gradient"> modern developer </strong>
           with a distinguished Diploma in Business Information Technology{" "}
           <FontAwesomeIcon icon={faMedal} /> Beyond academic excellence, I
           possess a rich tapestry of{" "}

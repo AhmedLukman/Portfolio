@@ -29,6 +29,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        heading: "var(--slate-200)",
+        body: "var(--slate-300)"
       },
       keyframes: {
         scroll: {

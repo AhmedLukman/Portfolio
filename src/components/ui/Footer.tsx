@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { SOCIAL_LINKS } from "@/lib/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +7,7 @@ import { Link } from "@heroui/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col items-center justify-center text-slate-300 pb-10 gap-2">
+    <footer className="w-full flex flex-col items-center justify-center pb-10 gap-2">
       <div>
         {SOCIAL_LINKS.map((link) => (
           <Button
@@ -21,7 +21,7 @@ const Footer = () => {
           >
             <FontAwesomeIcon
               size="xl"
-              className="text-slate-200"
+              className="text-body"
               icon={link.icon}
             />
           </Button>

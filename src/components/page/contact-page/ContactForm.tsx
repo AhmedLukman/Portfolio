@@ -47,7 +47,7 @@ const ContactForm = () => {
             classNames={{
               inputWrapper:
                 "border-slate-400 focus-within:!border-slate-300 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
-              input: "text-slate-300",
+              input: "text-body",
             }}
           />
           <Input
@@ -60,7 +60,7 @@ const ContactForm = () => {
             classNames={{
               inputWrapper:
                 "border-slate-400 focus-within:!border-slate-300 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
-              input: "text-slate-300",
+              input: "text-body",
             }}
           />
         </div>
@@ -72,7 +72,7 @@ const ContactForm = () => {
           classNames={{
             inputWrapper:
               "border-slate-400 focus-within:!border-slate-300 !h-56 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
-            input: "text-slate-300",
+            input: "text-body",
           }}
           variant="bordered"
         />

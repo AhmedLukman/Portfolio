@@ -10,7 +10,7 @@ const PageHeader = ({
 }) => {
   return (
     <header>
-      <h1 className="text-2xl lg:text-3xl text-slate-200 text-center font-bold tracking-wide mb-1">
+      <h1 className="text-2xl lg:text-3xl text-center font-bold tracking-wide mb-1">
         {children}
       </h1>
       <GradientBorder className={cn("mx-auto", borderClassName)} />

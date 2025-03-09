@@ -15,15 +15,12 @@ const Mastery = () => {
             key={title}
             className="w-full h-72 group border border-slate-300"
           >
-            <CardHeader
-              as="h3"
-              className="absolute z-20 top-1 text-slate-200 text-xl"
-            >
+            <CardHeader as="h3" className="absolute z-20 top-1  text-xl">
               {title}
             </CardHeader>
             <CardBody
               as="p"
-              className="z-20 absolute top-14 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-slate-300"
+              className="z-20 absolute top-14 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             >
               {description}
             </CardBody>

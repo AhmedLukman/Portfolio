@@ -14,16 +14,17 @@ const CertificationsList = () => {
               <CardHeader as="h3">
                 <span className="purple-gradient text-xl">{title}</span>
               </CardHeader>
-              <CardBody as="p" className="text-slate-300">
-                {description}
-              </CardBody>
-              <CardFooter as="footer" className="flex flex-row justify-between items-center">
-                <div className="flex flex-col">
-                  <span className="text-slate-300">{organization}</span>
-                  <time className="text-slate-300 sm:hidden">{date}</time>
+              <CardBody as="p">{description}</CardBody>
+              <CardFooter
+                as="footer"
+                className="flex flex-row justify-between items-center"
+              >
+                <div className="flex flex-col text-body">
+                  <span>{organization}</span>
+                  <time className="sm:hidden">{date}</time>
                 </div>
                 <div className="flex items-center sm:gap-4">
-                  <time className="text-slate-300 hidden sm:block">{date}</time>
+                  <time className="text-body hidden sm:block">{date}</time>
                   <BorderButton
                     file={`${file}.pdf`}
                     borderRadius="2rem"

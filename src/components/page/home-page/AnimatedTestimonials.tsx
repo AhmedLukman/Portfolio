@@ -121,9 +121,7 @@ export const AnimatedTestimonials = ({
             <h3 className="text-xl font-bold inline-block purple-gradient">
               {testimonials[active].name}
             </h3>
-            <p className="text-sm text-slate-300">
-              {testimonials[active].designation}
-            </p>
+            <p className="text-sm">{testimonials[active].designation}</p>
             <motion.p className="mt-8">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
@@ -143,7 +141,7 @@ export const AnimatedTestimonials = ({
                     ease: "easeInOut",
                     delay: 0.02 * index,
                   }}
-                  className="inline-block text-slate-300"
+                  className="inline-block"
                 >
                   {word}&nbsp;
                 </motion.span>
