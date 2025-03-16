@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, PropsWithChildren } from "react";
+import { createContext, use, useState, PropsWithChildren } from "react";
 
 type NavigationContextType = {
   isMobileMenuOpen: boolean;
@@ -27,7 +27,7 @@ export const NavigationProvider = ({ children }: PropsWithChildren) => {
 };
 
 export const useNavigation = () => {
-  const context = useContext(NavigationContext);
+  const context = use(NavigationContext);
   if (context === undefined)
     throw new Error("useNavigation must be used within a NavigationProvider");
   return context;
