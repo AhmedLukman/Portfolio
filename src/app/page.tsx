@@ -13,8 +13,8 @@ const Home = () => {
       <MainHeading />
       <Introduction />
       <TechAndTools />
-      <Testimonials />
       <AnimatedWords />
+      <Testimonials />
       <CallToAction />
     </PageWrapper>
   );
