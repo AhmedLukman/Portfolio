@@ -4,7 +4,7 @@ import { Poppins } from "next/font/google";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Footer from "../components/ui/Footer";
-import { BackgroundBeams } from "../components/ui/BackgroundBeams";
+import BackgroundBeamsWrapper from "../components/wrappers/BackgroundBeamsWrapper"; 
 import SideNav from "../components/ui/side-nav/SideNav";
 import { Providers } from "./providers";
 import PersonSchema from "../lib/schemas/PersonSchema";
@@ -42,7 +42,7 @@ export default function RootLayout({
               <Footer />
             </div>
           </div>
-          <BackgroundBeams />
+          <BackgroundBeamsWrapper />
         </Providers>
         <SpeedInsights />
         <Analytics />
