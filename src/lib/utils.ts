@@ -13,3 +13,7 @@ export const convertDate = (dateString: string): string => {
 
   return date.toLocaleDateString("en-US", options);
 };
+
+export const getExternalLinkProps = (isExternal: boolean) => {
+  return isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {};
+};

@@ -5,10 +5,11 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@heroui/button";
-import { Link } from "@heroui/link";
+import Link from "next/link";
 import { cn } from "@heroui/theme";
 import { usePathname } from "next/navigation";
 import { useNavigation } from "@/lib/contexts/NavigationContext";
+import { getExternalLinkProps } from "@/lib/utils";
 
 const SideNavLinkButton = ({
   link,
@@ -62,11 +63,12 @@ const SideNavLinkButton = ({
         )
       }
       as={Link}
+      role="link"
       href={link.path}
       className={cn(baseButtonClasses, hoverClasses, {
         [activeClasses]: isActive,
       })}
-      isExternal={isSocial}
+      {...getExternalLinkProps(isSocial)}
     >
       {link.name}
     </Button>

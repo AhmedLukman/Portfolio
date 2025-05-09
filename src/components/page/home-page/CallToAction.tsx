@@ -1,7 +1,7 @@
 import React from "react";
 import { BackgroundGradient } from "./BackgroundGradient";
 import { Button } from "@heroui/button";
-import { Link } from "@heroui/link";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMessage } from "@fortawesome/free-regular-svg-icons";
 import SectionWrapper from "../../wrappers/SectionWrapper";
@@ -21,6 +21,7 @@ const CallToAction = () => {
           <Button
             as={Link}
             href="/contact"
+            role="link"
             endContent={<FontAwesomeIcon icon={faMessage} />}
           >
             Contact me

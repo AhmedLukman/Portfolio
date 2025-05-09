@@ -3,6 +3,7 @@ import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { Link } from "@heroui/link";
 import SectionWrapper from "../../wrappers/SectionWrapper";
+import NextLink from "next/link";
 
 const Introduction = () => {
   return (
@@ -15,9 +16,8 @@ const Introduction = () => {
           <FontAwesomeIcon icon={faMedal} /> Beyond academic excellence, I
           possess a rich tapestry of{" "}
           <Link
-            showAnchorIcon
+            as={NextLink}
             underline="always"
-            isExternal
             href="/about#certifications"
             color="foreground"
           >
@@ -25,9 +25,8 @@ const Introduction = () => {
           </Link>{" "}
           from top-tier courses and boot-camps, alongside{" "}
           <Link
-            showAnchorIcon
             underline="always"
-            isExternal
+            as={NextLink}
             href="/about#recognition"
             color="foreground"
           >
