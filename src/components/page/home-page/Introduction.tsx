@@ -40,7 +40,6 @@ const Introduction = () => {
       <div className="relative md:basis-1/2 h-52 md:h-64">
         <Image
           priority
-          sizes="(min-width: 768px) 50vw, 100vw"
           fill
           src="/assets/images/man-near-computer.svg"
           alt="Developer sitting on a desk that has a computer"
