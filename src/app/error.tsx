@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import ImageTemplate from '/public/assets/images/portfolio-image-template.png';
 
 export default function Error({
   error,
@@ -18,11 +19,9 @@ export default function Error({
 
   return (
     <div className="h-full flex justify-center items-center flex-col">
-      <div className="relative">
+      <div>
         <Image
-          src="/assets/images/portfolio-image-template.png"
-          width={500}
-          height={500}
+          src={ImageTemplate}
           priority
           alt="Error image illustration"
         />

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import PageWrapper from "@/components/wrappers/PageWrapper";
 import PageHeader from "@/components/wrappers/PageHeader";
 import ContactForm from "@/components/page/contact-page/ContactForm";
+import ShakingHandsImage from "/public/assets/images/shakehands.png"
 
 export const metadata: Metadata = {
   title: "Contact Ahmed Lukman | Full Stack Developer",
@@ -15,11 +16,9 @@ const ContactPage = () => {
       <PageHeader>Contact me</PageHeader>
       <ContactForm />
       <Image
-        src="/assets/images/shakehands.png"
-        className="object-contain absolute right-0 top-24 hidden 2xl:block"
+        src={ShakingHandsImage}
+        className="object-contain absolute right-0 top-24 hidden 2xl:block w-80"
         priority
-        width={300}
-        height={480}
         alt="Shaking hands with contract illustration"
       />
     </PageWrapper>

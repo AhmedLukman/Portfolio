@@ -1,15 +1,15 @@
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import ImageTemplate from "/public/assets/images/portfolio-image-template.png";
 
 const NotFound = () => {
   return (
     <div className=" h-full flex justify-center items-center flex-col">
       <div className="relative">
         <Image
-          src="/assets/images/portfolio-image-template.png"
-          width={500}
-          height={500}
+          src={ImageTemplate}
+          className="w-[500px]"
           priority
           alt="Error image illustration"
         />

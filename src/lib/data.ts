@@ -1,47 +1,76 @@
+import FrontEndImage from "/public/assets/images/frontend.jpg";
+import BackEndImage from "/public/assets/images/backend.jpg";
+import DesignImage from "/public/assets/images/design.jpg";
+import HTML5 from "/public/assets/images/html5.svg";
+import CSS from "/public/assets/images/css.svg";
+import JavaScript from "/public/assets/images/javascript.svg";
+import React from "/public/assets/images/react.svg";
+import Next from "/public/assets/images/next.svg";
+import Svelte from "/public/assets/images/svelte.svg";
+import TypeScript from "/public/assets/images/typescript.svg";
+import Tailwind from "/public/assets/images/tailwind.svg";
+import HeroUI from "/public/assets/images/heroui.svg";
+import AceternityUI from "/public/assets/images/aceternity.webp";
+import Zod from "/public/assets/images/zod.svg";
+import AuthJS from "/public/assets/images/authjs.svg";
+import Prisma from "/public/assets/images/prisma.svg";
+import Supabase from "/public/assets/images/supabase.svg";
+import PostgreSQL from "/public/assets/images/postgresql.svg";
+import VSCode from "/public/assets/images/vscode.svg";
+import ChatGPT from "/public/assets/images/chatgpt.svg";
+import Copilot from "/public/assets/images/copilot.svg";
+import Vercel from "/public/assets/images/vercel.svg";
+import ESLint from "/public/assets/images/eslint.svg";
+import NPM from "/public/assets/images/npm.svg";
+import Git from "/public/assets/images/git.svg";
+import GitHub from "/public/assets/images/github.svg";
+import Vite from "/public/assets/images/vite.svg";
+import Claude from "/public/assets/images/claude.svg";
+
 export const FRONT_END_TECHS = [
   {
     name: "HTML5",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+    src: HTML5,
   },
   {
-    name: "CSS3",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+    name: "CSS",
+    src: CSS,
   },
   {
     name: "JavaScript",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg",
+    src: JavaScript,
   },
   {
     name: "React.js",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    src: React,
   },
   {
     name: "Next.js",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+    src: Next,
   },
   {
     name: "Svelte",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg",
+    src: Svelte,
   },
   {
     name: "TypeScript",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+    src: TypeScript,
   },
   {
     name: "Tailwind CSS",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    src: Tailwind,
   },
   {
     name: "HeroUI",
-    src: "/assets/images/heroui.png",
+    src: HeroUI,
   },
   {
     name: "Aceternity UI",
-    src: "/assets/images/aceternity.webp",
+    src: AceternityUI,
   },
   {
     name: "Zod",
-    src: "/assets/images/zod.svg",
+    src: Zod,
   },
 ];
 
@@ -49,55 +78,63 @@ export const FRONT_END_TECHS = [
 export const BACKEND_TECHS = [
   {
     name: "Auth.js",
-    src: "/assets/images/authjs.svg",
+    src: AuthJS,
   },
   {
     name: "Prisma",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+    src: Prisma,
   },
   {
     name: "Supabase",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+    src: Supabase,
   },
   {
     name: "PostgreSQL",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-  },
-  {
-    name: "SQL",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+    src: PostgreSQL,
   },
 ];
 
 export const DEV_TOOLS = [
   {
     name: "VSCode",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+    src: VSCode,
   },
   {
-    name: "Chatgpt",
-    src: "https://img.icons8.com/ios/100/ffffff/chatgpt.png",
+    name: "ChatGPT",
+    src: ChatGPT,
+  },
+  {
+    name: "GitHub Copilot",
+    src: Copilot
+  },
+  {
+    name: "Claude",
+    src: Claude
   },
   {
     name: "Vercel",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+    src: Vercel,
   },
   {
     name: "ESLint",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eslint/eslint-original.svg",
+    src: ESLint,
   },
   {
     name: "NPM",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg",
+    src: NPM,
   },
   {
     name: "Git",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    src: Git,
   },
   {
     name: "GitHub",
-    src: "/assets/images/github.svg",
+    src: GitHub,
   },
+  {
+    name: "Vite",
+    src: Vite,
+  }
 ];
 
 export const TESTIMONIALS = [
@@ -137,19 +174,19 @@ export const MASTERY = [
     title: "Front End",
     description:
       "Expert in creating beautiful, high-performance, responsive, and user-friendly web applications.",
-    src: "/assets/images/frontend.jpg",
+    src: FrontEndImage
   },
   {
     title: "Back End",
     description:
       "Skilled in developing robust, scalable, and secure server-side applications.",
-    src: "/assets/images/backend.jpg",
+    src: BackEndImage
   },
   {
     title: "UI/UX",
     description:
       "Focused on creating intuitive, engaging, and visually captivating user interfaces that enhance user experience.",
-    src: "/assets/images/design.jpg",
+    src: DesignImage
   },
 ];
 
