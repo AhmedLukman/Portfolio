@@ -15,7 +15,7 @@ const MasteryBody = ({ children }: PropsWithChildren) => {
     <div
       ref={ref}
       className={cn(
-        "absolute z-20 top-14 left-2 right-2 text-white transition-opacity duration-300 sm:opacity-0 sm:hover:opacity-100",
+        "absolute z-20 top-14 left-2 right-2 text-white transition-opacity duration-300 sm:opacity-0 sm:group-hover:opacity-100",
         inView ? "opacity-100" : "opacity-0"
       )}
     >
