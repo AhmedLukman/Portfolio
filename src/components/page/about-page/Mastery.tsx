@@ -1,8 +1,9 @@
-import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Card, CardHeader } from "@heroui/card";
 import Image from "next/image";
 import SectionHeader from "../../wrappers/SectionHeader";
 import { MASTERY } from "@/lib/data";
 import SectionWrapper from "../../wrappers/SectionWrapper";
+import MasteryBody from "./MasteryBody";
 
 const Mastery = () => {
   const getSizesByIndex = (index: number) => {
@@ -29,12 +30,7 @@ const Mastery = () => {
             <CardHeader as="h3" className="absolute z-20 top-1  text-xl">
               {title}
             </CardHeader>
-            <CardBody
-              as="p"
-              className="z-20 absolute top-14 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              {description}
-            </CardBody>
+            <MasteryBody>{description}</MasteryBody>
             <div className="inset-0 absolute bg-black/60 z-10" aria-hidden />
             <Image
               priority
