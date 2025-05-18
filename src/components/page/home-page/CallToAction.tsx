@@ -8,7 +8,7 @@ import SectionWrapper from "../../wrappers/SectionWrapper";
 
 const CallToAction = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper className="min-[768px]:mt-20">
       <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-black/70 flex flex-col items-center gap-3">
         <h3 className="text-xl font-bold text-center">
           Let&apos;s Work Together
