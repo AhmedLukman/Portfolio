@@ -91,7 +91,7 @@ const ExperienceItem = ({
                 />
                 <p className="">{company}</p>
               </div>
-              <small className="lg:mt-0 text-body">
+              <div className="lg:mt-0 text-body text-sm">
                 <time dateTime={startDate.toISOString()}>
                   {convertDate(startDate)}
                 </time>{" "}
@@ -102,7 +102,7 @@ const ExperienceItem = ({
                 <span className="ml-2 text-slate-400">
                   ({calculateDuration(startDate, EndOrCurrentDate)})
                 </span>
-              </small>
+              </div>
             </CardFooter>
           </Card>
         </ListItemWrapper>

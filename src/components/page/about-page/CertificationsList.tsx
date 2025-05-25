@@ -24,7 +24,12 @@ const CertificationsList = () => {
                   <time className="sm:hidden">{year}</time>
                 </div>
                 <div className="flex items-center sm:gap-4">
-                  <time className="text-body hidden sm:block">{year}</time>
+                  <time
+                    dateTime={year}
+                    className="text-body hidden sm:block text-sm"
+                  >
+                    {year}
+                  </time>
                   <BorderButton
                     file={`${file}.pdf`}
                     borderRadius="2rem"
