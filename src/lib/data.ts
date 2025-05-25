@@ -28,7 +28,9 @@ import Vite from "/public/assets/images/vite.svg";
 import Claude from "/public/assets/images/claude.svg";
 import IlabAfrica from "/public/assets/images/ilabafrica.jpg";
 import Trinetium from "/public/assets/images/trinetium.jpeg";
+import ThomsonReuters from "/public/assets/images/thomsonreuters.png";
 import { StaticImageData } from "next/image";
+import Yoonka from "/public/assets/images/yoonka.jpeg";
 
 export const FRONT_END_TECHS = [
   {
@@ -77,7 +79,6 @@ export const FRONT_END_TECHS = [
   },
 ];
 
-
 export const BACKEND_TECHS = [
   {
     name: "Auth.js",
@@ -108,11 +109,11 @@ export const DEV_TOOLS = [
   },
   {
     name: "GitHub Copilot",
-    src: Copilot
+    src: Copilot,
   },
   {
     name: "Claude",
-    src: Claude
+    src: Claude,
   },
   {
     name: "Vercel",
@@ -137,7 +138,7 @@ export const DEV_TOOLS = [
   {
     name: "Vite",
     src: Vite,
-  }
+  },
 ];
 
 export const TESTIMONIALS = [
@@ -177,19 +178,19 @@ export const MASTERY = [
     title: "Front End",
     description:
       "Expert in creating beautiful, high-performance, responsive, and user-friendly web applications.",
-    src: FrontEndImage
+    src: FrontEndImage,
   },
   {
     title: "Back End",
     description:
       "Skilled in developing robust, scalable, and secure server-side applications.",
-    src: BackEndImage
+    src: BackEndImage,
   },
   {
     title: "UI/UX",
     description:
       "Focused on creating intuitive, engaging, and visually captivating user interfaces that enhance user experience.",
-    src: DesignImage
+    src: DesignImage,
   },
 ];
 
@@ -581,22 +582,37 @@ export const SAMPLE_ARCS = [
 
 export const EXPERIENCE: {
   title: string;
-  type: "Full Time" | "Part Time" | "Contract" | "Internship";
+  type: "Full-Time" | "Part-Time" | "Contract" | "Internship";
   description: string;
   company: string;
-  startDate: string;
-  endDate: string;
+  startDate: Date;
+  endDate?: Date;
   companyLogo: StaticImageData;
 }[] = [
-  // TODO: Add full time experience and company logo beside title
+  {
+    title: "Front-end Developer",
+    type: "Part-Time",
+    description: "To be updated",
+    company: "Thomson Reuters",
+    startDate: new Date(2024, 9),
+    companyLogo: ThomsonReuters,
+  },
+  {
+    title: "Front-end Developer",
+    type: "Part-Time",
+    description: "To be updated",
+    company: "Yoonka",
+    startDate: new Date(2024, 9),
+    companyLogo: Yoonka,
+  },
   {
     title: "Front-end Developer",
     type: "Internship",
     description:
       "Collaborated adeptly with UI/UX designers and fellow engineers to craft clean, high-performance front-end web solutions. Key contributions to projects like Adapta, SSAMS, Digital Learning, and Next Events. Recognized as the Lead Intern, entrusted with independent design responsibilities due to a trusted sense of aesthetic.",
     company: "@iLabAfrica",
-    startDate: "2023-02",
-    endDate: "2023-08",
+    startDate: new Date(2023, 1),
+    endDate: new Date(2023, 7),
     companyLogo: IlabAfrica,
   },
   {
@@ -605,8 +621,8 @@ export const EXPERIENCE: {
     description:
       "Developed aesthetically pleasing UI components for the web, integrating dynamic features such as drag and drop, and seamlessly incorporated APIs using Next.js and Express. Recognized for achieving high performance and receiving praise for design excellence.",
     company: "Trinetium DMCC",
-    startDate: "2022-07",
-    endDate: "2022-10",
+    startDate: new Date(2022, 6),
+    endDate: new Date(2022, 9),
     companyLogo: Trinetium,
   },
 ];
