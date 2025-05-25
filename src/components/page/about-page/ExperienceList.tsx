@@ -4,8 +4,24 @@ import { Chip } from "@heroui/chip";
 import ListItemWrapper from "./ListItemWrapper";
 import { convertDate } from "@/lib/utils";
 import Image from "next/image";
+import { intervalToDuration, formatDuration } from "date-fns";
 
 const ExperienceList = () => {
+  const calculateDuration = (start: string, end: string) => {
+    const startDate = new Date(start);
+    const endDate = end ? new Date(end) : new Date();
+
+    const duration = intervalToDuration({
+      start: startDate,
+      end: endDate,
+    });
+
+    return formatDuration(duration, {
+      format: ["years", "months"],
+      delimiter: " ",
+    });
+  };
+
   return (
     <div className="relative w-full">
       {/* Timeline center line - hidden on mobile */}
@@ -78,7 +94,9 @@ const ExperienceList = () => {
                         </time>{" "}
                         <span>| </span>
                         <time dateTime={endDate}>{convertDate(endDate)}</time>
-                        <span className="ml-2 text-slate-400">X years</span>
+                        <span className="ml-2 text-slate-400">
+                          ({calculateDuration(startDate, endDate)})
+                        </span>
                       </small>
                     </CardFooter>
                   </Card>
@@ -90,6 +108,6 @@ const ExperienceList = () => {
       </ul>
     </div>
   );
-}
+};
 
-export default ExperienceList
+export default ExperienceList;
