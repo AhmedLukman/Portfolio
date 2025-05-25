@@ -26,6 +26,9 @@ import Git from "/public/assets/images/git.svg";
 import GitHub from "/public/assets/images/github.svg";
 import Vite from "/public/assets/images/vite.svg";
 import Claude from "/public/assets/images/claude.svg";
+import IlabAfrica from "/public/assets/images/ilabafrica.jpg";
+import Trinetium from "/public/assets/images/trinetium.jpeg";
+import { StaticImageData } from "next/image";
 
 export const FRONT_END_TECHS = [
   {
@@ -583,25 +586,28 @@ export const EXPERIENCE: {
   company: string;
   startDate: string;
   endDate: string;
+  companyLogo: StaticImageData;
 }[] = [
   // TODO: Add full time experience and company logo beside title
   {
     title: "Front-end Developer",
     type: "Internship",
     description:
-      "Front-end Web and Mobile Developer, collaborated adeptly with UI/UX designers and engineers to craft clean, high-performance full-stack web solutions. Key contributions to projects like Adapta, SSAMS, Digital Learning, and Next Events. Recognized as the Lead Intern, entrusted with independent design responsibilities due to a trusted sense of aesthetic.",
+      "Collaborated adeptly with UI/UX designers and fellow engineers to craft clean, high-performance front-end web solutions. Key contributions to projects like Adapta, SSAMS, Digital Learning, and Next Events. Recognized as the Lead Intern, entrusted with independent design responsibilities due to a trusted sense of aesthetic.",
     company: "@iLabAfrica",
     startDate: "2023-03",
     endDate: "2023-08",
+    companyLogo: IlabAfrica,
   },
   {
     title: "Front-end Developer",
     type: "Internship",
     description:
-      "Developed aesthetically pleasing UI components for the web, integrating dynamic features such as drag and drop, and seamlessly incorporated APIs using Next JS and Express. Recognized for achieving high performance and receiving praise for design excellence.",
+      "Developed aesthetically pleasing UI components for the web, integrating dynamic features such as drag and drop, and seamlessly incorporated APIs using Next.js and Express. Recognized for achieving high performance and receiving praise for design excellence.",
     company: "Trinetium DMCC",
     startDate: "2022-8",
     endDate: "2022-10",
+    companyLogo: Trinetium,
   },
 ];
 

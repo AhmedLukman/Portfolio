@@ -6,6 +6,7 @@ import { Chip } from "@heroui/chip";
 import ListItemWrapper from "./ListItemWrapper";
 import { convertDate } from "@/lib/utils";
 import SectionWrapper from "../../wrappers/SectionWrapper";
+import Image from "next/image";
 
 const Experience = () => {
   return (
@@ -18,7 +19,7 @@ const Experience = () => {
         <ul className="space-y-12">
           {EXPERIENCE.map(
             (
-              { company, description, title, type, startDate, endDate },
+              { company, description, title, type, startDate, endDate, companyLogo },
               index
             ) => (
               <div
@@ -55,21 +56,22 @@ const Experience = () => {
                           {type}
                         </Chip>
                       </CardHeader>
-                      <CardBody>
-                        <p>{description}</p>
-                      </CardBody>
+                      <CardBody as="p">{description}</CardBody>
                       <CardFooter
                         as="footer"
-                        className="flex justify-between flex-wrap"
+                        className="flex justify-between flex-wrap gap-2"
                       >
-                        <p className="">{company}</p>
-                        <div className="lg:mt-0 text-body">
+                        <div className="flex gap-2 items-center">
+                          <Image alt={company} src={companyLogo} className="w-8 h-8 rounded-full" />
+                          <p className="">{company}</p>
+                        </div>
+                        <small className="lg:mt-0 text-body">
                           <time dateTime={startDate}>
                             {convertDate(startDate)}
                           </time>{" "}
                           <span>| </span>
                           <time dateTime={endDate}>{convertDate(endDate)}</time>
-                        </div>
+                        </small>
                       </CardFooter>
                     </Card>
                   </ListItemWrapper>
