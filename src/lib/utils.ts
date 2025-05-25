@@ -1,9 +1,7 @@
-export const convertDate = (dateString: string): string => {
-  const date = new Date(dateString + "-01");
-
+export const convertDate = (date: Date): string => {
   // Check if date is valid
   if (isNaN(date.getTime())) {
-    throw new Error(`Invalid date: ${dateString}`);
+    throw new Error(`Invalid date: ${date}`);
   }
 
   const options: Intl.DateTimeFormatOptions = {
