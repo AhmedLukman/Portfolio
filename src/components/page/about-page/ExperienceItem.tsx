@@ -43,7 +43,7 @@ const ExperienceItem = ({
     endDate,
   },
 }: ExperienceItemProps) => {
-  let EndOrCurrentDate = endDate ? endDate : new Date();
+  const EndOrCurrentDate = endDate ? endDate : new Date();
   return (
     <div
       className={`relative flex lg:${index % 2 === 0 ? "justify-end" : "justify-start"} justify-center`}
