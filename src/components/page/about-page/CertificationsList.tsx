@@ -3,12 +3,13 @@ import ListItemWrapper from "./ListItemWrapper";
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { CERTIFICATIONS } from "@/lib/data";
 import { BorderButton } from "./BorderButton";
+import Image from "next/image";
 
 const CertificationsList = () => {
   return (
     <ul className="w-full space-y-8">
       {CERTIFICATIONS.map(
-        ({ organization, description, title, year, file }, index) => (
+        ({ organization, description, title, year, file, logo }, index) => (
           <ListItemWrapper index={index} key={index}>
             <Card className="bg-transparent border hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-300 border-slate-500">
               <CardHeader as="h3">
@@ -20,7 +21,14 @@ const CertificationsList = () => {
                 className="flex flex-row justify-between items-center"
               >
                 <div className="flex flex-col text-body">
-                  <span>{organization}</span>
+                  <div className="flex gap-2 items-center">
+                    <Image
+                      alt={organization}
+                      src={logo}
+                      className="w-8 h-8 rounded-full"
+                    />
+                    <span>{organization}</span>
+                  </div>
                   <time className="sm:hidden">{year}</time>
                 </div>
                 <div className="flex items-center sm:gap-4">
