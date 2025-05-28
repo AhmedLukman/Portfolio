@@ -28,6 +28,8 @@ const ContactForm = () => {
       formAction(formData);
       setShowAlert(true);
     });
+
+    e.currentTarget.reset();
   };
 
   return (
