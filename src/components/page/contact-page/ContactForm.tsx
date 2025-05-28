@@ -29,7 +29,7 @@ const ContactForm = () => {
       setShowAlert(true);
     });
 
-    e.currentTarget.reset();
+    if (db === "success") e.currentTarget.reset();
   };
 
   return (
