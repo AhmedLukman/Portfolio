@@ -1,6 +1,6 @@
 "use server";
 
-import { DB_STATE, initialFormState } from "./constants";
+import { initialFormState } from "./constants";
 import { Resend } from "resend";
 import { z } from "zod";
 import { EmailTemplate } from "../components/page/contact-page/EmailTemplate";
@@ -9,7 +9,7 @@ const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required").trim(),
   recipientEmail: z.string().min(1, "Email is required").email("Invalid email address").trim(),
   message: z.string().min(1, "Message is required").trim(),
-  db: z.enum([DB_STATE.SUCCESS, DB_STATE.ERROR]).optional()
+  db: z.enum(["success", "error"]).optional()
 });
 
 type ContactForm = z.infer<typeof contactFormSchema>;
@@ -49,13 +49,13 @@ export const sendEmail = async (
     });
     return {
       ...initialFormState,
-      db: DB_STATE.SUCCESS,
+      db: "success",
     };
   } catch (error) {
     console.error(error);
     return {
       ...initialFormState,
-      db: DB_STATE.ERROR,
+      db: "error",
     };
   }
 };

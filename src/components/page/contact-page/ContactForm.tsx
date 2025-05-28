@@ -7,9 +7,10 @@ import { Form } from "@heroui/form";
 import { Button } from "@heroui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { DB_STATE, initialFormState } from "@/lib/constants";
+import { initialFormState } from "@/lib/constants";
 import { cn } from "@heroui/theme";
 import { sendEmail } from "@/lib/actions";
+import { useRef, useEffect } from "react";
 
 const ContactForm = () => {
   const [errors, formAction, isPending] = useActionState(
@@ -19,22 +20,30 @@ const ContactForm = () => {
   const { db } = errors;
   const [showAlert, setShowAlert] = useState(false);
 
+  const isDBSuccess = db === "success";
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if(db){
+      setShowAlert(true);
+    }
+    if (db === "success" && formRef.current) {
+      formRef.current.reset();
+    }
+  }, [db]);
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     const formData = new FormData(e.currentTarget);
-
     startTransition(() => {
       formAction(formData);
-      setShowAlert(true);
     });
-
-    if (db === "success") e.currentTarget.reset();
   };
 
   return (
     <>
       <Form
+        ref={formRef}
         onSubmit={onSubmit}
         className="max-w-lg sm:max-w-xl mx-auto mt-14 flex flex-col gap-6"
         validationErrors={errors}
@@ -101,13 +110,13 @@ const ContactForm = () => {
         className="max-w-xl mx-auto mt-10"
         isVisible={!!db && showAlert}
         onClose={() => setShowAlert(false)}
-        color={db}
+        color={isDBSuccess ? db : "danger"}
         description={
-          db === DB_STATE.SUCCESS
+          db === "success"
             ? "Email successfully sent!"
             : "Error sending email, please try again."
         }
-        title={db === DB_STATE.SUCCESS ? "Success" : "Error"}
+        title={isDBSuccess ? "Success" : "Error"}
         hideIconWrapper
       />
     </>

@@ -47,8 +47,3 @@ export const initialFormState = {
   recipientEmail: "",
   message: "",
 } as const;
-
-export const DB_STATE = {
-  SUCCESS: "success",
-  ERROR: "danger",
-} as const;
