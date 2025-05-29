@@ -1,5 +1,5 @@
 import React from "react";
-import ListItemWrapper from "./ListItemWrapper";
+import ListItemWrapper from "../../wrappers/ListItemWrapper";
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { CERTIFICATIONS } from "@/lib/data";
 import { BorderButton } from "./BorderButton";

@@ -1,6 +1,6 @@
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
-import ListItemWrapper from "./ListItemWrapper";
+import ListItemWrapper from "../../wrappers/ListItemWrapper";
 import { convertDate } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import { intervalToDuration, formatDuration } from "date-fns";
