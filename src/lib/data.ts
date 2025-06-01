@@ -34,6 +34,11 @@ import Yoonka from "/public/assets/images/yoonka.jpeg";
 import Strathmore from "/public/assets/images/strathmore.jpeg";
 import GreatLearning from "/public/assets/images/greatlearning.jpeg";
 import SoloLearn from "/public/assets/images/sololearn.jpeg";
+import Cinemania from "/public/assets/images/cinemania.png";
+import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png";
+import Portfolio from "/public/assets/images/portfolio.png";
+import { faExclamationTriangle, faLightbulb, faThumbsUp, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { ProjectStatus, type TProjectStatus } from "./constants";
 
 export const FRONT_END_TECHS = [
   {
@@ -638,7 +643,7 @@ export const CERTIFICATIONS = [
     file: "Diploma_Certificate",
     description:
       "Graduated with distinction and honored as the Best Student in the course. Mastered fundamental Business concepts and advanced Information Technology topics. Developed a robust foundation in programming, database management, data structures, networking, and web development, making me a well-rounded and highly capable professional ready to tackle complex challenges in the tech industry.",
-    logo: Strathmore
+    logo: Strathmore,
   },
   {
     title: "Front End Developer - HTML",
@@ -647,7 +652,7 @@ export const CERTIFICATIONS = [
     file: "HTML",
     description:
       "Equipped me with the foundational skills to create well-structured and accessible websites, setting a strong base for advanced front-end development.",
-    logo: GreatLearning
+    logo: GreatLearning,
   },
   {
     title: "Front End Developer - CSS",
@@ -656,7 +661,7 @@ export const CERTIFICATIONS = [
     file: "CSS",
     description:
       "Specialized in CSS to create visually appealing and responsive web designs. Mastered modern styling techniques, ensuring sleek and professional website aesthetics.",
-    logo: GreatLearning
+    logo: GreatLearning,
   },
   {
     title: "Introduction to JavaScript",
@@ -665,16 +670,16 @@ export const CERTIFICATIONS = [
     file: "JS",
     description:
       "Acquired foundational JavaScript skills, enabling dynamic and interactive web content. Developed a solid understanding of core concepts, setting the stage for advanced programming and application development.",
-    logo: GreatLearning
+    logo: GreatLearning,
   },
   {
-    title: "React JS Tutorial",
+    title: "React.js Tutorial",
     organization: "Great Learning Academy",
     year: "2023",
     file: "REACT",
     description:
       "Gained expertise in building efficient and dynamic web applications by utilizing React's component-based architecture and state management.",
-    logo: GreatLearning
+    logo: GreatLearning,
   },
   {
     title: "Web Development",
@@ -683,6 +688,267 @@ export const CERTIFICATIONS = [
     file: "Web_Development",
     description:
       "Completed a comprehensive web development course on SoloLearn, mastering essential skills in HTML, CSS, and JavaScript. Developed proficiency in front-end, ready to tackle real-world web projects with confidence.",
-    logo: SoloLearn
+    logo: SoloLearn,
+  },
+];
+
+const problemCaseStudy = {
+  title: "Problem",
+  icon: faExclamationTriangle,
+  colors: [
+    [255, 166, 158],
+    [221, 255, 247],
+  ],
+  bgColor: "bg-pink-900",
+};
+
+const solutionCaseStudy = {
+  title: "Solution",
+  icon: faLightbulb,
+  bgColor: "bg-sky-600",
+  colors: [[125, 211, 252]],
+};
+
+const outcomeCaseStudy = {
+  title: "Outcome",
+  icon: faThumbsUp,
+  colors: [[125, 211, 252]],
+  bgColor: "bg-emerald-800",
+};
+
+type Project = {
+  overview: {
+    title: string;
+    description: string;
+    image: StaticImageData;
+    site: string;
+    source: string;
+    status: TProjectStatus;
+    startDate: string;
+    endDate?: string;
+  };
+  image: StaticImageData;
+  route: string;
+  slug: string;
+  techStack: {
+    alt: string;
+    src: string;
+  }[];
+  metrics: {
+    alt: string;
+    src: string;
+    score: string;
+  }[];
+  features: string[];
+  caseStudy: {
+    title: string;
+    description: string;
+    icon: IconDefinition;
+    colors: number[][];
+    dotSize?: number;
+    bgColor: string;
+  }[];
+};
+
+export const PROJECTS: Project[] = [
+  {
+    overview: {
+      title: "Cinemania",
+      description:
+        "Discover and interact in a world of movies and TV shows at your fingertips! Dive into synopsis, rating and more in cinemania today!",
+      image: CinemanieLaptop,
+      site: "https://cinemania-ahmedlukman.vercel.app",
+      status: ProjectStatus.pending,
+      source: "https://github.com/AhmedLukman/Cinemania",
+      startDate: "2024-06",
+    },
+    image: Cinemania,
+    route: "/projects/cinemania",
+    slug: "cinemania",
+    features: [
+      "Protects user data with cutting-edge encryption and security protocols.",
+      "Comprehensive details for each movie, TV show, and person, including cast, crew, trailers, reviews, and ratings.",
+      "A real-time feed of trending, popular and upcoming films, ensuring users are always up-to-date with the latest content.",
+      "Secure login and registration with options for social media authentication to streamline the sign-up process.",
+      "Optimized performance to ensure quick loading times for all pages and content, providing a smooth user experience.",
+      "Allow users to create and manage favorite collections for quick access.",
+      "Advanced search functionality with multiple filters (genre, year, rating, etc.) to help users find exactly what they’re looking for.",
+      "A platform for users to leave reviews, fostering a community of movie and TV enthusiasts.",
+      "Easy, engaging and interactive user interface.",
+      "A fully responsive design that provides a seamless experience across desktops, tablets, and mobile devices.",
+    ],
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Despite the abundance of streaming platforms like Netflix, users often struggle to find a centralized hub that provides detailed, real-time information on a wide array of films and celebrities across multiple sources in an efficient manner. These platforms usually focus on streaming, leaving a gap for users who want comprehensive details regarding the industry and an interactive community experience that goes beyond streaming alone.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Leveraging the TMDB API to build a web app that offer an all-encompassing entertainment hub including detailed information on movies, TV shows, and celebrities. It provides users with a holistic view of the entertainment landscape that transcends the limitations of individual streaming platforms.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "Cinemania revolutionizes the way users discover and interact with entertainment content by providing a unique, all-in-one entertainment hub. This comprehensive approach boosts user engagement and satisfaction, positioning Cinemania as the premier platform for entertainment enthusiasts. Users experience reduced search times and increased satisfaction, making content discovery more efficient and enjoyable.",
+      },
+    ],
+    techStack: [
+      {
+        alt: "Next.js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "React.js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      },
+      {
+        alt: "HTML5",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      },
+      {
+        alt: "CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "Auth.js",
+        src: "/assets/images/authjs.svg",
+      },
+      {
+        alt: "Prisma",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      },
+      {
+        alt: "PostgreSQL",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "90",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
+      },
+    ],
+  },
+  {
+    overview: {
+      title: "Portfolio",
+      description:
+        "My personal portfolio website where I showcase who I am, my diverse skills, innovative projects and more. Dive into it to see how I transform ideas into digital masterpieces!",
+      image: Portfolio,
+      site: "https://portfolio-ahmedlukman.vercel.app",
+      source: "https://github.com/AhmedLukman/Portfolio",
+      status: ProjectStatus.pending,
+      startDate: "2024-06",
+      endDate: "2024-07",
+    },
+    image: Portfolio,
+    route: "/projects/portfolio",
+    slug: "portfolio",
+    features: [
+      "Enjoy a responsive and seamless browsing experience across all devices.",
+      "Top-notch SEO practices boosting visibility thus easy discovery in search engines.",
+      "Effortlessly find what you are looking for with intuitive and user-friendly navigation.",
+      "Dedicated contact form functionality and social media links for easy reach.",
+      "Clean, stylish, and visually appealing custom design.",
+    ],
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "I needed a platform to showcase my diverse technical skills, innovative projects, and professional achievements that highlights my expertise and attracts potential employers or clients.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "I designed and developed a sleek, modern portfolio website using Next.js for its powerful performance and SEO capabilities, React for a dynamic user interface, UI libraries for beautiful and interactive animations.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "The website effectively showcases my skills and projects in a professional and engaging manner. It has received commendations for its performance, intuitive design and smooth navigation, reflecting my attention to detail and commitment to user experience.",
+      },
+    ],
+    techStack: [
+      {
+        alt: "Next.js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        alt: "React.js",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      },
+      {
+        alt: "HTML5",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      },
+      {
+        alt: "CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+      },
+      {
+        alt: "Tailwind CSS",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        src: "/assets/images/aceternity.webp",
+        alt: "Aceternity UI",
+      },
+      {
+        src: "/assets/images/nextui.png",
+        alt: "Next UI",
+      },
+    ],
+    metrics: [
+      {
+        alt: "Performance",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        score: "95",
+      },
+      {
+        alt: "Accessibility",
+        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        score: "100",
+      },
+      {
+        alt: "Best Practices",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        score: "100",
+      },
+      {
+        alt: "SEO",
+        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        score: "100",
+      },
+    ],
   },
 ];
