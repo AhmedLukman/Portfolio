@@ -47,3 +47,10 @@ export const initialFormState = {
   recipientEmail: "",
   message: "",
 } as const;
+
+export const ProjectStatus = { 
+  completed: "Completed",
+  pending: "Pending",
+} as const
+
+export type TProjectStatus = typeof ProjectStatus[keyof typeof ProjectStatus]
