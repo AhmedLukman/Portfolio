@@ -9,7 +9,7 @@ import SectionWrapper from "@/components/wrappers/SectionWrapper";
 const ProjectsList = () => {
   return (
     <SectionWrapper>
-      <ul className="justify-between w-full grid grid-cols-1 md:grid-cols-2">
+      <ul className="justify-between w-full grid grid-cols-1 md:grid-cols-2 xl:gap-14">
         {PROJECTS.map(
           (
             { overview: { title, description, status }, image, route },
