@@ -9,7 +9,7 @@ import SectionWrapper from "@/components/wrappers/SectionWrapper";
 const ProjectsList = () => {
   return (
     <SectionWrapper>
-      <ul className="flex justify-between w-full flex-wrap">
+      <ul className="justify-between w-full grid grid-cols-1 md:grid-cols-2">
         {PROJECTS.map(
           (
             { overview: { title, description, status }, image, route },
@@ -17,7 +17,7 @@ const ProjectsList = () => {
           ) => (
             <ListItemWrapper key={title} index={index}>
               <CardContainer>
-                <CardBody className="  relative group/card shadow-[0_8px_16px_rgb(0_0_0/0.3)] border border-white/[0.1] w-[22rem] md:w-[23rem] xl:w-[26rem] h-auto rounded-xl p-6   ">
+                <CardBody className="  relative group/card shadow-[0_8px_16px_rgb(0_0_0/0.3)] border border-white/[0.1] w-[21rem] xl:w-[26rem] h-auto rounded-xl p-6   ">
                   <Link href={route} className="block">
                     <CardItem
                       translateZ="70"
