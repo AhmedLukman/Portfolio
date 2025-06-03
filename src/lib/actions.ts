@@ -18,15 +18,8 @@ export const sendEmail = async (
   _: unknown,
   formData: FormData
 ): Promise<ContactForm> => {
-  const name = formData.get("name");
-  const recipientEmail = formData.get("recipientEmail");
-  const message = formData.get("message");
-
-  const { success, data, error } = contactFormSchema.safeParse({
-    name,
-    recipientEmail,
-    message,
-  });
+  const parsedFormData = Object.fromEntries(formData);
+  const { success, data, error } = contactFormSchema.safeParse(parsedFormData);
 
   if (!success) {
     return {
