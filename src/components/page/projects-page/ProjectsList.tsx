@@ -35,7 +35,7 @@ const ProjectsList = () => {
                     </CardItem>
                     <CardItem translateZ="99" className="group mt-4">
                       <Image
-                        priority={index < 2 ? true : false}
+                        priority
                         src={image}
                         className=" object-cover rounded-xl group-hover/card:shadow-xl"
                         alt={title}
