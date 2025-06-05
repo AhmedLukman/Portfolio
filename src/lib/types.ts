@@ -10,8 +10,8 @@ export type Project = {
     site: string;
     source: string;
     status: TProjectStatus;
-    startDate: string;
-    endDate?: string;
+    startDate: Date;
+    endDate?: Date;
   };
   image: StaticImageData;
   route: string;
@@ -23,7 +23,7 @@ export type Project = {
   metrics: {
     alt: string;
     src: string;
-    score: string;
+    score: number;
   }[];
   features: string[];
   caseStudy: {
