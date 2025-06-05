@@ -37,8 +37,9 @@ import SoloLearn from "/public/assets/images/sololearn.jpeg";
 import Cinemania from "/public/assets/images/cinemania.png";
 import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png";
 import Portfolio from "/public/assets/images/portfolio.png";
-import { faExclamationTriangle, faLightbulb, faThumbsUp, IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { ProjectStatus, type TProjectStatus } from "./constants";
+import { faExclamationTriangle, faLightbulb, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { ProjectStatus } from "./constants";
+import { Project } from "./types";
 
 export const FRONT_END_TECHS = [
   {
@@ -714,40 +715,6 @@ const outcomeCaseStudy = {
   icon: faThumbsUp,
   colors: [[125, 211, 252]],
   bgColor: "bg-emerald-800",
-};
-
-type Project = {
-  overview: {
-    title: string;
-    description: string;
-    image: StaticImageData;
-    site: string;
-    source: string;
-    status: TProjectStatus;
-    startDate: string;
-    endDate?: string;
-  };
-  image: StaticImageData;
-  route: string;
-  slug: string;
-  techStack: {
-    alt: string;
-    src: string;
-  }[];
-  metrics: {
-    alt: string;
-    src: string;
-    score: string;
-  }[];
-  features: string[];
-  caseStudy: {
-    title: string;
-    description: string;
-    icon: IconDefinition;
-    colors: number[][];
-    dotSize?: number;
-    bgColor: string;
-  }[];
 };
 
 export const PROJECTS: Project[] = [
