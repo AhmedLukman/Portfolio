@@ -16,8 +16,9 @@ const NotFound = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-3xl text-center flex flex-col gap-1 items-center">
           <p className="text-heading">
             404 <FontAwesomeIcon icon={faTriangleExclamation} />
+            <br />
+            Page not found
           </p>
-          <p>Page not found</p>
         </div>
       </div>
     </div>
