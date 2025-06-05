@@ -38,7 +38,7 @@ import Cinemania from "/public/assets/images/cinemania.png";
 import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png";
 import Portfolio from "/public/assets/images/portfolio.png";
 import { faExclamationTriangle, faLightbulb, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import { ProjectStatus } from "./constants";
+import { PORTFOLIO_SITE, ProjectStatus } from "./constants";
 import { Project } from "./types";
 
 export const FRONT_END_TECHS = [
@@ -828,7 +828,7 @@ export const PROJECTS: Project[] = [
       description:
         "My personal portfolio website where I showcase who I am, my diverse skills, innovative projects and more. Dive into it to see how I transform ideas into digital masterpieces!",
       image: Portfolio,
-      site: "https://portfolio-ahmedlukman.vercel.app",
+      site: PORTFOLIO_SITE,
       source: "https://github.com/AhmedLukman/Portfolio",
       status: ProjectStatus.pending,
       startDate: "2024-06",

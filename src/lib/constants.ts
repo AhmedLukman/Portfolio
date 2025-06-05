@@ -48,9 +48,11 @@ export const initialFormState = {
   message: "",
 } as const;
 
-export const ProjectStatus = { 
+export const ProjectStatus = {
   completed: "Completed",
   pending: "Pending",
-} as const
+} as const;
 
-export type TProjectStatus = typeof ProjectStatus[keyof typeof ProjectStatus]
+export type TProjectStatus = (typeof ProjectStatus)[keyof typeof ProjectStatus];
+
+export const PORTFOLIO_SITE = "https://www.ahmedlukman.dev";
