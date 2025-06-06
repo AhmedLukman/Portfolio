@@ -17,12 +17,12 @@ export type Project = {
   route: string;
   slug: string;
   techStack: {
-    alt: string;
-    src: string;
+    name: string;
+    src: StaticImageData;
   }[];
   metrics: {
-    alt: string;
-    src: string;
+    name: string;
+    icon: IconDefinition;
     score: number;
   }[];
   features: string[];
