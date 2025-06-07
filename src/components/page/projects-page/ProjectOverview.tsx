@@ -44,21 +44,27 @@ const ProjectOverview = ({
       </div>
       <div className="flex flex-col basis-1/2 justify-between gap-10">
         <div className="flex flex-col gap-1 animate-slideInFromBottom">
-          <h2 className="text-xl purple-gradient font-semibold">Description</h2>
+          <h2 className="text-xl font-semibold">
+            <span className="purple-gradient">Description</span>
+          </h2>
           <p className="text-slate-300">{description}</p>
         </div>
         <div className="flex flex-col gap-3 opacity-0 animate-slideInFromBottom delay-500">
-          <h2 className="text-xl purple-gradient font-semibold">Tech Stack</h2>
+          <h2 className="text-xl font-semibold">
+            <span className="purple-gradient">Tech Stack</span>
+          </h2>
           <AnimatedTooltip items={techStack} />
         </div>
         <div className="flex flex-col gap-3 opacity-0 animate-slideInFromBottom delay-1000">
-          <h2 className="text-xl purple-gradient font-semibold">Metrics</h2>
+          <h2 className="text-xl font-semibold">
+            <span className="purple-gradient">Metrics</span>
+          </h2>
           <AnimatedTooltip items={metrics} />
         </div>
         <div className="flex justify-between opacity-0 animate-slideInFromBottom delay-1500">
           <div className="flex flex-col gap-1">
-            <h2 className="text-xl font-semibold purple-gradient">
-              Start Date
+            <h2 className="text-xl font-semibold">
+              <span className="purple-gradient">Start Date</span>
             </h2>
             <div className="flex items-center gap-2">
               <FontAwesomeIcon
@@ -74,7 +80,9 @@ const ProjectOverview = ({
             </div>
           </div>
           <div className="flex flex-col gap-1">
-            <h2 className="text-xl purple-gradient font-semibold">End Date</h2>
+            <h2 className="text-xl font-semibold">
+              <span className="purple-gradient">End Date</span>
+            </h2>
             <div className="flex items-center gap-2">
               <FontAwesomeIcon
                 icon={faCalendarAlt}
@@ -89,7 +97,9 @@ const ProjectOverview = ({
             </div>
           </div>
           <div className="flex flex-col gap-1">
-            <h2 className="text-xl purple-gradient font-semibold">Status</h2>
+            <h2 className="text-xl font-semibold">
+              <span className="purple-gradient">Status</span>
+            </h2>
             <StatusChip status={status} />
           </div>
         </div>
