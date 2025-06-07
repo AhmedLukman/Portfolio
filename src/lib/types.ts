@@ -32,6 +32,5 @@ export type Project = {
     icon: IconDefinition;
     colors: number[][];
     dotSize?: number;
-    bgColor: string;
   }[];
 };
