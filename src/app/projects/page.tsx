@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const ProjectsPage = () => {
   return (
-    <PageWrapper>
+    <PageWrapper className="2xl:max-w-5xl">
       <PageHeader>My Projects</PageHeader>
       <ProjectsList />
     </PageWrapper>
