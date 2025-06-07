@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import {
   motion,
@@ -8,15 +8,24 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const AnimatedTooltip = ({
   items,
 }: {
-  items: {
-    name: string;
-    src: string;
-    score?: number;
-  }[];
+  items: (
+    | {
+        name: string;
+        src: StaticImageData;
+        score?: number;
+      }
+    | {
+        name: string;
+        icon: IconDefinition;
+        score?: number;
+      }
+  )[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
@@ -41,10 +50,10 @@ export const AnimatedTooltip = ({
 
   return (
     <ul className="flex gap-3 flex-wrap">
-      {items.map((item, idx) => (
+      {items.map(({ name, score, ...rest }, idx) => (
         <li
           className="relative group"
-          key={item.name}
+          key={name}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -73,22 +82,33 @@ export const AnimatedTooltip = ({
                 <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
                 <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
                 <div className="font-bold text-white relative z-30 text-base">
-                  {item.name}
+                  {name}
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
           <div className=" flex flex-col items-center justify-center gap-2">
-            <Image
-              priority
-              onMouseMove={handleMouseMove}
-              src={item.src}
-              alt={item.name}
-              className="object-contain !m-0 p-1.5 object-center rounded-xl h-11 w-11 border group-hover:scale-105 group-hover:z-30 border-slate-600  relative transition duration-500"
-            />
-            {item.score && (
-              <span className="text-sm text-pink-200">{item.score}</span>
+            {"src" in rest ? (
+              <Image
+                priority
+                onMouseMove={handleMouseMove}
+                src={rest.src}
+                alt={name}
+                className="object-contain !m-0 p-1.5 object-center rounded-xl h-11 w-11 border group-hover:scale-105 group-hover:z-30 border-slate-600  relative transition duration-500"
+              />
+            ) : (
+              <span
+                onMouseMove={handleMouseMove}
+                className="relative h-11 w-11 p-1.5 border border-slate-600 rounded-xl transition duration-500 group-hover:scale-105 group-hover:z-30"
+              >
+                <FontAwesomeIcon
+                  icon={rest.icon}
+                  className="!h-full !w-full text-body"
+                />
+              </span>
             )}
+
+            {score && <span className="text-sm text-pink-200">{score}</span>}
           </div>
         </li>
       ))}
