@@ -37,7 +37,15 @@ import SoloLearn from "/public/assets/images/sololearn.jpeg";
 import Cinemania from "/public/assets/images/cinemania.png";
 import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png";
 import Portfolio from "/public/assets/images/portfolio.png";
-import { faExclamationTriangle, faLightbulb, faMedal, faPersonCane, faRocket, faSearch, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faExclamationTriangle,
+  faLightbulb,
+  faMedal,
+  faPersonCane,
+  faRocket,
+  faSearch,
+  faThumbsUp,
+} from "@fortawesome/free-solid-svg-icons";
 import { PORTFOLIO_SITE, ProjectStatus } from "./constants";
 import { Project } from "./types";
 
@@ -696,25 +704,19 @@ export const CERTIFICATIONS = [
 const problemCaseStudy = {
   title: "Problem",
   icon: faExclamationTriangle,
-  colors: [
-    [255, 166, 158],
-    [221, 255, 247],
-  ],
-  bgColor: "bg-pink-900",
+  colors: [[255, 166, 158]],
 };
 
 const solutionCaseStudy = {
   title: "Solution",
   icon: faLightbulb,
-  bgColor: "bg-sky-600",
-  colors: [[125, 211, 252]],
+  colors: [[221, 255, 247]],
 };
 
 const outcomeCaseStudy = {
   title: "Outcome",
   icon: faThumbsUp,
   colors: [[125, 211, 252]],
-  bgColor: "bg-emerald-800",
 };
 
 export const PROJECTS: Project[] = [
@@ -748,7 +750,7 @@ export const PROJECTS: Project[] = [
       {
         ...problemCaseStudy,
         description:
-          "Despite the abundance of streaming platforms like Netflix, users often struggle to find a centralized hub that provides detailed, real-time information on a wide array of films and celebrities across multiple sources in an efficient manner. These platforms usually focus on streaming, leaving a gap for users who want comprehensive details regarding the industry and an interactive community experience that goes beyond streaming alone.",
+          "Despite the abundance of streaming platforms like Netflix, users often struggle to find a centralized hub that provides detailed, real-time information on a wide array of films and celebrities across multiple sources in an efficient manner. These platforms usually just focus on streaming.",
       },
       {
         ...solutionCaseStudy,
@@ -758,7 +760,7 @@ export const PROJECTS: Project[] = [
       {
         ...outcomeCaseStudy,
         description:
-          "Cinemania revolutionizes the way users discover and interact with entertainment content by providing a unique, all-in-one entertainment hub. This comprehensive approach boosts user engagement and satisfaction, positioning Cinemania as the premier platform for entertainment enthusiasts. Users experience reduced search times and increased satisfaction, making content discovery more efficient and enjoyable.",
+          "Cinemania revolutionizes the way users discover and interact with entertainment content by providing a unique, all-in-one entertainment hub. This comprehensive approach boosts user engagement and satisfaction, positioning Cinemania as the premier platform for entertainment enthusiasts to discover efficiently",
       },
     ],
     techStack: [
