@@ -37,7 +37,7 @@ import SoloLearn from "/public/assets/images/sololearn.jpeg";
 import Cinemania from "/public/assets/images/cinemania.png";
 import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png";
 import Portfolio from "/public/assets/images/portfolio.png";
-import { faExclamationTriangle, faLightbulb, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { faExclamationTriangle, faLightbulb, faMedal, faPersonCane, faRocket, faSearch, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { PORTFOLIO_SITE, ProjectStatus } from "./constants";
 import { Project } from "./types";
 
@@ -763,61 +763,61 @@ export const PROJECTS: Project[] = [
     ],
     techStack: [
       {
-        alt: "Next.js",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+        name: "Next.js",
+        src: Next,
       },
       {
-        alt: "React.js",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        name: "React.js",
+        src: React,
       },
       {
-        alt: "HTML5",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        name: "HTML5",
+        src: HTML5,
       },
       {
-        alt: "CSS",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+        name: "CSS",
+        src: CSS,
       },
       {
-        alt: "TypeScript",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+        name: "TypeScript",
+        src: TypeScript,
       },
       {
-        alt: "Tailwind CSS",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        name: "Tailwind CSS",
+        src: Tailwind,
       },
       {
-        alt: "Auth.js",
-        src: "/assets/images/authjs.svg",
+        name: "Auth.js",
+        src: AuthJS,
       },
       {
-        alt: "Prisma",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+        name: "Prisma",
+        src: Prisma,
       },
       {
-        alt: "PostgreSQL",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+        name: "PostgreSQL",
+        src: PostgreSQL,
       },
     ],
     metrics: [
       {
-        alt: "Performance",
-        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        name: "Performance",
+        icon: faRocket,
         score: 90,
       },
       {
-        alt: "Accessibility",
-        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        name: "Accessibility",
+        icon: faPersonCane,
         score: 100,
       },
       {
-        alt: "Best Practices",
-        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        name: "Best Practices",
+        icon: faMedal,
         score: 100,
       },
       {
-        alt: "SEO",
-        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        name: "SEO",
+        icon: faSearch,
         score: 100,
       },
     ],
@@ -862,57 +862,57 @@ export const PROJECTS: Project[] = [
     ],
     techStack: [
       {
-        alt: "Next.js",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+        name: "Next.js",
+        src: Next,
       },
       {
-        alt: "React.js",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        name: "React.js",
+        src: React,
       },
       {
-        alt: "HTML5",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        name: "HTML5",
+        src: HTML5,
       },
       {
-        alt: "CSS",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+        name: "CSS",
+        src: CSS,
       },
       {
-        alt: "Tailwind CSS",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        name: "Tailwind CSS",
+        src: Tailwind,
       },
       {
-        alt: "TypeScript",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+        name: "TypeScript",
+        src: TypeScript,
       },
       {
-        src: "/assets/images/aceternity.webp",
-        alt: "Aceternity UI",
+        name: "Aceternity UI",
+        src: AceternityUI,
       },
       {
-        src: "/assets/images/nextui.png",
-        alt: "Next UI",
+        name: "Hero UI",
+        src: HeroUI,
       },
     ],
     metrics: [
       {
-        alt: "Performance",
-        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/rocket.png",
+        name: "Performance",
+        icon: faRocket,
         score: 100,
       },
       {
-        alt: "Accessibility",
-        src: "https://img.icons8.com/ios-filled/50/cbd5e1/access-for-blind.png",
+        name: "Accessibility",
+        icon: faPersonCane,
         score: 100,
       },
       {
-        alt: "Best Practices",
-        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/medal.png",
+        name: "Best Practices",
+        icon: faMedal,
         score: 100,
       },
       {
-        alt: "SEO",
-        src: "https://img.icons8.com/ios-glyphs/30/cbd5e1/search--v1.png",
+        name: "SEO",
+        icon: faSearch,
         score: 100,
       },
     ],
