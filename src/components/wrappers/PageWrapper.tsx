@@ -1,8 +1,16 @@
-import { PropsWithChildren } from "react";
+import { cn } from "@heroui/theme";
 
-const PageWrapper = ({ children }: PropsWithChildren) => {
+const PageWrapper = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
   return (
-    <div className="mx-auto max-w-4xl py-10 px-5 md:px-10 xl:px-0">{children}</div>
+    <div className={cn("mx-auto max-w-4xl py-10 px-5 md:px-10 xl:px-0", className)}>
+      {children}
+    </div>
   );
 };
 
