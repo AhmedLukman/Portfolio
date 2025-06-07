@@ -1,3 +1,4 @@
+import CaseStudy from "@/components/page/projects-page/CaseStudy";
 import ProjectOverview from "@/components/page/projects-page/ProjectOverview";
 import PageHeader from "@/components/wrappers/PageHeader";
 import PageWrapper from "@/components/wrappers/PageWrapper";
@@ -34,6 +35,7 @@ const ProjectDetailsPage = async ({
     <PageWrapper className="2xl:max-w-5xl">
       <PageHeader>{project.overview.title}</PageHeader>
       <ProjectOverview project={project} />
+      <CaseStudy project={project} />
     </PageWrapper>
   );
 };
