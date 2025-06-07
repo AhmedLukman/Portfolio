@@ -6,7 +6,7 @@ type SectionWrapperProps = {
 };
 
 const SectionWrapper = ({ children, className }: SectionWrapperProps) => {
-  return <section className={cn("mt-16 space-y-8", className)}>{children}</section>;
+  return <section className={cn("mt-10 xl:mt-12 space-y-8", className)}>{children}</section>;
 };
 
 export default SectionWrapper;
