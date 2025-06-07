@@ -2,7 +2,6 @@ import SectionHeader from "@/components/wrappers/SectionHeader";
 import CaseStudyCard from "./CaseStudyCard";
 import { Project } from "@/lib/types";
 import { CanvasRevealEffect } from "./CanvasRevealEffect";
-import { cn } from "@heroui/theme";
 
 const CaseStudy = ({ project: { caseStudy } }: { project: Project }) => {
   return (
