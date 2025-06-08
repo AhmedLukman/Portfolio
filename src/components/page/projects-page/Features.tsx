@@ -2,7 +2,7 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Project } from "@/lib/types";
 import SectionHeader from "@/components/wrappers/SectionHeader";
-import ListItemWrapper from "@/components/wrappers/ListItemWrapper";
+import ItemWrapper from "@/components/wrappers/ItemWrapper";
 import { BorderContainer } from "./BorderContainer";
 
 const Features = ({ project: { features } }: { project: Project }) => {
@@ -11,7 +11,7 @@ const Features = ({ project: { features } }: { project: Project }) => {
       <SectionHeader className="text-center">Features</SectionHeader>
       <ul className="text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
         {features.map((feature, index) => (
-          <ListItemWrapper key={index} index={index}>
+          <ItemWrapper key={index} index={index}>
             <BorderContainer
               duration={Math.floor(Math.random() * 10000) + 10000}
               borderRadius="1.5rem"
@@ -22,7 +22,7 @@ const Features = ({ project: { features } }: { project: Project }) => {
                 <p className="text-white">{feature}</p>
               </div>
             </BorderContainer>
-          </ListItemWrapper>
+          </ItemWrapper>
         ))}
       </ul>
     </section>

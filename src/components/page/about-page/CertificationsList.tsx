@@ -1,5 +1,5 @@
 import React from "react";
-import ListItemWrapper from "../../wrappers/ListItemWrapper";
+import ItemWrapper from "../../wrappers/ItemWrapper";
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { CERTIFICATIONS } from "@/lib/data";
 import { BorderButton } from "./BorderButton";
@@ -10,7 +10,7 @@ const CertificationsList = () => {
     <ul className="w-full space-y-8">
       {CERTIFICATIONS.map(
         ({ organization, description, title, year, file, logo }, index) => (
-          <ListItemWrapper index={index} key={index}>
+          <ItemWrapper index={index} key={index}>
             <Card className="bg-transparent border hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-300 border-slate-500">
               <CardHeader as="h3">
                 <span className="purple-gradient text-xl">{title}</span>
@@ -48,7 +48,7 @@ const CertificationsList = () => {
                 </div>
               </CardFooter>
             </Card>
-          </ListItemWrapper>
+          </ItemWrapper>
         )
       )}
     </ul>

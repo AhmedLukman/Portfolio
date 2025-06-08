@@ -1,6 +1,6 @@
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
-import ListItemWrapper from "../../wrappers/ListItemWrapper";
+import ItemWrapper from "../../wrappers/ItemWrapper";
 import { convertDate } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import { intervalToDuration, formatDuration } from "date-fns";
@@ -67,7 +67,7 @@ const ExperienceItem = ({
       <div
         className={`w-full lg:w-[45%] ${index % 2 === 0 ? "lg:mr-auto lg:pr-8" : "lg:ml-auto lg:pl-8"}`}
       >
-        <ListItemWrapper index={index}>
+        <ItemWrapper as="div" index={index}>
           <Card className="bg-transparent border hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-200 border-slate-500">
             <CardHeader
               as="header"
@@ -105,7 +105,7 @@ const ExperienceItem = ({
               </div>
             </CardFooter>
           </Card>
-        </ListItemWrapper>
+        </ItemWrapper>
       </div>
     </li>
   );

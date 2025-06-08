@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PROJECTS } from "@/lib/data";
-import ListItemWrapper from "../../wrappers/ListItemWrapper";
+import ItemWrapper from "../../wrappers/ItemWrapper";
 import { CardBody, CardContainer, CardItem } from "./3DCard";
 import StatusIcon from "./StatusIcon";
 import SectionWrapper from "@/components/wrappers/SectionWrapper";
@@ -15,7 +15,7 @@ const ProjectsList = () => {
             { overview: { title, description, status }, image, route },
             index
           ) => (
-            <ListItemWrapper key={title} index={index}>
+            <ItemWrapper key={title} index={index}>
               <CardContainer>
                 <CardBody className="  relative group/card shadow-[0_8px_16px_rgb(0_0_0/0.3)] border border-white/[0.1] w-[21rem] xl:w-[26rem] h-auto rounded-xl p-6   ">
                   <Link href={route} className="block">
@@ -44,7 +44,7 @@ const ProjectsList = () => {
                   </Link>
                 </CardBody>
               </CardContainer>
-            </ListItemWrapper>
+            </ItemWrapper>
           )
         )}
       </ul>
