@@ -839,11 +839,12 @@ export const PROJECTS: Project[] = [
     route: "/projects/portfolio",
     slug: "portfolio",
     features: [
-      "Enjoy a responsive and seamless browsing experience across all devices.",
-      "Top-notch SEO practices boosting visibility thus easy discovery in search engines.",
-      "Effortlessly find what you are looking for with intuitive and user-friendly navigation.",
-      "Dedicated contact form functionality and social media links for easy reach.",
+      "Responsive and seamless browsing experience across all devices.",
+      "Optimized SEO implementation enhancing online presence.",
+      "Intuitive and user-friendly navigation.",
+      "Contact form functionality and social media links for easy reach.",
       "Clean, stylish, and visually appealing custom design.",
+      "Custom AI chat integration for quick and efficient communication.",
     ],
     caseStudy: [
       {
