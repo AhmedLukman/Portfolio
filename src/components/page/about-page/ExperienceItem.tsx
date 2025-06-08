@@ -43,9 +43,9 @@ const ExperienceItem = ({
     endDate,
   },
 }: ExperienceItemProps) => {
-  const EndOrCurrentDate = endDate ? endDate : new Date();
+  const endOrCurrentDate = endDate ?? new Date();
   return (
-    <div
+    <li
       className={`relative flex lg:${index % 2 === 0 ? "justify-end" : "justify-start"} justify-center`}
     >
       {/* Timeline dot - hidden on mobile */}
@@ -96,18 +96,18 @@ const ExperienceItem = ({
                   {convertDate(startDate)}
                 </time>{" "}
                 <span>| </span>
-                <time dateTime={EndOrCurrentDate.toISOString()}>
-                  {convertDate(EndOrCurrentDate)}
+                <time dateTime={endOrCurrentDate.toISOString()}>
+                  {convertDate(endOrCurrentDate)}
                 </time>
                 <span className="ml-2 text-slate-400">
-                  ({calculateDuration(startDate, EndOrCurrentDate)})
+                  ({calculateDuration(startDate, endOrCurrentDate)})
                 </span>
               </div>
             </CardFooter>
           </Card>
         </ListItemWrapper>
       </div>
-    </div>
+    </li>
   );
 };
 
