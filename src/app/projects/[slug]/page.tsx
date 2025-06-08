@@ -1,11 +1,11 @@
 import CaseStudy from "@/components/page/projects-page/CaseStudy";
+import Features from "@/components/page/projects-page/Features";
 import ProjectOverview from "@/components/page/projects-page/ProjectOverview";
 import PageHeader from "@/components/wrappers/PageHeader";
 import PageWrapper from "@/components/wrappers/PageWrapper";
 import { PROJECTS } from "@/lib/data";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import React from "react";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -36,6 +36,7 @@ const ProjectDetailsPage = async ({
       <PageHeader>{project.overview.title}</PageHeader>
       <ProjectOverview project={project} />
       <CaseStudy project={project} />
+      <Features project={project} />
     </PageWrapper>
   );
 };
