@@ -4,12 +4,13 @@ import { Poppins } from "next/font/google";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Footer from "../components/ui/Footer";
-import BackgroundBeamsWrapper from "../components/wrappers/BackgroundBeamsWrapper"; 
+import BackgroundBeamsWrapper from "../components/wrappers/BackgroundBeamsWrapper";
 import SideNav from "../components/ui/side-nav/SideNav";
 import { Providers } from "./providers";
 import PersonSchema from "../lib/schemas/PersonSchema";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
+import WebsiteSchema from "../lib/schemas/WebsiteSchema";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Ahmed Lukman | Full Stack Developer",
@@ -34,6 +35,7 @@ export default function RootLayout({
         className={`${poppins.className} antialiased bg-gradient-to-r from-[#0a0e14] to-[#262c35]`}
       >
         <PersonSchema />
+        <WebsiteSchema />
         <Providers>
           <div className="lg:flex">
             <SideNav />
