@@ -1,5 +1,7 @@
 "use server";
 
+import 'server-only'
+
 import { initialFormState } from "./constants";
 import { Resend } from "resend";
 import { z } from "zod";
