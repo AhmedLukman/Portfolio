@@ -24,6 +24,7 @@ export default function ProjectListSchema() {
           name: "Ahmed Lukman",
         },
         applicationCategory: "WebApplication",
+        operatingSystem: "Any",
       },
     })),
   };
