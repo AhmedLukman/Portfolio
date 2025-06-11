@@ -14,6 +14,11 @@ export default function PersonSchema() {
             "https://www.linkedin.com/in/ahmedlukman",
             "https://www.github.com/ahmedlukman"
           ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Thomson Reuters",
+            "url": "https://www.thomsonreuters.com"
+          },
           "knowsAbout": ["React", "Next.js", "JavaScript", "TypeScript", "UI/UX Design", "Tailwind CSS", "Web Development", "Front-end Development"],
           "description": "Modern, experienced full stack developer creating beautiful, high-performance, responsive web applications.",
           "contactPoint": {
