@@ -43,7 +43,7 @@ const ExperienceItem = ({
     endDate,
   },
 }: ExperienceItemProps) => {
-  const endOrCurrentDate = endDate ?? new Date();
+  const endOrCurrent = endDate ?? new Date();
   return (
     <li
       className={`relative flex lg:${index % 2 === 0 ? "justify-end" : "justify-start"} justify-center`}
@@ -96,11 +96,15 @@ const ExperienceItem = ({
                   {convertDate(startDate)}
                 </time>{" "}
                 <span>| </span>
-                <time dateTime={endOrCurrentDate.toISOString()}>
-                  {convertDate(endOrCurrentDate)}
-                </time>
+                {endDate ? (
+                  <time dateTime={endDate.toISOString()}>
+                    {convertDate(endDate)}
+                  </time>
+                ) : (
+                  <span>Present</span>
+                )}
                 <span className="ml-2 text-slate-400">
-                  ({calculateDuration(startDate, endOrCurrentDate)})
+                  ({calculateDuration(startDate, endOrCurrent)})
                 </span>
               </div>
             </CardFooter>
