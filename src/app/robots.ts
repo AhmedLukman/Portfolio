@@ -1,3 +1,4 @@
+import { PORTFOLIO_SITE } from '@/lib/constants'
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
@@ -6,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://ahmedlukman.dev/sitemap.xml',
+    sitemap: `${PORTFOLIO_SITE}/sitemap.xml`,
   }
 }
