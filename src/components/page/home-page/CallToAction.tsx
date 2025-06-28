@@ -1,10 +1,9 @@
-import React from "react"
-import { BackgroundGradient } from "./BackgroundGradient"
+import { faMessage } from "@fortawesome/free-regular-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Button } from "@heroui/button"
 import Link from "next/link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMessage } from "@fortawesome/free-regular-svg-icons"
 import SectionWrapper from "../../wrappers/SectionWrapper"
+import { BackgroundGradient } from "./BackgroundGradient"
 
 const CallToAction = () => {
   return (

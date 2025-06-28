@@ -1,6 +1,6 @@
+import { IconDefinition } from "@fortawesome/free-brands-svg-icons"
 import { StaticImageData } from "next/image"
 import { TProjectStatus } from "./constants"
-import { IconDefinition } from "@fortawesome/free-brands-svg-icons"
 
 export type Project = {
   overview: {

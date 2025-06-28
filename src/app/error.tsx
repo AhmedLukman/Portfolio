@@ -1,9 +1,9 @@
 "use client"
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Button } from "@heroui/button"
 import Image from "next/image"
 import { useEffect } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons"
 import ImageTemplate from "/public/assets/images/portfolio-image-template.png"
 
 export default function Error({

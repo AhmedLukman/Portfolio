@@ -1,8 +1,8 @@
+import ItemWrapper from "@/components/wrappers/ItemWrapper"
+import SectionHeader from "@/components/wrappers/SectionHeader"
+import { Project } from "@/lib/types"
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Project } from "@/lib/types"
-import SectionHeader from "@/components/wrappers/SectionHeader"
-import ItemWrapper from "@/components/wrappers/ItemWrapper"
 import { BorderContainer } from "./BorderContainer"
 
 const Features = ({ project: { features } }: { project: Project }) => {

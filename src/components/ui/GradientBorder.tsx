@@ -1,5 +1,4 @@
 import { cn } from "@heroui/theme"
-import React from "react"
 
 const GradientBorder = ({
   insetClass = "inset-x-20",

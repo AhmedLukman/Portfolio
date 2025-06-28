@@ -1,7 +1,7 @@
 "use client"
 
-import { useRouter } from "next/navigation"
 import { HeroUIProvider } from "@heroui/system"
+import { useRouter } from "next/navigation"
 import { NavigationProvider } from "../lib/contexts/NavigationContext"
 
 declare module "@react-types/shared" {

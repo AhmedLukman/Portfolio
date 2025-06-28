@@ -1,5 +1,5 @@
 import { cn } from "@heroui/theme"
-import React, { PropsWithChildren } from "react"
+import { PropsWithChildren } from "react"
 
 const SectionHeader = ({
   children,

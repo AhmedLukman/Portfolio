@@ -1,4 +1,3 @@
-import React from "react"
 import SectionHeader from "../../wrappers/SectionHeader"
 import SectionWrapper from "../../wrappers/SectionWrapper"
 import ExperienceList from "./ExperienceList"

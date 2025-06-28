@@ -1,7 +1,6 @@
-import React from "react"
-import { FlipWords } from "./FlipWords"
-import SectionWrapper from "../../wrappers/SectionWrapper"
 import { WEB_QUALITIES } from "@/lib/data"
+import SectionWrapper from "../../wrappers/SectionWrapper"
+import { FlipWords } from "./FlipWords"
 
 const AnimatedWords = () => {
   return (

@@ -1,7 +1,6 @@
-import React from "react"
-import SectionHeader from "../../wrappers/SectionHeader"
 import { TESTIMONIALS } from "@/lib/data"
 import { AnimatedTestimonials } from "../../page/home-page/AnimatedTestimonials"
+import SectionHeader from "../../wrappers/SectionHeader"
 import SectionWrapper from "../../wrappers/SectionWrapper"
 
 const Testimonials = () => {

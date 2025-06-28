@@ -1,8 +1,8 @@
 import ProjectsList from "@/components/page/projects-page/ProjectsList"
 import PageHeader from "@/components/wrappers/PageHeader"
 import PageWrapper from "@/components/wrappers/PageWrapper"
-import { Metadata } from "next"
 import ProjectListSchema from "@/lib/schemas/ProjectListSchema"
+import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Ahmed Lukman | Projects",

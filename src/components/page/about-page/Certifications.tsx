@@ -1,7 +1,6 @@
-import React from "react"
 import SectionHeader from "../../wrappers/SectionHeader"
-import CertificationsList from "./CertificationsList"
 import SectionWrapper from "../../wrappers/SectionWrapper"
+import CertificationsList from "./CertificationsList"
 
 const Certifications = () => {
   return (

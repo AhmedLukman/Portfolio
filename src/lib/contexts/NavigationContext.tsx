@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, use, useState, PropsWithChildren } from "react"
+import { createContext, PropsWithChildren, use, useState } from "react"
 
 type NavigationContextType = {
   isMobileMenuOpen: boolean

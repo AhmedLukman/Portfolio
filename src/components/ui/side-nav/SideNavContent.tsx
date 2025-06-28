@@ -1,6 +1,6 @@
-import SideNavLinks from "./SideNavLinks"
-import SideNavHeader from "./SideNavHeader"
 import SideNavFooter from "./SideNavFooter"
+import SideNavHeader from "./SideNavHeader"
+import SideNavLinks from "./SideNavLinks"
 
 const SideNavContent = () => {
   return (

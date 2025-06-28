@@ -1,16 +1,21 @@
 "use client"
 
-import { startTransition, useActionState, useState } from "react"
-import { Input, Textarea } from "@heroui/input"
-import { Alert } from "@heroui/alert"
-import { Form } from "@heroui/form"
-import { Button } from "@heroui/button"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import { initialFormState } from "@/lib/constants"
-import { cn } from "@heroui/theme"
 import { sendEmail } from "@/lib/actions"
-import { useRef, useEffect } from "react"
+import { initialFormState } from "@/lib/constants"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Alert } from "@heroui/alert"
+import { Button } from "@heroui/button"
+import { Form } from "@heroui/form"
+import { Input, Textarea } from "@heroui/input"
+import { cn } from "@heroui/theme"
+import {
+  startTransition,
+  useActionState,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 
 const ContactForm = () => {
   const [errors, formAction, isPending] = useActionState(

@@ -1,7 +1,7 @@
+import { MASTERY } from "@/lib/data"
 import { Card, CardHeader } from "@heroui/card"
 import Image from "next/image"
 import SectionHeader from "../../wrappers/SectionHeader"
-import { MASTERY } from "@/lib/data"
 import SectionWrapper from "../../wrappers/SectionWrapper"
 import MasteryBody from "./MasteryBody"
 

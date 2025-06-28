@@ -1,13 +1,13 @@
-import * as React from "react"
 import {
-  Html,
-  Head,
   Body,
   Container,
+  Head,
   Heading,
+  Html,
   Text,
 } from "@react-email/components"
 import { Tailwind } from "@react-email/tailwind"
+import * as React from "react"
 
 export const EmailTemplate: React.FC<
   Readonly<{ name: string; recipientEmail: string; message: string }>

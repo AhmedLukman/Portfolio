@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
 
 const HeatMap = () => {
   const [points, setPoints] = useState<

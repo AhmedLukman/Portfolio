@@ -1,15 +1,15 @@
 "use client"
-import Image, { StaticImageData } from "next/image"
-import React, { useState } from "react"
-import {
-  motion,
-  useTransform,
-  AnimatePresence,
-  useMotionValue,
-  useSpring,
-} from "framer-motion"
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  AnimatePresence,
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion"
+import Image, { StaticImageData } from "next/image"
+import React, { useState } from "react"
 
 export const AnimatedTooltip = ({
   items,

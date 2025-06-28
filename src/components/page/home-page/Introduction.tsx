@@ -1,9 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMedal } from "@fortawesome/free-solid-svg-icons"
-import Image from "next/image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "@heroui/link"
-import SectionWrapper from "../../wrappers/SectionWrapper"
+import Image from "next/image"
 import NextLink from "next/link"
+import SectionWrapper from "../../wrappers/SectionWrapper"
 import ManNearComputerImage from "/public/assets/images/man-near-computer.svg"
 
 const Introduction = () => {

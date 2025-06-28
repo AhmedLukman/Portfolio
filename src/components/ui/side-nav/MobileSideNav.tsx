@@ -1,11 +1,11 @@
 "use client"
 
-import { AnimatePresence, motion } from "framer-motion"
-import { Button } from "@heroui/button"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-import SideNavContent from "./SideNavContent"
 import { useNavigation } from "@/lib/contexts/NavigationContext"
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Button } from "@heroui/button"
+import { AnimatePresence, motion } from "framer-motion"
+import SideNavContent from "./SideNavContent"
 
 const MobileSideNav = () => {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useNavigation()

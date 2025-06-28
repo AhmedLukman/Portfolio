@@ -1,10 +1,10 @@
+import { EXPERIENCE } from "@/lib/data"
+import { convertDate } from "@/lib/utils"
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card"
 import { Chip } from "@heroui/chip"
-import ItemWrapper from "../../wrappers/ItemWrapper"
-import { convertDate } from "@/lib/utils"
+import { formatDuration, intervalToDuration } from "date-fns"
 import Image, { StaticImageData } from "next/image"
-import { intervalToDuration, formatDuration } from "date-fns"
-import { EXPERIENCE } from "@/lib/data"
+import ItemWrapper from "../../wrappers/ItemWrapper"
 
 const calculateDuration = (start: Date, end: Date) => {
   const duration = intervalToDuration({

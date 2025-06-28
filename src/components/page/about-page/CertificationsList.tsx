@@ -1,9 +1,8 @@
-import React from "react"
-import ItemWrapper from "../../wrappers/ItemWrapper"
-import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card"
 import { CERTIFICATIONS } from "@/lib/data"
-import { BorderButton } from "./BorderButton"
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card"
 import Image from "next/image"
+import ItemWrapper from "../../wrappers/ItemWrapper"
+import { BorderButton } from "./BorderButton"
 
 const CertificationsList = () => {
   return (

@@ -1,8 +1,7 @@
-import React from "react"
-import SectionHeader from "../../wrappers/SectionHeader"
-import { AnimatedTooltip } from "../../ui/AnimatedTooltip"
-import SectionWrapper from "../../wrappers/SectionWrapper"
 import { BACKEND_TECHS, DEV_TOOLS, FRONT_END_TECHS } from "@/lib/data"
+import { AnimatedTooltip } from "../../ui/AnimatedTooltip"
+import SectionHeader from "../../wrappers/SectionHeader"
+import SectionWrapper from "../../wrappers/SectionWrapper"
 
 const TechAndTools = () => {
   return (

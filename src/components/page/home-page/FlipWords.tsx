@@ -1,7 +1,7 @@
 "use client"
-import React, { useCallback, useEffect, useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
 import { cn } from "@heroui/theme"
+import { AnimatePresence, motion } from "framer-motion"
+import { useCallback, useEffect, useState } from "react"
 
 export const FlipWords = ({
   words,

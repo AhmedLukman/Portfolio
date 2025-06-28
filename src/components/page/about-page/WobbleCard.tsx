@@ -1,7 +1,7 @@
 "use client"
-import { MouseEvent, ReactNode, useState } from "react"
-import { motion } from "framer-motion"
 import { cn } from "@heroui/theme"
+import { motion } from "framer-motion"
+import { MouseEvent, ReactNode, useState } from "react"
 
 export const WobbleCard = ({
   children,

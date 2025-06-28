@@ -1,15 +1,15 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useNavigation } from "@/lib/contexts/NavigationContext"
+import { getExternalLinkProps } from "@/lib/utils"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Button } from "@heroui/button"
-import Link from "next/link"
 import { cn } from "@heroui/theme"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useNavigation } from "@/lib/contexts/NavigationContext"
-import { getExternalLinkProps } from "@/lib/utils"
+import { useEffect, useRef } from "react"
 
 const SideNavLinkButton = ({
   link,

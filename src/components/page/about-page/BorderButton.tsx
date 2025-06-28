@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import React from "react"
+import { Button as HeroButton } from "@heroui/button"
+import { cn } from "@heroui/theme"
 import {
   motion,
   useAnimationFrame,
@@ -8,9 +9,7 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion"
-import { useRef } from "react"
-import { Button as HeroButton } from "@heroui/button"
-import { cn } from "@heroui/theme"
+import React, { useRef } from "react"
 
 export function BorderButton({
   borderRadius = "1.75rem",

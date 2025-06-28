@@ -1,11 +1,11 @@
 "use client"
 
-import { motion, AnimatePresence } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { useState } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { cn } from "@heroui/theme"
+import { AnimatePresence, motion } from "framer-motion"
+import { useState } from "react"
+import { useInView } from "react-intersection-observer"
 
 const CaseStudyCard = ({
   title,

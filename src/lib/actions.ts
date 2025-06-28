@@ -2,10 +2,10 @@
 
 import "server-only"
 
-import { initialFormState } from "./constants"
 import { Resend } from "resend"
 import { z } from "zod"
 import { EmailTemplate } from "../components/page/contact-page/EmailTemplate"
+import { initialFormState } from "./constants"
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required").trim(),
