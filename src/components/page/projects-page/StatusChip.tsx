@@ -5,14 +5,10 @@ const StatusChip = ({ status }: { status: TProjectStatus }) => {
   return (
     <>
       {status === ProjectStatus.completed && (
-        <Chip color="success">
-          Completed
-        </Chip>
+        <Chip color="success">Completed</Chip>
       )}
       {status === ProjectStatus.pending && (
-        <Chip color="warning">
-          {status}
-        </Chip>
+        <Chip color="warning">{status}</Chip>
       )}
     </>
   );

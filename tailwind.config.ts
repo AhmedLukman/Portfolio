@@ -1,28 +1,28 @@
-import {heroui} from "@heroui/theme";
+import { heroui } from "@heroui/theme";
 import type { Config } from "tailwindcss";
 const {
   default: flattenColorPalette,
-// eslint-disable-next-line @typescript-eslint/no-require-imports
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const addVariablesForColors = ({ addBase, theme }: any) => {
   const allColors = flattenColorPalette(theme("colors"));
   const newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
 
   addBase({
     ":root": newVars,
   });
-}
+};
 
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@heroui/theme/dist/components/(alert|avatar|button|card|chip|form|input|link|popover|ripple|spinner).js"
+    "./node_modules/@heroui/theme/dist/components/(alert|avatar|button|card|chip|form|input|link|popover|ripple|spinner).js",
   ],
   theme: {
     extend: {
@@ -30,7 +30,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         heading: "var(--slate-200)",
-        body: "var(--slate-300)"
+        body: "var(--slate-300)",
       },
       keyframes: {
         scroll: {

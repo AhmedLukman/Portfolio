@@ -13,15 +13,7 @@ import StatusChip from "./StatusChip";
 
 const ProjectOverview = ({
   project: {
-    overview: {
-      description,
-      site,
-      source,
-      title,
-      status,
-      startDate,
-      endDate,
-    },
+    overview: { description, site, source, title, status, startDate, endDate },
     deviceImage,
     techStack,
     metrics,
@@ -31,37 +23,37 @@ const ProjectOverview = ({
 }) => {
   const isSitePortfolio = site === PORTFOLIO_SITE;
   return (
-    <section className="flex flex-col lg:gap-5 2xl:gap-10 lg:flex-row lg:mt-10 xl:mt-12">
-      <div className="basis-1/2 relative aspect-square lg:aspect-auto">
+    <section className="flex flex-col lg:mt-10 lg:flex-row lg:gap-5 xl:mt-12 2xl:gap-10">
+      <div className="relative aspect-square basis-1/2 lg:aspect-auto">
         <Image
           src={deviceImage}
           alt={title}
           sizes="(min-width: 1540px) 492px, (min-width: 1280px) 438px, (min-width: 1040px) calc(26.36vw + 66px), (min-width: 980px) 816px, (min-width: 780px) calc(72.78vw + 117px), calc(100vw - 55px)"
           fill
           priority
-          className="object-contain object-top animate-slideInFromLeft"
+          className="animate-slideInFromLeft object-contain object-top"
         />
       </div>
-      <div className="flex flex-col basis-1/2 justify-between gap-10">
-        <div className="flex flex-col gap-1 animate-slideInFromBottom">
+      <div className="flex basis-1/2 flex-col justify-between gap-10">
+        <div className="flex animate-slideInFromBottom flex-col gap-1">
           <h2 className="text-xl font-semibold">
             <span className="purple-gradient">Description</span>
           </h2>
           <p className="text-slate-300">{description}</p>
         </div>
-        <div className="flex flex-col gap-3 opacity-0 animate-slideInFromBottom delay-500">
+        <div className="flex animate-slideInFromBottom flex-col gap-3 opacity-0 delay-500">
           <h2 className="text-xl font-semibold">
             <span className="purple-gradient">Tech Stack</span>
           </h2>
           <AnimatedTooltip items={techStack} />
         </div>
-        <div className="flex flex-col gap-3 opacity-0 animate-slideInFromBottom delay-1000">
+        <div className="flex animate-slideInFromBottom flex-col gap-3 opacity-0 delay-1000">
           <h2 className="text-xl font-semibold">
             <span className="purple-gradient">Metrics</span>
           </h2>
           <AnimatedTooltip items={metrics} />
         </div>
-        <div className="flex justify-between opacity-0 animate-slideInFromBottom delay-1500">
+        <div className="flex animate-slideInFromBottom justify-between opacity-0 delay-1500">
           <div className="flex flex-col gap-1">
             <h2 className="text-xl font-semibold">
               <span className="purple-gradient">Start Date</span>
@@ -103,10 +95,10 @@ const ProjectOverview = ({
             <StatusChip status={status} />
           </div>
         </div>
-        <div className="flex gap-5 mt-5">
-          <LinkPreview url={source} className="font-bold flex-grow">
+        <div className="mt-5 flex gap-5">
+          <LinkPreview url={source} className="flex-grow font-bold">
             <Button
-              className="text-white w-full hover:text-black  opacity-0 animate-slideInFromLeft delay-2000"
+              className="w-full animate-slideInFromLeft text-white opacity-0 delay-2000 hover:text-black"
               variant="ghost"
               endContent={<FontAwesomeIcon icon={faGithub} />}
             >
@@ -120,7 +112,7 @@ const ProjectOverview = ({
               content="Already viewing this site"
             >
               <Button
-                className="flex-grow opacity-0 animate-slideInFromRight delay-2000"
+                className="flex-grow animate-slideInFromRight opacity-0 delay-2000"
                 endContent={<FontAwesomeIcon icon={faGlobe} />}
                 disabled
               >
@@ -129,9 +121,9 @@ const ProjectOverview = ({
             </Tooltip>
           )}
           {!isSitePortfolio && (
-            <LinkPreview url={site} className="font-bold flex-grow">
+            <LinkPreview url={site} className="flex-grow font-bold">
               <Button
-                className="  w-full opacity-0 animate-slideInFromRight delay-2000 hover:!opacity-80"
+                className="w-full animate-slideInFromRight opacity-0 delay-2000 hover:!opacity-80"
                 endContent={<FontAwesomeIcon icon={faGlobe} />}
               >
                 Explore site

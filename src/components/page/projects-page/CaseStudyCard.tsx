@@ -31,8 +31,8 @@ const CaseStudyCard = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className={cn(
-        "border border-slate-600/50 group/canvas-card flex items-center opacity-0 justify-center bg-gradient-to-b from-black/20 to-black/30  max-w-sm w-full mx-auto p-4 lg:p-0 xl:p-4 relative lg:h-80 rounded-3xl",
-        inView && className
+        "group/canvas-card relative mx-auto flex w-full max-w-sm items-center justify-center rounded-3xl border border-slate-600/50 bg-gradient-to-b from-black/20 to-black/30 p-4 opacity-0 lg:h-80 lg:p-0 xl:p-4",
+        inView && className,
       )}
     >
       <AnimatePresence>
@@ -40,7 +40,7 @@ const CaseStudyCard = ({
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="h-full w-full absolute inset-0"
+            className="absolute inset-0 h-full w-full"
           >
             {children}
           </motion.div>
@@ -48,18 +48,11 @@ const CaseStudyCard = ({
       </AnimatePresence>
 
       <div className="relative z-20 px-5">
-        <div
-          className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
-        group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex items-center gap-2 justify-center"
-        >
-          <h3 className="text-white text-lg">{title}</h3>
+        <div className="absolute left-[50%] top-[50%] mx-auto flex min-w-40 translate-x-[-50%] translate-y-[-50%] items-center justify-center gap-2 text-center transition duration-200 group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0">
+          <h3 className="text-lg text-white">{title}</h3>
           <FontAwesomeIcon icon={icon} className="text-white" />
         </div>
-        <p
-          className="text-sm opacity-0 group-hover/canvas-card:opacity-100
-         relative z-10 mt-4 group-hover/canvas-card:text-white text-center
-         group-hover/canvas-card:-translate-y-2 transition duration-200"
-        >
+        <p className="relative z-10 mt-4 text-center text-sm opacity-0 transition duration-200 group-hover/canvas-card:-translate-y-2 group-hover/canvas-card:text-white group-hover/canvas-card:opacity-100">
           {description}
         </p>
       </div>

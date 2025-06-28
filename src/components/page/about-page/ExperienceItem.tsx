@@ -49,16 +49,16 @@ const ExperienceItem = ({
       className={`relative flex lg:${index % 2 === 0 ? "justify-end" : "justify-start"} justify-center`}
     >
       {/* Timeline dot - hidden on mobile */}
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-purple-600 z-10 hidden lg:block"></div>
+      <div className="absolute left-1/2 top-1/2 z-10 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-purple-600 lg:block"></div>
 
       {/* Mobile vertical connector between items - hidden on desktop */}
       {index < EXPERIENCE.length - 1 && (
-        <div className="lg:hidden absolute top-full h-[3rem] left-1/2 transform -translate-x-1/2 w-0.5 bg-slate-500"></div>
+        <div className="absolute left-1/2 top-full h-[3rem] w-0.5 -translate-x-1/2 transform bg-slate-500 lg:hidden"></div>
       )}
 
       {/* Horizontal connector line - hidden on mobile */}
       <div
-        className={`absolute top-1/2 -translate-y-1/2 h-0.5 bg-slate-500 w-[calc(9.5%-8px)] ${
+        className={`absolute top-1/2 h-0.5 w-[calc(9.5%-8px)] -translate-y-1/2 bg-slate-500 ${
           index % 2 === 0 ? "right-[50%]" : "left-[50%]"
         } hidden lg:block`}
       />
@@ -68,10 +68,10 @@ const ExperienceItem = ({
         className={`w-full lg:w-[45%] ${index % 2 === 0 ? "lg:mr-auto lg:pr-8" : "lg:ml-auto lg:pl-8"}`}
       >
         <ItemWrapper as="div" index={index}>
-          <Card className="bg-transparent border hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-200 border-slate-500">
+          <Card className="border border-slate-500 bg-transparent hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-200">
             <CardHeader
               as="header"
-              className="flex justify-between flex-wrap gap-2"
+              className="flex flex-wrap justify-between gap-2"
             >
               <h3 className="purple-gradient text-xl">{title}</h3>
               <Chip variant="bordered" className="text-body">
@@ -81,17 +81,17 @@ const ExperienceItem = ({
             <CardBody as="p">{description}</CardBody>
             <CardFooter
               as="footer"
-              className="flex justify-between flex-wrap gap-2"
+              className="flex flex-wrap justify-between gap-2"
             >
-              <div className="flex gap-2 items-center">
+              <div className="flex items-center gap-2">
                 <Image
                   alt={company}
                   src={companyLogo}
-                  className="w-8 h-8 rounded-full"
+                  className="h-8 w-8 rounded-full"
                 />
                 <p className="">{company}</p>
               </div>
-              <div className="lg:mt-0 text-body text-sm">
+              <div className="text-sm text-body lg:mt-0">
                 <time dateTime={startDate.toISOString()}>
                   {convertDate(startDate)}
                 </time>{" "}

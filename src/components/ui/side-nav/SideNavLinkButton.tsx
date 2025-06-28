@@ -43,7 +43,7 @@ const SideNavLinkButton = ({
 
   const iconClasses = cn(
     "!text-slate-400 group-hover:!text-white !transition-all !duration-200 h-4 mr-1",
-    { "!text-white": isActive }
+    { "!text-white": isActive },
   );
 
   const externalIconClasses =

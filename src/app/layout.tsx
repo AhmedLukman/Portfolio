@@ -32,14 +32,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased bg-gradient-to-r from-[#0a0e14] to-[#262c35]`}
+        className={`${poppins.className} bg-gradient-to-r from-[#0a0e14] to-[#262c35] antialiased`}
       >
         <PersonSchema />
         <WebsiteSchema />
         <Providers>
           <div className="lg:flex">
             <SideNav />
-            <div className="relative z-10 basis-10/12 h-screen flex flex-col justify-between overflow-y-auto">
+            <div className="relative z-10 flex h-screen basis-10/12 flex-col justify-between overflow-y-auto">
               <main className="flex-grow">{children}</main>
               <Footer />
             </div>

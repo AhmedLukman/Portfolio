@@ -6,7 +6,6 @@ import TechAndTools from "@/components/page/home-page/TechAndTools";
 import Testimonials from "@/components/page/home-page/Testimonials";
 import PageWrapper from "@/components/wrappers/PageWrapper";
 
-
 const Home = () => {
   return (
     <PageWrapper>

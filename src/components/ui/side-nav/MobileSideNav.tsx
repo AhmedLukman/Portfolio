@@ -9,10 +9,10 @@ import { useNavigation } from "@/lib/contexts/NavigationContext";
 
 const MobileSideNav = () => {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useNavigation();
-  
+
   return (
     <>
-      <div className="lg:hidden fixed top-4 right-4 z-50">
+      <div className="fixed right-4 top-4 z-50 lg:hidden">
         <Button
           isIconOnly
           variant="light"
@@ -39,9 +39,9 @@ const MobileSideNav = () => {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-0 w-full h-full bg-[#0a0e14]/50 backdrop-blur-xl z-40 lg:hidden"
+            className="fixed inset-0 z-40 h-full w-full bg-[#0a0e14]/50 backdrop-blur-xl lg:hidden"
           >
-            <div className="flex flex-col justify-between p-6 h-full max-w-sm mx-auto">
+            <div className="mx-auto flex h-full max-w-sm flex-col justify-between p-6">
               <SideNavContent />
             </div>
           </motion.aside>

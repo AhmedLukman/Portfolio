@@ -3,7 +3,7 @@ import SideNavLinkButton from "./SideNavLinkButton";
 
 const SideNavLinks = () => {
   return (
-    <div className="flex flex-col justify-evenly h-full">
+    <div className="flex h-full flex-col justify-evenly">
       <div className="flex flex-col gap-3">
         <h3 className="text-white">Pages</h3>
         <ul className="flex flex-col gap-3">

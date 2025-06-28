@@ -48,8 +48,8 @@ export const AnimatedTestimonials = ({
   };
 
   return (
-    <div className="max-w-sm sm:max-w-none md:max-w-4xl mx-auto antialiased px-4 md:px-8 lg:px-12">
-      <div className="relative grid grid-cols-1 sm:grid-cols-2  gap-20">
+    <div className="mx-auto max-w-sm px-4 antialiased sm:max-w-none md:max-w-4xl md:px-8 lg:px-12">
+      <div className="relative grid grid-cols-1 gap-20 sm:grid-cols-2">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
@@ -89,7 +89,7 @@ export const AnimatedTestimonials = ({
                     alt={testimonial.name}
                     draggable={false}
                     fill
-                    className=" rounded-3xl object-cover object-center"
+                    className="rounded-3xl object-cover object-center"
                     priority={index === 0}
                   />
                 </motion.div>
@@ -97,7 +97,7 @@ export const AnimatedTestimonials = ({
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex justify-between flex-col py-4">
+        <div className="flex flex-col justify-between py-4">
           <motion.div
             key={active}
             initial={{
@@ -117,7 +117,7 @@ export const AnimatedTestimonials = ({
               ease: "easeInOut",
             }}
           >
-            <h3 className="text-xl font-bold inline-block purple-gradient">
+            <h3 className="purple-gradient inline-block text-xl font-bold">
               {testimonials[active].name}
             </h3>
             <p className="text-sm">{testimonials[active].designation}</p>
@@ -147,7 +147,7 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex justify-center sm:justify-start gap-4 pt-12 md:pt-0">
+          <div className="flex justify-center gap-4 pt-12 sm:justify-start md:pt-0">
             <Button
               onPress={handlePrev}
               aria-label="Previous testimonial"
@@ -156,7 +156,7 @@ export const AnimatedTestimonials = ({
             >
               <FontAwesomeIcon
                 icon={faArrowLeft}
-                className="group-hover/button:rotate-12 transition-transform duration-300"
+                className="transition-transform duration-300 group-hover/button:rotate-12"
               />
             </Button>
             <Button
@@ -167,7 +167,7 @@ export const AnimatedTestimonials = ({
             >
               <FontAwesomeIcon
                 icon={faArrowRight}
-                className="group-hover/button:-rotate-12 transition-transform duration-300"
+                className="transition-transform duration-300 group-hover/button:-rotate-12"
               />
             </Button>
           </div>

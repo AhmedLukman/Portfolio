@@ -1,8 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheckCircle,
-  faClock,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faClock } from "@fortawesome/free-solid-svg-icons";
 import { Tooltip } from "@heroui/tooltip";
 import { ProjectStatus, TProjectStatus } from "@/lib/constants";
 

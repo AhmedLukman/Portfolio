@@ -18,7 +18,7 @@
 
 @layer components {
   .purple-gradient {
-    @apply bg-gradient-to-r from-[#ffc0cb] via-[#ffc0cb] to-[#7a5299] text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-[#ffc0cb] via-[#ffc0cb] to-[#7a5299] bg-clip-text text-transparent;
   }
 }
 

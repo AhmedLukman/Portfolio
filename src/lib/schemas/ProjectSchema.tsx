@@ -7,7 +7,7 @@ type ProjectSchemaProps = {
   image?: string;
   datePublished?: string;
   codeRepository: string;
-}
+};
 
 export default function ProjectSchema({
   name,

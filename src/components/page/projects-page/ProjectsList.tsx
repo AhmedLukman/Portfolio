@@ -9,19 +9,19 @@ import SectionWrapper from "@/components/wrappers/SectionWrapper";
 const ProjectsList = () => {
   return (
     <SectionWrapper>
-      <ul className="justify-between w-full grid grid-cols-1 md:grid-cols-2">
+      <ul className="grid w-full grid-cols-1 justify-between md:grid-cols-2">
         {PROJECTS.map(
           (
             { overview: { title, description, status }, image, route },
-            index
+            index,
           ) => (
             <ItemWrapper key={title} index={index}>
               <CardContainer>
-                <CardBody className="  relative group/card shadow-[0_8px_16px_rgb(0_0_0/0.3)] border border-white/[0.1] w-[21rem] xl:w-[26rem] h-auto rounded-xl p-6   ">
+                <CardBody className="group/card relative h-auto w-[21rem] rounded-xl border border-white/[0.1] p-6 shadow-[0_8px_16px_rgb(0_0_0/0.3)] xl:w-[26rem]">
                   <Link href={route} className="block">
                     <CardItem
                       translateZ="70"
-                      className="text-xl font-bold w-full text-slate-200 flex justify-between items-center"
+                      className="flex w-full items-center justify-between text-xl font-bold text-slate-200"
                     >
                       <h2>{title}</h2>
                       <StatusIcon status={status} />
@@ -29,7 +29,7 @@ const ProjectsList = () => {
                     <CardItem
                       as="div"
                       translateZ="60"
-                      className="text-slate-400 w-full  flex items-center !line-clamp-3 justify-between text-sm mt-2"
+                      className="mt-2 !line-clamp-3 flex w-full items-center justify-between text-sm text-slate-400"
                     >
                       {description}
                     </CardItem>
@@ -37,7 +37,7 @@ const ProjectsList = () => {
                       <Image
                         priority
                         src={image}
-                        className=" object-cover w-[365px] h-[228px] rounded-xl group-hover/card:shadow-xl"
+                        className="h-[228px] w-[365px] rounded-xl object-cover group-hover/card:shadow-xl"
                         alt={title}
                       />
                     </CardItem>
@@ -45,7 +45,7 @@ const ProjectsList = () => {
                 </CardBody>
               </CardContainer>
             </ItemWrapper>
-          )
+          ),
         )}
       </ul>
     </SectionWrapper>

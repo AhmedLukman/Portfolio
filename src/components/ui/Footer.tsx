@@ -7,7 +7,7 @@ import { Link } from "@heroui/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col items-center justify-center pb-10 gap-2">
+    <footer className="flex w-full flex-col items-center justify-center gap-2 pb-10">
       <div>
         {SOCIAL_LINKS.map((link) => (
           <Button
@@ -19,11 +19,7 @@ const Footer = () => {
             isIconOnly
             aria-label={link.name}
           >
-            <FontAwesomeIcon
-              size="xl"
-              className="text-body"
-              icon={link.icon}
-            />
+            <FontAwesomeIcon size="xl" className="text-body" icon={link.icon} />
           </Button>
         ))}
       </div>

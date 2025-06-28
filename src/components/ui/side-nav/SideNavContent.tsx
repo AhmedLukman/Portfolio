@@ -4,7 +4,7 @@ import SideNavFooter from "./SideNavFooter";
 
 const SideNavContent = () => {
   return (
-    <nav className="flex flex-col justify-between h-full">
+    <nav className="flex h-full flex-col justify-between">
       <SideNavHeader />
       <SideNavLinks />
       <SideNavFooter />

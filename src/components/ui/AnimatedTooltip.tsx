@@ -33,15 +33,15 @@ export const AnimatedTooltip = ({
   // rotate the tooltip
   const rotate = useSpring(
     useTransform(x, [-100, 100], [-45, 45]),
-    springConfig
+    springConfig,
   );
   // translate the tooltip
   const translateX = useSpring(
     useTransform(x, [-100, 100], [-50, 50]),
-    springConfig
+    springConfig,
   );
   const handleMouseMove = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
   ) => {
     const target = event.currentTarget as HTMLDivElement;
     const halfWidth = target.offsetWidth / 2;
@@ -49,10 +49,10 @@ export const AnimatedTooltip = ({
   };
 
   return (
-    <ul className="flex gap-3 flex-wrap">
+    <ul className="flex flex-wrap gap-3">
       {items.map(({ name, score, ...rest }, idx) => (
         <li
-          className="relative group"
+          className="group relative"
           key={name}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -77,29 +77,29 @@ export const AnimatedTooltip = ({
                   rotate: rotate,
                   whiteSpace: "nowrap",
                 }}
-                className="absolute -top-16 -left-1/2 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
+                className="absolute -left-1/2 -top-16 z-50 flex translate-x-1/2 flex-col items-center justify-center rounded-md bg-black px-4 py-2 text-xs shadow-xl"
               >
-                <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
-                <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
-                <div className="font-bold text-white relative z-30 text-base">
+                <div className="absolute inset-x-10 -bottom-px z-30 h-px w-[20%] bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
+                <div className="absolute -bottom-px left-10 z-30 h-px w-[40%] bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
+                <div className="relative z-30 text-base font-bold text-white">
                   {name}
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
-          <div className=" flex flex-col items-center justify-center gap-2">
+          <div className="flex flex-col items-center justify-center gap-2">
             {"src" in rest ? (
               <Image
                 priority
                 onMouseMove={handleMouseMove}
                 src={rest.src}
                 alt={name}
-                className="object-contain !m-0 p-1.5 object-center rounded-xl h-11 w-11 border group-hover:scale-105 group-hover:z-30 border-slate-600  relative transition duration-500"
+                className="relative !m-0 h-11 w-11 rounded-xl border border-slate-600 object-contain object-center p-1.5 transition duration-500 group-hover:z-30 group-hover:scale-105"
               />
             ) : (
               <span
                 onMouseMove={handleMouseMove}
-                className="relative h-11 w-11 p-1.5 border border-slate-600 rounded-xl transition duration-500 group-hover:scale-105 group-hover:z-30"
+                className="relative h-11 w-11 rounded-xl border border-slate-600 p-1.5 transition duration-500 group-hover:z-30 group-hover:scale-105"
               >
                 <FontAwesomeIcon
                   icon={rest.icon}

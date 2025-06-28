@@ -23,7 +23,7 @@ const HeatMap = () => {
   if (points.length === 0) return null;
 
   return (
-    <div className="relative w-full h-full bg-transparent overflow-hidden">
+    <div className="relative h-full w-full overflow-hidden bg-transparent">
       {points.map((point, i) => (
         <motion.div
           key={i}

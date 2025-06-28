@@ -32,7 +32,7 @@ const ItemWrapper = ({
           "animate-slideInFromLeft": inView && index % 2 === 0,
           "animate-slideInFromRight": inView && index % 2 !== 0,
         },
-        className
+        className,
       )}
     >
       {children}

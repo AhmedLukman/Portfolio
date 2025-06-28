@@ -7,7 +7,7 @@ const CaseStudy = ({ project: { caseStudy } }: { project: Project }) => {
   return (
     <section className="mt-20">
       <SectionHeader className="text-center">Case Study</SectionHeader>
-      <div className="mt-10 flex flex-col md:flex-row items-center justify-center w-full gap-4">
+      <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 md:flex-row">
         {caseStudy.map((study, index) => (
           <CaseStudyCard
             key={index}

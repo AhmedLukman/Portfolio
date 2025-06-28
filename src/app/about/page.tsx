@@ -1,4 +1,3 @@
-
 import Certifications from "@/components/page/about-page/Certifications";
 import Experience from "@/components/page/about-page/Experience";
 import Introduction from "@/components/page/about-page/Introduction";
@@ -10,7 +9,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Ahmed Lukman | Skills & Experience",
-  description: "Learn about my background, skills, and experience as a full stack developer specializing in modern web technologies.",
+  description:
+    "Learn about my background, skills, and experience as a full stack developer specializing in modern web technologies.",
 };
 
 const AboutPage = () => {

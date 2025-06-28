@@ -9,11 +9,11 @@ import SectionWrapper from "../../wrappers/SectionWrapper";
 const CallToAction = () => {
   return (
     <SectionWrapper className="min-[768px]:mt-20">
-      <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-black/70 flex flex-col items-center gap-3">
-        <h3 className="text-xl font-bold text-center">
+      <BackgroundGradient className="flex flex-col items-center gap-3 rounded-[22px] bg-black/70 p-4 sm:p-10">
+        <h3 className="text-center text-xl font-bold">
           Let&apos;s Work Together
         </h3>
-        <p className="text-lg text-center mb-2 max-w-prose">
+        <p className="mb-2 max-w-prose text-center text-lg">
           Excited to start a new project? Collaborate on an existing one? Or
           just have a chat? Get in touch today!
         </p>

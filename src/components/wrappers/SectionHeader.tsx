@@ -8,7 +8,7 @@ const SectionHeader = ({
   className?: string;
 }) => {
   return (
-    <h2 className={cn(" text-xl lg:text-2xl font-semibold", className)}>
+    <h2 className={cn("text-xl font-semibold lg:text-2xl", className)}>
       {children}
     </h2>
   );

@@ -20,18 +20,18 @@ const Mastery = () => {
   return (
     <SectionWrapper>
       <SectionHeader className="text-center">Mastery</SectionHeader>
-      <ul className="flex flex-col sm:flex-row gap-5">
+      <ul className="flex flex-col gap-5 sm:flex-row">
         {MASTERY.map(({ description, title, src }, index) => (
           <Card
             as="li"
             key={title}
-            className="w-full h-72 group border border-slate-300"
+            className="group h-72 w-full border border-slate-300"
           >
-            <CardHeader as="h3" className="absolute z-20 top-1  text-xl">
+            <CardHeader as="h3" className="absolute top-1 z-20 text-xl">
               {title}
             </CardHeader>
             <MasteryBody>{description}</MasteryBody>
-            <div className="inset-0 absolute bg-black/60 z-10" aria-hidden />
+            <div className="absolute inset-0 z-10 bg-black/60" aria-hidden />
             <Image
               priority
               fill

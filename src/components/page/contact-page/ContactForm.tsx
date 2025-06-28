@@ -15,7 +15,7 @@ import { useRef, useEffect } from "react";
 const ContactForm = () => {
   const [errors, formAction, isPending] = useActionState(
     sendEmail,
-    initialFormState
+    initialFormState,
   );
   const { db } = errors;
   const [showAlert, setShowAlert] = useState(false);
@@ -24,7 +24,7 @@ const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-    if(db){
+    if (db) {
       setShowAlert(true);
     }
     if (db === "success" && formRef.current) {
@@ -45,10 +45,10 @@ const ContactForm = () => {
       <Form
         ref={formRef}
         onSubmit={onSubmit}
-        className="max-w-lg sm:max-w-xl mx-auto mt-14 flex flex-col gap-6"
+        className="mx-auto mt-14 flex max-w-lg flex-col gap-6 sm:max-w-xl"
         validationErrors={errors}
       >
-        <div className="flex flex-col sm:flex-row gap-6 w-full">
+        <div className="flex w-full flex-col gap-6 sm:flex-row">
           <Input
             isRequired
             name="name"
@@ -87,16 +87,16 @@ const ContactForm = () => {
           }}
           variant="bordered"
         />
-        <div className="flex justify-center w-full">
+        <div className="flex w-full justify-center">
           <Button
             type="submit"
             isLoading={isPending}
             size="lg"
             className={cn(
-              "bg-slate-400 font-bold animate-slideInFromBottom opacity-0 delay-2000 sm:delay-1000 shadow-[0_8px_16px_rgb(0_0_0/0.3)] hover:!opacity-80",
+              "animate-slideInFromBottom bg-slate-400 font-bold opacity-0 shadow-[0_8px_16px_rgb(0_0_0/0.3)] delay-2000 hover:!opacity-80 sm:delay-1000",
               {
                 "!opacity-80": isPending,
-              }
+              },
             )}
             endContent={<FontAwesomeIcon icon={faEnvelope} />}
           >
@@ -107,7 +107,7 @@ const ContactForm = () => {
       <Alert
         variant="bordered"
         isClosable
-        className="max-w-xl mx-auto mt-10"
+        className="mx-auto mt-10 max-w-xl"
         isVisible={!!db && showAlert}
         onClose={() => setShowAlert(false)}
         color={isDBSuccess ? db : "danger"}

@@ -8,8 +8,8 @@ import ManNearComputerImage from "/public/assets/images/man-near-computer.svg";
 
 const Introduction = () => {
   return (
-    <SectionWrapper className="flex md:flex-row justify-between gap-5 space-y-0 md:gap-0 flex-col-reverse">
-      <div className="md:basis-1/2 self-center">
+    <SectionWrapper className="flex flex-col-reverse justify-between gap-5 space-y-0 md:flex-row md:gap-0">
+      <div className="self-center md:basis-1/2">
         <p>
           I&apos;m a{" "}
           <strong className="purple-gradient"> modern developer </strong>
@@ -38,7 +38,7 @@ const Introduction = () => {
           my passion for programming, making me an ideal candidate anywhere.
         </p>
       </div>
-      <div className="relative md:basis-1/2 h-52 md:h-64">
+      <div className="relative h-52 md:h-64 md:basis-1/2">
         <Image
           priority
           fill

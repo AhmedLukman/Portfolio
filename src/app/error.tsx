@@ -18,7 +18,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="h-full flex justify-center items-center flex-col">
+    <div className="flex h-full flex-col items-center justify-center">
       <div className="relative">
         <Image
           src={ImageTemplate}
@@ -26,7 +26,7 @@ export default function Error({
           priority
           alt="Error image illustration"
         />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-3xl text-center flex flex-col items-center">
+        <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center text-center text-3xl font-bold">
           <p className="text-heading">
             <FontAwesomeIcon icon={faCircleExclamation} className="mb-1" />
             <br />

@@ -1,6 +1,6 @@
 "use server";
 
-import 'server-only'
+import "server-only";
 
 import { initialFormState } from "./constants";
 import { Resend } from "resend";
@@ -9,16 +9,20 @@ import { EmailTemplate } from "../components/page/contact-page/EmailTemplate";
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required").trim(),
-  recipientEmail: z.string().min(1, "Email is required").email("Invalid email address").trim(),
+  recipientEmail: z
+    .string()
+    .min(1, "Email is required")
+    .email("Invalid email address")
+    .trim(),
   message: z.string().min(1, "Message is required").trim(),
-  db: z.enum(["success", "error"]).optional()
+  db: z.enum(["success", "error"]).optional(),
 });
 
 type ContactForm = z.infer<typeof contactFormSchema>;
 
 export const sendEmail = async (
   _: unknown,
-  formData: FormData
+  formData: FormData,
 ): Promise<ContactForm> => {
   const parsedFormData = Object.fromEntries(formData);
   const { success, data, error } = contactFormSchema.safeParse(parsedFormData);

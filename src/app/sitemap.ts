@@ -1,5 +1,5 @@
-import { MetadataRoute } from 'next'
-import { PORTFOLIO_SITE } from '@/lib/constants' 
+import { MetadataRoute } from "next";
+import { PORTFOLIO_SITE } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
