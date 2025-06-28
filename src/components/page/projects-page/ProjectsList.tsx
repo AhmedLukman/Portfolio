@@ -37,7 +37,7 @@ const ProjectsList = () => {
                       <Image
                         priority
                         src={image}
-                        className=" object-cover rounded-xl group-hover/card:shadow-xl"
+                        className=" object-cover w-[365px] h-[228px] rounded-xl group-hover/card:shadow-xl"
                         alt={title}
                       />
                     </CardItem>
