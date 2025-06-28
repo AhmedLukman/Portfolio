@@ -15,7 +15,6 @@ const ProjectOverview = ({
   project: {
     overview: {
       description,
-      image,
       site,
       source,
       title,
@@ -23,6 +22,7 @@ const ProjectOverview = ({
       startDate,
       endDate,
     },
+    deviceImage,
     techStack,
     metrics,
   },
@@ -34,7 +34,7 @@ const ProjectOverview = ({
     <section className="flex flex-col lg:gap-5 2xl:gap-10 lg:flex-row lg:mt-10 xl:mt-12">
       <div className="basis-1/2 relative aspect-square lg:aspect-auto">
         <Image
-          src={image}
+          src={deviceImage}
           alt={title}
           sizes="(min-width: 1540px) 492px, (min-width: 1280px) 438px, (min-width: 1040px) calc(26.36vw + 66px), (min-width: 980px) 816px, (min-width: 780px) calc(72.78vw + 117px), calc(100vw - 55px)"
           fill

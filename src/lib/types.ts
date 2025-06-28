@@ -14,6 +14,7 @@ export type Project = {
     endDate?: Date;
   };
   image: StaticImageData;
+  deviceImage: StaticImageData;
   route: string;
   slug: string;
   techStack: {

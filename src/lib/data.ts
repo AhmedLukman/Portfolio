@@ -37,6 +37,7 @@ import SoloLearn from "/public/assets/images/sololearn.jpeg";
 import Cinemania from "/public/assets/images/cinemania.png";
 import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png";
 import Portfolio from "/public/assets/images/portfolio.png";
+import DevicePortfolio from "/public/assets/images/device-portfolio.png";
 import {
   faExclamationTriangle,
   faLightbulb,
@@ -732,6 +733,7 @@ export const PROJECTS: Project[] = [
       startDate: new Date(2024, 6),
     },
     image: Cinemania,
+    deviceImage: Cinemania,
     route: "/projects/cinemania",
     slug: "cinemania",
     features: [
@@ -836,6 +838,7 @@ export const PROJECTS: Project[] = [
       startDate: new Date(2024, 6),
     },
     image: Portfolio,
+    deviceImage: DevicePortfolio,
     route: "/projects/portfolio",
     slug: "portfolio",
     features: [
