@@ -1,44 +1,44 @@
-"use client";
+"use client"
 
-import { startTransition, useActionState, useState } from "react";
-import { Input, Textarea } from "@heroui/input";
-import { Alert } from "@heroui/alert";
-import { Form } from "@heroui/form";
-import { Button } from "@heroui/button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { initialFormState } from "@/lib/constants";
-import { cn } from "@heroui/theme";
-import { sendEmail } from "@/lib/actions";
-import { useRef, useEffect } from "react";
+import { startTransition, useActionState, useState } from "react"
+import { Input, Textarea } from "@heroui/input"
+import { Alert } from "@heroui/alert"
+import { Form } from "@heroui/form"
+import { Button } from "@heroui/button"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { initialFormState } from "@/lib/constants"
+import { cn } from "@heroui/theme"
+import { sendEmail } from "@/lib/actions"
+import { useRef, useEffect } from "react"
 
 const ContactForm = () => {
   const [errors, formAction, isPending] = useActionState(
     sendEmail,
     initialFormState,
-  );
-  const { db } = errors;
-  const [showAlert, setShowAlert] = useState(false);
+  )
+  const { db } = errors
+  const [showAlert, setShowAlert] = useState(false)
 
-  const isDBSuccess = db === "success";
-  const formRef = useRef<HTMLFormElement>(null);
+  const isDBSuccess = db === "success"
+  const formRef = useRef<HTMLFormElement>(null)
 
   useEffect(() => {
     if (db) {
-      setShowAlert(true);
+      setShowAlert(true)
     }
     if (db === "success" && formRef.current) {
-      formRef.current.reset();
+      formRef.current.reset()
     }
-  }, [db]);
+  }, [db])
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    e.preventDefault()
+    const formData = new FormData(e.currentTarget)
     startTransition(() => {
-      formAction(formData);
-    });
-  };
+      formAction(formData)
+    })
+  }
 
   return (
     <>
@@ -120,7 +120,7 @@ const ContactForm = () => {
         hideIconWrapper
       />
     </>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

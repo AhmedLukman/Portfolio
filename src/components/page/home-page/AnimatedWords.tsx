@@ -1,7 +1,7 @@
-import React from "react";
-import { FlipWords } from "./FlipWords";
-import SectionWrapper from "../../wrappers/SectionWrapper";
-import { WEB_QUALITIES } from "@/lib/data";
+import React from "react"
+import { FlipWords } from "./FlipWords"
+import SectionWrapper from "../../wrappers/SectionWrapper"
+import { WEB_QUALITIES } from "@/lib/data"
 
 const AnimatedWords = () => {
   return (
@@ -11,7 +11,7 @@ const AnimatedWords = () => {
         <FlipWords words={WEB_QUALITIES} />
       </p>
     </SectionWrapper>
-  );
-};
+  )
+}
 
-export default AnimatedWords;
+export default AnimatedWords

@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faClock } from "@fortawesome/free-solid-svg-icons";
-import { Tooltip } from "@heroui/tooltip";
-import { ProjectStatus, TProjectStatus } from "@/lib/constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCheckCircle, faClock } from "@fortawesome/free-solid-svg-icons"
+import { Tooltip } from "@heroui/tooltip"
+import { ProjectStatus, TProjectStatus } from "@/lib/constants"
 
 const StatusIcon = ({ status }: { status: TProjectStatus }) => {
   return (
@@ -21,7 +21,7 @@ const StatusIcon = ({ status }: { status: TProjectStatus }) => {
         </Tooltip>
       )}
     </>
-  );
-};
+  )
+}
 
-export default StatusIcon;
+export default StatusIcon

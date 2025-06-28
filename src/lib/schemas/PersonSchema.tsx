@@ -1,4 +1,4 @@
-import Script from "next/script";
+import Script from "next/script"
 
 export default function PersonSchema() {
   return (
@@ -37,5 +37,5 @@ export default function PersonSchema() {
         }
       `}
     </Script>
-  );
+  )
 }

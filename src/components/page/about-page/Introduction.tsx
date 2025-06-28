@@ -1,4 +1,4 @@
-import SectionWrapper from "../../wrappers/SectionWrapper";
+import SectionWrapper from "../../wrappers/SectionWrapper"
 
 const Introduction = () => {
   return (
@@ -23,7 +23,7 @@ const Introduction = () => {
         development and continuous learning.
       </p>
     </SectionWrapper>
-  );
-};
+  )
+}
 
-export default Introduction;
+export default Introduction

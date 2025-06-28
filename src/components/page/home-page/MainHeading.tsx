@@ -1,4 +1,4 @@
-import PageHeader from "../../wrappers/PageHeader";
+import PageHeader from "../../wrappers/PageHeader"
 
 const MainHeading = () => {
   return (
@@ -9,7 +9,7 @@ const MainHeading = () => {
         <span className="purple-gradient">Full Stack Developer</span>
       </span>
     </PageHeader>
-  );
-};
+  )
+}
 
-export default MainHeading;
+export default MainHeading

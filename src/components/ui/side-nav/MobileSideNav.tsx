@@ -1,14 +1,14 @@
-"use client";
+"use client"
 
-import { AnimatePresence, motion } from "framer-motion";
-import { Button } from "@heroui/button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import SideNavContent from "./SideNavContent";
-import { useNavigation } from "@/lib/contexts/NavigationContext";
+import { AnimatePresence, motion } from "framer-motion"
+import { Button } from "@heroui/button"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
+import SideNavContent from "./SideNavContent"
+import { useNavigation } from "@/lib/contexts/NavigationContext"
 
 const MobileSideNav = () => {
-  const { isMobileMenuOpen, setIsMobileMenuOpen } = useNavigation();
+  const { isMobileMenuOpen, setIsMobileMenuOpen } = useNavigation()
 
   return (
     <>
@@ -48,7 +48,7 @@ const MobileSideNav = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )
+}
 
-export default MobileSideNav;
+export default MobileSideNav

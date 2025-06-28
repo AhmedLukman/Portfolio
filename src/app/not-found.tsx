@@ -1,7 +1,7 @@
-import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
-import ImageTemplate from "/public/assets/images/portfolio-image-template.png";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Image from "next/image"
+import ImageTemplate from "/public/assets/images/portfolio-image-template.png"
 
 const NotFound = () => {
   return (
@@ -22,7 +22,7 @@ const NotFound = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

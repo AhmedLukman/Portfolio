@@ -1,5 +1,5 @@
-import { ProjectStatus, TProjectStatus } from "@/lib/constants";
-import { Chip } from "@heroui/chip";
+import { ProjectStatus, TProjectStatus } from "@/lib/constants"
+import { Chip } from "@heroui/chip"
 
 const StatusChip = ({ status }: { status: TProjectStatus }) => {
   return (
@@ -11,7 +11,7 @@ const StatusChip = ({ status }: { status: TProjectStatus }) => {
         <Chip color="warning">{status}</Chip>
       )}
     </>
-  );
-};
+  )
+}
 
-export default StatusChip;
+export default StatusChip

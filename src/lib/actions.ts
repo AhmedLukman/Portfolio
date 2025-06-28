@@ -1,11 +1,11 @@
-"use server";
+"use server"
 
-import "server-only";
+import "server-only"
 
-import { initialFormState } from "./constants";
-import { Resend } from "resend";
-import { z } from "zod";
-import { EmailTemplate } from "../components/page/contact-page/EmailTemplate";
+import { initialFormState } from "./constants"
+import { Resend } from "resend"
+import { z } from "zod"
+import { EmailTemplate } from "../components/page/contact-page/EmailTemplate"
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required").trim(),
@@ -16,16 +16,16 @@ const contactFormSchema = z.object({
     .trim(),
   message: z.string().min(1, "Message is required").trim(),
   db: z.enum(["success", "error"]).optional(),
-});
+})
 
-type ContactForm = z.infer<typeof contactFormSchema>;
+type ContactForm = z.infer<typeof contactFormSchema>
 
 export const sendEmail = async (
   _: unknown,
   formData: FormData,
 ): Promise<ContactForm> => {
-  const parsedFormData = Object.fromEntries(formData);
-  const { success, data, error } = contactFormSchema.safeParse(parsedFormData);
+  const parsedFormData = Object.fromEntries(formData)
+  const { success, data, error } = contactFormSchema.safeParse(parsedFormData)
 
   if (!success) {
     return {
@@ -33,11 +33,11 @@ export const sendEmail = async (
       name: error.flatten().fieldErrors.name?.[0] ?? "",
       recipientEmail: error.flatten().fieldErrors.recipientEmail?.[0] ?? "",
       message: error.flatten().fieldErrors.message?.[0] ?? "",
-    };
+    }
   }
 
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const resend = new Resend(process.env.RESEND_API_KEY)
     await resend.emails.send({
       from: "Contact <onboarding@resend.dev>",
       to: process.env.MY_EMAIL as string,
@@ -45,16 +45,16 @@ export const sendEmail = async (
       react: await EmailTemplate(data),
       replyTo: data.recipientEmail,
       text: `Contact form submission from ${data.name}. Please view this email in an HTML-compatible email client.`,
-    });
+    })
     return {
       ...initialFormState,
       db: "success",
-    };
+    }
   } catch (error) {
-    console.error(error);
+    console.error(error)
     return {
       ...initialFormState,
       db: "error",
-    };
+    }
   }
-};
+}

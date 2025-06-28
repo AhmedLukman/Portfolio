@@ -9,7 +9,7 @@ const SideNavHeader = () => {
         </span>
       </span>
     </header>
-  );
-};
+  )
+}
 
-export default SideNavHeader;
+export default SideNavHeader

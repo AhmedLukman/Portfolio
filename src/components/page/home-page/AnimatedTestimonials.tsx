@@ -1,51 +1,51 @@
-"use client";
+"use client"
 
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "@heroui/button";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Button } from "@heroui/button"
+import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
+import { useCallback, useEffect, useState } from "react"
 
 type Testimonial = {
-  quote: string;
-  name: string;
-  designation: string;
-  src: string;
-};
+  quote: string
+  name: string
+  designation: string
+  src: string
+}
 export const AnimatedTestimonials = ({
   testimonials,
   autoplay = false,
 }: {
-  testimonials: Testimonial[];
-  autoplay?: boolean;
+  testimonials: Testimonial[]
+  autoplay?: boolean
 }) => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(0)
 
   const handleNext = useCallback(() => {
-    setActive((prev) => (prev + 1) % testimonials.length);
-  }, [testimonials.length]);
+    setActive((prev) => (prev + 1) % testimonials.length)
+  }, [testimonials.length])
 
   const handlePrev = useCallback(() => {
-    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  }, [testimonials.length]);
+    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }, [testimonials.length])
 
   const isActive = (index: number) => {
-    return index === active;
-  };
+    return index === active
+  }
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
-      return () => clearInterval(interval);
+      const interval = setInterval(handleNext, 5000)
+      return () => clearInterval(interval)
     }
-  }, [autoplay, handleNext]);
+  }, [autoplay, handleNext])
 
   const getRotateY = (index: number) => {
     // Use a deterministic pattern based on index
-    const rotations = [8, -8, 6, -6, 4, -4];
-    return rotations[index % rotations.length];
-  };
+    const rotations = [8, -8, 6, -6, 4, -4]
+    return rotations[index % rotations.length]
+  }
 
   return (
     <div className="mx-auto max-w-sm px-4 antialiased sm:max-w-none md:max-w-4xl md:px-8 lg:px-12">
@@ -174,5 +174,5 @@ export const AnimatedTestimonials = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

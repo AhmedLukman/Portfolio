@@ -1,21 +1,21 @@
-import { heroui } from "@heroui/theme";
-import type { Config } from "tailwindcss";
+import { heroui } from "@heroui/theme"
+import type { Config } from "tailwindcss"
 const {
   default: flattenColorPalette,
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-} = require("tailwindcss/lib/util/flattenColorPalette");
+} = require("tailwindcss/lib/util/flattenColorPalette")
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const addVariablesForColors = ({ addBase, theme }: any) => {
-  const allColors = flattenColorPalette(theme("colors"));
+  const allColors = flattenColorPalette(theme("colors"))
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
-  );
+  )
 
   addBase({
     ":root": newVars,
-  });
-};
+  })
+}
 
 export default {
   content: [
@@ -99,8 +99,8 @@ export default {
         ".delay-2000": {
           animationDelay: "2s",
         },
-      };
-      addUtilities(newAnimationDelays, ["responsive", "hover"]);
+      }
+      addUtilities(newAnimationDelays, ["responsive", "hover"])
     },
   ],
-} satisfies Config;
+} satisfies Config

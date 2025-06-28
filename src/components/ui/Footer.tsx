@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { SOCIAL_LINKS } from "@/lib/constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "@heroui/button";
-import { Link } from "@heroui/link";
+import { SOCIAL_LINKS } from "@/lib/constants"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Button } from "@heroui/button"
+import { Link } from "@heroui/link"
 
 const Footer = () => {
   return (
@@ -25,7 +25,7 @@ const Footer = () => {
       </div>
       <p>&copy; {new Date().getFullYear()} Ahmed Lukman.</p>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

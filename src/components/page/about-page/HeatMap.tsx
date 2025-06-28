@@ -1,26 +1,26 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 
 const HeatMap = () => {
   const [points, setPoints] = useState<
     { x: number; y: number; intensity: number }[]
-  >([]);
+  >([])
 
   const generatePoints = (count: number) => {
     return Array.from({ length: count }, () => ({
       x: Math.random() * 100,
       y: Math.random() * 100,
       intensity: Math.random(),
-    }));
-  };
+    }))
+  }
 
   useEffect(() => {
-    setPoints(generatePoints(30));
-  }, []);
+    setPoints(generatePoints(30))
+  }, [])
 
-  if (points.length === 0) return null;
+  if (points.length === 0) return null
 
   return (
     <div className="relative h-full w-full overflow-hidden bg-transparent">
@@ -52,7 +52,7 @@ const HeatMap = () => {
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default HeatMap;
+export default HeatMap

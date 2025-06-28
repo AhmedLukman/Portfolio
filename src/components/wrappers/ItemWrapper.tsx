@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-"use client";
+"use client"
 
-import { cn } from "@heroui/theme";
-import React from "react";
-import { useInView } from "react-intersection-observer";
+import { cn } from "@heroui/theme"
+import React from "react"
+import { useInView } from "react-intersection-observer"
 
 type ItemWrapperProps = {
-  children: React.ReactNode;
-  index: number;
-  as?: any;
-  className?: string;
-};
+  children: React.ReactNode
+  index: number
+  as?: any
+  className?: string
+}
 
 const ItemWrapper = ({
   children,
@@ -21,7 +21,7 @@ const ItemWrapper = ({
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.6,
-  });
+  })
 
   return (
     <Component
@@ -37,7 +37,7 @@ const ItemWrapper = ({
     >
       {children}
     </Component>
-  );
-};
+  )
+}
 
-export default ItemWrapper;
+export default ItemWrapper

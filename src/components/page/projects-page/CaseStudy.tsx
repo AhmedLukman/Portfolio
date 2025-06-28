@@ -1,7 +1,7 @@
-import SectionHeader from "@/components/wrappers/SectionHeader";
-import CaseStudyCard from "./CaseStudyCard";
-import { Project } from "@/lib/types";
-import { CanvasRevealEffect } from "./CanvasRevealEffect";
+import SectionHeader from "@/components/wrappers/SectionHeader"
+import CaseStudyCard from "./CaseStudyCard"
+import { Project } from "@/lib/types"
+import { CanvasRevealEffect } from "./CanvasRevealEffect"
 
 const CaseStudy = ({ project: { caseStudy } }: { project: Project }) => {
   return (
@@ -26,7 +26,7 @@ const CaseStudy = ({ project: { caseStudy } }: { project: Project }) => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default CaseStudy;
+export default CaseStudy

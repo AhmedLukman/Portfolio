@@ -1,11 +1,11 @@
-import { cn } from "@heroui/theme";
+import { cn } from "@heroui/theme"
 
 const PageWrapper = ({
   children,
   className,
 }: {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode
+  className?: string
 }) => {
   return (
     <div
@@ -13,7 +13,7 @@ const PageWrapper = ({
     >
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default PageWrapper;
+export default PageWrapper

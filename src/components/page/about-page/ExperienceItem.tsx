@@ -1,35 +1,35 @@
-import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
-import { Chip } from "@heroui/chip";
-import ItemWrapper from "../../wrappers/ItemWrapper";
-import { convertDate } from "@/lib/utils";
-import Image, { StaticImageData } from "next/image";
-import { intervalToDuration, formatDuration } from "date-fns";
-import { EXPERIENCE } from "@/lib/data";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card"
+import { Chip } from "@heroui/chip"
+import ItemWrapper from "../../wrappers/ItemWrapper"
+import { convertDate } from "@/lib/utils"
+import Image, { StaticImageData } from "next/image"
+import { intervalToDuration, formatDuration } from "date-fns"
+import { EXPERIENCE } from "@/lib/data"
 
 const calculateDuration = (start: Date, end: Date) => {
   const duration = intervalToDuration({
     start: start,
     end: end,
-  });
+  })
 
   return formatDuration(duration, {
     format: ["years", "months"],
     delimiter: " ",
-  });
-};
+  })
+}
 
 type ExperienceItemProps = {
   item: {
-    index: number;
-    title: string;
-    description: string;
-    company: string;
-    type: string;
-    startDate: Date;
-    endDate?: Date;
-    companyLogo: StaticImageData;
-  };
-};
+    index: number
+    title: string
+    description: string
+    company: string
+    type: string
+    startDate: Date
+    endDate?: Date
+    companyLogo: StaticImageData
+  }
+}
 
 const ExperienceItem = ({
   item: {
@@ -43,7 +43,7 @@ const ExperienceItem = ({
     endDate,
   },
 }: ExperienceItemProps) => {
-  const endOrCurrent = endDate ?? new Date();
+  const endOrCurrent = endDate ?? new Date()
   return (
     <li
       className={`relative flex lg:${index % 2 === 0 ? "justify-end" : "justify-start"} justify-center`}
@@ -112,7 +112,7 @@ const ExperienceItem = ({
         </ItemWrapper>
       </div>
     </li>
-  );
-};
+  )
+}
 
-export default ExperienceItem;
+export default ExperienceItem

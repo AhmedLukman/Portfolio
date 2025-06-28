@@ -1,15 +1,15 @@
-"use client";
+"use client"
 
-import { CardBody } from "@heroui/card";
-import { cn } from "@heroui/theme";
-import { PropsWithChildren } from "react";
-import { useInView } from "react-intersection-observer";
+import { CardBody } from "@heroui/card"
+import { cn } from "@heroui/theme"
+import { PropsWithChildren } from "react"
+import { useInView } from "react-intersection-observer"
 
 const MasteryBody = ({ children }: PropsWithChildren) => {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.4,
-  });
+  })
 
   return (
     <div
@@ -21,7 +21,7 @@ const MasteryBody = ({ children }: PropsWithChildren) => {
     >
       <CardBody as="p">{children}</CardBody>
     </div>
-  );
-};
+  )
+}
 
-export default MasteryBody;
+export default MasteryBody

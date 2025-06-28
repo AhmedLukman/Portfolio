@@ -1,5 +1,5 @@
-import { PAGE_LINKS, SOCIAL_LINKS } from "@/lib/constants";
-import SideNavLinkButton from "./SideNavLinkButton";
+import { PAGE_LINKS, SOCIAL_LINKS } from "@/lib/constants"
+import SideNavLinkButton from "./SideNavLinkButton"
 
 const SideNavLinks = () => {
   return (
@@ -26,7 +26,7 @@ const SideNavLinks = () => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SideNavLinks;
+export default SideNavLinks

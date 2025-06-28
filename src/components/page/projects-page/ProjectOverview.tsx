@@ -1,15 +1,15 @@
-import Image from "next/image";
-import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faCalendarAlt, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import { convertDate } from "@/lib/utils";
-import { Project } from "@/lib/types";
-import { PORTFOLIO_SITE } from "@/lib/constants";
-import { LinkPreview } from "./LinkPreview";
-import { Button } from "@heroui/button";
-import { Tooltip } from "@heroui/tooltip";
-import StatusChip from "./StatusChip";
+import Image from "next/image"
+import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faCalendarAlt, faGlobe } from "@fortawesome/free-solid-svg-icons"
+import { convertDate } from "@/lib/utils"
+import { Project } from "@/lib/types"
+import { PORTFOLIO_SITE } from "@/lib/constants"
+import { LinkPreview } from "./LinkPreview"
+import { Button } from "@heroui/button"
+import { Tooltip } from "@heroui/tooltip"
+import StatusChip from "./StatusChip"
 
 const ProjectOverview = ({
   project: {
@@ -19,9 +19,9 @@ const ProjectOverview = ({
     metrics,
   },
 }: {
-  project: Project;
+  project: Project
 }) => {
-  const isSitePortfolio = site === PORTFOLIO_SITE;
+  const isSitePortfolio = site === PORTFOLIO_SITE
   return (
     <section className="flex flex-col lg:mt-10 lg:flex-row lg:gap-5 xl:mt-12 2xl:gap-10">
       <div className="relative aspect-square basis-1/2 lg:aspect-auto">
@@ -133,7 +133,7 @@ const ProjectOverview = ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ProjectOverview;
+export default ProjectOverview

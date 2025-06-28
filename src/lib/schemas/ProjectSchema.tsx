@@ -1,13 +1,13 @@
-import Script from "next/script";
+import Script from "next/script"
 
 type ProjectSchemaProps = {
-  name: string;
-  description: string;
-  url: string;
-  image?: string;
-  datePublished?: string;
-  codeRepository: string;
-};
+  name: string
+  description: string
+  url: string
+  image?: string
+  datePublished?: string
+  codeRepository: string
+}
 
 export default function ProjectSchema({
   name,
@@ -32,11 +32,11 @@ export default function ProjectSchema({
     codeRepository,
     applicationCategory: "WebApplication",
     operatingSystem: "All",
-  };
+  }
 
   return (
     <Script id="schema-project" type="application/ld+json">
       {JSON.stringify(schema)}
     </Script>
-  );
+  )
 }

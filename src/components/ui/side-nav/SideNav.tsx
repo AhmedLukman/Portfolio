@@ -1,5 +1,5 @@
-import DesktopSideNav from "./DesktopSideNav";
-import MobileSideNav from "./MobileSideNav";
+import DesktopSideNav from "./DesktopSideNav"
+import MobileSideNav from "./MobileSideNav"
 
 const SideNav = () => {
   return (
@@ -7,7 +7,7 @@ const SideNav = () => {
       <DesktopSideNav />
       <MobileSideNav />
     </>
-  );
-};
+  )
+}
 
-export default SideNav;
+export default SideNav

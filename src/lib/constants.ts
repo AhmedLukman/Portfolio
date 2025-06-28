@@ -1,10 +1,10 @@
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import {
   faCode,
   faContactBook,
   faHouse,
   faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons"
 
 export const SOCIAL_LINKS = [
   {
@@ -17,7 +17,7 @@ export const SOCIAL_LINKS = [
     icon: faLinkedin,
     path: "https://www.linkedin.com/in/ahmedlukman",
   },
-];
+]
 
 export const PAGE_LINKS = [
   {
@@ -40,19 +40,19 @@ export const PAGE_LINKS = [
     path: "/contact",
     icon: faContactBook,
   },
-];
+]
 
 export const initialFormState = {
   name: "",
   recipientEmail: "",
   message: "",
-} as const;
+} as const
 
 export const ProjectStatus = {
   completed: "Completed",
   pending: "Pending",
-} as const;
+} as const
 
-export type TProjectStatus = (typeof ProjectStatus)[keyof typeof ProjectStatus];
+export type TProjectStatus = (typeof ProjectStatus)[keyof typeof ProjectStatus]
 
-export const PORTFOLIO_SITE = "https://www.ahmedlukman.dev";
+export const PORTFOLIO_SITE = "https://www.ahmedlukman.dev"

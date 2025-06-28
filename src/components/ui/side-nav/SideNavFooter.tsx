@@ -1,4 +1,4 @@
-import { Button } from "@heroui/button";
+import { Button } from "@heroui/button"
 
 const SideNavFooter = () => {
   return (
@@ -10,7 +10,7 @@ const SideNavFooter = () => {
         Download CV
       </Button>
     </footer>
-  );
-};
+  )
+}
 
-export default SideNavFooter;
+export default SideNavFooter

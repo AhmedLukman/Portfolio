@@ -1,6 +1,6 @@
-import SideNavLinks from "./SideNavLinks";
-import SideNavHeader from "./SideNavHeader";
-import SideNavFooter from "./SideNavFooter";
+import SideNavLinks from "./SideNavLinks"
+import SideNavHeader from "./SideNavHeader"
+import SideNavFooter from "./SideNavFooter"
 
 const SideNavContent = () => {
   return (
@@ -9,7 +9,7 @@ const SideNavContent = () => {
       <SideNavLinks />
       <SideNavFooter />
     </nav>
-  );
-};
+  )
+}
 
-export default SideNavContent;
+export default SideNavContent

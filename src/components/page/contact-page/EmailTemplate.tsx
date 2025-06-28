@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import {
   Html,
   Head,
@@ -6,8 +6,8 @@ import {
   Container,
   Heading,
   Text,
-} from "@react-email/components";
-import { Tailwind } from "@react-email/tailwind";
+} from "@react-email/components"
+import { Tailwind } from "@react-email/tailwind"
 
 export const EmailTemplate: React.FC<
   Readonly<{ name: string; recipientEmail: string; message: string }>
@@ -33,4 +33,4 @@ export const EmailTemplate: React.FC<
       </Body>
     </Html>
   </Tailwind>
-);
+)

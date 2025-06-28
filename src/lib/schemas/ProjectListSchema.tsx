@@ -1,5 +1,5 @@
-import Script from "next/script";
-import { PROJECTS } from "../data";
+import Script from "next/script"
+import { PROJECTS } from "../data"
 
 export default function ProjectListSchema() {
   const schema = {
@@ -27,11 +27,11 @@ export default function ProjectListSchema() {
         operatingSystem: "Any",
       },
     })),
-  };
+  }
 
   return (
     <Script id="schema-project-list" type="application/ld+json">
       {JSON.stringify(schema)}
     </Script>
-  );
+  )
 }

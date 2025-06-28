@@ -1,5 +1,5 @@
-import { EXPERIENCE } from "@/lib/data";
-import ExperienceItem from "./ExperienceItem";
+import { EXPERIENCE } from "@/lib/data"
+import ExperienceItem from "./ExperienceItem"
 
 const ExperienceList = () => {
   return (
@@ -13,7 +13,7 @@ const ExperienceList = () => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default ExperienceList;
+export default ExperienceList

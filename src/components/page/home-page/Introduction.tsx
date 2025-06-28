@@ -1,10 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMedal } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
-import { Link } from "@heroui/link";
-import SectionWrapper from "../../wrappers/SectionWrapper";
-import NextLink from "next/link";
-import ManNearComputerImage from "/public/assets/images/man-near-computer.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMedal } from "@fortawesome/free-solid-svg-icons"
+import Image from "next/image"
+import { Link } from "@heroui/link"
+import SectionWrapper from "../../wrappers/SectionWrapper"
+import NextLink from "next/link"
+import ManNearComputerImage from "/public/assets/images/man-near-computer.svg"
 
 const Introduction = () => {
   return (
@@ -47,7 +47,7 @@ const Introduction = () => {
         />
       </div>
     </SectionWrapper>
-  );
-};
+  )
+}
 
-export default Introduction;
+export default Introduction

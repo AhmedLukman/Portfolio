@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { PROJECTS } from "@/lib/data";
-import ItemWrapper from "../../wrappers/ItemWrapper";
-import { CardBody, CardContainer, CardItem } from "./3DCard";
-import StatusIcon from "./StatusIcon";
-import SectionWrapper from "@/components/wrappers/SectionWrapper";
+import Image from "next/image"
+import Link from "next/link"
+import { PROJECTS } from "@/lib/data"
+import ItemWrapper from "../../wrappers/ItemWrapper"
+import { CardBody, CardContainer, CardItem } from "./3DCard"
+import StatusIcon from "./StatusIcon"
+import SectionWrapper from "@/components/wrappers/SectionWrapper"
 
 const ProjectsList = () => {
   return (
@@ -49,7 +49,7 @@ const ProjectsList = () => {
         )}
       </ul>
     </SectionWrapper>
-  );
-};
+  )
+}
 
-export default ProjectsList;
+export default ProjectsList

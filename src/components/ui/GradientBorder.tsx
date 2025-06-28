@@ -1,14 +1,14 @@
-import { cn } from "@heroui/theme";
-import React from "react";
+import { cn } from "@heroui/theme"
+import React from "react"
 
 const GradientBorder = ({
   insetClass = "inset-x-20",
   pinkHeightClass = "h-[5px]",
   className,
 }: {
-  insetClass?: string;
-  pinkHeightClass?: string;
-  className?: string;
+  insetClass?: string
+  pinkHeightClass?: string
+  className?: string
 }) => {
   return (
     <div className={"relative " + className}>
@@ -32,7 +32,7 @@ const GradientBorder = ({
       />
       <div className="absolute inset-x-40 top-0 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent sm:inset-x-60" />
     </div>
-  );
-};
+  )
+}
 
-export default GradientBorder;
+export default GradientBorder

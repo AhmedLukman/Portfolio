@@ -1,12 +1,12 @@
-import { cn } from "@heroui/theme";
-import React, { PropsWithChildren } from "react";
-import GradientBorder from "../ui/GradientBorder";
+import { cn } from "@heroui/theme"
+import React, { PropsWithChildren } from "react"
+import GradientBorder from "../ui/GradientBorder"
 
 const PageHeader = ({
   children,
   borderClassName = "max-w-xl",
 }: PropsWithChildren & {
-  borderClassName?: string;
+  borderClassName?: string
 }) => {
   return (
     <header>
@@ -15,7 +15,7 @@ const PageHeader = ({
       </h1>
       <GradientBorder className={cn("mx-auto", borderClassName)} />
     </header>
-  );
-};
+  )
+}
 
-export default PageHeader;
+export default PageHeader

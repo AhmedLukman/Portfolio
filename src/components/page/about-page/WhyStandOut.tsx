@@ -1,13 +1,13 @@
-import SectionHeader from "../../wrappers/SectionHeader";
-import { WobbleCard } from "./WobbleCard";
-import HeatMap from "./HeatMap";
-import SectionWrapper from "../../wrappers/SectionWrapper";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SectionHeader from "../../wrappers/SectionHeader"
+import { WobbleCard } from "./WobbleCard"
+import HeatMap from "./HeatMap"
+import SectionWrapper from "../../wrappers/SectionWrapper"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faGlobeAfrica,
   faRocket,
   faUserTie,
-} from "@fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons"
 
 export default function WhyStandOut() {
   return (
@@ -57,5 +57,5 @@ export default function WhyStandOut() {
         </WobbleCard>
       </div>
     </SectionWrapper>
-  );
+  )
 }

@@ -1,43 +1,43 @@
-import FrontEndImage from "/public/assets/images/frontend.jpg";
-import BackEndImage from "/public/assets/images/backend.jpg";
-import DesignImage from "/public/assets/images/design.jpg";
-import HTML5 from "/public/assets/images/html5.svg";
-import CSS from "/public/assets/images/css.svg";
-import JavaScript from "/public/assets/images/javascript.svg";
-import React from "/public/assets/images/react.svg";
-import Next from "/public/assets/images/next.svg";
-import Svelte from "/public/assets/images/svelte.svg";
-import TypeScript from "/public/assets/images/typescript.svg";
-import Tailwind from "/public/assets/images/tailwind.svg";
-import HeroUI from "/public/assets/images/heroui.svg";
-import AceternityUI from "/public/assets/images/aceternity.webp";
-import Zod from "/public/assets/images/zod.svg";
-import AuthJS from "/public/assets/images/authjs.svg";
-import Prisma from "/public/assets/images/prisma.svg";
-import Supabase from "/public/assets/images/supabase.svg";
-import PostgreSQL from "/public/assets/images/postgresql.svg";
-import VSCode from "/public/assets/images/vscode.svg";
-import ChatGPT from "/public/assets/images/chatgpt.svg";
-import Copilot from "/public/assets/images/copilot.svg";
-import Vercel from "/public/assets/images/vercel.svg";
-import ESLint from "/public/assets/images/eslint.svg";
-import NPM from "/public/assets/images/npm.svg";
-import Git from "/public/assets/images/git.svg";
-import GitHub from "/public/assets/images/github.svg";
-import Vite from "/public/assets/images/vite.svg";
-import Claude from "/public/assets/images/claude.svg";
-import IlabAfrica from "/public/assets/images/ilabafrica.jpg";
-import Trinetium from "/public/assets/images/trinetium.jpeg";
-import ThomsonReuters from "/public/assets/images/thomsonreuters.png";
-import { StaticImageData } from "next/image";
-import Yoonka from "/public/assets/images/yoonka.jpeg";
-import Strathmore from "/public/assets/images/strathmore.jpeg";
-import GreatLearning from "/public/assets/images/greatlearning.jpeg";
-import SoloLearn from "/public/assets/images/sololearn.jpeg";
-import Cinemania from "/public/assets/images/cinemania.png";
-import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png";
-import Portfolio from "/public/assets/images/portfolio.png";
-import DevicePortfolio from "/public/assets/images/device-portfolio.png";
+import FrontEndImage from "/public/assets/images/frontend.jpg"
+import BackEndImage from "/public/assets/images/backend.jpg"
+import DesignImage from "/public/assets/images/design.jpg"
+import HTML5 from "/public/assets/images/html5.svg"
+import CSS from "/public/assets/images/css.svg"
+import JavaScript from "/public/assets/images/javascript.svg"
+import React from "/public/assets/images/react.svg"
+import Next from "/public/assets/images/next.svg"
+import Svelte from "/public/assets/images/svelte.svg"
+import TypeScript from "/public/assets/images/typescript.svg"
+import Tailwind from "/public/assets/images/tailwind.svg"
+import HeroUI from "/public/assets/images/heroui.svg"
+import AceternityUI from "/public/assets/images/aceternity.webp"
+import Zod from "/public/assets/images/zod.svg"
+import AuthJS from "/public/assets/images/authjs.svg"
+import Prisma from "/public/assets/images/prisma.svg"
+import Supabase from "/public/assets/images/supabase.svg"
+import PostgreSQL from "/public/assets/images/postgresql.svg"
+import VSCode from "/public/assets/images/vscode.svg"
+import ChatGPT from "/public/assets/images/chatgpt.svg"
+import Copilot from "/public/assets/images/copilot.svg"
+import Vercel from "/public/assets/images/vercel.svg"
+import ESLint from "/public/assets/images/eslint.svg"
+import NPM from "/public/assets/images/npm.svg"
+import Git from "/public/assets/images/git.svg"
+import GitHub from "/public/assets/images/github.svg"
+import Vite from "/public/assets/images/vite.svg"
+import Claude from "/public/assets/images/claude.svg"
+import IlabAfrica from "/public/assets/images/ilabafrica.jpg"
+import Trinetium from "/public/assets/images/trinetium.jpeg"
+import ThomsonReuters from "/public/assets/images/thomsonreuters.png"
+import { StaticImageData } from "next/image"
+import Yoonka from "/public/assets/images/yoonka.jpeg"
+import Strathmore from "/public/assets/images/strathmore.jpeg"
+import GreatLearning from "/public/assets/images/greatlearning.jpeg"
+import SoloLearn from "/public/assets/images/sololearn.jpeg"
+import Cinemania from "/public/assets/images/cinemania.png"
+import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png"
+import Portfolio from "/public/assets/images/portfolio.png"
+import DevicePortfolio from "/public/assets/images/device-portfolio.png"
 import {
   faExclamationTriangle,
   faLightbulb,
@@ -46,9 +46,9 @@ import {
   faRocket,
   faSearch,
   faThumbsUp,
-} from "@fortawesome/free-solid-svg-icons";
-import { PORTFOLIO_SITE, ProjectStatus } from "./constants";
-import { Project } from "./types";
+} from "@fortawesome/free-solid-svg-icons"
+import { PORTFOLIO_SITE, ProjectStatus } from "./constants"
+import { Project } from "./types"
 
 export const FRONT_END_TECHS = [
   {
@@ -95,7 +95,7 @@ export const FRONT_END_TECHS = [
     name: "Zod",
     src: Zod,
   },
-];
+]
 
 export const BACKEND_TECHS = [
   {
@@ -114,7 +114,7 @@ export const BACKEND_TECHS = [
     name: "PostgreSQL",
     src: PostgreSQL,
   },
-];
+]
 
 export const DEV_TOOLS = [
   {
@@ -157,7 +157,7 @@ export const DEV_TOOLS = [
     name: "Vite",
     src: Vite,
   },
-];
+]
 
 export const TESTIMONIALS = [
   {
@@ -180,7 +180,7 @@ export const TESTIMONIALS = [
     designation: "Software Engineer",
     src: "data:image/png;base64,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",
   },
-];
+]
 
 export const WEB_QUALITIES = [
   "Performant",
@@ -189,7 +189,7 @@ export const WEB_QUALITIES = [
   "Functional",
   "Accessible",
   "Semantic",
-];
+]
 
 export const MASTERY = [
   {
@@ -210,7 +210,7 @@ export const MASTERY = [
       "Focused on creating intuitive, engaging, and visually captivating user interfaces that enhance user experience.",
     src: DesignImage,
   },
-];
+]
 
 export const GLOBAL_WORLD_CONFIG = {
   pointSize: 4,
@@ -233,8 +233,8 @@ export const GLOBAL_WORLD_CONFIG = {
   initialPosition: { lat: 22.3193, lng: 114.1694 },
   autoRotate: true,
   autoRotateSpeed: 0.5,
-};
-const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+}
+const colors = ["#06b6d4", "#3b82f6", "#6366f1"]
 export const SAMPLE_ARCS = [
   {
     order: 1,
@@ -596,16 +596,16 @@ export const SAMPLE_ARCS = [
     arcAlt: 0.3,
     color: colors[Math.floor(Math.random() * (colors.length - 1))],
   },
-];
+]
 
 export const EXPERIENCE: {
-  title: string;
-  type: "Full-Time" | "Part-Time" | "Contract" | "Internship";
-  description: string;
-  company: string;
-  startDate: Date;
-  endDate?: Date;
-  companyLogo: StaticImageData;
+  title: string
+  type: "Full-Time" | "Part-Time" | "Contract" | "Internship"
+  description: string
+  company: string
+  startDate: Date
+  endDate?: Date
+  companyLogo: StaticImageData
 }[] = [
   {
     title: "Front-end Developer",
@@ -643,7 +643,7 @@ export const EXPERIENCE: {
     endDate: new Date(2022, 9),
     companyLogo: Trinetium,
   },
-];
+]
 
 export const CERTIFICATIONS = [
   {
@@ -700,25 +700,25 @@ export const CERTIFICATIONS = [
       "Completed a comprehensive web development course on SoloLearn, mastering essential skills in HTML, CSS, and JavaScript. Developed proficiency in front-end, ready to tackle real-world web projects with confidence.",
     logo: SoloLearn,
   },
-];
+]
 
 const problemCaseStudy = {
   title: "Problem",
   icon: faExclamationTriangle,
   colors: [[255, 166, 158]],
-};
+}
 
 const solutionCaseStudy = {
   title: "Solution",
   icon: faLightbulb,
   colors: [[221, 255, 247]],
-};
+}
 
 const outcomeCaseStudy = {
   title: "Outcome",
   icon: faThumbsUp,
   colors: [[125, 211, 252]],
-};
+}
 
 export const PROJECTS: Project[] = [
   {
@@ -923,4 +923,4 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
-];
+]

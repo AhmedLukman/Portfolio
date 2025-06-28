@@ -1,9 +1,9 @@
-import React from "react";
-import ItemWrapper from "../../wrappers/ItemWrapper";
-import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
-import { CERTIFICATIONS } from "@/lib/data";
-import { BorderButton } from "./BorderButton";
-import Image from "next/image";
+import React from "react"
+import ItemWrapper from "../../wrappers/ItemWrapper"
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card"
+import { CERTIFICATIONS } from "@/lib/data"
+import { BorderButton } from "./BorderButton"
+import Image from "next/image"
 
 const CertificationsList = () => {
   return (
@@ -52,7 +52,7 @@ const CertificationsList = () => {
         ),
       )}
     </ul>
-  );
-};
+  )
+}
 
-export default CertificationsList;
+export default CertificationsList

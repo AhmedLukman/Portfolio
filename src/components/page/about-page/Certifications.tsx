@@ -1,7 +1,7 @@
-import React from "react";
-import SectionHeader from "../../wrappers/SectionHeader";
-import CertificationsList from "./CertificationsList";
-import SectionWrapper from "../../wrappers/SectionWrapper";
+import React from "react"
+import SectionHeader from "../../wrappers/SectionHeader"
+import CertificationsList from "./CertificationsList"
+import SectionWrapper from "../../wrappers/SectionWrapper"
 
 const Certifications = () => {
   return (
@@ -11,7 +11,7 @@ const Certifications = () => {
       </SectionHeader>
       <CertificationsList />
     </SectionWrapper>
-  );
-};
+  )
+}
 
-export default Certifications;
+export default Certifications

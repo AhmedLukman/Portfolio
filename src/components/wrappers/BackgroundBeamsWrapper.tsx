@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import React from "react";
-import { BackgroundBeams } from "../ui/BackgroundBeams";
+import React from "react"
+import { BackgroundBeams } from "../ui/BackgroundBeams"
 
 const BackgroundBeamsWrapper = () => {
-  return <BackgroundBeams />;
-};
+  return <BackgroundBeams />
+}
 
-export default BackgroundBeamsWrapper;
+export default BackgroundBeamsWrapper

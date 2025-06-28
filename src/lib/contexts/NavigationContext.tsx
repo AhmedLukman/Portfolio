@@ -1,21 +1,21 @@
-"use client";
+"use client"
 
-import { createContext, use, useState, PropsWithChildren } from "react";
+import { createContext, use, useState, PropsWithChildren } from "react"
 
 type NavigationContextType = {
-  isMobileMenuOpen: boolean;
-  setIsMobileMenuOpen: (isOpen: boolean) => void;
-  closeMobileMenu: () => void;
-};
+  isMobileMenuOpen: boolean
+  setIsMobileMenuOpen: (isOpen: boolean) => void
+  closeMobileMenu: () => void
+}
 
 const NavigationContext = createContext<NavigationContextType | undefined>(
   undefined,
-);
+)
 
 export const NavigationProvider = ({ children }: PropsWithChildren) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false)
 
   return (
     <NavigationContext.Provider
@@ -23,12 +23,12 @@ export const NavigationProvider = ({ children }: PropsWithChildren) => {
     >
       {children}
     </NavigationContext.Provider>
-  );
-};
+  )
+}
 
 export const useNavigation = () => {
-  const context = use(NavigationContext);
+  const context = use(NavigationContext)
   if (context === undefined)
-    throw new Error("useNavigation must be used within a NavigationProvider");
-  return context;
-};
+    throw new Error("useNavigation must be used within a NavigationProvider")
+  return context
+}

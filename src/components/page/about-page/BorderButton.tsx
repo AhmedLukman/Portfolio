@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-"use client";
-import React from "react";
+"use client"
+import React from "react"
 import {
   motion,
   useAnimationFrame,
   useMotionTemplate,
   useMotionValue,
   useTransform,
-} from "framer-motion";
-import { useRef } from "react";
-import { Button as HeroButton } from "@heroui/button";
-import { cn } from "@heroui/theme";
+} from "framer-motion"
+import { useRef } from "react"
+import { Button as HeroButton } from "@heroui/button"
+import { cn } from "@heroui/theme"
 
 export function BorderButton({
   borderRadius = "1.75rem",
@@ -22,15 +22,15 @@ export function BorderButton({
   file,
   ...otherProps
 }: {
-  borderRadius?: string;
-  children: React.ReactNode;
-  as?: any;
-  containerClassName?: string;
-  borderClassName?: string;
-  duration?: number;
-  className?: string;
-  file: string;
-  [key: string]: any;
+  borderRadius?: string
+  children: React.ReactNode
+  as?: any
+  containerClassName?: string
+  borderClassName?: string
+  duration?: number
+  className?: string
+  file: string
+  [key: string]: any
 }) {
   return (
     <HeroButton
@@ -72,7 +72,7 @@ export function BorderButton({
         {children}
       </div>
     </HeroButton>
-  );
+  )
 }
 
 export const MovingBorder = ({
@@ -82,33 +82,33 @@ export const MovingBorder = ({
   ry,
   ...otherProps
 }: {
-  children: React.ReactNode;
-  duration?: number;
-  rx?: string;
-  ry?: string;
-  [key: string]: any;
+  children: React.ReactNode
+  duration?: number
+  rx?: string
+  ry?: string
+  [key: string]: any
 }) => {
-  const pathRef = useRef<SVGRectElement | null>(null);
-  const progress = useMotionValue<number>(0);
+  const pathRef = useRef<SVGRectElement | null>(null)
+  const progress = useMotionValue<number>(0)
 
   useAnimationFrame((time) => {
-    const length = pathRef.current?.getTotalLength();
+    const length = pathRef.current?.getTotalLength()
     if (length) {
-      const pxPerMillisecond = length / duration;
-      progress.set((time * pxPerMillisecond) % length);
+      const pxPerMillisecond = length / duration
+      progress.set((time * pxPerMillisecond) % length)
     }
-  });
+  })
 
   const x = useTransform(
     progress,
     (val) => pathRef.current?.getPointAtLength(val).x,
-  );
+  )
   const y = useTransform(
     progress,
     (val) => pathRef.current?.getPointAtLength(val).y,
-  );
+  )
 
-  const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
+  const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`
 
   return (
     <>
@@ -141,5 +141,5 @@ export const MovingBorder = ({
         {children}
       </motion.div>
     </>
-  );
-};
+  )
+}

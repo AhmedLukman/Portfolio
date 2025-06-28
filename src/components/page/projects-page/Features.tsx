@@ -1,9 +1,9 @@
-import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Project } from "@/lib/types";
-import SectionHeader from "@/components/wrappers/SectionHeader";
-import ItemWrapper from "@/components/wrappers/ItemWrapper";
-import { BorderContainer } from "./BorderContainer";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Project } from "@/lib/types"
+import SectionHeader from "@/components/wrappers/SectionHeader"
+import ItemWrapper from "@/components/wrappers/ItemWrapper"
+import { BorderContainer } from "./BorderContainer"
 
 const Features = ({ project: { features } }: { project: Project }) => {
   return (
@@ -26,7 +26,7 @@ const Features = ({ project: { features } }: { project: Project }) => {
         ))}
       </ul>
     </section>
-  );
-};
+  )
+}
 
-export default Features;
+export default Features

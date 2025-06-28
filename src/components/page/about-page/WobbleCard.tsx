@@ -1,34 +1,34 @@
-"use client";
-import { MouseEvent, ReactNode, useState } from "react";
-import { motion } from "framer-motion";
-import { cn } from "@heroui/theme";
+"use client"
+import { MouseEvent, ReactNode, useState } from "react"
+import { motion } from "framer-motion"
+import { cn } from "@heroui/theme"
 
 export const WobbleCard = ({
   children,
   containerClassName,
   className,
 }: {
-  children: ReactNode;
-  containerClassName?: string;
-  className?: string;
+  children: ReactNode
+  containerClassName?: string
+  className?: string
 }) => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isHovering, setIsHovering] = useState(false)
 
   const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
-    const { clientX, clientY } = event;
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = (clientX - (rect.left + rect.width / 2)) / 20;
-    const y = (clientY - (rect.top + rect.height / 2)) / 20;
-    setMousePosition({ x, y });
-  };
+    const { clientX, clientY } = event
+    const rect = event.currentTarget.getBoundingClientRect()
+    const x = (clientX - (rect.left + rect.width / 2)) / 20
+    const y = (clientY - (rect.top + rect.height / 2)) / 20
+    setMousePosition({ x, y })
+  }
   return (
     <motion.section
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => {
-        setIsHovering(false);
-        setMousePosition({ x: 0, y: 0 });
+        setIsHovering(false)
+        setMousePosition({ x: 0, y: 0 })
       }}
       style={{
         transform: isHovering
@@ -61,5 +61,5 @@ export const WobbleCard = ({
         </motion.div>
       </div>
     </motion.section>
-  );
-};
+  )
+}

@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { cn } from "@heroui/theme";
+import { motion, AnimatePresence } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
+import { cn } from "@heroui/theme"
 
 const CaseStudyCard = ({
   title,
@@ -14,17 +14,17 @@ const CaseStudyCard = ({
   icon,
   description,
 }: {
-  title: string;
-  children?: React.ReactNode;
-  icon: IconDefinition;
-  className?: string;
-  description: string;
+  title: string
+  children?: React.ReactNode
+  icon: IconDefinition
+  className?: string
+  description: string
 }) => {
-  const [hovered, setHovered] = useState(false);
+  const [hovered, setHovered] = useState(false)
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
-  });
+  })
   return (
     <div
       ref={ref}
@@ -57,6 +57,6 @@ const CaseStudyCard = ({
         </p>
       </div>
     </div>
-  );
-};
-export default CaseStudyCard;
+  )
+}
+export default CaseStudyCard

@@ -1,5 +1,5 @@
-import { PORTFOLIO_SITE } from "@/lib/constants";
-import { MetadataRoute } from "next";
+import { PORTFOLIO_SITE } from "@/lib/constants"
+import { MetadataRoute } from "next"
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,5 +8,5 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     sitemap: `${PORTFOLIO_SITE}/sitemap.xml`,
-  };
+  }
 }
