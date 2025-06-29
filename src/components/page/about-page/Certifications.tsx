@@ -5,7 +5,7 @@ import CertificationsList from "./CertificationsList"
 const Certifications = () => {
   return (
     <SectionWrapper>
-      <SectionHeader className="text-center">
+      <SectionHeader id="certifications" className="text-center">
         Certifications &amp; Achievements
       </SectionHeader>
       <CertificationsList />
