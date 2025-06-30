@@ -3,7 +3,11 @@ import { PORTFOLIO_SITE } from "@/lib/constants"
 import { Project } from "@/lib/types"
 import { convertDate } from "@/lib/utils"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faCalendarAlt, faGlobe } from "@fortawesome/free-solid-svg-icons"
+import {
+  faCalendarAlt,
+  faCircleInfo,
+  faGlobe,
+} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Button } from "@heroui/button"
 import { Tooltip } from "@heroui/tooltip"
@@ -49,7 +53,18 @@ const ProjectOverview = ({
         </div>
         <div className="flex animate-slideInFromBottom flex-col gap-3 opacity-0 delay-1000">
           <h2 className="text-xl font-semibold">
-            <span className="purple-gradient">Metrics</span>
+            <span className="purple-gradient mr-2">Metrics</span>
+            <Tooltip
+              showArrow
+              content="Average lighthouse score across all pages of the site"
+              className="!bg-slate-300"
+            >
+              <FontAwesomeIcon
+                icon={faCircleInfo}
+                size="2xs"
+                className="text-slate-300"
+              />
+            </Tooltip>
           </h2>
           <AnimatedTooltip items={metrics} />
         </div>
