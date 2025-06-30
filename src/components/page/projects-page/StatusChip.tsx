@@ -10,6 +10,9 @@ const StatusChip = ({ status }: { status: TProjectStatus }) => {
       {status === ProjectStatus.pending && (
         <Chip color="warning">{status}</Chip>
       )}
+      {status === ProjectStatus.cancelled && (
+        <Chip color="danger">Cancelled</Chip>
+      )}
     </>
   )
 }

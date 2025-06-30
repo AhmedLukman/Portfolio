@@ -51,6 +51,7 @@ export const initialFormState = {
 export const ProjectStatus = {
   completed: "Completed",
   pending: "Pending",
+  cancelled: "Cancelled",
 } as const
 
 export type TProjectStatus = (typeof ProjectStatus)[keyof typeof ProjectStatus]

@@ -1,5 +1,9 @@
 import { ProjectStatus, TProjectStatus } from "@/lib/constants"
-import { faCheckCircle, faClock } from "@fortawesome/free-solid-svg-icons"
+import {
+  faCheckCircle,
+  faClock,
+  faTimesCircle,
+} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Tooltip } from "@heroui/tooltip"
 
@@ -17,6 +21,15 @@ const StatusIcon = ({ status }: { status: TProjectStatus }) => {
             title="Pending"
             icon={faClock}
             className="text-yellow-500"
+          />
+        </Tooltip>
+      )}
+      {status === ProjectStatus.cancelled && (
+        <Tooltip content={ProjectStatus.cancelled} color="danger">
+          <FontAwesomeIcon
+            title="Cancelled"
+            icon={faTimesCircle}
+            className="text-red-500"
           />
         </Tooltip>
       )}
