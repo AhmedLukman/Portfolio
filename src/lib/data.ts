@@ -51,6 +51,8 @@ import Yoonka from "/public/assets/images/yoonka.jpeg"
 import Zod from "/public/assets/images/frontend/zod.svg"
 import Resend from "/public/assets/images/backend/resend.svg"
 import Prettier from "/public/assets/images/devtools/prettier.svg"
+import DigitalLearning from "/public/assets/images/digitallearning.png"
+import DeviceDigitalLearning from "/public/assets/images/device-digitallearning.png"
 
 export const FRONT_END_TECHS = [
   {
@@ -942,6 +944,94 @@ export const PROJECTS: Project[] = [
         name: "SEO",
         icon: faSearch,
         score: 100,
+      },
+    ],
+  },
+  {
+    overview: {
+      title: "Digital Learning",
+      description:
+        "A website meant to inspire a revamp of @ilabafrica's official website. Utilizes Next JS and TypeScript.",
+      image: DigitalLearning,
+      site: "https://digital-learning-ahmedlukman.vercel.app",
+      status: ProjectStatus.cancelled,
+      source: "https://github.com/ahmedlukman/digital-learning",
+      startDate: new Date(2024, 7),
+      endDate: new Date(2024, 8),
+    },
+    image: DigitalLearning,
+    deviceImage: DeviceDigitalLearning,
+    route: "/projects/digital-learning",
+    slug: "digital-learning",
+    features: [
+      "Clean and engaging user interface with smooth animations.",
+      "Fully responsive design ensuring seamless experience across all devices.",
+      "High-performance application built with Next.js for optimal speed.",
+      "Beautiful visual presentations with quality imagery.",
+    ],
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Traditional educational platforms often lack engaging interfaces and fail to leverage modern web technologies effectively. Many learning platforms struggle with accessibility, responsiveness, and user engagement, creating barriers to effective digital education delivery.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed a cutting-edge digital learning platform using Next.js and modern web technologies. The solution focuses on creating an engaging, accessible, and responsive educational experience that leverages ICT innovation to enhance teaching and learning effectiveness.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "The Digital Learning Platform transforms educational content delivery with its modern approach to web-based learning. The platform successfully combines aesthetic appeal with functional excellence, positioning itself as a premier solution for quality digital education.",
+      },
+    ],
+    techStack: [
+      {
+        name: "Next.js",
+        src: Next,
+      },
+      {
+        name: "React.js",
+        src: React,
+      },
+      {
+        name: "TypeScript",
+        src: TypeScript,
+      },
+      {
+        name: "Tailwind CSS",
+        src: Tailwind,
+      },
+      {
+        name: "HTML5",
+        src: HTML5,
+      },
+      {
+        name: "CSS3",
+        src: CSS,
+      },
+    ],
+    metrics: [
+      {
+        name: "Performance",
+        icon: faRocket,
+        score: 100,
+      },
+      {
+        name: "Accessibility",
+        icon: faPersonCane,
+        score: 89,
+      },
+      {
+        name: "Best Practices",
+        icon: faMedal,
+        score: 78,
+      },
+      {
+        name: "SEO",
+        icon: faSearch,
+        score: 82,
       },
     ],
   },
