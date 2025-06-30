@@ -49,6 +49,8 @@ import Vite from "/public/assets/images/vite.svg"
 import VSCode from "/public/assets/images/vscode.svg"
 import Yoonka from "/public/assets/images/yoonka.jpeg"
 import Zod from "/public/assets/images/zod.svg"
+import Resend from "/public/assets/images/resend.svg"
+import Prettier from "/public/assets/images/prettier.svg"
 
 export const FRONT_END_TECHS = [
   {
@@ -114,6 +116,10 @@ export const BACKEND_TECHS = [
     name: "PostgreSQL",
     src: PostgreSQL,
   },
+  {
+    name: "Resend",
+    src: Resend,
+  },
 ]
 
 export const DEV_TOOLS = [
@@ -140,6 +146,10 @@ export const DEV_TOOLS = [
   {
     name: "ESLint",
     src: ESLint,
+  },
+  {
+    name: "Prettier",
+    src: Prettier,
   },
   {
     name: "NPM",
@@ -697,7 +707,7 @@ export const CERTIFICATIONS = [
     year: "2023",
     file: "Web_Development",
     description:
-      "Completed a comprehensive web development course on SoloLearn, mastering essential skills in HTML, CSS, and JavaScript. Developed proficiency in front-end, ready to tackle real-world web projects with confidence.",
+      "Completed a comprehensive Web Development course, further strengthening my skills in HTML, CSS, and JavaScript and boosting my confidence in solving real-world challenges.",
     logo: SoloLearn,
   },
 ]
@@ -757,12 +767,12 @@ export const PROJECTS: Project[] = [
       {
         ...solutionCaseStudy,
         description:
-          "Leveraging the TMDB API to build a web app that offer an all-encompassing entertainment hub including detailed information on movies, TV shows, and celebrities. It provides users with a holistic view of the entertainment landscape that transcends the limitations of individual streaming platforms.",
+          "To leverage the TMDB API to build a web app that offer an all-encompassing entertainment hub including detailed information on movies, TV shows, and celebrities. It provides users with a holistic view of the entertainment landscape that transcends the limitations of individual streaming platforms.",
       },
       {
         ...outcomeCaseStudy,
         description:
-          "Cinemania revolutionizes the way users discover and interact with entertainment content by providing a unique, all-in-one entertainment hub. This comprehensive approach boosts user engagement and satisfaction, positioning Cinemania as the premier platform for entertainment enthusiasts to discover efficiently",
+          "Cinemania transforms the entertainment discovery experience. This comprehensive approach boosts user engagement and satisfaction, positioning Cinemania as the premier platform for entertainment enthusiasts to discover efficiently.",
       },
     ],
     techStack: [
@@ -830,7 +840,7 @@ export const PROJECTS: Project[] = [
     overview: {
       title: "Portfolio",
       description:
-        "My personal portfolio website where I showcase who I am, my diverse skills, innovative projects and more. Dive into it to see how I transform ideas into digital masterpieces!",
+        "My personal portfolio website where I my background, diverse skills, achievements, innovative projects and more.",
       image: Portfolio,
       site: PORTFOLIO_SITE,
       source: "https://github.com/AhmedLukman/Portfolio",
@@ -847,7 +857,7 @@ export const PROJECTS: Project[] = [
       "Intuitive and user-friendly navigation.",
       "Contact form functionality and social media links for easy reach.",
       "Clean, stylish, and visually appealing custom design.",
-      "Custom AI chat integration for quick and efficient communication.",
+      "A personalized AI chat that quickly and efficiently taps into my knowledge to provide helpful answers.",
     ],
     caseStudy: [
       {
@@ -876,6 +886,10 @@ export const PROJECTS: Project[] = [
         src: React,
       },
       {
+        name: "JavaScript",
+        src: JavaScript,
+      },
+      {
         name: "HTML5",
         src: HTML5,
       },
@@ -892,12 +906,20 @@ export const PROJECTS: Project[] = [
         src: TypeScript,
       },
       {
+        name: "Zod",
+        src: Zod,
+      },
+      {
         name: "Aceternity UI",
         src: AceternityUI,
       },
       {
         name: "Hero UI",
         src: HeroUI,
+      },
+      {
+        name: "Resend",
+        src: Resend,
       },
     ],
     metrics: [
