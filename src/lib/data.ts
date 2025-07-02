@@ -57,6 +57,8 @@ import ThreeJS from "/public/assets/images/threejs.svg"
 import Trinetium from "/public/assets/images/trinetium.jpeg"
 import WorldVisualizer from "/public/assets/images/worldvisualizer.png"
 import Yoonka from "/public/assets/images/yoonka.jpeg"
+import NextEvent from "/public/assets/images/nextevent.png"
+import DeviceNextEvent from "/public/assets/images/device-nextevent.png"
 
 export const FRONT_END_TECHS = [
   {
@@ -1134,6 +1136,95 @@ export const PROJECTS: Project[] = [
         name: "SEO",
         icon: faSearch,
         score: 90,
+      },
+    ],
+  },
+  {
+    overview: {
+      title: "Next Events",
+      description:
+        "A platform to discover and manage events, featuring event listings, filtering, and detailed event views.",
+      image: NextEvent,
+      site: "https://next-event-ahmedlukman.vercel.app",
+      source: "https://github.com/AhmedLukman/next-event",
+      status: ProjectStatus.cancelled,
+      startDate: new Date(2024, 4),
+      endDate: new Date(2024, 5),
+    },
+    image: NextEvent,
+    deviceImage: DeviceNextEvent,
+    route: "/projects/next-events",
+    slug: "next-events",
+    features: [
+      "Browse trending, physical, and virtual events.",
+      "Detailed event pages with information like date, time, location, and price.",
+      "Responsive design for seamless browsing on all devices.",
+      "Event filtering and pagination.",
+      "Integration with NextUI components for a modern UI.",
+      "Image sliders for event display.",
+    ],
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        title: "Problem",
+        description:
+          "There was a need for a modern, user-friendly platform to list and manage various types of events, making it easy for users to discover and attend them.",
+      },
+      {
+        ...solutionCaseStudy,
+        title: "Solution",
+        description:
+          "Developed a Next.js application leveraging React components, NextUI for styling, and react-slick for carousels, providing a dynamic and interactive event browsing experience.",
+      },
+      {
+        ...outcomeCaseStudy,
+        title: "Outcome",
+        description:
+          "The 'Next Events' platform successfully provides a centralized hub for event discovery, enhancing user engagement through its intuitive design and comprehensive event details.",
+      },
+    ],
+    techStack: [
+      {
+        name: "Next.js",
+        src: Next,
+      },
+      {
+        name: "React.js",
+        src: React,
+      },
+      {
+        name: "TypeScript",
+        src: TypeScript,
+      },
+      {
+        name: "Tailwind CSS",
+        src: Tailwind,
+      },
+      {
+        name: "HeroUI",
+        src: HeroUI,
+      },
+    ],
+    metrics: [
+      {
+        name: "Performance",
+        icon: faRocket,
+        score: 95,
+      },
+      {
+        name: "Accessibility",
+        icon: faPersonCane,
+        score: 95,
+      },
+      {
+        name: "Best Practices",
+        icon: faMedal,
+        score: 96,
+      },
+      {
+        name: "SEO",
+        icon: faSearch,
+        score: 100,
       },
     ],
   },
