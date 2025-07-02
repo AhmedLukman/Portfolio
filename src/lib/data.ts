@@ -20,6 +20,7 @@ import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png"
 import Cinemania from "/public/assets/images/cinemania.png"
 import DesignImage from "/public/assets/images/design.jpg"
 import DeviceDigitalLearning from "/public/assets/images/device-digitallearning.png"
+import DeviceNextEvent from "/public/assets/images/device-nextevent.png"
 import DevicePortfolio from "/public/assets/images/device-portfolio.png"
 import DeviceWorldVisualizer from "/public/assets/images/device-worldvisualizer.png"
 import ChatGPT from "/public/assets/images/devtools/chatgpt.svg"
@@ -49,6 +50,7 @@ import TypeScript from "/public/assets/images/frontend/typescript.svg"
 import Zod from "/public/assets/images/frontend/zod.svg"
 import GreatLearning from "/public/assets/images/greatlearning.jpeg"
 import IlabAfrica from "/public/assets/images/ilabafrica.jpg"
+import NextEvent from "/public/assets/images/nextevent.png"
 import Portfolio from "/public/assets/images/portfolio.png"
 import SoloLearn from "/public/assets/images/sololearn.jpeg"
 import Strathmore from "/public/assets/images/strathmore.jpeg"
@@ -57,8 +59,8 @@ import ThreeJS from "/public/assets/images/threejs.svg"
 import Trinetium from "/public/assets/images/trinetium.jpeg"
 import WorldVisualizer from "/public/assets/images/worldvisualizer.png"
 import Yoonka from "/public/assets/images/yoonka.jpeg"
-import NextEvent from "/public/assets/images/nextevent.png"
-import DeviceNextEvent from "/public/assets/images/device-nextevent.png"
+import MasterTracker from "/public/assets/images/mastertracker.jpeg"
+import DeviceMasterTracker from "/public/assets/images/device-mastertracker.jpeg"
 
 export const FRONT_END_TECHS = [
   {
@@ -739,6 +741,101 @@ const outcomeCaseStudy = {
 }
 
 export const PROJECTS: Project[] = [
+  {
+    overview: {
+      title: "Master Tracker",
+      description:
+        "A comprehensive and efficient task management solution that helps users organize, categorize, and track their daily activities with a beautiful and intuitive interface.",
+      image: MasterTracker,
+      site: "https://master-tracker-ahmedlukman.vercel.app",
+      source: "https://github.com/AhmedLukman/master-tracker",
+      status: ProjectStatus.completed,
+      startDate: new Date(2024, 0),
+    },
+    image: MasterTracker,
+    deviceImage: DeviceMasterTracker,
+    route: "/projects/master-tracker",
+    slug: "master-tracker",
+    features: [
+      "Intuitive task creation and management with seamless user experience.",
+      "Advanced categorization system for better task organization and prioritization.",
+      "Real-time search functionality to quickly locate specific tasks.",
+      "One-click copy to clipboard feature for easy task sharing and reference.",
+      "Persistent data storage using localStorage ensuring data availability across sessions.",
+      "Fully responsive design optimized for desktop, tablet, and mobile devices.",
+      "Form validation and comprehensive error handling for data accuracy.",
+      "Beautiful and modern UI with smooth animations and interactions.",
+      "Toggle between todo and category views for flexible task management.",
+    ],
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        title: "Problem",
+        description:
+          "Users needed an efficient and user-friendly solution to manage their daily tasks and activities. Existing solutions were either too complex, lacked proper categorization, or didn't provide a seamless cross-device experience.",
+      },
+      {
+        ...solutionCaseStudy,
+        title: "Solution",
+        description:
+          "I developed Master Tracker using React.js and TypeScript for robust performance and type safety, implemented advanced categorization features, integrated localStorage for data persistence, and created a responsive design using Tailwind CSS for optimal user experience across all devices.",
+      },
+      {
+        ...outcomeCaseStudy,
+        title: "Outcome",
+        description:
+          "The application successfully provides users with an intuitive task management solution that increases productivity through better organization. The responsive design and persistent storage ensure users can access their tasks anywhere, while the clean interface promotes regular usage and task completion.",
+      },
+    ],
+    techStack: [
+      {
+        name: "React.js",
+        src: React,
+      },
+      {
+        name: "TypeScript",
+        src: TypeScript,
+      },
+      {
+        name: "Tailwind CSS",
+        src: Tailwind,
+      },
+      {
+        name: "JavaScript",
+        src: JavaScript,
+      },
+      {
+        name: "HTML5",
+        src: HTML5,
+      },
+      {
+        name: "CSS",
+        src: CSS,
+      },
+    ],
+    metrics: [
+      {
+        name: "Performance",
+        icon: faRocket,
+        score: 100,
+      },
+      {
+        name: "Accessibility",
+        icon: faPersonCane,
+        score: 100,
+      },
+      {
+        name: "Best Practices",
+        icon: faMedal,
+        score: 100,
+      },
+      {
+        name: "SEO",
+        icon: faSearch,
+        score: 100,
+      },
+    ],
+  },
   {
     overview: {
       title: "Cinemania",
