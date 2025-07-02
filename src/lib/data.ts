@@ -10,49 +10,53 @@ import {
 import { StaticImageData } from "next/image"
 import { PORTFOLIO_SITE, ProjectStatus } from "./constants"
 import { Project } from "./types"
-import AceternityUI from "/public/assets/images/frontend/aceternity.webp"
-import AuthJS from "/public/assets/images/backend/authjs.svg"
 import BackEndImage from "/public/assets/images/backend.jpg"
-import ChatGPT from "/public/assets/images/devtools/chatgpt.svg"
-import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png"
-import Cinemania from "/public/assets/images/cinemania.png"
-import Claude from "/public/assets/images/devtools/claude.svg"
-import Copilot from "/public/assets/images/devtools/copilot.svg"
-import CSS from "/public/assets/images/frontend/css.svg"
-import DesignImage from "/public/assets/images/design.jpg"
-import DevicePortfolio from "/public/assets/images/device-portfolio.png"
-import ESLint from "/public/assets/images/devtools/eslint.svg"
-import FrontEndImage from "/public/assets/images/frontend.jpg"
-import Git from "/public/assets/images/devtools/git.svg"
-import GitHub from "/public/assets/images/devtools/github.svg"
-import GreatLearning from "/public/assets/images/greatlearning.jpeg"
-import HeroUI from "/public/assets/images/frontend/heroui.svg"
-import HTML5 from "/public/assets/images/frontend/html5.svg"
-import IlabAfrica from "/public/assets/images/ilabafrica.jpg"
-import JavaScript from "/public/assets/images/frontend/javascript.svg"
-import Next from "/public/assets/images/frontend/next.svg"
-import NPM from "/public/assets/images/devtools/npm.svg"
-import Portfolio from "/public/assets/images/portfolio.png"
+import AuthJS from "/public/assets/images/backend/authjs.svg"
 import PostgreSQL from "/public/assets/images/backend/postgresql.svg"
 import Prisma from "/public/assets/images/backend/prisma.svg"
-import React from "/public/assets/images/frontend/react.svg"
-import SoloLearn from "/public/assets/images/sololearn.jpeg"
-import Strathmore from "/public/assets/images/strathmore.jpeg"
+import Resend from "/public/assets/images/backend/resend.svg"
 import Supabase from "/public/assets/images/backend/supabase.svg"
-import Svelte from "/public/assets/images/frontend/svelte.svg"
-import Tailwind from "/public/assets/images/frontend/tailwind.svg"
-import ThomsonReuters from "/public/assets/images/thomsonreuters.png"
-import Trinetium from "/public/assets/images/trinetium.jpeg"
-import TypeScript from "/public/assets/images/frontend/typescript.svg"
+import CinemanieLaptop from "/public/assets/images/cinemania-laptop.png"
+import Cinemania from "/public/assets/images/cinemania.png"
+import DesignImage from "/public/assets/images/design.jpg"
+import DeviceDigitalLearning from "/public/assets/images/device-digitallearning.png"
+import DevicePortfolio from "/public/assets/images/device-portfolio.png"
+import DeviceWorldVisualizer from "/public/assets/images/device-worldvisualizer.png"
+import ChatGPT from "/public/assets/images/devtools/chatgpt.svg"
+import Claude from "/public/assets/images/devtools/claude.svg"
+import Copilot from "/public/assets/images/devtools/copilot.svg"
+import ESLint from "/public/assets/images/devtools/eslint.svg"
+import Git from "/public/assets/images/devtools/git.svg"
+import GitHub from "/public/assets/images/devtools/github.svg"
+import NPM from "/public/assets/images/devtools/npm.svg"
+import Prettier from "/public/assets/images/devtools/prettier.svg"
 import Vercel from "/public/assets/images/devtools/vercel.svg"
 import Vite from "/public/assets/images/devtools/vite.svg"
 import VSCode from "/public/assets/images/devtools/vscode.svg"
-import Yoonka from "/public/assets/images/yoonka.jpeg"
-import Zod from "/public/assets/images/frontend/zod.svg"
-import Resend from "/public/assets/images/backend/resend.svg"
-import Prettier from "/public/assets/images/devtools/prettier.svg"
 import DigitalLearning from "/public/assets/images/digitallearning.png"
-import DeviceDigitalLearning from "/public/assets/images/device-digitallearning.png"
+import Framer from "/public/assets/images/framer.svg"
+import FrontEndImage from "/public/assets/images/frontend.jpg"
+import AceternityUI from "/public/assets/images/frontend/aceternity.webp"
+import CSS from "/public/assets/images/frontend/css.svg"
+import HeroUI from "/public/assets/images/frontend/heroui.svg"
+import HTML5 from "/public/assets/images/frontend/html5.svg"
+import JavaScript from "/public/assets/images/frontend/javascript.svg"
+import Next from "/public/assets/images/frontend/next.svg"
+import React from "/public/assets/images/frontend/react.svg"
+import Svelte from "/public/assets/images/frontend/svelte.svg"
+import Tailwind from "/public/assets/images/frontend/tailwind.svg"
+import TypeScript from "/public/assets/images/frontend/typescript.svg"
+import Zod from "/public/assets/images/frontend/zod.svg"
+import GreatLearning from "/public/assets/images/greatlearning.jpeg"
+import IlabAfrica from "/public/assets/images/ilabafrica.jpg"
+import Portfolio from "/public/assets/images/portfolio.png"
+import SoloLearn from "/public/assets/images/sololearn.jpeg"
+import Strathmore from "/public/assets/images/strathmore.jpeg"
+import ThomsonReuters from "/public/assets/images/thomsonreuters.png"
+import ThreeJS from "/public/assets/images/threejs.svg"
+import Trinetium from "/public/assets/images/trinetium.jpeg"
+import WorldVisualizer from "/public/assets/images/worldvisualizer.png"
+import Yoonka from "/public/assets/images/yoonka.jpeg"
 
 export const FRONT_END_TECHS = [
   {
@@ -842,7 +846,7 @@ export const PROJECTS: Project[] = [
     overview: {
       title: "Portfolio",
       description:
-        "My personal portfolio website where I my background, diverse skills, achievements, innovative projects and more.",
+        "My personal portfolio website where I showcase my background, diverse skills, achievements, innovative projects and more.",
       image: Portfolio,
       site: PORTFOLIO_SITE,
       source: "https://github.com/AhmedLukman/Portfolio",
@@ -1032,6 +1036,104 @@ export const PROJECTS: Project[] = [
         name: "SEO",
         icon: faSearch,
         score: 82,
+      },
+    ],
+  },
+  {
+    overview: {
+      title: "World Visualizer",
+      description:
+        "An interactive 3D globe visualization tool for exploring world data through an immersive educational experience. Discover countries, their demographics, and educational statistics in a beautiful and engaging interface.",
+      image: WorldVisualizer,
+      site: "https://world-visualizer-ahmedlukman.vercel.app",
+      status: ProjectStatus.cancelled,
+      source: "https://github.com/ahmedlukman/world-visualizer",
+      startDate: new Date(2024, 7),
+      endDate: new Date(2024, 8),
+    },
+    image: WorldVisualizer,
+    deviceImage: DeviceWorldVisualizer,
+    route: "/projects/world-visualizer",
+    slug: "world-visualizer",
+    features: [
+      "Interactive 3D globe with realistic Earth textures and night sky background",
+      "Click-to-explore functionality revealing detailed country information",
+      "Real-time screenshot capture of selected countries for documentation",
+      "Comprehensive country data including demographics, economy, and geography",
+      "Educational content focused on Early Childhood Development programs",
+      "Responsive modal interface with organized information cards",
+      "Smooth auto-rotating globe with intuitive user controls",
+      "Toggle between globe view and list view for different perspectives",
+      "Color-coded visualization based on data metrics and statistics",
+      "Modern UI with NextUI components and Tailwind CSS styling",
+    ],
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Traditional world maps and static visualizations fail to engage users in exploring global data effectively. Educational institutions and researchers need an interactive platform that makes world statistics and country information more accessible and engaging for learning purposes.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Developed an interactive 3D globe using React Globe.gl and Three.js that transforms static world data into an immersive experience. The application provides detailed country information through modal interfaces, making global statistics and educational data more accessible and engaging.",
+      },
+      {
+        ...outcomeCaseStudy,
+        description:
+          "World Visualizer revolutionizes how users interact with global data by providing an intuitive, visually appealing platform for exploring world statistics. The interactive 3D interface significantly improves user engagement and comprehension of geographical and demographic information.",
+      },
+    ],
+    techStack: [
+      {
+        name: "React.js",
+        src: React,
+      },
+      {
+        name: "TypeScript",
+        src: TypeScript,
+      },
+      {
+        name: "Vite",
+        src: Vite,
+      },
+      {
+        name: "HeroUI",
+        src: HeroUI,
+      },
+      {
+        name: "Tailwind CSS",
+        src: Tailwind,
+      },
+      {
+        name: "Framer Motion",
+        src: Framer,
+      },
+      {
+        name: "Three.js",
+        src: ThreeJS,
+      },
+    ],
+    metrics: [
+      {
+        name: "Performance",
+        icon: faRocket,
+        score: 70,
+      },
+      {
+        name: "Accessibility",
+        icon: faPersonCane,
+        score: 100,
+      },
+      {
+        name: "Best Practices",
+        icon: faMedal,
+        score: 100,
+      },
+      {
+        name: "SEO",
+        icon: faSearch,
+        score: 90,
       },
     ],
   },
