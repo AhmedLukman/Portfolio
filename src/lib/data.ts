@@ -846,7 +846,7 @@ export const PROJECTS: Project[] = [
     overview: {
       title: "Portfolio",
       description:
-        "My personal portfolio website where I showcase my background, diverse skills, achievements, innovative projects and more.",
+        "My personal portfolio website where I my background, diverse skills, achievements, innovative projects and more.",
       image: Portfolio,
       site: PORTFOLIO_SITE,
       source: "https://github.com/AhmedLukman/Portfolio",
