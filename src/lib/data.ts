@@ -1236,7 +1236,7 @@ export const PROJECTS: Project[] = [
   },
   {
     overview: {
-      title: "Next Events",
+      title: "Next Event",
       description:
         "A platform meant to discover and manage events in a user-friendly and intuitive manner.",
       image: NextEvent,
