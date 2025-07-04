@@ -647,7 +647,7 @@ export const EXPERIENCE: {
     title: "Front-end Developer",
     type: "Internship",
     description:
-      "Collaborated adeptly with UI/UX designers and fellow engineers to craft clean, high-performance front-end web solutions. Key contributions to projects like Adapta, SSAMS, Digital Learning, and Next Events. Recognized as the Lead Intern, entrusted with independent design responsibilities due to a trusted sense of aesthetic.",
+      "Collaborated adeptly with UI/UX designers and fellow engineers to craft clean, high-performance front-end web solutions. Recognized as the Lead Intern, entrusted with independent design responsibilities due to a trusted sense of aesthetic.",
     company: "@iLabAfrica",
     startDate: new Date(2023, 1),
     endDate: new Date(2023, 7),
@@ -657,7 +657,7 @@ export const EXPERIENCE: {
     title: "Front-end Developer",
     type: "Internship",
     description:
-      "Developed aesthetically pleasing UI components for the web, integrating dynamic features such as drag and drop, and seamlessly incorporated APIs using Next.js and Express. Recognized for achieving high performance and receiving praise for design excellence.",
+      "Developed visually appealing UI components for the web, integrating dynamic features such as drag and drop, and seamlessly incorporated APIs using Next.js and Express. Recognized for achieving high performance and receiving praise for design excellence.",
     company: "Trinetium DMCC",
     startDate: new Date(2022, 6),
     endDate: new Date(2022, 9),
