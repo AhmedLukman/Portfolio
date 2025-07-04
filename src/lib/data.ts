@@ -100,7 +100,7 @@ export const FRONT_END_TECHS = [
     src: HeroUI,
   },
   {
-    name: "Aceternity UI",
+    name: "AceternityUI",
     src: AceternityUI,
   },
   {
@@ -690,7 +690,7 @@ export const CERTIFICATIONS = [
     year: "2023",
     file: "CSS",
     description:
-      "Specialized in CSS to create visually appealing and responsive web designs. Mastered modern styling techniques, ensuring sleek and professional website aesthetics.",
+      "Learned CSS fundamentals to build attractive websites that work well on all devices.",
     logo: GreatLearning,
   },
   {
@@ -708,7 +708,7 @@ export const CERTIFICATIONS = [
     year: "2023",
     file: "REACT",
     description:
-      "Gained expertise in building efficient and dynamic web applications by utilizing React's component-based architecture and state management.",
+      "Gained foundational knowledge in building efficient and dynamic web applications by utilizing React's component-based architecture and state management.",
     logo: GreatLearning,
   },
   {
@@ -745,12 +745,13 @@ export const PROJECTS: Project[] = [
     overview: {
       title: "Master Tracker",
       description:
-        "A comprehensive and efficient task management solution that helps users organize, categorize, and track their daily activities with a beautiful and intuitive interface.",
+        "A comprehensive and efficient task management solution that helps users organize, categorize, and track their daily activities.",
       image: MasterTracker,
       site: "https://master-tracker-ahmedlukman.vercel.app",
       source: "https://github.com/AhmedLukman/master-tracker",
       status: ProjectStatus.completed,
-      startDate: new Date(2024, 0),
+      startDate: new Date(2023, 10),
+      endDate: new Date(2023, 10),
     },
     image: MasterTracker,
     deviceImage: DeviceMasterTracker,
@@ -764,27 +765,26 @@ export const PROJECTS: Project[] = [
       "Persistent data storage using localStorage ensuring data availability across sessions.",
       "Fully responsive design optimized for desktop, tablet, and mobile devices.",
       "Form validation and comprehensive error handling for data accuracy.",
-      "Beautiful and modern UI with smooth animations and interactions.",
-      "Toggle between todo and category views for flexible task management.",
+      "Beautiful and modern UI with smooth interactions.",
     ],
     caseStudy: [
       {
         ...problemCaseStudy,
         title: "Problem",
         description:
-          "Users needed an efficient and user-friendly solution to manage their daily tasks and activities. Existing solutions were either too complex, lacked proper categorization, or didn't provide a seamless cross-device experience.",
+          "I wanted to create a simple task management app to practice my development skills while making something useful. The goal was to build a straightforward tool that could help track daily tasks and activities.",
       },
       {
         ...solutionCaseStudy,
         title: "Solution",
         description:
-          "I developed Master Tracker using React.js and TypeScript for robust performance and type safety, implemented advanced categorization features, integrated localStorage for data persistence, and created a responsive design using Tailwind CSS for optimal user experience across all devices.",
+          "I developed Master Tracker using React.js and TypeScript for robust performance and type safety, implemented a basic categorization feature, integrated localStorage for data persistence, and created a responsive design using Tailwind CSS for optimal user experience across all devices.",
       },
       {
         ...outcomeCaseStudy,
         title: "Outcome",
         description:
-          "The application successfully provides users with an intuitive task management solution that increases productivity through better organization. The responsive design and persistent storage ensure users can access their tasks anywhere, while the clean interface promotes regular usage and task completion.",
+          "Through building the app, I was able to strengthen my skills in React.js, TypeScript, and Tailwind CSS while also learning how to implement localStorage for data persistence.",
       },
     ],
     techStack: [
@@ -945,7 +945,7 @@ export const PROJECTS: Project[] = [
     overview: {
       title: "Portfolio",
       description:
-        "My personal portfolio website where I my background, diverse skills, achievements, innovative projects and more.",
+        "My personal portfolio website where I showcase my background, diverse skills, achievements, innovative projects and more.",
       image: Portfolio,
       site: PORTFOLIO_SITE,
       source: "https://github.com/AhmedLukman/Portfolio",
@@ -962,7 +962,9 @@ export const PROJECTS: Project[] = [
       "Intuitive and user-friendly navigation.",
       "Contact form functionality and social media links for easy reach.",
       "Clean, stylish, and visually appealing custom design.",
-      "A personalized AI chat that quickly and efficiently taps into my knowledge to provide helpful answers.",
+      "Professional typography and color schemes enhancing readability.",
+      "Optimized images and assets for fast loading times.",
+      "A personalized AI chat that quickly and efficiently taps into my knowledge to provide helpful answers. (soon)",
     ],
     caseStudy: [
       {
@@ -1015,11 +1017,11 @@ export const PROJECTS: Project[] = [
         src: Zod,
       },
       {
-        name: "Aceternity UI",
+        name: "AceternityUI",
         src: AceternityUI,
       },
       {
-        name: "Hero UI",
+        name: "HeroUI",
         src: HeroUI,
       },
       {
@@ -1054,7 +1056,7 @@ export const PROJECTS: Project[] = [
     overview: {
       title: "Digital Learning",
       description:
-        "A website meant to inspire a revamp of @ilabafrica's official website. Utilizes Next JS and TypeScript.",
+        "A website meant to inspire a revamp of @ilabafrica's official website. Utilizes Next.js and TypeScript.",
       image: DigitalLearning,
       site: "https://digital-learning-ahmedlukman.vercel.app",
       status: ProjectStatus.cancelled,
@@ -1081,12 +1083,12 @@ export const PROJECTS: Project[] = [
       {
         ...solutionCaseStudy,
         description:
-          "Developed a cutting-edge digital learning platform using Next.js and modern web technologies. The solution focuses on creating an engaging, accessible, and responsive educational experience that leverages ICT innovation to enhance teaching and learning effectiveness.",
+          "To Develop a cutting-edge digital learning platform using Next.js and modern web technologies. The solution was to focus on creating an engaging, accessible, and responsive educational experience that leverages ICT innovation to enhance teaching and learning effectiveness.",
       },
       {
         ...outcomeCaseStudy,
         description:
-          "The Digital Learning Platform transforms educational content delivery with its modern approach to web-based learning. The platform successfully combines aesthetic appeal with functional excellence, positioning itself as a premier solution for quality digital education.",
+          "The Digital Learning Platform was meant to transform educational content delivery with its modern approach to web-based learning.",
       },
     ],
     techStack: [
@@ -1142,7 +1144,7 @@ export const PROJECTS: Project[] = [
     overview: {
       title: "World Visualizer",
       description:
-        "An interactive 3D globe visualization tool for exploring world data through an immersive educational experience. Discover countries, their demographics, and educational statistics in a beautiful and engaging interface.",
+        "An interactive 3D globe visualization tool for exploring world statistics through a beautiful and engaging experience.",
       image: WorldVisualizer,
       site: "https://world-visualizer-ahmedlukman.vercel.app",
       status: ProjectStatus.cancelled,
@@ -1155,14 +1157,10 @@ export const PROJECTS: Project[] = [
     route: "/projects/world-visualizer",
     slug: "world-visualizer",
     features: [
-      "Interactive 3D globe with realistic Earth textures and night sky background",
+      "Interactive and smooth auto-rotating 3D globe with realistic Earth textures and night sky background",
       "Click-to-explore functionality revealing detailed country information",
-      "Real-time screenshot capture of selected countries for documentation",
       "Comprehensive country data including demographics, economy, and geography",
-      "Educational content focused on Early Childhood Development programs",
       "Responsive modal interface with organized information cards",
-      "Smooth auto-rotating globe with intuitive user controls",
-      "Toggle between globe view and list view for different perspectives",
       "Color-coded visualization based on data metrics and statistics",
       "Modern UI with NextUI components and Tailwind CSS styling",
     ],
@@ -1175,12 +1173,12 @@ export const PROJECTS: Project[] = [
       {
         ...solutionCaseStudy,
         description:
-          "Developed an interactive 3D globe using React Globe.gl and Three.js that transforms static world data into an immersive experience. The application provides detailed country information through modal interfaces, making global statistics and educational data more accessible and engaging.",
+          "Developed an interactive 3D globe using React Globe.gl and Three.js that transforms static world data into an immersive experience. The application provides detailed country information through modal interfaces, making global statistics more accessible and engaging.",
       },
       {
         ...outcomeCaseStudy,
         description:
-          "World Visualizer revolutionizes how users interact with global data by providing an intuitive, visually appealing platform for exploring world statistics. The interactive 3D interface significantly improves user engagement and comprehension of geographical and demographic information.",
+          "World Visualizer was meant to revolutionize how users interact with global data by providing an intuitive, visually appealing platform for exploring world statistics.",
       },
     ],
     techStack: [
@@ -1240,7 +1238,7 @@ export const PROJECTS: Project[] = [
     overview: {
       title: "Next Events",
       description:
-        "A platform to discover and manage events, featuring event listings, filtering, and detailed event views.",
+        "A platform meant to discover and manage events in a user-friendly and intuitive manner.",
       image: NextEvent,
       site: "https://next-event-ahmedlukman.vercel.app",
       source: "https://github.com/AhmedLukman/next-event",
@@ -1277,7 +1275,7 @@ export const PROJECTS: Project[] = [
         ...outcomeCaseStudy,
         title: "Outcome",
         description:
-          "The 'Next Events' platform successfully provides a centralized hub for event discovery, enhancing user engagement through its intuitive design and comprehensive event details.",
+          "This platform was meant tp provide a centralized hub for event discovery, enhancing user engagement through its intuitive design and comprehensive event details.",
       },
     ],
     techStack: [
