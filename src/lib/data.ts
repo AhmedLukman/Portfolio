@@ -1324,3 +1324,33 @@ export const PROJECTS: Project[] = [
     ],
   },
 ]
+
+type Recognition = {
+  title: string
+  url: string
+}
+
+export const RECOGNITIONS: Recognition[] = [
+  {
+    title:
+      "14-year old Aga Khan Student develops an App that enables you to vote with your phone - Aga Khan Schools",
+    url: "https://www.agakhanschools.org/Kenya/Kenya/Article/1093",
+  },
+  {
+    title:
+      "14 year old Kenyan boy develops app that allows you to vote on your phone | Pulselive Kenya",
+    url: "https://www.pulselive.co.ke/articles/news/local/ahmed-lukman-14-year-old-kenyan-boy-develops-app-that-allows-you-to-vote-on-your-2024081609353682721",
+  },
+  {
+    title: "AHMED LUKMAN Pitch on KCB Lions Den SN4 EP9",
+    url: "https://youtu.be/KQzCSG4CtaU",
+  },
+  {
+    title: "2019 Winners - Young Scientists Kenya",
+    url: "https://ysk.co.ke/2019-winners/",
+  },
+  {
+    title: "President Uhuru Kenyatta recognizes Ahmed Lukman Innovation",
+    url: "https://youtu.be/K2TuzqGanqw?t=11",
+  },
+]
