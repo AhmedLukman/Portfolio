@@ -17,24 +17,18 @@ const CertificationsList = () => {
               <CardBody as="p">{description}</CardBody>
               <CardFooter
                 as="footer"
-                className="flex flex-row items-center justify-between"
+                className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-0"
               >
-                <div className="flex flex-col gap-2 text-body">
-                  <div className="flex items-center gap-2">
-                    <Image
-                      alt={organization}
-                      src={logo}
-                      className="h-8 w-8 rounded-full"
-                    />
-                    <span>{organization}</span>
-                  </div>
-                  <time className="sm:hidden">{year}</time>
+                <div className="flex items-center gap-2">
+                  <Image
+                    alt={organization}
+                    src={logo}
+                    className="h-8 w-8 rounded-full"
+                  />
+                  <span className="text-body">{organization}</span>
                 </div>
-                <div className="flex items-center sm:gap-4">
-                  <time
-                    dateTime={year}
-                    className="hidden text-sm text-body sm:block"
-                  >
+                <div className="flex w-full items-center justify-between sm:w-auto sm:gap-4">
+                  <time dateTime={year} className="text-sm text-body">
                     {year}
                   </time>
                   <BorderButton
