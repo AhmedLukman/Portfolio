@@ -11,7 +11,6 @@ const RecognitionList = async () => {
         <ItemWrapper key={index} index={index}>
           <Card
             key={index}
-            as="li"
             className="w-full border border-slate-500 bg-transparent p-3 hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-200"
           >
             <CardHeader
