@@ -19,7 +19,7 @@ const CertificationsList = () => {
                 as="footer"
                 className="flex flex-row items-center justify-between"
               >
-                <div className="flex flex-col text-body">
+                <div className="flex flex-col gap-2 text-body">
                   <div className="flex items-center gap-2">
                     <Image
                       alt={organization}
