@@ -20,6 +20,13 @@ const contactFormSchema = z.object({
 
 type ContactForm = z.infer<typeof contactFormSchema>
 
+const envSchema = z.object({
+  RESEND_API_KEY: z.string().min(1),
+  MY_EMAIL: z.string().min(1),
+})
+
+const { MY_EMAIL, RESEND_API_KEY } = envSchema.parse(process.env)
+
 export const sendEmail = async (
   _: unknown,
   formData: FormData,
@@ -37,10 +44,10 @@ export const sendEmail = async (
   }
 
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY)
+    const resend = new Resend(RESEND_API_KEY)
     await resend.emails.send({
       from: "Contact <onboarding@resend.dev>",
-      to: process.env.MY_EMAIL as string,
+      to: MY_EMAIL,
       subject: `Contact form submission from ${data.name}`,
       react: await EmailTemplate(data),
       replyTo: data.recipientEmail,
