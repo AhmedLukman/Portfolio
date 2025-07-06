@@ -39,7 +39,7 @@ export default function RootLayout({
         <Providers>
           <div className="lg:flex">
             <SideNav />
-            <div className="relative z-10 flex h-screen basis-10/12 flex-col justify-between overflow-y-auto">
+            <div className="relative z-10 flex h-screen basis-10/12 flex-col justify-between overflow-y-auto overflow-x-hidden">
               <main className="flex-grow">{children}</main>
               <Footer />
             </div>
