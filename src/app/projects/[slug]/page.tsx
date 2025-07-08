@@ -24,6 +24,11 @@ export const generateMetadata = async ({
   }
 }
 
+export const generateStaticParams = () =>
+  PROJECTS.map(({ slug }) => ({
+    slug,
+  }))
+
 const ProjectDetailsPage = async ({
   params,
 }: {
