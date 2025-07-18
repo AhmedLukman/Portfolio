@@ -1,6 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility purple-gradient {
+  @apply bg-linear-to-r from-[#ffc0cb] via-[#ffc0cb] to-[#7a5299] bg-clip-text text-transparent;
+}
 
 @layer base {
   p {
@@ -13,12 +25,6 @@
   h5,
   h6 {
     @apply text-heading;
-  }
-}
-
-@layer components {
-  .purple-gradient {
-    @apply bg-gradient-to-r from-[#ffc0cb] via-[#ffc0cb] to-[#7a5299] bg-clip-text text-transparent;
   }
 }
 
