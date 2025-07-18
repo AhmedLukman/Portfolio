@@ -213,13 +213,13 @@ export const WEB_QUALITIES = [
 
 export const MASTERY = [
   {
-    title: "Front End",
+    title: "Front-end",
     description:
       "Expert in creating beautiful, high-performance, responsive, and user-friendly web applications.",
     src: FrontEndImage,
   },
   {
-    title: "Back End",
+    title: "Back-end",
     description:
       "Skilled in developing robust, scalable, and secure server-side applications.",
     src: BackEndImage,
@@ -676,7 +676,7 @@ export const CERTIFICATIONS = [
     logo: Strathmore,
   },
   {
-    title: "Front End Developer - HTML",
+    title: "Front-end Developer - HTML",
     organization: "Great Learning Academy",
     year: "2023",
     file: "HTML",
@@ -685,7 +685,7 @@ export const CERTIFICATIONS = [
     logo: GreatLearning,
   },
   {
-    title: "Front End Developer - CSS",
+    title: "Front-end Developer - CSS",
     organization: "Great Learning Academy",
     year: "2023",
     file: "CSS",
