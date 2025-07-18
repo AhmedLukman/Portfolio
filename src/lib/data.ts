@@ -676,7 +676,7 @@ export const CERTIFICATIONS = [
     logo: Strathmore,
   },
   {
-    title: "Front-end Developer - HTML",
+    title: "Front-end Development - HTML",
     organization: "Great Learning Academy",
     year: "2023",
     file: "HTML",
@@ -685,7 +685,7 @@ export const CERTIFICATIONS = [
     logo: GreatLearning,
   },
   {
-    title: "Front-end Developer - CSS",
+    title: "Front-end Development - CSS",
     organization: "Great Learning Academy",
     year: "2023",
     file: "CSS",
