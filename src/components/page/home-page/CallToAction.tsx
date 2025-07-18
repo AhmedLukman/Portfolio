@@ -7,7 +7,7 @@ import { BackgroundGradient } from "./BackgroundGradient"
 
 const CallToAction = () => {
   return (
-    <SectionWrapper className="min-[768px]:!mt-20">
+    <SectionWrapper className="min-[768px]:mt-20!">
       <BackgroundGradient className="flex flex-col items-center gap-3 rounded-[22px] bg-black/70 p-4 sm:p-10">
         <h3 className="text-center text-xl font-bold">
           Let&apos;s Work Together

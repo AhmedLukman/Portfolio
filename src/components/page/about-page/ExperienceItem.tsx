@@ -53,7 +53,7 @@ const ExperienceItem = ({
 
       {/* Mobile vertical connector between items - hidden on desktop */}
       {index < EXPERIENCE.length - 1 && (
-        <div className="absolute left-1/2 top-full h-[3rem] w-0.5 -translate-x-1/2 transform bg-slate-500 lg:hidden"></div>
+        <div className="absolute left-1/2 top-full h-12 w-0.5 -translate-x-1/2 transform bg-slate-500 lg:hidden"></div>
       )}
 
       {/* Horizontal connector line - hidden on mobile */}

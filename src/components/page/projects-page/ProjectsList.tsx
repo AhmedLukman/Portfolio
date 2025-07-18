@@ -17,7 +17,7 @@ const ProjectsList = () => {
           ) => (
             <ItemWrapper key={title} index={index}>
               <CardContainer>
-                <CardBody className="group/card relative h-auto w-[21rem] rounded-xl border border-white/[0.1] p-6 shadow-[0_8px_16px_rgb(0_0_0/0.3)] xl:w-[26rem]">
+                <CardBody className="group/card relative h-auto w-84 rounded-xl border border-white/10 p-6 shadow-[0_8px_16px_rgb(0_0_0/0.3)] xl:w-104">
                   <Link href={route} className="block">
                     <CardItem
                       translateZ="70"
@@ -29,7 +29,7 @@ const ProjectsList = () => {
                     <CardItem
                       as="div"
                       translateZ="60"
-                      className="mt-2 !line-clamp-3 flex w-full items-center justify-between text-sm text-slate-400"
+                      className="mt-2 line-clamp-3! flex w-full items-center justify-between text-sm text-slate-400"
                     >
                       {description}
                     </CardItem>

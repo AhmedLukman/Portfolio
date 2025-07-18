@@ -12,7 +12,7 @@ const CaseStudy = ({ project: { caseStudy } }: { project: Project }) => {
           <CaseStudyCard
             key={index}
             icon={study.icon}
-            className={`animate-slideInFromBottom delay-${index * 500}`}
+            className={`animate-slide-in-from-bottom delay-${index * 500}`}
             title={study.title}
             description={study.description}
           >

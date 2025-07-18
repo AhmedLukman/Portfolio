@@ -35,29 +35,29 @@ const ProjectOverview = ({
           sizes="(min-width: 1540px) 492px, (min-width: 1280px) 438px, (min-width: 1040px) calc(26.36vw + 66px), (min-width: 980px) 816px, (min-width: 780px) calc(72.78vw + 117px), calc(100vw - 55px)"
           fill
           priority
-          className="animate-slideInFromLeft object-contain object-top"
+          className="animate-slide-in-from-left object-contain object-top"
         />
       </div>
       <div className="flex basis-1/2 flex-col justify-between gap-10">
-        <div className="flex animate-slideInFromBottom flex-col gap-1">
+        <div className="flex animate-slide-in-from-bottom flex-col gap-1">
           <h2 className="text-xl font-semibold">
             <span className="purple-gradient">Description</span>
           </h2>
           <p className="text-slate-300">{description}</p>
         </div>
-        <div className="flex animate-slideInFromBottom flex-col gap-3 opacity-0 delay-500">
+        <div className="flex animate-slide-in-from-bottom flex-col gap-3 opacity-0 delay-500">
           <h2 className="text-xl font-semibold">
             <span className="purple-gradient">Tech Stack</span>
           </h2>
           <AnimatedTooltip items={techStack} />
         </div>
-        <div className="flex animate-slideInFromBottom flex-col gap-3 opacity-0 delay-1000">
+        <div className="flex animate-slide-in-from-bottom flex-col gap-3 opacity-0 delay-1000">
           <h2 className="text-xl font-semibold">
             <span className="purple-gradient mr-2">Metrics</span>
             <Tooltip
               showArrow
               content="Average lighthouse score across all pages of the site"
-              className="!bg-slate-300"
+              className="bg-slate-300!"
             >
               <FontAwesomeIcon
                 icon={faCircleInfo}
@@ -68,7 +68,7 @@ const ProjectOverview = ({
           </h2>
           <AnimatedTooltip items={metrics} />
         </div>
-        <div className="flex animate-slideInFromBottom justify-between opacity-0 delay-1500">
+        <div className="flex animate-slide-in-from-bottom justify-between opacity-0 delay-1500">
           <div className="flex flex-col gap-1">
             <h2 className="text-xl font-semibold">
               <span className="purple-gradient">Start Date</span>
@@ -111,9 +111,9 @@ const ProjectOverview = ({
           </div>
         </div>
         <div className="mt-5 flex gap-5">
-          <LinkPreview url={source} className="flex-grow font-bold">
+          <LinkPreview url={source} className="grow font-bold">
             <Button
-              className="w-full animate-slideInFromLeft text-white opacity-0 delay-2000 hover:text-black"
+              className="w-full animate-slide-in-from-left text-white opacity-0 delay-2000 hover:text-black"
               variant="ghost"
               endContent={<FontAwesomeIcon icon={faGithub} />}
             >
@@ -127,7 +127,7 @@ const ProjectOverview = ({
               content="Already viewing this site"
             >
               <Button
-                className="flex-grow animate-slideInFromRight opacity-0 delay-2000"
+                className="grow animate-slide-in-from-right opacity-0 delay-2000"
                 endContent={<FontAwesomeIcon icon={faGlobe} />}
                 disabled
               >
@@ -136,9 +136,9 @@ const ProjectOverview = ({
             </Tooltip>
           )}
           {!isSitePortfolio && (
-            <LinkPreview url={site} className="flex-grow font-bold">
+            <LinkPreview url={site} className="grow font-bold">
               <Button
-                className="w-full animate-slideInFromRight opacity-0 delay-2000 hover:!opacity-80"
+                className="w-full animate-slide-in-from-right opacity-0 delay-2000 hover:opacity-80!"
                 endContent={<FontAwesomeIcon icon={faGlobe} />}
               >
                 Explore site

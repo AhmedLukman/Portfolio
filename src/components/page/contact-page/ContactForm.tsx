@@ -59,35 +59,35 @@ const ContactForm = () => {
             name="name"
             label="Name"
             variant="bordered"
-            className="animate-slideInFromLeft opacity-0 delay-500 sm:delay-0"
+            className="animate-slide-in-from-left opacity-0 delay-500 sm:delay-0"
             classNames={{
               inputWrapper:
-                "border-slate-400 focus-within:!border-slate-300 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
+                "border-slate-400 focus-within:border-slate-300! shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
               input: "text-body",
             }}
           />
           <Input
             isRequired
-            className="animate-slideInFromRight opacity-0 delay-1000 sm:delay-0"
+            className="animate-slide-in-from-right opacity-0 delay-1000 sm:delay-0"
             name="recipientEmail"
             type="email"
             label="Email"
             variant="bordered"
             classNames={{
               inputWrapper:
-                "border-slate-400 focus-within:!border-slate-300 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
+                "border-slate-400 focus-within:border-slate-300! shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
               input: "text-body",
             }}
           />
         </div>
         <Textarea
           isRequired
-          className="animate-slideInFromBottom opacity-0 delay-1500 sm:delay-0"
+          className="animate-slide-in-from-bottom opacity-0 delay-1500 sm:delay-0"
           name="message"
           label="Message"
           classNames={{
             inputWrapper:
-              "border-slate-400 focus-within:!border-slate-300 !h-56 shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
+              "border-slate-400 focus-within:border-slate-300! h-56! shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
             input: "text-body",
           }}
           variant="bordered"
@@ -98,9 +98,9 @@ const ContactForm = () => {
             isLoading={isPending}
             size="lg"
             className={cn(
-              "animate-slideInFromBottom bg-slate-400 font-bold opacity-0 shadow-[0_8px_16px_rgb(0_0_0/0.3)] delay-2000 hover:!opacity-80 sm:delay-1000",
+              "animate-slide-in-from-bottom bg-slate-400 font-bold opacity-0 shadow-[0_8px_16px_rgb(0_0_0/0.3)] delay-2000 hover:opacity-80! sm:delay-1000",
               {
-                "!opacity-80": isPending,
+                "opacity-80!": isPending,
               },
             )}
             endContent={<FontAwesomeIcon icon={faEnvelope} />}

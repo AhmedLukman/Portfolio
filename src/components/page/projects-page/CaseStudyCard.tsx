@@ -31,7 +31,7 @@ const CaseStudyCard = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className={cn(
-        "group/canvas-card relative mx-auto flex w-full max-w-sm items-center justify-center rounded-3xl border border-slate-600/50 bg-gradient-to-b from-black/20 to-black/30 p-4 opacity-0 lg:h-80 lg:p-0 xl:p-4",
+        "group/canvas-card relative mx-auto flex w-full max-w-sm items-center justify-center rounded-3xl border border-slate-600/50 bg-linear-to-b from-black/20 to-black/30 p-4 opacity-0 lg:h-80 lg:p-0 xl:p-4",
         inView && className,
       )}
     >

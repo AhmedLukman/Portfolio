@@ -15,7 +15,7 @@ const Features = ({ project: { features } }: { project: Project }) => {
             <BorderContainer
               duration={Math.floor(Math.random() * 10000) + 10000}
               borderRadius="1.5rem"
-              className="rounded-[calc(1.5rem* 0.96)] min-h-20 flex-1 border-slate-800 bg-gradient-to-r from-slate-800 via-purple-900/50 to-slate-800"
+              className="rounded-[calc(1.5rem* 0.96)] min-h-20 flex-1 border-slate-800 bg-linear-to-r from-slate-800 via-purple-900/50 to-slate-800"
             >
               <div className="flex w-full items-center gap-3 p-5">
                 <FontAwesomeIcon size="xl" icon={faCircleCheck} />

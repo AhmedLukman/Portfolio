@@ -29,8 +29,8 @@ const ItemWrapper = ({
       className={cn(
         "z-10 opacity-0",
         {
-          "animate-slideInFromLeft": inView && index % 2 === 0,
-          "animate-slideInFromRight": inView && index % 2 !== 0,
+          "animate-slide-in-from-left": inView && index % 2 === 0,
+          "animate-slide-in-from-right": inView && index % 2 !== 0,
         },
         className,
       )}
