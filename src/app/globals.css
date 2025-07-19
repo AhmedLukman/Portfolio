@@ -1,43 +1,111 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@plugin './hero.ts';
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
 
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+@theme {
+  /* custom colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-heading: var(--color-slate-200);
+  --color-body: var(--color-slate-300);
+
+  /* custom keyframes */
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+  --animate-slide-in-from-left: slideInFromLeft 1s ease-out forwards;
+  --animate-slide-in-from-right: slideInFromRight 1s ease-out forwards;
+  --animate-slide-in-from-bottom: slideInFromBottom 1s ease-out forwards;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
   }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Custom animation delay utilities */
+@utility delay-0 {
+  animation-delay: 0s;
+}
+
+@utility delay-500 {
+  animation-delay: 0.5s;
+}
+
+@utility delay-1000 {
+  animation-delay: 1s;
+}
+
+@utility delay-1500 {
+  animation-delay: 1.5s;
+}
+
+@utility delay-2000 {
+  animation-delay: 2s;
 }
 
 @utility purple-gradient {
-  @apply bg-linear-to-r from-[#ffc0cb] via-[#ffc0cb] to-[#7a5299] bg-clip-text text-transparent;
+  background: linear-gradient(to right, #ffc0cb, #ffc0cb, #7a5299);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-@layer base {
-  p {
-    @apply text-body;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-heading;
-  }
+p {
+  color: var(--color-body);
 }
 
-/* For Webkit browsers (Chrome, Safari) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+}
+
 ::-webkit-scrollbar-track {
-  background: transparent; /* makes the track transparent */
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #653e80; /* color of the scroll thumb */
+  background: #653e80;
 }
 
-/* For Firefox */
 * {
-  scrollbar-color: #653e80 transparent; /* thumb and track color */
+  scrollbar-color: #653e80 transparent;
 }
