@@ -42,7 +42,7 @@ const SideNavLinkButton = ({
     "lg:ml-5! shadow-[0_8px_16px_rgb(0_0_0/0.3)] bg-linear-to-b from-[#653e80] to-[#7a5299] text-white!"
 
   const iconClasses = cn(
-    "text-slate-400! group-hover:text-white! transition-all! duration-200! h-4 mr-1",
+    "text-slate-400! group-hover:text-white! transition-all! duration-200! h-4! mr-1",
     { "text-white!": isActive },
   )
 

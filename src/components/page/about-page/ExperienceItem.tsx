@@ -73,7 +73,7 @@ const ExperienceItem = ({
               as="header"
               className="flex flex-wrap justify-between gap-2"
             >
-              <h3 className="purple-gradient text-xl">{title}</h3>
+              <h3 className="purple-gradient! text-xl">{title}</h3>
               <Chip variant="bordered" className="text-body">
                 {type}
               </Chip>

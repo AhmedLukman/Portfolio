@@ -17,7 +17,7 @@ const RecognitionList = async () => {
               as="header"
               className="flex flex-wrap justify-between gap-2"
             >
-              <h3 className="purple-gradient text-xl">{recognition.title}</h3>
+              <h3 className="purple-gradient! text-xl">{recognition.title}</h3>
             </CardHeader>
             <CardFooter as="footer" className="flex justify-end">
               <Link
