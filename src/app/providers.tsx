@@ -1,6 +1,6 @@
 "use client"
 
-import { HeroUIProvider } from "@heroui/system"
+import { HeroUIProvider } from "@heroui/react"
 import { useRouter } from "next/navigation"
 import { NavigationProvider } from "../lib/contexts/NavigationContext"
 
