@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "@heroui/link"
 import Image from "next/image"
 import NextLink from "next/link"
+import ManNearComputerImage from "public/assets/images/man-near-computer.svg"
 import SectionWrapper from "../../wrappers/SectionWrapper"
-import ManNearComputerImage from "/public/assets/images/man-near-computer.svg"
 
 const Introduction = () => {
   return (

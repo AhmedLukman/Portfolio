@@ -3,7 +3,7 @@ import PageHeader from "@/components/wrappers/PageHeader"
 import PageWrapper from "@/components/wrappers/PageWrapper"
 import type { Metadata } from "next"
 import Image from "next/image"
-import ShakingHandsImage from "/public/assets/images/shakehands.png"
+import ShakingHandsImage from "public/assets/images/shakehands.png"
 
 export const metadata: Metadata = {
   title: "Contact Ahmed Lukman | Full Stack Developer",

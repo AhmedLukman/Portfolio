@@ -1,7 +1,7 @@
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
-import ImageTemplate from "/public/assets/images/portfolio-image-template.png"
+import ImageTemplate from "public/assets/images/portfolio-image-template.png"
 
 const NotFound = () => {
   return (
