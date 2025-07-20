@@ -39,19 +39,19 @@ const ProjectOverview = ({
         />
       </div>
       <div className="flex basis-1/2 flex-col justify-between gap-10">
-        <div className="flex animate-slide-in-from-bottom flex-col gap-1">
+        <div className="animate-slide-in-from-bottom flex flex-col gap-1">
           <h2 className="text-xl font-semibold">
             <span className="purple-gradient">Description</span>
           </h2>
           <p className="text-slate-300">{description}</p>
         </div>
-        <div className="flex animate-slide-in-from-bottom flex-col gap-3 opacity-0 delay-500">
+        <div className="animate-slide-in-from-bottom animation-delay-500 flex flex-col gap-3 opacity-0">
           <h2 className="text-xl font-semibold">
             <span className="purple-gradient">Tech Stack</span>
           </h2>
           <AnimatedTooltip items={techStack} />
         </div>
-        <div className="flex animate-slide-in-from-bottom flex-col gap-3 opacity-0 delay-1000">
+        <div className="animate-slide-in-from-bottom animation-delay-1000 flex flex-col gap-3 opacity-0">
           <h2 className="text-xl font-semibold">
             <span className="purple-gradient mr-2">Metrics</span>
             <Tooltip
@@ -68,7 +68,7 @@ const ProjectOverview = ({
           </h2>
           <AnimatedTooltip items={metrics} />
         </div>
-        <div className="flex animate-slide-in-from-bottom justify-between opacity-0 delay-1500">
+        <div className="animate-slide-in-from-bottom animation-delay-1500 flex justify-between opacity-0">
           <div className="flex flex-col gap-1">
             <h2 className="text-xl font-semibold">
               <span className="purple-gradient">Start Date</span>
@@ -113,7 +113,7 @@ const ProjectOverview = ({
         <div className="mt-5 flex gap-5">
           <LinkPreview url={source} className="grow font-bold">
             <Button
-              className="w-full animate-slide-in-from-left text-white opacity-0 delay-2000 hover:text-black"
+              className="animate-slide-in-from-left animation-delay-2000 w-full text-white opacity-0 hover:text-black"
               variant="ghost"
               endContent={<FontAwesomeIcon icon={faGithub} />}
             >
@@ -127,7 +127,7 @@ const ProjectOverview = ({
               content="Already viewing this site"
             >
               <Button
-                className="grow animate-slide-in-from-right opacity-0 delay-2000"
+                className="animate-slide-in-from-right animation-delay-2000 grow opacity-0"
                 endContent={<FontAwesomeIcon icon={faGlobe} />}
                 disabled
               >
@@ -138,7 +138,7 @@ const ProjectOverview = ({
           {!isSitePortfolio && (
             <LinkPreview url={site} className="grow font-bold">
               <Button
-                className="w-full animate-slide-in-from-right opacity-0 delay-2000 hover:opacity-80!"
+                className="animate-slide-in-from-right animation-delay-2000 w-full opacity-0 hover:opacity-80!"
                 endContent={<FontAwesomeIcon icon={faGlobe} />}
               >
                 Explore site

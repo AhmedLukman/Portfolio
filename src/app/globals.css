@@ -58,23 +58,23 @@
 }
 
 /* Custom animation delay utilities */
-@utility delay-0 {
+@utility animation-delay-0 {
   animation-delay: 0s;
 }
 
-@utility delay-500 {
+@utility animation-delay-500 {
   animation-delay: 0.5s;
 }
 
-@utility delay-1000 {
+@utility animation-delay-1000 {
   animation-delay: 1s;
 }
 
-@utility delay-1500 {
+@utility animation-delay-1500 {
   animation-delay: 1.5s;
 }
 
-@utility delay-2000 {
+@utility animation-delay-2000 {
   animation-delay: 2s;
 }
 

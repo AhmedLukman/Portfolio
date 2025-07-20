@@ -59,7 +59,7 @@ const ContactForm = () => {
             name="name"
             label="Name"
             variant="bordered"
-            className="animate-slide-in-from-left opacity-0 delay-500 sm:delay-0"
+            className="animate-slide-in-from-left animation-delay-500 sm:animation-delay-0 opacity-0"
             classNames={{
               inputWrapper:
                 "border-slate-400 focus-within:border-slate-300! shadow-[0_8px_16px_rgb(0_0_0/0.3)]",
@@ -68,7 +68,7 @@ const ContactForm = () => {
           />
           <Input
             isRequired
-            className="animate-slide-in-from-right opacity-0 delay-1000 sm:delay-0"
+            className="animate-slide-in-from-right animation-delay-1000 sm:animation-delay-0 opacity-0"
             name="recipientEmail"
             type="email"
             label="Email"
@@ -82,7 +82,7 @@ const ContactForm = () => {
         </div>
         <Textarea
           isRequired
-          className="animate-slide-in-from-bottom opacity-0 delay-1500 sm:delay-0"
+          className="animate-slide-in-from-bottom animation-delay-1500 sm:animation-delay-0 opacity-0"
           name="message"
           label="Message"
           classNames={{
@@ -98,7 +98,7 @@ const ContactForm = () => {
             isLoading={isPending}
             size="lg"
             className={cn(
-              "animate-slide-in-from-bottom bg-slate-400 font-bold opacity-0 shadow-[0_8px_16px_rgb(0_0_0/0.3)] delay-2000 hover:opacity-80! sm:delay-1000",
+              "animate-slide-in-from-bottom animation-delay-2000 sm:animation-delay-1000 bg-slate-400 font-bold opacity-0 shadow-[0_8px_16px_rgb(0_0_0/0.3)] hover:opacity-80!",
               {
                 "opacity-80!": isPending,
               },
