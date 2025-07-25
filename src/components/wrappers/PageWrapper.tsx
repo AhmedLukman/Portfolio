@@ -9,7 +9,7 @@ const PageWrapper = ({
 }) => {
   return (
     <div
-      className={cn("mx-auto max-w-4xl px-5 py-10 md:px-10 xl:px-0", className)}
+      className={cn("mx-auto max-w-4xl px-5 py-10 md:px-10 xl:px-0 h-full", className)}
     >
       {children}
     </div>
