@@ -1,6 +1,7 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import {
   faCode,
+  faComment,
   faContactBook,
   faHouse,
   faInfoCircle,
@@ -39,6 +40,11 @@ export const PAGE_LINKS = [
     name: "Contact",
     path: "/contact",
     icon: faContactBook,
+  },
+  {
+    name: "AI Chat",
+    path: "/ai",
+    icon: faComment,
   },
 ]
 
