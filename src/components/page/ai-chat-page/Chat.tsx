@@ -3,7 +3,10 @@
 import { PlaceholdersAndVanishInput } from "@/components/ui/PlaceholderAndVanishInput"
 import { PAGE_LINKS } from "@/lib/constants"
 import { useChat } from "@ai-sdk/react"
-import { faExclamationTriangle, faTimes } from "@fortawesome/free-solid-svg-icons"
+import {
+  faExclamationTriangle,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { addToast } from "@heroui/toast"
 import { useRouter } from "next/navigation"
@@ -35,7 +38,7 @@ const Chat = () => {
   })
 
   useEffect(() => {
-    console.error(error)
+    if (error) console.error(error)
   }, [error])
 
   useEffect(() => {
@@ -93,7 +96,7 @@ const Chat = () => {
                       case "text":
                         return (
                           <div key={`${message.id}-${i}`}>
-                            <div className="prose prose-invert prose-purple text-heading! [&>p]:text-heading!  max-w-none">
+                            <div className="prose prose-invert prose-purple text-heading! [&>p]:text-heading! max-w-none">
                               <ReactMarkdown>{part.text}</ReactMarkdown>
                             </div>
                           </div>
@@ -160,12 +163,15 @@ const Chat = () => {
           <div className="flex justify-start gap-3">
             <div className="mt-1 flex-shrink-0">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-600">
-                <FontAwesomeIcon icon={faExclamationTriangle} className=" text-white" />
+                <FontAwesomeIcon
+                  icon={faExclamationTriangle}
+                  className="text-white"
+                />
               </div>
             </div>
             <div className="rounded-2xl border border-red-700/50 bg-red-900/20 px-4 py-3 shadow-lg backdrop-blur-sm">
               <div className="flex items-center gap-2">
-                <FontAwesomeIcon icon={faTimes} className=" text-red-400" />
+                <FontAwesomeIcon icon={faTimes} className="text-red-400" />
                 <span className="text-sm text-red-300">
                   Something went wrong. Please try again.
                 </span>
