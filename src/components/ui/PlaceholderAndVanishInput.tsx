@@ -4,6 +4,7 @@
 import { cn } from "@heroui/react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useCallback, useEffect, useRef, useState } from "react"
+import { Button } from "@heroui/button"
 
 export function PlaceholdersAndVanishInput({
   placeholders,
@@ -213,10 +214,12 @@ export function PlaceholdersAndVanishInput({
           )}
         />
 
-        <button
-          disabled={!value}
+        <Button
+          isDisabled={!value}
+          isIconOnly
+          size="sm"
           type="submit"
-          className="absolute top-1/2 right-2 z-50 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-r from-blue-500/80 to-purple-600/80 shadow-lg transition-all duration-200 hover:scale-105 hover:from-blue-400 hover:to-purple-500 disabled:from-transparent disabled:to-transparent disabled:hover:scale-100"
+          className="absolute top-1/2 right-2 z-50 flex -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-r from-blue-500/80 to-purple-600/80 shadow-lg transition-all duration-200 hover:scale-105 disabled:from-transparent disabled:to-transparent disabled:hover:scale-100"
         >
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +251,7 @@ export function PlaceholdersAndVanishInput({
             <path d="M13 18l6 -6" />
             <path d="M13 6l6 6" />
           </motion.svg>
-        </button>
+        </Button>
 
         <div className="pointer-events-none absolute inset-0 flex items-center rounded-full">
           <AnimatePresence mode="wait">
