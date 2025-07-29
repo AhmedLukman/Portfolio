@@ -1,21 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
+import { Button } from "@heroui/button"
 import { cn } from "@heroui/react"
+import { ChatStatus } from "ai"
 import { AnimatePresence, motion } from "framer-motion"
 import { useCallback, useEffect, useRef, useState } from "react"
-import { Button } from "@heroui/button"
-import { ChatStatus } from "ai"
 
 export function PlaceholdersAndVanishInput({
   placeholders,
   onChange,
   onSubmit,
-  status
+  status,
 }: {
   placeholders: string[]
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
-    onSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void
   status: ChatStatus
 }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0)
@@ -156,7 +156,13 @@ export function PlaceholdersAndVanishInput({
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && !animating && status === "ready") {
+    if (
+      e.key === "Enter" &&
+      !animating &&
+      status === "ready" &&
+      inputRef.current &&
+      inputRef.current.value.trim().length > 0
+    ) {
       vanishAndSubmit()
     }
   }
