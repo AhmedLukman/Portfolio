@@ -187,6 +187,7 @@ const Chat = () => {
 
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
+        status={status}
         onSubmit={(e) => {
           e.preventDefault()
           if (input.trim()) {

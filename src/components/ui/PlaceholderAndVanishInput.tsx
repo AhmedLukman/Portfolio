@@ -5,15 +5,18 @@ import { cn } from "@heroui/react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useCallback, useEffect, useRef, useState } from "react"
 import { Button } from "@heroui/button"
+import { ChatStatus } from "ai"
 
 export function PlaceholdersAndVanishInput({
   placeholders,
   onChange,
   onSubmit,
+  status
 }: {
   placeholders: string[]
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
-  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+    onSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+  status: ChatStatus
 }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0)
 
@@ -153,7 +156,7 @@ export function PlaceholdersAndVanishInput({
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && !animating) {
+    if (e.key === "Enter" && !animating && status === "ready") {
       vanishAndSubmit()
     }
   }
@@ -215,7 +218,7 @@ export function PlaceholdersAndVanishInput({
         />
 
         <Button
-          isDisabled={!value}
+          isDisabled={!value || status !== "ready"}
           isIconOnly
           size="sm"
           type="submit"
