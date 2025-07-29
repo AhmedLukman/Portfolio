@@ -132,7 +132,7 @@ const Chat = () => {
         ))}
 
         {/* Typing Indicator */}
-        {status === "streaming" && (
+        {(status === "streaming" || status === "submitted") && (
           <div className="flex justify-start gap-3">
             <div className="mt-1 flex-shrink-0">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-violet-600">
@@ -152,7 +152,9 @@ const Chat = () => {
                     style={{ animationDelay: "0.2s" }}
                   ></div>
                 </div>
-                <span className="text-sm text-gray-400">Thinking...</span>
+                <span className="text-sm text-gray-400">
+                  {status === "submitted" ? "Thinking" : "Typing"}...
+                </span>
               </div>
             </div>
           </div>
