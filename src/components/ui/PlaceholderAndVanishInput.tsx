@@ -224,7 +224,7 @@ export function PlaceholdersAndVanishInput({
         />
 
         <Button
-          isDisabled={!value || status !== "ready"}
+          isDisabled={!value || status === "streaming" || status === "submitted"}
           isIconOnly
           size="sm"
           type="submit"
