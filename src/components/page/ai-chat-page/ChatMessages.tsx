@@ -82,7 +82,7 @@ const ChatMessages = ({
       {/* Typing Indicator */}
       {(status === "streaming" || status === "submitted") && (
         <div className="flex gap-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-violet-600">
+          <div className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-violet-600">
             <span className="text-xs font-semibold text-white">AI</span>
           </div>
           <div className="flex items-center gap-2 rounded-2xl bg-gray-800 px-4 py-3">
