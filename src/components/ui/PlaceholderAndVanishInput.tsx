@@ -195,10 +195,15 @@ export function PlaceholdersAndVanishInput({
     >
       <div
         className={cn(
-          "relative h-full w-full rounded-full backdrop-blur-sm transition-all duration-200",
+          "relative h-full w-full rounded-2xl border border-white/10 backdrop-blur-xl transition-all duration-300",
+          "bg-gradient-to-r from-slate-900/80 via-slate-800/80 to-slate-900/80",
+          "shadow-[0_8px_32px_rgba(59,130,246,0.12),_0_4px_16px_rgba(147,51,234,0.08)]",
           value && "bg-slate-800/95",
         )}
       >
+        {/* Subtle inner glow */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5" />
+
         <canvas
           className={cn(
             "pointer-events-none absolute top-[20%] left-2 origin-top-left scale-50 transform pr-20 text-base sm:left-8",
