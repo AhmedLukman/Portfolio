@@ -1,7 +1,7 @@
 import { PAGE_LINKS } from "@/lib/constants"
 import { PROJECTS } from "@/lib/data"
 import { google } from "@ai-sdk/google"
-import { convertToModelMessages, streamText, tool, UIMessage } from "ai"
+import { convertToModelMessages, smoothStream, streamText, tool, UIMessage } from "ai"
 import z from "zod"
 
 // Allow streaming responses up to 30 seconds
@@ -28,6 +28,7 @@ export async function POST(req: Request) {
         }),
       }),
     },
+    experimental_transform: smoothStream(),
   })
 
   return result.toUIMessageStreamResponse()
