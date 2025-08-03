@@ -28,6 +28,18 @@ const Chat = () => {
             base: "bg-heading",
           },
         })
+      } else if (toolName === "externalLinkOpener") {
+        const { link } = input as { link: string }
+        window.open(link, "_blank", "noopener,noreferrer")
+        addToast({
+          title: `Opened ${link}`,
+          color: "secondary",
+          hideIcon: true,
+          variant: "flat",
+          classNames: {
+            base: "bg-heading",
+          },
+        })
       }
     },
   })

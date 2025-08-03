@@ -56,6 +56,7 @@ const ChatMessages = ({
                           <ReactMarkdown>{part.text}</ReactMarkdown>
                         </div>
                       )
+                    case "tool-externalLinkOpener":
                     case "tool-navigator":
                       return (
                         <div key={`${message.id}-${i}`}>
