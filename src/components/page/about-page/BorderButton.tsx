@@ -41,7 +41,7 @@ export function BorderButton({
         containerClassName,
       )}
       style={{
-        borderRadius: borderRadius,
+        borderRadius,
       }}
       {...otherProps}
     >
