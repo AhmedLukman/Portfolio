@@ -40,6 +40,21 @@ const Chat = () => {
             base: "bg-heading",
           },
         })
+      } else if (toolName === "certificateDownloader") {
+        const { fileName } = input as { fileName: string }
+        const link = document.createElement("a")
+        link.href = `/assets/files/${fileName}.pdf`
+        link.download = fileName
+        link.click()
+        addToast({
+          title: `Downloaded ${fileName}`,
+          color: "secondary",
+          hideIcon: true,
+          variant: "flat",
+          classNames: {
+            base: "bg-heading",
+          },
+        })
       }
     },
   })
