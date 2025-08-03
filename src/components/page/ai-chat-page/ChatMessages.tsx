@@ -44,7 +44,7 @@ const ChatMessages = ({
                   : "border border-gray-700/50 bg-gray-800/70 shadow-lg backdrop-blur-sm"
               }`}
             >
-              <div>
+              <div className="space-y-2">
                 {message.parts.map((part, i) => {
                   switch (part.type) {
                     case "text":
