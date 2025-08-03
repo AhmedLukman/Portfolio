@@ -720,7 +720,7 @@ export const CERTIFICATIONS = [
       "Completed a comprehensive Web Development course, further strengthening my skills in HTML, CSS, and JavaScript and boosting my confidence in solving real-world challenges.",
     logo: SoloLearn,
   },
-]
+] as const
 
 const problemCaseStudy = {
   title: "Problem",
