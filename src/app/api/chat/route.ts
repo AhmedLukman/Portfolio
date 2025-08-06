@@ -26,6 +26,8 @@ export async function POST(req: Request) {
   const allExternalLinks = [
     ...SOCIAL_LINKS.map((link) => link.path),
     ...RECOGNITIONS.map((link) => link.url),
+    ...PROJECTS.map((project) => project.overview.source),
+    ...PROJECTS.map((project) => project.overview.site),
   ]
 
   const certificates = CERTIFICATIONS.map((cert) => cert.file)
@@ -44,7 +46,7 @@ export async function POST(req: Request) {
         }),
       }),
       externalLinkOpener: tool({
-        description: "Open an external link (social profiles or featured page)",
+        description: "Open an external link. This includes social profiles (GitHub or LinkedIn), places I was featured online, project github repositories and the actual project URLs",
         inputSchema: z.object({
           link: z.enum(allExternalLinks).describe("The link to open"),
         }),
