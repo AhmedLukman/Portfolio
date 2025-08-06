@@ -32,7 +32,7 @@ export const sendEmailByAI = async ({
   name,
   message,
 }: Omit<ContactForm, "db">) => {
-  throw new Error("error bro")
+  // throw new Error("error bro")
   const resend = new Resend(RESEND_API_KEY)
   await resend.emails.send({
     from: "Contact <onboarding@resend.dev>",
