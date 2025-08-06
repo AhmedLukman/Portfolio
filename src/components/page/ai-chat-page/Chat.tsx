@@ -4,16 +4,50 @@ import { PlaceholdersAndVanishInput } from "@/components/ui/PlaceholderAndVanish
 import { PAGE_LINKS } from "@/lib/constants"
 import { useChat } from "@ai-sdk/react"
 import { addToast } from "@heroui/toast"
+import { UIDataTypes, UIMessage, UITools } from "ai"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import ChatIntroduction from "./ChatIntroduction"
 import ChatMessages from "./ChatMessages"
+import { Button } from "@heroui/button"
+
+// Chat persistence utilities
+const CHAT_STORAGE_KEY = "ai-chat-messages"
+
+const saveChatMessages = (
+  messages: UIMessage<unknown, UIDataTypes, UITools>[],
+) => {
+  try {
+    localStorage.setItem(CHAT_STORAGE_KEY, JSON.stringify(messages))
+  } catch (error) {
+    console.error("Failed to save chat messages:", error)
+  }
+}
+
+const loadChatMessages = () => {
+  try {
+    const stored = localStorage.getItem(CHAT_STORAGE_KEY)
+    return stored ? JSON.parse(stored) : []
+  } catch (error) {
+    console.error("Failed to load chat messages:", error)
+    return []
+  }
+}
+
+const clearChatMessages = () => {
+  try {
+    localStorage.removeItem(CHAT_STORAGE_KEY)
+  } catch (error) {
+    console.error("Failed to clear chat messages:", error)
+  }
+}
 
 const Chat = () => {
   const router = useRouter()
   const [input, setInput] = useState("")
+  const [isLoaded, setIsLoaded] = useState(false)
 
-  const { messages, sendMessage, status, error } = useChat({
+  const { messages, sendMessage, status, error, setMessages } = useChat({
     onToolCall: async ({ toolCall: { toolName, input } }) => {
       if (toolName === "navigator") {
         type PagePath = (typeof PAGE_LINKS)[number]["path"]
@@ -56,15 +90,44 @@ const Chat = () => {
           },
         })
       } else if (toolName === "emailSender") {
-       // TODO: Handle email sent notif and error
-
+        // TODO: Handle email sent notif and error
       }
     },
   })
 
+  // Load messages from localStorage on component mount
+  useEffect(() => {
+    const savedMessages = loadChatMessages()
+    if (savedMessages.length > 0) {
+      setMessages(savedMessages)
+    }
+    setIsLoaded(true)
+  }, [setMessages])
+
+  // Save messages to localStorage whenever messages change
+  useEffect(() => {
+    if (isLoaded) {
+      saveChatMessages(messages)
+    }
+  }, [messages, isLoaded])
+
   useEffect(() => {
     if (error) console.error(error)
   }, [error])
+
+  const handleClearChat = () => {
+    setMessages([])
+    clearChatMessages()
+    addToast({
+      title: "Chat history cleared",
+      color: "secondary",
+      hideIcon: true,
+      variant: "flat",
+      classNames: {
+        base: "bg-heading",
+      },
+    })
+  }
 
   const placeholders = [
     "What's the first rule of Fight Club?",
@@ -76,22 +139,37 @@ const Chat = () => {
 
   return (
     <div className="flex h-full w-full flex-col justify-between py-10 text-white xl:py-12">
-      {messages.length === 0 && <ChatIntroduction />}
+      {messages.length === 0 && isLoaded && <ChatIntroduction />}
+      {
+       !isLoaded && <div className="h-full w-full flex items-center justify-center">Loading</div> 
+      }
       {messages.length > 0 && (
         <ChatMessages messages={messages} status={status} />
       )}
-      <PlaceholdersAndVanishInput
-        placeholders={placeholders}
-        status={status}
-        onSubmit={(e) => {
-          e.preventDefault()
-          sendMessage({ text: input })
-          setInput("")
-        }}
-        onChange={(e) => {
-          setInput(e.currentTarget.value)
-        }}
-      />
+      <div className="space-y-4">
+        {messages.length > 0 && status === "ready" && (
+          <div className="flex justify-center">
+            <Button
+              onPress={handleClearChat}
+              className="border border-gray-600/50 bg-gray-800/70 text-sm text-gray-300 transition-colors hover:bg-gray-700/70 hover:text-white"
+            >
+              Clear chat
+            </Button>
+          </div>
+        )}
+        <PlaceholdersAndVanishInput
+          placeholders={placeholders}
+          status={status}
+          onSubmit={(e) => {
+            e.preventDefault()
+            sendMessage({ text: input })
+            setInput("")
+          }}
+          onChange={(e) => {
+            setInput(e.currentTarget.value)
+          }}
+        />
+      </div>
     </div>
   )
 }
