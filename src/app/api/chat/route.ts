@@ -44,6 +44,7 @@ export async function POST(req: Request) {
         inputSchema: z.object({
           route: z.enum(allRoutes).describe("The route to navigate to"),
         }),
+        execute: ({ route }) => route,
       }),
       externalLinkOpener: tool({
         description: "Open an external link. This includes social profiles (GitHub or LinkedIn), places I was featured online, project github repositories and the actual project URLs",
