@@ -1,3 +1,4 @@
+import { sendEmailByAI } from "@/lib/actions"
 import { PAGE_LINKS, SOCIAL_LINKS } from "@/lib/constants"
 import { CERTIFICATIONS, PROJECTS, RECOGNITIONS } from "@/lib/data"
 import { google } from "@ai-sdk/google"
@@ -57,6 +58,38 @@ export async function POST(req: Request) {
             .describe("The name of the certificate to download"),
         }),
         execute: ({ fileName }) => fileName,
+      }),
+      emailSender: tool({
+        description: "Send an email from the user",
+        inputSchema: z.object({
+          recipientEmail: z
+            .string()
+            .describe(
+              "The email address of the sender (must be a valid email format)",
+            ),
+          name: z.string().describe("The name of the sender"),
+          message: z.string().describe("The message to send"),
+        }),
+        execute: async ({ recipientEmail, name, message }) => {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+          if (!emailRegex.test(recipientEmail)) {
+            throw new Error("Invalid email format")
+          }
+          try {
+            await sendEmailByAI({
+              recipientEmail,
+              name,
+              message,
+            })
+            return {
+              recipientEmail,
+              name,
+              message,
+            }
+          } catch (error) {
+            throw new Error(error instanceof Error ? error.toString() : "Unknown error occurred")
+          }
+        },
       }),
     },
     experimental_transform: smoothStream(),

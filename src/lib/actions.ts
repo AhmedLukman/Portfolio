@@ -27,6 +27,27 @@ const envSchema = z.object({
 
 const { MY_EMAIL, RESEND_API_KEY } = envSchema.parse(process.env)
 
+export const sendEmailByAI = async ({
+  recipientEmail,
+  name,
+  message,
+}: Omit<ContactForm, "db">) => {
+  throw new Error("error bro")
+  const resend = new Resend(RESEND_API_KEY)
+  await resend.emails.send({
+    from: "Contact <onboarding@resend.dev>",
+    to: MY_EMAIL,
+    subject: `Contact form submission from ${name}`,
+    react: await EmailTemplate({
+      name,
+      recipientEmail,
+      message,
+    }),
+    replyTo: recipientEmail,
+    text: `Contact form submission from ${name}. Please view this email in an HTML-compatible email client.`,
+  })
+}
+
 export const sendEmail = async (
   _: unknown,
   formData: FormData,

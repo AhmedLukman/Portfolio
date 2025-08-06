@@ -56,6 +56,7 @@ const ChatMessages = ({
                           <ReactMarkdown>{part.text}</ReactMarkdown>
                         </div>
                       )
+                    case "tool-emailSender":
                     case "tool-certificateDownloader":
                     case "tool-externalLinkOpener":
                     case "tool-navigator":

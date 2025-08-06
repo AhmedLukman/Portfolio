@@ -14,7 +14,7 @@ const Chat = () => {
   const [input, setInput] = useState("")
 
   const { messages, sendMessage, status, error } = useChat({
-    onToolCall: ({ toolCall: { toolName, input } }) => {
+    onToolCall: async ({ toolCall: { toolName, input } }) => {
       if (toolName === "navigator") {
         type PagePath = (typeof PAGE_LINKS)[number]["path"]
         const { route } = input as { route: PagePath }
@@ -55,6 +55,9 @@ const Chat = () => {
             base: "bg-heading",
           },
         })
+      } else if (toolName === "emailSender") {
+       // TODO: Handle email sent notif and error
+
       }
     },
   })
