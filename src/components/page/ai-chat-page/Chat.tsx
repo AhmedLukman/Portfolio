@@ -3,13 +3,14 @@
 import { PlaceholdersAndVanishInput } from "@/components/ui/PlaceholderAndVanishInput"
 import { PAGE_LINKS } from "@/lib/constants"
 import { useChat } from "@ai-sdk/react"
+import { Button } from "@heroui/button"
+import { Spinner } from "@heroui/spinner"
 import { addToast } from "@heroui/toast"
 import { UIDataTypes, UIMessage, UITools } from "ai"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import ChatIntroduction from "./ChatIntroduction"
 import ChatMessages from "./ChatMessages"
-import { Button } from "@heroui/button"
 
 // Chat persistence utilities
 const CHAT_STORAGE_KEY = "ai-chat-messages"
@@ -140,9 +141,11 @@ const Chat = () => {
   return (
     <div className="flex h-full w-full flex-col justify-between py-10 text-white xl:py-12">
       {messages.length === 0 && isLoaded && <ChatIntroduction />}
-      {
-       !isLoaded && <div className="h-full w-full flex items-center justify-center">Loading</div> 
-      }
+      {!isLoaded && (
+        <div className="flex h-full w-full items-center justify-center">
+          <Spinner size="lg" />
+        </div>
+      )}
       {messages.length > 0 && (
         <ChatMessages messages={messages} status={status} />
       )}
