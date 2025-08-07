@@ -131,12 +131,12 @@ const Chat = () => {
   }
 
   const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis Hiding?",
-    "Write a Javascript method to reverse a string",
-    "How to assemble your own PC?",
-  ]
+    "What technologies have you worked with?",
+    "Tell me about your experience.",
+    "Can I see some of your projects?",
+    "How to contact you?",
+    "Do you have any certificates I can download?",
+  ]  
 
   const [hasAccess, setHasAccess] = useState(false)
   const [numberOfTimesClicked, setNumberOfTimesClicked] = useState(0)
