@@ -4,14 +4,14 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Button } from "@heroui/button"
 import { AnimatePresence, motion } from "framer-motion"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import { useCallback, useEffect, useState } from "react"
 
 type Testimonial = {
   quote: string
   name: string
   designation: string
-  src: string
+  src: StaticImageData
 }
 export const AnimatedTestimonials = ({
   testimonials,
@@ -89,7 +89,7 @@ export const AnimatedTestimonials = ({
                     alt={testimonial.name}
                     draggable={false}
                     fill
-                    className="rounded-3xl object-cover object-center"
+                    className="rounded-3xl object-cover object-top"
                     priority={index === 0}
                   />
                 </motion.div>
@@ -147,7 +147,7 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex justify-center gap-4 pt-12 sm:justify-start md:pt-0">
+          <div className="flex justify-center gap-4 pt-12 sm:justify-start md:pt-5">
             <Button
               onPress={handlePrev}
               aria-label="Previous testimonial"
