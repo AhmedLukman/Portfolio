@@ -9,31 +9,32 @@ import { useCallback, useEffect, useRef, useState } from "react"
 
 export function PlaceholdersAndVanishInput({
   placeholders,
-  onChange,
-  onSubmit,
+  onChangeAction,
+  onSubmitAction,
   status,
 }: {
   placeholders: string[]
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
-  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+  onChangeAction: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onSubmitAction: (e: React.FormEvent<HTMLFormElement>) => void
   status: ChatStatus
 }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0)
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
-  const startAnimation = () => {
+  const startAnimation = useCallback(() => {
+    if (intervalRef.current) return
     intervalRef.current = setInterval(() => {
       setCurrentPlaceholder((prev) => (prev + 1) % placeholders.length)
     }, 3000)
-  }
-  const handleVisibilityChange = () => {
+  }, [placeholders.length])
+  const handleVisibilityChange = useCallback(() => {
     if (document.visibilityState !== "visible" && intervalRef.current) {
       clearInterval(intervalRef.current) // Clear the interval when the tab is not visible
       intervalRef.current = null
     } else if (document.visibilityState === "visible") {
       startAnimation() // Restart the interval when the tab becomes visible
     }
-  }
+  }, [startAnimation])
 
   useEffect(() => {
     startAnimation()
@@ -45,7 +46,7 @@ export function PlaceholdersAndVanishInput({
       }
       document.removeEventListener("visibilitychange", handleVisibilityChange)
     }
-  }, [placeholders])
+  }, [handleVisibilityChange, placeholders, startAnimation])
 
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const newDataRef = useRef<any[]>([])
@@ -183,7 +184,7 @@ export function PlaceholdersAndVanishInput({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    onSubmit && onSubmit(e)
+    onSubmitAction(e)
     vanishAndSubmit()
   }
   return (
@@ -215,7 +216,7 @@ export function PlaceholdersAndVanishInput({
           onChange={(e) => {
             if (!animating) {
               setValue(e.target.value)
-              onChange && onChange(e)
+              onChangeAction(e)
             }
           }}
           onKeyDown={handleKeyDown}
@@ -229,7 +230,9 @@ export function PlaceholdersAndVanishInput({
         />
 
         <Button
-          isDisabled={!value || status === "streaming" || status === "submitted"}
+          isDisabled={
+            !value || status === "streaming" || status === "submitted"
+          }
           isIconOnly
           size="sm"
           type="submit"

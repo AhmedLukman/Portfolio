@@ -202,12 +202,12 @@ const Chat = () => {
             <PlaceholdersAndVanishInput
               placeholders={placeholders}
               status={status}
-              onSubmit={(e) => {
+              onSubmitAction={(e) => {
                 e.preventDefault()
                 sendMessage({ text: input })
                 setInput("")
               }}
-              onChange={(e) => {
+              onChangeAction={(e) => {
                 setInput(e.currentTarget.value)
               }}
             />
