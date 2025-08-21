@@ -12,7 +12,6 @@ import { useEffect, useState } from "react"
 import ChatIntroduction from "./ChatIntroduction"
 import ChatMessages from "./ChatMessages"
 
-// Chat persistence utilities
 const CHAT_STORAGE_KEY = "ai-chat-messages"
 
 const saveChatMessages = (
@@ -32,14 +31,6 @@ const loadChatMessages = () => {
   } catch (error) {
     console.error("Failed to load chat messages:", error)
     return []
-  }
-}
-
-const clearChatMessages = () => {
-  try {
-    localStorage.removeItem(CHAT_STORAGE_KEY)
-  } catch (error) {
-    console.error("Failed to clear chat messages:", error)
   }
 }
 
@@ -105,12 +96,12 @@ const Chat = () => {
     setIsLoaded(true)
   }, [setMessages])
 
-  // Save messages to localStorage whenever messages change
+  // Save messages to localStorage whenever response has been received
   useEffect(() => {
-    if (isLoaded) {
+    if (isLoaded && status === "ready") {
       saveChatMessages(messages)
     }
-  }, [messages, isLoaded])
+  }, [messages, status, isLoaded])
 
   useEffect(() => {
     if (error) console.error(error)
@@ -118,7 +109,6 @@ const Chat = () => {
 
   const handleClearChat = () => {
     setMessages([])
-    clearChatMessages()
     addToast({
       title: "Chat history cleared",
       color: "secondary",
