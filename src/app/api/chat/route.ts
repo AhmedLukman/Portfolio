@@ -46,7 +46,8 @@ export async function POST(req: Request) {
         execute: ({ route }) => route,
       }),
       externalLinkOpener: tool({
-        description: "Open an external link. This includes social profiles (GitHub or LinkedIn), places I was featured online, project github repositories and the actual project URLs",
+        description:
+          "Open an external link. This includes social profiles (GitHub or LinkedIn), places I was featured online, project github repositories and the actual project URLs",
         inputSchema: z.object({
           link: z.enum(allExternalLinks).describe("The link to open"),
         }),
@@ -89,7 +90,9 @@ export async function POST(req: Request) {
               message,
             }
           } catch (error) {
-            throw new Error(error instanceof Error ? error.toString() : "Unknown error occurred")
+            throw new Error(
+              error instanceof Error ? error.message : "Unknown error occurred",
+            )
           }
         },
       }),
