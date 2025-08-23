@@ -81,9 +81,23 @@ const Chat = () => {
             base: "bg-heading",
           },
         })
-      } else if (toolName === "emailSender") {
-        // TODO: Handle email sent notif and error
       }
+    },
+    onFinish: ({ message }) => {
+      message.parts.forEach((part) => {
+        if (part.type === "tool-emailSender") {
+          const hasError = part.state === "output-error"
+          addToast({
+            title: hasError ? part.errorText : "Email sent successfully",
+            color: hasError ? "danger" : "success",
+            hideIcon: true,
+            variant: "flat",
+            classNames: {
+              base: "bg-heading",
+            },
+          })
+        }
+      })
     },
   })
 
@@ -129,41 +143,41 @@ const Chat = () => {
   ]
 
   return (
-      <div className="flex h-full w-full flex-col justify-between py-10 text-white xl:py-12">
-        {messages.length === 0 && isLoaded && <ChatIntroduction />}
-        {!isLoaded && (
-          <div className="flex h-full w-full items-center justify-center">
-            <Spinner size="lg" />
+    <div className="flex h-full w-full flex-col justify-between py-10 text-white xl:py-12">
+      {messages.length === 0 && isLoaded && <ChatIntroduction />}
+      {!isLoaded && (
+        <div className="flex h-full w-full items-center justify-center">
+          <Spinner size="lg" />
+        </div>
+      )}
+      {messages.length > 0 && (
+        <ChatMessages messages={messages} status={status} />
+      )}
+      <div className="space-y-4">
+        {messages.length > 0 && status === "ready" && (
+          <div className="flex justify-center">
+            <Button
+              onPress={handleClearChat}
+              className="border border-gray-600/50 bg-gray-800/70 text-sm text-gray-300 transition-colors hover:bg-gray-700/70 hover:text-white"
+            >
+              Clear chat
+            </Button>
           </div>
         )}
-        {messages.length > 0 && (
-          <ChatMessages messages={messages} status={status} />
-        )}
-        <div className="space-y-4">
-          {messages.length > 0 && status === "ready" && (
-            <div className="flex justify-center">
-              <Button
-                onPress={handleClearChat}
-                className="border border-gray-600/50 bg-gray-800/70 text-sm text-gray-300 transition-colors hover:bg-gray-700/70 hover:text-white"
-              >
-                Clear chat
-              </Button>
-            </div>
-          )}
-          <PlaceholdersAndVanishInput
-            placeholders={placeholders}
-            status={status}
-            onSubmitAction={(e) => {
-              e.preventDefault()
-              sendMessage({ text: input })
-              setInput("")
-            }}
-            onChangeAction={(e) => {
-              setInput(e.currentTarget.value)
-            }}
-          />
-        </div>
+        <PlaceholdersAndVanishInput
+          placeholders={placeholders}
+          status={status}
+          onSubmitAction={(e) => {
+            e.preventDefault()
+            sendMessage({ text: input })
+            setInput("")
+          }}
+          onChangeAction={(e) => {
+            setInput(e.currentTarget.value)
+          }}
+        />
       </div>
+    </div>
   )
 }
 
