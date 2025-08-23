@@ -121,11 +121,11 @@ const Chat = () => {
   }
 
   const placeholders = [
-    "What technologies have you worked with?",
     "Tell me about your experience.",
+    "What technologies have you worked with?",
+    "How can I contact you?",
     "Can I see some of your projects?",
-    "How to contact you?",
-    "Do you have any certificates I can download?",
+    "Can I have a look at your certificates?",
   ]
 
   return (
