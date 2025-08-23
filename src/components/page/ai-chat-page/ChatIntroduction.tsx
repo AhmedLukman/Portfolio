@@ -54,10 +54,10 @@ const ChatIntroduction = () => {
         Meet my AI Self Agent — your intelligent gateway to learn everything
         about my professional journey!
       </p>
-      <ul className="grid h-full grid-cols-2 gap-10">
+      <ul className="grid h-full grid-cols-1 gap-5 sm:grid-cols-2 md:gap-10">
         {CAPABILITIES.map((capability) => (
           <li key={capability.id}>
-            <Card className="h-56 bg-slate-700/20 p-1">
+            <Card className="h-40 bg-slate-700/20 p-1 sm:h-56">
               <CardHeader as="header">
                 <div
                   className={cn(
