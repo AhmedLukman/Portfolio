@@ -126,85 +126,44 @@ const Chat = () => {
     "Can I see some of your projects?",
     "How to contact you?",
     "Do you have any certificates I can download?",
-  ]  
-
-  const [hasAccess, setHasAccess] = useState(false)
-  const [numberOfTimesClicked, setNumberOfTimesClicked] = useState(0)
-
-  const handleClick = () => {
-    setNumberOfTimesClicked(prevState => prevState + 1)
-  }
-
-  useEffect(() => {
-    if (numberOfTimesClicked === 4) {
-      setHasAccess(true)
-    }
-  }, [numberOfTimesClicked])
-
+  ]
 
   return (
-    <>
-      {!hasAccess && (
-        <div className="flex h-full w-full items-center gap-3 justify-center">
-          <p>You do not have access yet!</p>
-          <svg
-            onClick={handleClick}
-            role="button"
-            width="50"
-            height="50"
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="50"
-              cy="50"
-              r="45"
-              fill="#ff4d4f"
-              stroke="#000"
-              strokeWidth="5"
-            />
-            <rect x="20" y="45" width="60" height="10" fill="#fff" />
-          </svg>
-        </div>
-      )}
-      {hasAccess && (
-        <div className="flex h-full w-full flex-col justify-between py-10 text-white xl:py-12">
-          {messages.length === 0 && isLoaded && <ChatIntroduction />}
-          {!isLoaded && (
-            <div className="flex h-full w-full items-center justify-center">
-              <Spinner size="lg" />
+      <div className="flex h-full w-full flex-col justify-between py-10 text-white xl:py-12">
+        {messages.length === 0 && isLoaded && <ChatIntroduction />}
+        {!isLoaded && (
+          <div className="flex h-full w-full items-center justify-center">
+            <Spinner size="lg" />
+          </div>
+        )}
+        {messages.length > 0 && (
+          <ChatMessages messages={messages} status={status} />
+        )}
+        <div className="space-y-4">
+          {messages.length > 0 && status === "ready" && (
+            <div className="flex justify-center">
+              <Button
+                onPress={handleClearChat}
+                className="border border-gray-600/50 bg-gray-800/70 text-sm text-gray-300 transition-colors hover:bg-gray-700/70 hover:text-white"
+              >
+                Clear chat
+              </Button>
             </div>
           )}
-          {messages.length > 0 && (
-            <ChatMessages messages={messages} status={status} />
-          )}
-          <div className="space-y-4">
-            {messages.length > 0 && status === "ready" && (
-              <div className="flex justify-center">
-                <Button
-                  onPress={handleClearChat}
-                  className="border border-gray-600/50 bg-gray-800/70 text-sm text-gray-300 transition-colors hover:bg-gray-700/70 hover:text-white"
-                >
-                  Clear chat
-                </Button>
-              </div>
-            )}
-            <PlaceholdersAndVanishInput
-              placeholders={placeholders}
-              status={status}
-              onSubmitAction={(e) => {
-                e.preventDefault()
-                sendMessage({ text: input })
-                setInput("")
-              }}
-              onChangeAction={(e) => {
-                setInput(e.currentTarget.value)
-              }}
-            />
-          </div>
+          <PlaceholdersAndVanishInput
+            placeholders={placeholders}
+            status={status}
+            onSubmitAction={(e) => {
+              e.preventDefault()
+              sendMessage({ text: input })
+              setInput("")
+            }}
+            onChangeAction={(e) => {
+              setInput(e.currentTarget.value)
+            }}
+          />
         </div>
-      )}
-    </>
+      </div>
   )
 }
 
