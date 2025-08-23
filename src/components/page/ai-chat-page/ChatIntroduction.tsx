@@ -58,7 +58,7 @@ const ChatIntroduction = () => {
         {CAPABILITIES.map((capability) => (
           <li key={capability.id}>
             <Card className="h-56 bg-slate-700/20 p-1">
-              <CardHeader as="h2">
+              <CardHeader as="header">
                 <div
                   className={cn(
                     "mr-3 flex h-8 w-8 items-center justify-center rounded-lg",
