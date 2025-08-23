@@ -6,6 +6,46 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Card, CardBody, CardHeader } from "@heroui/card"
+import { cn } from "@heroui/theme"
+
+const CAPABILITIES = [
+  {
+    id: 1,
+    title: "Personal Q&A",
+    description:
+      "Ask about my background, skills, experience, or any professional questions you have",
+    icon: faComment,
+    iconColor: "text-purple-600",
+    bgColor: "bg-purple-100",
+  },
+  {
+    id: 2,
+    title: "Navigation",
+    description:
+      "Navigate to specific sections of my portfolio, open my professional profiles or see where I have been featured",
+    icon: faLocationArrow,
+    iconColor: "text-blue-600",
+    bgColor: "bg-blue-100",
+  },
+  {
+    id: 3,
+    title: "Download Resources",
+    description:
+      "Download my certifications, resume, or other relevant documents",
+    icon: faFileDownload,
+    iconColor: "text-pink-600",
+    bgColor: "bg-pink-100",
+  },
+  {
+    id: 4,
+    title: "Send Email",
+    description:
+      "Send me an email though the AI for communication or opportunities",
+    icon: faEnvelope,
+    iconColor: "text-red-600",
+    bgColor: "bg-red-100",
+  },
+]
 
 const ChatIntroduction = () => {
   return (
@@ -15,85 +55,30 @@ const ChatIntroduction = () => {
         about my professional journey!
       </p>
       <ul className="grid h-full grid-cols-2 gap-10">
-        <li>
-          <Card className="h-56 bg-slate-700/20 p-1">
-            <CardHeader as="h2">
-              <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-lg bg-purple-100">
-                <FontAwesomeIcon
-                  icon={faComment}
-                  className="text-purple-600"
-                  fontSize="18"
-                />
-              </div>
-              <h2 className="text-lg font-semibold">Personal Q&A</h2>
-            </CardHeader>
-            <CardBody>
-              <p>
-                Ask about my background, skills, experience, or any professional
-                questions you have
-              </p>
-            </CardBody>
-          </Card>
-        </li>
-        <li>
-          <Card className="h-56 bg-slate-700/20 p-1">
-            <CardHeader as="h2">
-              <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100">
-                <FontAwesomeIcon
-                  icon={faLocationArrow}
-                  className="text-blue-600"
-                  fontSize="18"
-                />
-              </div>
-              <h2 className="text-lg font-semibold">Navigation</h2>
-            </CardHeader>
-            <CardBody>
-              <p>
-                Navigate to specific sections of my portfolio, open my
-                professional profiles or see where I have been featured
-              </p>
-            </CardBody>
-          </Card>
-        </li>
-        <li>
-          <Card className="h-56 bg-slate-700/20 p-1">
-            <CardHeader as="h2">
-              <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-lg bg-pink-100">
-                <FontAwesomeIcon
-                  icon={faFileDownload}
-                  className="text-pink-600"
-                  fontSize="18"
-                />
-              </div>
-              <h2 className="text-lg font-semibold">Download Resources</h2>
-            </CardHeader>
-            <CardBody>
-              <p>
-                Download my certifications, resume, or other relevant documents
-              </p>
-            </CardBody>
-          </Card>
-        </li>
-        <li>
-          <Card className="h-56 bg-slate-700/20 p-1">
-            <CardHeader as="h2">
-              <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-lg bg-red-100">
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  className="text-red-600"
-                  fontSize="18"
-                />
-              </div>
-              <h2 className="text-lg font-semibold">Send Email</h2>
-            </CardHeader>
-            <CardBody>
-              <p>
-                Send me an email though the AI for communication or
-                opportunities
-              </p>
-            </CardBody>
-          </Card>
-        </li>
+        {CAPABILITIES.map((capability) => (
+          <li key={capability.id}>
+            <Card className="h-56 bg-slate-700/20 p-1">
+              <CardHeader as="h2">
+                <div
+                  className={cn(
+                    "mr-3 flex h-8 w-8 items-center justify-center rounded-lg",
+                    capability.bgColor,
+                  )}
+                >
+                  <FontAwesomeIcon
+                    icon={capability.icon}
+                    className={capability.iconColor}
+                    fontSize="18"
+                  />
+                </div>
+                <h2 className="text-lg font-semibold">{capability.title}</h2>
+              </CardHeader>
+              <CardBody>
+                <p>{capability.description}</p>
+              </CardBody>
+            </Card>
+          </li>
+        ))}
       </ul>
     </div>
   )
