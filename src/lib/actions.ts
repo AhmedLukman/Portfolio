@@ -3,16 +3,14 @@
 import "server-only"
 
 import { Resend } from "resend"
-import { z } from "zod"
+import z from "zod"
 import { EmailTemplate } from "../components/page/contact-page/EmailTemplate"
 import { initialFormState } from "./constants"
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required").trim(),
-  recipientEmail: z
-    .string()
-    .min(1, "Email is required")
-    .email("Invalid email address")
+  recipientEmail: z.email("Invalid email address")
+      .min(1, "Email is required")
     .trim(),
   message: z.string().min(1, "Message is required").trim(),
   db: z.enum(["success", "error"]).optional(),
