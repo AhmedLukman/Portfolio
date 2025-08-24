@@ -702,12 +702,7 @@ export const PROJECTS: Project[] = [
   },
 ]
 
-type Recognition = {
-  title: string
-  url: string
-}
-
-export const RECOGNITIONS: Recognition[] = [
+export const RECOGNITIONS = [
   {
     title:
       "14-year old Aga Khan Student develops an App that enables you to vote with your phone - Aga Khan Schools",
