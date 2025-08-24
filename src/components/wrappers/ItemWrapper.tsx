@@ -5,7 +5,7 @@ import { cn } from "@heroui/theme"
 import React from "react"
 import { useInView } from "react-intersection-observer"
 
-type ItemWrapperProps = {
+type Props = {
   children: React.ReactNode
   index: number
   as?: any
@@ -17,7 +17,7 @@ const ItemWrapper = ({
   index,
   as: Component = "li",
   className,
-}: ItemWrapperProps) => {
+}: Props) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.6,

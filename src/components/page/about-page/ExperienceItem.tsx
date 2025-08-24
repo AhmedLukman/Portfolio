@@ -17,7 +17,7 @@ const calculateDuration = (start: Date, end: Date) => {
   })
 }
 
-type ExperienceItemProps = {
+type Props = {
   item: {
     index: number
     title: string
@@ -43,7 +43,7 @@ const ExperienceItem = ({
     endDate,
   },
   experienceCount,
-}: ExperienceItemProps) => {
+}: Props) => {
   const endOrCurrent = endDate ?? new Date()
   return (
     <li

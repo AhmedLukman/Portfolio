@@ -1,6 +1,6 @@
 import Script from "next/script"
 
-type ProjectSchemaProps = {
+type Props = {
   name: string
   description: string
   url: string
@@ -16,7 +16,7 @@ export default function ProjectSchema({
   image,
   datePublished,
   codeRepository,
-}: ProjectSchemaProps) {
+}: Props) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",

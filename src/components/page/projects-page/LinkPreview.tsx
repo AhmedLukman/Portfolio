@@ -12,7 +12,7 @@ import Image from "next/image"
 import { encode } from "qss"
 import React from "react"
 
-type LinkPreviewProps = {
+type Props = {
   children: React.ReactNode
   url: string
   className?: string
@@ -35,7 +35,7 @@ export const LinkPreview = ({
   layout = "fixed",
   isStatic = false,
   imageSrc = "",
-}: LinkPreviewProps) => {
+}: Props) => {
   let src
   if (!isStatic) {
     const params = encode({
