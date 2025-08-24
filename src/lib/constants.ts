@@ -18,7 +18,7 @@ export const SOCIAL_LINKS = [
     icon: faLinkedin,
     path: "https://www.linkedin.com/in/ahmedlukman",
   },
-] as const
+]
 
 export const PAGE_LINKS = [
   {
@@ -46,13 +46,13 @@ export const PAGE_LINKS = [
     path: "/ai",
     icon: faComment,
   },
-] as const
+] 
 
 export const initialFormState = {
   name: "",
   recipientEmail: "",
   message: "",
-} as const
+}
 
 export const ProjectStatus = {
   completed: "Completed",
