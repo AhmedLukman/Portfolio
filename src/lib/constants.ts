@@ -52,6 +52,7 @@ export const initialFormState = {
   name: "",
   recipientEmail: "",
   message: "",
+  db: undefined,
 }
 
 export const ProjectStatus = {
