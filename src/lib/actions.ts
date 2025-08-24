@@ -9,8 +9,9 @@ import { initialFormState } from "./constants"
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required").trim(),
-  recipientEmail: z.email("Invalid email address")
-      .min(1, "Email is required")
+  recipientEmail: z
+    .email("Invalid email address")
+    .min(1, "Email is required")
     .trim(),
   message: z.string().min(1, "Message is required").trim(),
   db: z.enum(["success", "error"]).optional(),
@@ -30,7 +31,6 @@ export const sendEmailByAI = async ({
   name,
   message,
 }: Omit<ContactForm, "db">) => {
-  // throw new Error("error bro")
   const resend = new Resend(RESEND_API_KEY)
   await resend.emails.send({
     from: "Contact <onboarding@resend.dev>",
@@ -45,6 +45,36 @@ export const sendEmailByAI = async ({
     text: `Contact form submission from ${name}. Please view this email in an HTML-compatible email client.`,
   })
 }
+const firstError = (
+  tree: {
+    errors: string[]
+    properties?:
+      | {
+          name?:
+            | {
+                errors: string[]
+              }
+            | undefined
+          recipientEmail?:
+            | {
+                errors: string[]
+              }
+            | undefined
+          message?:
+            | {
+                errors: string[]
+              }
+            | undefined
+          db?:
+            | {
+                errors: string[]
+              }
+            | undefined
+        }
+      | undefined
+  },
+  key: keyof ContactForm,
+) => tree.properties?.[key]?.errors?.[0] ?? ""
 
 export const sendEmail = async (
   _: unknown,
@@ -54,11 +84,12 @@ export const sendEmail = async (
   const { success, data, error } = contactFormSchema.safeParse(parsedFormData)
 
   if (!success) {
+    const tree = z.treeifyError(error)
     return {
       ...initialFormState,
-      name: error.flatten().fieldErrors.name?.[0] ?? "",
-      recipientEmail: error.flatten().fieldErrors.recipientEmail?.[0] ?? "",
-      message: error.flatten().fieldErrors.message?.[0] ?? "",
+      name: firstError(tree, "name"),
+      recipientEmail: firstError(tree, "recipientEmail"),
+      message: firstError(tree, "message"),
     }
   }
 
