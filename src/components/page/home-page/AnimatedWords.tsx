@@ -1,6 +1,14 @@
-import { WEB_QUALITIES } from "@/lib/data"
 import SectionWrapper from "../../wrappers/SectionWrapper"
 import { FlipWords } from "./FlipWords"
+
+const WEB_QUALITIES = [
+  "Performant",
+  "Responsive",
+  "Aesthetic",
+  "Functional",
+  "Accessible",
+  "Semantic",
+]
 
 const AnimatedWords = () => {
   return (

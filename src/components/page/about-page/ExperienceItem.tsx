@@ -1,4 +1,3 @@
-import { EXPERIENCE } from "@/lib/data"
 import { convertDate } from "@/lib/utils"
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card"
 import { Chip } from "@heroui/chip"
@@ -29,6 +28,7 @@ type ExperienceItemProps = {
     endDate?: Date
     companyLogo: StaticImageData
   }
+  experienceCount: number
 }
 
 const ExperienceItem = ({
@@ -42,6 +42,7 @@ const ExperienceItem = ({
     type,
     endDate,
   },
+  experienceCount,
 }: ExperienceItemProps) => {
   const endOrCurrent = endDate ?? new Date()
   return (
@@ -49,11 +50,11 @@ const ExperienceItem = ({
       className={`relative flex lg:${index % 2 === 0 ? "justify-end" : "justify-start"} justify-center`}
     >
       {/* Timeline dot - hidden on mobile */}
-      <div className="absolute left-1/2 top-1/2 z-10 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-purple-600 lg:block"></div>
+      <div className="absolute top-1/2 left-1/2 z-10 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-purple-600 lg:block"></div>
 
       {/* Mobile vertical connector between items - hidden on desktop */}
-      {index < EXPERIENCE.length - 1 && (
-        <div className="absolute left-1/2 top-full h-12 w-0.5 -translate-x-1/2 transform bg-slate-500 lg:hidden"></div>
+      {index < experienceCount - 1 && (
+        <div className="absolute top-full left-1/2 h-12 w-0.5 -translate-x-1/2 transform bg-slate-500 lg:hidden"></div>
       )}
 
       {/* Horizontal connector line - hidden on mobile */}
@@ -91,7 +92,7 @@ const ExperienceItem = ({
                 />
                 <p className="">{company}</p>
               </div>
-              <div className="text-sm text-body lg:mt-0">
+              <div className="text-body text-sm lg:mt-0">
                 <time dateTime={startDate.toISOString()}>
                   {convertDate(startDate)}
                 </time>{" "}
