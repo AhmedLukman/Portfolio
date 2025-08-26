@@ -68,7 +68,7 @@ const ProjectOverview = ({
           </h2>
           <AnimatedTooltip items={metrics} />
         </div>
-        <div className="animate-slide-in-from-bottom animation-delay-1500 flex justify-between opacity-0">
+        <div className="animate-slide-in-from-bottom animation-delay-1500 flex flex-wrap sm:flex-nowrap justify-between opacity-0">
           <div className="flex flex-col gap-1">
             <h2 className="text-xl font-semibold">
               <span className="purple-gradient">Start Date</span>
@@ -103,7 +103,7 @@ const ProjectOverview = ({
               </time>
             </div>
           </div>
-          <div className="flex flex-col gap-1">
+          <div className="mt-10 flex w-full flex-col gap-1 sm:mt-0 sm:w-auto">
             <h2 className="text-xl font-semibold">
               <span className="purple-gradient">Status</span>
             </h2>
