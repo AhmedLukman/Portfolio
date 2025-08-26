@@ -28,7 +28,7 @@ const CaseStudyCard = ({
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 640) // sm breakpoint
+      setIsMobile(window.innerWidth < 1024) // md breakpoint
     }
 
     checkMobile()
