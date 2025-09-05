@@ -1,7 +1,8 @@
 "use client"
 
 import { PlaceholdersAndVanishInput } from "@/components/ui/PlaceholderAndVanishInput"
-import { PAGE_LINKS } from "@/lib/constants"
+import { PAGE_LINKS, SOCIAL_LINKS } from "@/lib/constants"
+import { CERTIFICATIONS } from "@/lib/data"
 import { useChat } from "@ai-sdk/react"
 import { Button } from "@heroui/button"
 import { Spinner } from "@heroui/spinner"
@@ -9,10 +10,23 @@ import { addToast } from "@heroui/toast"
 import { UIDataTypes, UIMessage, UITools } from "ai"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
+import { z } from "zod"
 import ChatIntroduction from "./ChatIntroduction"
 import ChatMessages from "./ChatMessages"
 
 const CHAT_STORAGE_KEY = "ai-chat-messages"
+
+const NavigatorInputSchema = z.object({
+  route: z.enum(PAGE_LINKS.map((link) => link.path)),
+})
+
+const ExternalLinkInputSchema = z.object({
+  link: z.enum(SOCIAL_LINKS.map((link) => link.path)),
+})
+
+const CertificateDownloaderInputSchema = z.object({
+  fileName: z.enum(CERTIFICATIONS.map((cert) => cert.file)),
+})
 
 const saveChatMessages = (
   messages: UIMessage<unknown, UIDataTypes, UITools>[],
@@ -42,8 +56,22 @@ const Chat = () => {
   const { messages, sendMessage, status, error, setMessages } = useChat({
     onToolCall: async ({ toolCall: { toolName, input } }) => {
       if (toolName === "navigator") {
-        type PagePath = (typeof PAGE_LINKS)[number]["path"]
-        const { route } = input as { route: PagePath }
+        const result = NavigatorInputSchema.safeParse(input)
+        if (!result.success) {
+          console.error(`Invalid navigator input:`, result.error)
+          addToast({
+            title: "Navigation failed: Invalid route",
+            color: "danger",
+            hideIcon: true,
+            variant: "flat",
+            classNames: {
+              base: "bg-heading",
+            },
+          })
+          return
+        }
+
+        const { route } = result.data
         router.push(route)
         addToast({
           title: `Navigated to ${route}`,
@@ -55,7 +83,22 @@ const Chat = () => {
           },
         })
       } else if (toolName === "externalLinkOpener") {
-        const { link } = input as { link: string }
+        const result = ExternalLinkInputSchema.safeParse(input)
+        if (!result.success) {
+          console.error(`Invalid external link input:`, result.error)
+          addToast({
+            title: "Failed to open link: Invalid URL",
+            color: "danger",
+            hideIcon: true,
+            variant: "flat",
+            classNames: {
+              base: "bg-heading",
+            },
+          })
+          return
+        }
+
+        const { link } = result.data
         window.open(link, "_blank", "noopener,noreferrer")
         addToast({
           title: `Opened ${link}`,
@@ -67,7 +110,22 @@ const Chat = () => {
           },
         })
       } else if (toolName === "certificateDownloader") {
-        const { fileName } = input as { fileName: string }
+        const result = CertificateDownloaderInputSchema.safeParse(input)
+        if (!result.success) {
+          console.error(`Invalid certificate downloader input:`, result.error)
+          addToast({
+            title: "Download failed: Invalid filename",
+            color: "danger",
+            hideIcon: true,
+            variant: "flat",
+            classNames: {
+              base: "bg-heading",
+            },
+          })
+          return
+        }
+
+        const { fileName } = result.data
         const link = document.createElement("a")
         link.href = `/assets/files/${fileName}.pdf`
         link.download = fileName
