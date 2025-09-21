@@ -1,4 +1,5 @@
 import AuthJS from "public/assets/images/backend/authjs.svg"
+import Elixir from "public/assets/images/backend/elixir.svg"
 import PostgreSQL from "public/assets/images/backend/postgresql.svg"
 import Prisma from "public/assets/images/backend/prisma.svg"
 import Resend from "public/assets/images/backend/resend.svg"
@@ -96,6 +97,10 @@ const BACKEND_TECHS = [
   {
     name: "Resend",
     src: Resend,
+  },
+  {
+    name: "Elixir",
+    src: Elixir,
   },
 ]
 
