@@ -6,7 +6,6 @@ import Resend from "public/assets/images/backend/resend.svg"
 import Supabase from "public/assets/images/backend/supabase.svg"
 import ChatGPT from "public/assets/images/devtools/chatgpt.svg"
 import Claude from "public/assets/images/devtools/claude.svg"
-import Copilot from "public/assets/images/devtools/copilot.svg"
 import ESLint from "public/assets/images/devtools/eslint.svg"
 import Git from "public/assets/images/devtools/git.svg"
 import GitHub from "public/assets/images/devtools/github.svg"
@@ -14,7 +13,6 @@ import NPM from "public/assets/images/devtools/npm.svg"
 import Prettier from "public/assets/images/devtools/prettier.svg"
 import Vercel from "public/assets/images/devtools/vercel.svg"
 import Vite from "public/assets/images/devtools/vite.svg"
-import VSCode from "public/assets/images/devtools/vscode.svg"
 import AceternityUI from "public/assets/images/frontend/aceternity.webp"
 import CSS from "public/assets/images/frontend/css.svg"
 import HeroUI from "public/assets/images/frontend/heroui.svg"
@@ -26,6 +24,7 @@ import Svelte from "public/assets/images/frontend/svelte.svg"
 import Tailwind from "public/assets/images/frontend/tailwind.svg"
 import TypeScript from "public/assets/images/frontend/typescript.svg"
 import Zod from "public/assets/images/frontend/zod.svg"
+import Trae from "public/assets/images/trae.svg"
 import { AnimatedTooltip } from "../../ui/AnimatedTooltip"
 import SectionHeader from "../../wrappers/SectionHeader"
 import SectionWrapper from "../../wrappers/SectionWrapper"
@@ -106,16 +105,12 @@ const BACKEND_TECHS = [
 
 const DEV_TOOLS = [
   {
-    name: "VSCode",
-    src: VSCode,
+    name: "TRAE",
+    src: Trae,
   },
   {
     name: "ChatGPT",
     src: ChatGPT,
-  },
-  {
-    name: "GitHub Copilot",
-    src: Copilot,
   },
   {
     name: "Claude",
