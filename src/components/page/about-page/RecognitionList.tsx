@@ -2,9 +2,8 @@ import ItemWrapper from "@/components/wrappers/ItemWrapper"
 import { RECOGNITIONS } from "@/lib/data"
 import { Card, CardFooter, CardHeader } from "@heroui/card"
 import { Link } from "@heroui/link"
-import NextLink from "next/link"
 
-const RecognitionList = async () => {
+const RecognitionList = () => {
   return (
     <ul className="space-y-8 md:grid-cols-2 xl:gap-10">
       {RECOGNITIONS.map((recognition, index) => (
@@ -22,7 +21,6 @@ const RecognitionList = async () => {
             <CardFooter as="footer" className="flex justify-end">
               <Link
                 isExternal
-                as={NextLink}
                 className="text-slate-200 underline"
                 href={recognition.url}
               >
