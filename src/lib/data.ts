@@ -8,9 +8,11 @@ import {
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons"
 import AuthJS from "public/assets/images/backend/authjs.svg"
+import Elixir from "public/assets/images/backend/elixir.svg"
 import PostgreSQL from "public/assets/images/backend/postgresql.svg"
 import Prisma from "public/assets/images/backend/prisma.svg"
 import Resend from "public/assets/images/backend/resend.svg"
+import Supabase from "public/assets/images/backend/supabase.svg"
 import CinemanieLaptop from "public/assets/images/cinemania-laptop.png"
 import Cinemania from "public/assets/images/cinemania.png"
 import DeviceDigitalLearning from "public/assets/images/device-digitallearning.png"
@@ -18,6 +20,14 @@ import DeviceMasterTracker from "public/assets/images/device-mastertracker.png"
 import DeviceNextEvent from "public/assets/images/device-nextevent.png"
 import DevicePortfolio from "public/assets/images/device-portfolio.png"
 import DeviceWorldVisualizer from "public/assets/images/device-worldvisualizer.png"
+import ChatGPT from "public/assets/images/devtools/chatgpt.svg"
+import Claude from "public/assets/images/devtools/claude.svg"
+import ESLint from "public/assets/images/devtools/eslint.svg"
+import Git from "public/assets/images/devtools/git.svg"
+import GitHub from "public/assets/images/devtools/github.svg"
+import NPM from "public/assets/images/devtools/npm.svg"
+import Prettier from "public/assets/images/devtools/prettier.svg"
+import Vercel from "public/assets/images/devtools/vercel.svg"
 import Vite from "public/assets/images/devtools/vite.svg"
 import DigitalLearning from "public/assets/images/digitallearning.png"
 import Framer from "public/assets/images/framer.svg"
@@ -28,19 +38,26 @@ import HTML5 from "public/assets/images/frontend/html5.svg"
 import JavaScript from "public/assets/images/frontend/javascript.svg"
 import Next from "public/assets/images/frontend/next.svg"
 import React from "public/assets/images/frontend/react.svg"
+import Svelte from "public/assets/images/frontend/svelte.svg"
 import Tailwind from "public/assets/images/frontend/tailwind.svg"
 import TypeScript from "public/assets/images/frontend/typescript.svg"
 import Zod from "public/assets/images/frontend/zod.svg"
 import GreatLearning from "public/assets/images/greatlearning.jpeg"
+import IlabAfrica from "public/assets/images/ilabafrica.jpg"
 import MasterTracker from "public/assets/images/mastertracker.png"
 import NextEvent from "public/assets/images/nextevent.png"
 import Portfolio from "public/assets/images/portfolio.png"
 import SoloLearn from "public/assets/images/sololearn.jpeg"
 import Strathmore from "public/assets/images/strathmore.jpeg"
+import Kelvin from "public/assets/images/testimonials/kelvin.jpg"
+import ThomsonReuters from "public/assets/images/thomsonreuters.png"
 import ThreeJS from "public/assets/images/threejs.svg"
+import Trae from "public/assets/images/trae.svg"
+import Trinetium from "public/assets/images/trinetium.jpeg"
 import WorldVisualizer from "public/assets/images/worldvisualizer.png"
+import Yoonka from "public/assets/images/yoonka.jpeg"
 import { PORTFOLIO_SITE, ProjectStatus } from "./constants"
-import { Project } from "./types" 
+import { Project } from "./types"
 
 export const CERTIFICATIONS = [
   {
@@ -724,5 +741,171 @@ export const RECOGNITIONS = [
   {
     title: "President Uhuru Kenyatta recognizes Ahmed Lukman Innovation",
     url: "https://youtu.be/K2TuzqGanqw?t=11",
+  },
+]
+
+export const FRONT_END_TECHS = [
+  {
+    name: "HTML5",
+    src: HTML5,
+  },
+  {
+    name: "CSS",
+    src: CSS,
+  },
+  {
+    name: "JavaScript",
+    src: JavaScript,
+  },
+  {
+    name: "React.js",
+    src: React,
+  },
+  {
+    name: "Next.js",
+    src: Next,
+  },
+  {
+    name: "Svelte",
+    src: Svelte,
+  },
+  {
+    name: "TypeScript",
+    src: TypeScript,
+  },
+  {
+    name: "Tailwind CSS",
+    src: Tailwind,
+  },
+  {
+    name: "HeroUI",
+    src: HeroUI,
+  },
+  {
+    name: "AceternityUI",
+    src: AceternityUI,
+  },
+  {
+    name: "Zod",
+    src: Zod,
+  },
+]
+
+export const BACKEND_TECHS = [
+  {
+    name: "Auth.js",
+    src: AuthJS,
+  },
+  {
+    name: "Prisma",
+    src: Prisma,
+  },
+  {
+    name: "Supabase",
+    src: Supabase,
+  },
+  {
+    name: "PostgreSQL",
+    src: PostgreSQL,
+  },
+  {
+    name: "Resend",
+    src: Resend,
+  },
+  {
+    name: "Elixir",
+    src: Elixir,
+  },
+]
+
+export const DEV_TOOLS = [
+  {
+    name: "TRAE",
+    src: Trae,
+  },
+  {
+    name: "ChatGPT",
+    src: ChatGPT,
+  },
+  {
+    name: "Claude",
+    src: Claude,
+  },
+  {
+    name: "Vercel",
+    src: Vercel,
+  },
+  {
+    name: "ESLint",
+    src: ESLint,
+  },
+  {
+    name: "Prettier",
+    src: Prettier,
+  },
+  {
+    name: "NPM",
+    src: NPM,
+  },
+  {
+    name: "Git",
+    src: Git,
+  },
+  {
+    name: "GitHub",
+    src: GitHub,
+  },
+  {
+    name: "Vite",
+    src: Vite,
+  },
+]
+
+export const TESTIMONIALS = [
+  {
+    name: "Kelvin Ndambuki",
+    designation: "ML Engineer at Jacaranda Health",
+    quote:
+      "From the very beginning, Ahmed stood out for his exceptional curiosity, discipline, and deep understanding of programming and algorithms. His specialization in full-stack software development has been nothing short of impressive — his current work reflects the same dedication, clarity, and problem-solving mindset that made him exceptional from the start.",
+    src: Kelvin,
+  },
+]
+
+export const EXPERIENCE = [
+  {
+    title: "Front-end Developer",
+    type: "Part-Time",
+    description: "To be updated",
+    company: "Thomson Reuters",
+    startDate: new Date(2024, 9),
+    companyLogo: ThomsonReuters,
+  },
+  {
+    title: "Front-end Developer",
+    type: "Part-Time",
+    description: "To be updated",
+    company: "Yoonka",
+    startDate: new Date(2024, 9),
+    companyLogo: Yoonka,
+  },
+  {
+    title: "Front-end Developer",
+    type: "Internship",
+    description:
+      "Collaborated adeptly with UI/UX designers and fellow engineers to craft clean, high-performance front-end web solutions. Recognized as the Lead Intern, entrusted with independent design responsibilities due to a trusted sense of aesthetic.",
+    company: "@iLabAfrica",
+    startDate: new Date(2023, 1),
+    endDate: new Date(2023, 7),
+    companyLogo: IlabAfrica,
+  },
+  {
+    title: "Front-end Developer",
+    type: "Internship",
+    description:
+      "Developed visually appealing UI components for the web, integrating dynamic features such as drag and drop, and seamlessly incorporated APIs using Next.js and Express. Recognized for achieving high performance and receiving praise for design excellence.",
+    company: "Trinetium DMCC",
+    startDate: new Date(2022, 6),
+    endDate: new Date(2022, 9),
+    companyLogo: Trinetium,
   },
 ]

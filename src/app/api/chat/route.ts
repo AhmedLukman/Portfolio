@@ -1,6 +1,15 @@
 import { sendEmailByAI } from "@/lib/actions"
 import { PAGE_LINKS, SOCIAL_LINKS } from "@/lib/constants"
-import { CERTIFICATIONS, PROJECTS, RECOGNITIONS } from "@/lib/data"
+import {
+  BACKEND_TECHS,
+  CERTIFICATIONS,
+  DEV_TOOLS,
+  EXPERIENCE,
+  FRONT_END_TECHS,
+  PROJECTS,
+  RECOGNITIONS,
+  TESTIMONIALS,
+} from "@/lib/data"
 import { google } from "@ai-sdk/google"
 import {
   convertToModelMessages,
@@ -38,6 +47,30 @@ export async function POST(req: Request) {
     stopWhen: stepCountIs(15),
     system: process.env.SYSTEM_PROMPT,
     tools: {
+      certificatesRetriever: tool({
+        description: "Retrieve the certificates",
+        execute: () => CERTIFICATIONS,
+      }),
+      projectsRetriever: tool({
+        description: "Retrieve the projects",
+        execute: () => PROJECTS,
+      }),
+      recognitionsRetriever: tool({
+        description: "Retrieve the recognitions",
+        execute: () => RECOGNITIONS,
+      }),
+      techAndToolsRetriever: tool({
+        description: "Retrieve the technologies and tools",
+        execute: () => [...FRONT_END_TECHS, ...BACKEND_TECHS, ...DEV_TOOLS],
+      }),
+      testimonialsRetriever: tool({
+        description: "Retrieve the testimonials",
+        execute: () => TESTIMONIALS,
+      }),
+      experienceRetriever: tool({
+        description: "Retrieve the experience",
+        execute: () => EXPERIENCE,
+      }),
       navigator: tool({
         description: "Navigate to a specific route in the Portfolio",
         inputSchema: z.object({
