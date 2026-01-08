@@ -1,7 +1,6 @@
 import { faMessage } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Button } from "@heroui/button"
-import Link from "next/link"
+import HeroButton from "@/components/ui/HeroButton"
 import SectionWrapper from "../../wrappers/SectionWrapper"
 import { BackgroundGradient } from "./BackgroundGradient"
 
@@ -17,14 +16,13 @@ const CallToAction = () => {
           just have a chat? Get in touch today!
         </p>
         <footer className="flex justify-center">
-          <Button
-            as={Link}
+          <HeroButton
             href="/contact"
             role="link"
             endContent={<FontAwesomeIcon icon={faMessage} />}
           >
             Contact me
-          </Button>
+          </HeroButton>
         </footer>
       </BackgroundGradient>
     </SectionWrapper>

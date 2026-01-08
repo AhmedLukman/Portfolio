@@ -1,9 +1,8 @@
 import { faMedal } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link } from "@heroui/link"
 import Image from "next/image"
-import NextLink from "next/link"
 import ManNearComputerImage from "public/assets/images/man-near-computer.svg"
+import HeroLink from "@/components/ui/HeroLink"
 import SectionWrapper from "../../wrappers/SectionWrapper"
 
 const Introduction = () => {
@@ -16,23 +15,21 @@ const Introduction = () => {
           with a distinguished Diploma in Business Information Technology{" "}
           <FontAwesomeIcon icon={faMedal} /> Beyond academic excellence, I
           possess a rich tapestry of{" "}
-          <Link
-            as={NextLink}
+          <HeroLink
             underline="always"
             href="/about#certifications"
             color="foreground"
           >
             certifications
-          </Link>{" "}
+          </HeroLink>{" "}
           from top-tier courses and boot-camps, alongside{" "}
-          <Link
+          <HeroLink
             underline="always"
-            as={NextLink}
             href="/about#recognition"
             color="foreground"
           >
             recognition
-          </Link>{" "}
+          </HeroLink>{" "}
           in various platforms, including national media. My unwavering
           dedication to mastering new skills and solving complex problems fuels
           my passion for programming, making me an ideal candidate anywhere.
