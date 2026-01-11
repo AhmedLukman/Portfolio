@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "bun run --bun next dev",
-    "build": "bun --bun next build", 
-    "start": "bun --bun next start", 
+    "build": "bun --bun next build",
+    "start": "bun --bun next start",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -24,6 +24,7 @@
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "ai": "^5.0.0-beta.25",
+    "babel-plugin-react-compiler": "^1.0.0",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.23.6",
     "next": "16.1.1",
