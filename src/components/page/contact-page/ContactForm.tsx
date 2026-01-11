@@ -30,7 +30,7 @@ const ContactForm = () => {
 
   useEffect(() => {
     if (db) {
-      setShowAlert(true)
+      queueMicrotask(() => setShowAlert(true))
     }
     if (db === "success" && formRef.current) {
       formRef.current.reset()

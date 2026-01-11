@@ -165,7 +165,7 @@ const Chat = () => {
     if (savedMessages.length > 0) {
       setMessages(savedMessages)
     }
-    setIsLoaded(true)
+    queueMicrotask(() => setIsLoaded(true))
   }, [setMessages])
 
   // Save messages to localStorage whenever response has been received

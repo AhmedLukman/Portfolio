@@ -38,8 +38,10 @@ const CaseStudyCard = ({
   }, [])
 
   useEffect(() => {
-    if (isMobile) setHovered(inView)
-    else setHovered(false)
+    queueMicrotask(() => {
+      if (isMobile) setHovered(inView)
+      else setHovered(false)
+    })
   }, [inView, isMobile])
 
   return (

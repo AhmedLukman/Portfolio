@@ -1,7 +1,7 @@
 "use client"
 import { cn } from "@heroui/theme"
 import { motion } from "framer-motion"
-import React from "react"
+import React, { useState } from "react"
 
 export const BackgroundBeams = React.memo(
   ({ className }: { className?: string }) => {
@@ -57,6 +57,16 @@ export const BackgroundBeams = React.memo(
       "M-44 -573C-44 -573 24 -168 488 -41C952 86 1020 491 1020 491",
       "M-37 -581C-37 -581 31 -176 495 -49C959 78 1027 483 1027 483",
     ]
+
+    // Pre-compute random values in useState initializer (allowed to be impure)
+    const [animationValues] = useState(() =>
+      paths.map(() => ({
+        y2End: 93 + Math.random() * 8,
+        duration: Math.random() * 10 + 10,
+        delay: Math.random() * 10,
+      }))
+    )
+
     return (
       <div
         className={cn(
@@ -104,13 +114,13 @@ export const BackgroundBeams = React.memo(
                   x1: ["0%", "100%"],
                   x2: ["0%", "95%"],
                   y1: ["0%", "100%"],
-                  y2: ["0%", `${93 + Math.random() * 8}%`],
+                  y2: ["0%", `${animationValues[index].y2End}%`],
                 }}
                 transition={{
-                  duration: Math.random() * 10 + 10,
+                  duration: animationValues[index].duration,
                   ease: "easeInOut",
                   repeat: Infinity,
-                  delay: Math.random() * 10,
+                  delay: animationValues[index].delay,
                 }}
               >
                 <stop stopColor="#18CCFC" stopOpacity="0"></stop>

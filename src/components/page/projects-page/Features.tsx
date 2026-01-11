@@ -5,6 +5,9 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { BorderContainer } from "./BorderContainer"
 
+// Generate varied durations based on index - deterministic but visually varied
+const getDuration = (index: number) => 10000 + ((index * 7919) % 10000)
+
 const Features = ({ project: { features } }: { project: Project }) => {
   return (
     <section className="mt-20">
@@ -13,7 +16,7 @@ const Features = ({ project: { features } }: { project: Project }) => {
         {features.map((feature, index) => (
           <ItemWrapper key={index} index={index}>
             <BorderContainer
-              duration={Math.floor(Math.random() * 10000) + 10000}
+              duration={getDuration(index)}
               borderRadius="1.5rem"
               className="rounded-[calc(1.5rem* 0.96)] min-h-20 flex-1 border-slate-800 bg-linear-to-r from-slate-800 via-purple-900/50 to-slate-800"
             >
