@@ -4,9 +4,9 @@ import {
   Head,
   Heading,
   Html,
+  Tailwind,
   Text,
 } from "@react-email/components"
-import { Tailwind } from "@react-email/tailwind"
 import * as React from "react"
 
 export const EmailTemplate: React.FC<
@@ -16,7 +16,7 @@ export const EmailTemplate: React.FC<
     <Html>
       <Head />
       <Body className="bg-[#262c35]">
-        <Container className="mx-auto max-w-2xl rounded-lg bg-white p-8 shadow-lg">
+        <Container className="mx-auto max-w-[600px] rounded-lg bg-white p-8 shadow-lg">
           <Heading className="text-2xl font-bold text-[#0a0e14]">
             Contact Form Submission
           </Heading>
