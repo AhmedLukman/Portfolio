@@ -14,15 +14,17 @@ import { google } from "@ai-sdk/google"
 import {
   convertToModelMessages,
   smoothStream,
-  stepCountIs,
   streamText,
   tool,
   UIMessage,
 } from "ai"
-import z from "zod"
+import { z } from "zod"
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30
+
+// Empty input schema for tools that don't require parameters
+const emptyInputSchema = z.object({})
 
 export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json()
@@ -43,32 +45,37 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: google("gemini-2.5-flash"),
-    messages: convertToModelMessages(messages),
-    stopWhen: stepCountIs(15),
+    messages: await convertToModelMessages(messages),
     system: process.env.SYSTEM_PROMPT,
     tools: {
       certificatesRetriever: tool({
         description: "Retrieve the certificates",
+        inputSchema: emptyInputSchema,
         execute: () => CERTIFICATIONS,
       }),
       projectsRetriever: tool({
         description: "Retrieve the projects",
+        inputSchema: emptyInputSchema,
         execute: () => PROJECTS,
       }),
       recognitionsRetriever: tool({
         description: "Retrieve the recognitions",
+        inputSchema: emptyInputSchema,
         execute: () => RECOGNITIONS,
       }),
       techAndToolsRetriever: tool({
         description: "Retrieve the technologies and tools",
+        inputSchema: emptyInputSchema,
         execute: () => [...FRONT_END_TECHS, ...BACKEND_TECHS, ...DEV_TOOLS],
       }),
       testimonialsRetriever: tool({
         description: "Retrieve the testimonials",
+        inputSchema: emptyInputSchema,
         execute: () => TESTIMONIALS,
       }),
       experienceRetriever: tool({
         description: "Retrieve the experience",
+        inputSchema: emptyInputSchema,
         execute: () => EXPERIENCE,
       }),
       navigator: tool({
