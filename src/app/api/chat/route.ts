@@ -41,7 +41,7 @@ export async function POST(req: Request) {
   const certificates = CERTIFICATIONS.map((cert) => cert.file)
 
   const result = streamText({
-    model: google("gemini-2.5-flash"),
+    model: google("gemini-3-flash-preview"),
     messages: await convertToModelMessages(messages),
     system: process.env.SYSTEM_PROMPT,
     stopWhen: stepCountIs(20),
