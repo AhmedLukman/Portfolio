@@ -16,6 +16,9 @@ import ChatIntroduction from "./ChatIntroduction"
 import ChatMessages from "./ChatMessages"
 
 const CHAT_STORAGE_KEY = "ai-chat-messages"
+const PROMPT_STORAGE_KEY = "ai-prompt-session"
+const PROMPT_LIMIT = 5
+const PROMPT_SESSION_DURATION = 24 * 60 * 60 * 1000 // 24 hours
 
 const NavigatorInputSchema = z.object({
   route: z.enum(PAGE_LINKS.map((link) => link.path)),
@@ -42,17 +45,44 @@ const saveChatMessages = (
 const loadChatMessages = () => {
   try {
     const stored = localStorage.getItem(CHAT_STORAGE_KEY)
-    return stored ? JSON.parse(stored) : []
+    return stored ? JSON.parse(stored) as UIMessage<unknown, UIDataTypes, UITools>[] : []
   } catch (error) {
     console.error("Failed to load chat messages:", error)
     return []
   }
 }
 
+const loadPromptSession = () => {
+  try {
+    const stored = localStorage.getItem(PROMPT_STORAGE_KEY)
+    if (stored) {
+      const data = JSON.parse(stored) as { promptsRemaining: number; createdAt: number }
+      if (Date.now() - data.createdAt < PROMPT_SESSION_DURATION) {
+        return data.promptsRemaining
+      }
+      localStorage.removeItem(PROMPT_STORAGE_KEY)
+    }
+  } catch (error) {
+    console.error("Failed to load prompt session:", error)
+  }
+  return PROMPT_LIMIT
+}
+
+const savePromptSession = (promptsRemaining: number) => {
+  const stored = localStorage.getItem(PROMPT_STORAGE_KEY)
+  const createdAt = stored ? JSON.parse(stored).createdAt : Date.now()
+  localStorage.setItem(PROMPT_STORAGE_KEY, JSON.stringify({ promptsRemaining, createdAt }))
+}
+
 const Chat = () => {
   const router = useRouter()
   const [input, setInput] = useState("")
   const [isLoaded, setIsLoaded] = useState(false)
+  const [promptsRemaining, setPromptsRemaining] = useState<number | undefined>(
+    undefined,
+  )
+
+  const isPromptSessionLoaded = promptsRemaining !== undefined
 
   const { messages, sendMessage, status, error, setMessages } = useChat({
     onToolCall: async ({ toolCall: { toolName, input } }) => {
@@ -169,6 +199,11 @@ const Chat = () => {
     queueMicrotask(() => setIsLoaded(true))
   }, [setMessages])
 
+  // Load prompt session on mount
+  useEffect(() => {
+    queueMicrotask(() => setPromptsRemaining(loadPromptSession()))
+  }, [])
+
   // Save messages to localStorage whenever response has been received
   useEffect(() => {
     if (isLoaded && status === "ready") {
@@ -228,6 +263,23 @@ const Chat = () => {
           status={status}
           onSubmitAction={(e) => {
             e.preventDefault()
+            if (!isPromptSessionLoaded) return
+
+            if (promptsRemaining <= 0) {
+              addToast({
+                title: "Prompt limit reached. Try again later.",
+                color: "danger",
+                hideIcon: true,
+                variant: "flat",
+                classNames: { base: "bg-heading" },
+              })
+              return
+            }
+
+            const newCount = promptsRemaining - 1
+            setPromptsRemaining(newCount)
+            savePromptSession(newCount)
+
             sendMessage({ text: input })
             setInput("")
           }}
@@ -235,6 +287,11 @@ const Chat = () => {
             setInput(e.currentTarget.value)
           }}
         />
+        <p className="text-center text-xs text-gray-500">
+          {isPromptSessionLoaded
+            ? `${promptsRemaining} / ${PROMPT_LIMIT}`
+            : `- / ${PROMPT_LIMIT}`} prompts remaining
+        </p>
       </div>
     </div>
   )
