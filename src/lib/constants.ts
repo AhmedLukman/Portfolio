@@ -46,7 +46,7 @@ export const PAGE_LINKS = [
     path: "/ai",
     icon: faComment,
   },
-] 
+]
 
 export const initialFormState = {
   name: "",

@@ -12,7 +12,7 @@ const MobileSideNav = () => {
 
   return (
     <>
-      <div className="fixed right-4 top-4 z-50 lg:hidden">
+      <div className="fixed top-4 right-4 z-50 lg:hidden">
         <Button
           isIconOnly
           variant="light"

@@ -1,5 +1,5 @@
-import { PROJECTS, RECOGNITIONS } from "./data"
 import { SOCIAL_LINKS } from "./constants"
+import { PROJECTS, RECOGNITIONS } from "./data"
 
 export const convertDate = (date: Date): string => {
   // Check if date is valid

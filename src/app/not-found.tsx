@@ -13,7 +13,7 @@ const NotFound = () => {
           priority
           alt="Error image illustration"
         />
-        <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center gap-1 text-center text-3xl font-bold">
+        <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center gap-1 text-center text-3xl font-bold">
           <p className="text-heading">
             404 <FontAwesomeIcon icon={faTriangleExclamation} />
             <br />

@@ -1,11 +1,11 @@
 import { Card, CardHeader } from "@heroui/card"
 import Image from "next/image"
-import SectionHeader from "../../wrappers/SectionHeader"
-import SectionWrapper from "../../wrappers/SectionWrapper"
-import MasteryBody from "./MasteryBody"
 import BackEndImage from "public/assets/images/backend.jpg"
 import DesignImage from "public/assets/images/design.jpg"
 import FrontEndImage from "public/assets/images/frontend.jpg"
+import SectionHeader from "../../wrappers/SectionHeader"
+import SectionWrapper from "../../wrappers/SectionWrapper"
+import MasteryBody from "./MasteryBody"
 
 const MASTERY = [
   {

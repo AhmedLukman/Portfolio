@@ -1,7 +1,6 @@
 "use client"
 
 import { PlaceholdersAndVanishInput } from "@/components/ui/PlaceholderAndVanishInput"
-import { PAGE_LINKS } from "@/lib/constants"
 import {
   loadChatMessages,
   loadPromptSession,
@@ -9,6 +8,7 @@ import {
   saveChatMessages,
   savePromptSession,
 } from "@/lib/chat-session"
+import { PAGE_LINKS } from "@/lib/constants"
 import { CERTIFICATIONS } from "@/lib/data"
 import { getAllExternalLinks } from "@/lib/utils"
 import { useChat } from "@ai-sdk/react"
@@ -249,7 +249,8 @@ const Chat = () => {
         <p className="text-center text-xs text-gray-500">
           {isPromptSessionLoaded
             ? `${promptsRemaining} / ${PROMPT_LIMIT}`
-            : `- / ${PROMPT_LIMIT}`} prompts remaining
+            : `- / ${PROMPT_LIMIT}`}{" "}
+          prompts remaining
         </p>
       </div>
     </div>

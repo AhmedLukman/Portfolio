@@ -18,7 +18,7 @@ const ContactPage = () => {
       <ContactForm />
       <Image
         src={ShakingHandsImage}
-        className="absolute right-0 top-24 hidden w-80 object-contain 2xl:block"
+        className="absolute top-24 right-0 hidden w-80 object-contain 2xl:block"
         priority
         alt="Shaking hands with contract illustration"
       />

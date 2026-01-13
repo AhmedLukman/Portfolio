@@ -3,8 +3,8 @@ import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Button } from "@heroui/button"
 import Image from "next/image"
-import { useEffect } from "react"
 import ImageTemplate from "public/assets/images/portfolio-image-template.png"
+import { useEffect } from "react"
 
 export default function Error({
   error,
@@ -26,7 +26,7 @@ export default function Error({
           priority
           alt="Error image illustration"
         />
-        <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center text-center text-3xl font-bold">
+        <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center text-center text-3xl font-bold">
           <p className="text-heading">
             <FontAwesomeIcon icon={faCircleExclamation} className="mb-1" />
             <br />

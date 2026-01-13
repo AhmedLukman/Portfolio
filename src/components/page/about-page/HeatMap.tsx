@@ -11,7 +11,7 @@ const HeatMap = () => {
       y: Math.random() * 100,
       intensity: Math.random(),
       delay: Math.random() * 2,
-    }))
+    })),
   )
 
   return (

@@ -1,6 +1,6 @@
+import HeroButton from "@/components/ui/HeroButton"
 import { faMessage } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import HeroButton from "@/components/ui/HeroButton"
 import SectionWrapper from "../../wrappers/SectionWrapper"
 import { BackgroundGradient } from "./BackgroundGradient"
 

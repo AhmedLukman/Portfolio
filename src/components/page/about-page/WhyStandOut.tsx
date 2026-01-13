@@ -15,7 +15,7 @@ export default function WhyStandOut() {
       <SectionHeader className="text-center">Why I stand out</SectionHeader>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <WobbleCard containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800">
-          <h3 className="text-balance text-left text-base font-semibold tracking-[-0.015em] text-slate-100 md:text-xl lg:text-3xl">
+          <h3 className="text-left text-base font-semibold tracking-[-0.015em] text-balance text-slate-100 md:text-xl lg:text-3xl">
             <FontAwesomeIcon aria-hidden icon={faRocket} className="mr-4" />
             Up-to-Date with Evolving Technology
           </h3>
@@ -26,7 +26,7 @@ export default function WhyStandOut() {
           </p>
         </WobbleCard>
         <WobbleCard containerClassName="col-span-1">
-          <h3 className="text-balance text-left text-base font-semibold tracking-[-0.015em] text-slate-100 md:text-xl lg:text-3xl">
+          <h3 className="text-left text-base font-semibold tracking-[-0.015em] text-balance text-slate-100 md:text-xl lg:text-3xl">
             <FontAwesomeIcon aria-hidden icon={faUserTie} className="mr-4" />
             User centric
           </h3>
@@ -37,7 +37,7 @@ export default function WhyStandOut() {
         </WobbleCard>
         <WobbleCard containerClassName="col-span-1 sm:col-span-2 lg:col-span-3 bg-blue-900">
           <div className="sm:w-1/2">
-            <h3 className="text-balance text-left text-base font-semibold tracking-[-0.015em] text-slate-100 md:text-xl lg:text-3xl">
+            <h3 className="text-left text-base font-semibold tracking-[-0.015em] text-balance text-slate-100 md:text-xl lg:text-3xl">
               <FontAwesomeIcon
                 aria-hidden
                 icon={faGlobeAfrica}
@@ -45,7 +45,7 @@ export default function WhyStandOut() {
               />
               Flexible with different Time Zone
             </h3>
-            <p className="mb-20 mt-6 text-left text-base/6">
+            <p className="mt-6 mb-20 text-left text-base/6">
               I am adept at accommodating various time zones, ensuring seamless
               collaboration with global teams and clients regardless of the
               hour.

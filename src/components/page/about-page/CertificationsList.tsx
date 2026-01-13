@@ -28,7 +28,7 @@ const CertificationsList = () => {
                   <span className="text-body">{organization}</span>
                 </div>
                 <div className="flex w-full items-center justify-between sm:w-auto sm:gap-4">
-                  <time dateTime={year} className="text-sm text-body">
+                  <time dateTime={year} className="text-body text-sm">
                     {year}
                   </time>
                   <BorderButton

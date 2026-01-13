@@ -1,8 +1,8 @@
+import HeroLink from "@/components/ui/HeroLink"
 import { faMedal } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import ManNearComputerImage from "public/assets/images/man-near-computer.svg"
-import HeroLink from "@/components/ui/HeroLink"
 import SectionWrapper from "../../wrappers/SectionWrapper"
 
 const Introduction = () => {

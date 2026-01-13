@@ -64,13 +64,13 @@ export const BackgroundBeams = React.memo(
         y2End: 93 + Math.random() * 8,
         duration: Math.random() * 10 + 10,
         delay: Math.random() * 10,
-      }))
+      })),
     )
 
     return (
       <div
         className={cn(
-          "fixed inset-0 flex items-center justify-center mask-no-repeat mask-size-[40px]",
+          "fixed inset-0 flex items-center justify-center mask-size-[40px] mask-no-repeat",
           className,
         )}
       >
@@ -138,8 +138,14 @@ export const BackgroundBeams = React.memo(
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(352 34) rotate(90) scale(555 1560.62)"
             >
-              <stop offset="0.0666667" stopColor="var(--color-neutral-300)"></stop>
-              <stop offset="0.243243" stopColor="var(--color-neutral-300)"></stop>
+              <stop
+                offset="0.0666667"
+                stopColor="var(--color-neutral-300)"
+              ></stop>
+              <stop
+                offset="0.243243"
+                stopColor="var(--color-neutral-300)"
+              ></stop>
               <stop offset="0.43594" stopColor="white" stopOpacity="0"></stop>
             </radialGradient>
           </defs>

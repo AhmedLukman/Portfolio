@@ -68,7 +68,7 @@ const ProjectOverview = ({
           </h2>
           <AnimatedTooltip items={metrics} />
         </div>
-        <div className="animate-slide-in-from-bottom animation-delay-1500 flex flex-wrap sm:flex-nowrap justify-between opacity-0">
+        <div className="animate-slide-in-from-bottom animation-delay-1500 flex flex-wrap justify-between opacity-0 sm:flex-nowrap">
           <div className="flex flex-col gap-1">
             <h2 className="text-xl font-semibold">
               <span className="purple-gradient">Start Date</span>
