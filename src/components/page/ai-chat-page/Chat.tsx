@@ -1,8 +1,9 @@
 "use client"
 
 import { PlaceholdersAndVanishInput } from "@/components/ui/PlaceholderAndVanishInput"
-import { PAGE_LINKS, SOCIAL_LINKS } from "@/lib/constants"
+import { PAGE_LINKS } from "@/lib/constants"
 import { CERTIFICATIONS } from "@/lib/data"
+import { getAllExternalLinks } from "@/lib/utils"
 import { useChat } from "@ai-sdk/react"
 import { Button } from "@heroui/button"
 import { Spinner } from "@heroui/spinner"
@@ -21,7 +22,7 @@ const NavigatorInputSchema = z.object({
 })
 
 const ExternalLinkInputSchema = z.object({
-  link: z.enum(SOCIAL_LINKS.map((link) => link.path)),
+  link: z.enum(getAllExternalLinks()),
 })
 
 const CertificateDownloaderInputSchema = z.object({

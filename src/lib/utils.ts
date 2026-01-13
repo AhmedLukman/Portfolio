@@ -1,3 +1,6 @@
+import { PROJECTS, RECOGNITIONS } from "./data"
+import { SOCIAL_LINKS } from "./constants"
+
 export const convertDate = (date: Date): string => {
   // Check if date is valid
   if (isNaN(date.getTime())) {
@@ -14,4 +17,13 @@ export const convertDate = (date: Date): string => {
 
 export const getExternalLinkProps = (isExternal: boolean) => {
   return isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {}
+}
+
+export const getAllExternalLinks = () => {
+  return [
+    ...SOCIAL_LINKS.map((link) => link.path),
+    ...RECOGNITIONS.map((link) => link.url),
+    ...PROJECTS.map((project) => project.overview.source),
+    ...PROJECTS.map((project) => project.overview.site),
+  ]
 }

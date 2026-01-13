@@ -1,5 +1,5 @@
 import { sendEmailByAI } from "@/lib/actions"
-import { PAGE_LINKS, SOCIAL_LINKS } from "@/lib/constants"
+import { PAGE_LINKS } from "@/lib/constants"
 import {
   BACKEND_TECHS,
   CERTIFICATIONS,
@@ -10,15 +10,17 @@ import {
   RECOGNITIONS,
   TESTIMONIALS,
 } from "@/lib/data"
+import { getAllExternalLinks } from "@/lib/utils"
 import { google } from "@ai-sdk/google"
 import {
   convertToModelMessages,
   smoothStream,
+  stepCountIs,
   streamText,
   tool,
   UIMessage,
 } from "ai"
-import { z } from "zod"
+import z from "zod"
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30
@@ -34,12 +36,7 @@ export async function POST(req: Request) {
     ...PROJECTS.map((project) => project.route),
   ]
 
-  const allExternalLinks = [
-    ...SOCIAL_LINKS.map((link) => link.path),
-    ...RECOGNITIONS.map((link) => link.url),
-    ...PROJECTS.map((project) => project.overview.source),
-    ...PROJECTS.map((project) => project.overview.site),
-  ]
+  const allExternalLinks = getAllExternalLinks()
 
   const certificates = CERTIFICATIONS.map((cert) => cert.file)
 
@@ -47,6 +44,7 @@ export async function POST(req: Request) {
     model: google("gemini-2.5-flash"),
     messages: await convertToModelMessages(messages),
     system: process.env.SYSTEM_PROMPT,
+    stopWhen: stepCountIs(20),
     tools: {
       certificatesRetriever: tool({
         description: "Retrieve the certificates",
