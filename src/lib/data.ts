@@ -20,7 +20,7 @@ import DeviceMasterTracker from "public/assets/images/device-mastertracker.png"
 import DeviceNextEvent from "public/assets/images/device-nextevent.png"
 import DevicePortfolio from "public/assets/images/device-portfolio.png"
 import DeviceWorldVisualizer from "public/assets/images/device-worldvisualizer.png"
-import ChatGPT from "public/assets/images/devtools/chatgpt.svg"
+import Biome from "public/assets/images/devtools/biome.svg"
 import Claude from "public/assets/images/devtools/claude.svg"
 import Cursor from "public/assets/images/devtools/cursor.svg"
 import ESLint from "public/assets/images/devtools/eslint.svg"
@@ -826,11 +826,7 @@ export const DEV_TOOLS = [
     src: Cursor,
   },
   {
-    name: "ChatGPT",
-    src: ChatGPT,
-  },
-  {
-    name: "Claude",
+    name: "Claude Code",
     src: Claude,
   },
   {
@@ -840,6 +836,10 @@ export const DEV_TOOLS = [
   {
     name: "ESLint",
     src: ESLint,
+  },
+  {
+    name: "Biome",
+    src: Biome,
   },
   {
     name: "Prettier",
