@@ -34,7 +34,6 @@
     "react-markdown": "^10.1.0",
     "resend": "^6.7.0",
     "three": "^0.182.0",
-    "three-globe": "^2.45.0",
     "zod": "^4.3.5"
   },
   "devDependencies": {
