@@ -22,6 +22,7 @@ import DevicePortfolio from "public/assets/images/device-portfolio.png"
 import DeviceWorldVisualizer from "public/assets/images/device-worldvisualizer.png"
 import ChatGPT from "public/assets/images/devtools/chatgpt.svg"
 import Claude from "public/assets/images/devtools/claude.svg"
+import Cursor from "public/assets/images/devtools/cursor.svg"
 import ESLint from "public/assets/images/devtools/eslint.svg"
 import Git from "public/assets/images/devtools/git.svg"
 import GitHub from "public/assets/images/devtools/github.svg"
@@ -52,7 +53,6 @@ import Strathmore from "public/assets/images/strathmore.jpeg"
 import Kelvin from "public/assets/images/testimonials/kelvin.jpg"
 import ThomsonReuters from "public/assets/images/thomsonreuters.png"
 import ThreeJS from "public/assets/images/threejs.svg"
-import Trae from "public/assets/images/trae.svg"
 import Trinetium from "public/assets/images/trinetium.jpeg"
 import WorldVisualizer from "public/assets/images/worldvisualizer.png"
 import Yoonka from "public/assets/images/yoonka.jpeg"
@@ -821,8 +821,8 @@ export const BACKEND_TECHS = [
 
 export const DEV_TOOLS = [
   {
-    name: "TRAE",
-    src: Trae,
+    name: "Cursor",
+    src: Cursor,
   },
   {
     name: "ChatGPT",
