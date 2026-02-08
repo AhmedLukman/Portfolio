@@ -343,8 +343,9 @@ export const PROJECTS: Project[] = [
       image: Portfolio,
       site: PORTFOLIO_SITE,
       source: "https://github.com/AhmedLukman/Portfolio",
-      status: ProjectStatus.pending,
-      startDate: new Date(2024, 6),
+      status: ProjectStatus.completed,
+      startDate: new Date(2025, 1),
+      endDate: new Date(2025, 8),
     },
     image: Portfolio,
     deviceImage: DevicePortfolio,
@@ -358,7 +359,7 @@ export const PROJECTS: Project[] = [
       "Clean, stylish, and visually appealing custom design.",
       "Professional typography and color schemes enhancing readability.",
       "Optimized images and assets for fast loading times.",
-      "A personalized AI chat that quickly and efficiently taps into my knowledge to provide helpful answers. (soon)",
+      "AI agent that provides helpful answers about me and my profession.",
     ],
     caseStudy: [
       {
