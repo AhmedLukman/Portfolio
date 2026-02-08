@@ -28,6 +28,7 @@ import Git from "public/assets/images/devtools/git.svg"
 import GitHub from "public/assets/images/devtools/github.svg"
 import NPM from "public/assets/images/devtools/npm.svg"
 import Prettier from "public/assets/images/devtools/prettier.svg"
+import Turbopack from "public/assets/images/devtools/turbopack.svg"
 import Vercel from "public/assets/images/devtools/vercel.svg"
 import Vite from "public/assets/images/devtools/vite.svg"
 import DigitalLearning from "public/assets/images/digitallearning.png"
@@ -859,6 +860,10 @@ export const DEV_TOOLS = [
   {
     name: "Vite",
     src: Vite,
+  },
+  {
+    name: "Turbopack",
+    src: Turbopack,
   },
 ]
 
