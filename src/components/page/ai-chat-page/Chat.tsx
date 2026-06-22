@@ -1,6 +1,7 @@
 "use client"
 
 import { PlaceholdersAndVanishInput } from "@/components/ui/PlaceholderAndVanishInput"
+import { Ripple } from "m3-ripple"
 import {
   loadChatMessages,
   loadPromptSession,
@@ -12,9 +13,7 @@ import { PAGE_LINKS } from "@/lib/constants"
 import { CERTIFICATIONS } from "@/lib/data"
 import { getAllExternalLinks } from "@/lib/utils"
 import { useChat } from "@ai-sdk/react"
-import { Button } from "@heroui/button"
-import { Spinner } from "@heroui/spinner"
-import { addToast } from "@heroui/toast"
+import { Button, Spinner, toast } from "@heroui/react"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import { z } from "zod"
@@ -49,69 +48,29 @@ const Chat = () => {
         const result = NavigatorInputSchema.safeParse(input)
         if (!result.success) {
           console.error(`Invalid navigator input:`, result.error)
-          addToast({
-            title: "Navigation failed: Invalid route",
-            color: "danger",
-            hideIcon: true,
-            variant: "flat",
-            classNames: {
-              base: "bg-heading",
-            },
-          })
+          toast.danger("Navigation failed: Invalid route", { indicator: null })
           return
         }
 
         const { route } = result.data
         router.push(route)
-        addToast({
-          title: `Navigated to ${route}`,
-          color: "secondary",
-          hideIcon: true,
-          variant: "flat",
-          classNames: {
-            base: "bg-heading",
-          },
-        })
+        toast.info(`Navigated to ${route}`, { indicator: null })
       } else if (toolName === "externalLinkOpener") {
         const result = ExternalLinkInputSchema.safeParse(input)
         if (!result.success) {
           console.error(`Invalid external link input:`, result.error)
-          addToast({
-            title: "Failed to open link: Invalid URL",
-            color: "danger",
-            hideIcon: true,
-            variant: "flat",
-            classNames: {
-              base: "bg-heading",
-            },
-          })
+          toast.danger("Failed to open link: Invalid URL", { indicator: null })
           return
         }
 
         const { link } = result.data
         window.open(link, "_blank", "noopener,noreferrer")
-        addToast({
-          title: `Opened ${link}`,
-          color: "secondary",
-          hideIcon: true,
-          variant: "flat",
-          classNames: {
-            base: "bg-heading",
-          },
-        })
+        toast.info(`Opened ${link}`, { indicator: null })
       } else if (toolName === "certificateDownloader") {
         const result = CertificateDownloaderInputSchema.safeParse(input)
         if (!result.success) {
           console.error(`Invalid certificate downloader input:`, result.error)
-          addToast({
-            title: "Download failed: Invalid filename",
-            color: "danger",
-            hideIcon: true,
-            variant: "flat",
-            classNames: {
-              base: "bg-heading",
-            },
-          })
+          toast.danger("Download failed: Invalid filename", { indicator: null })
           return
         }
 
@@ -120,30 +79,18 @@ const Chat = () => {
         link.href = `/assets/files/${fileName}.pdf`
         link.download = fileName
         link.click()
-        addToast({
-          title: `Downloaded ${fileName}`,
-          color: "secondary",
-          hideIcon: true,
-          variant: "flat",
-          classNames: {
-            base: "bg-heading",
-          },
-        })
+        toast.info(`Downloaded ${fileName}`, { indicator: null })
       }
     },
     onFinish: ({ message }) => {
       message.parts.forEach((part) => {
         if (part.type === "tool-emailSender") {
           const hasError = part.state === "output-error"
-          addToast({
-            title: hasError ? part.errorText : "Email sent successfully",
-            color: hasError ? "danger" : "success",
-            hideIcon: true,
-            variant: "flat",
-            classNames: {
-              base: "bg-heading",
-            },
-          })
+          if (hasError) {
+            toast.danger(part.errorText, { indicator: null })
+          } else {
+            toast.success("Email sent successfully", { indicator: null })
+          }
         }
       })
     },
@@ -176,15 +123,7 @@ const Chat = () => {
 
   const handleClearChat = () => {
     setMessages([])
-    addToast({
-      title: "Chat history cleared",
-      color: "secondary",
-      hideIcon: true,
-      variant: "flat",
-      classNames: {
-        base: "bg-heading",
-      },
-    })
+    toast("Chat history cleared", { indicator: null })
   }
 
   const placeholders = [
@@ -211,8 +150,9 @@ const Chat = () => {
           <div className="flex justify-center">
             <Button
               onPress={handleClearChat}
-              className="border border-gray-600/50 bg-gray-800/70 text-sm text-gray-300 transition-colors hover:bg-gray-700/70 hover:text-white"
+              className="h-10! min-w-20! overflow-hidden rounded-[12px]! border border-gray-600/50 bg-gray-800/70 px-4! text-sm! leading-5! font-normal! text-gray-300 transition-colors! duration-150! hover:bg-gray-700/70 hover:text-white"
             >
+              <Ripple />
               Clear chat
             </Button>
           </div>
@@ -225,13 +165,10 @@ const Chat = () => {
             if (!isPromptSessionLoaded) return
 
             if (promptsRemaining <= 0) {
-              addToast({
-                title: "Prompt limit reached. Try again later.",
-                color: "danger",
-                hideIcon: true,
-                variant: "flat",
-                classNames: { base: "bg-heading" },
-              })
+              toast.danger(
+                "Prompt limit reached. Try again later.",
+                { indicator: null },
+              )
               return
             }
 

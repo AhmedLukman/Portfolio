@@ -1,4 +1,4 @@
-import { cn } from "@heroui/theme"
+import { cn } from "@heroui/react"
 
 type Props = {
   children: React.ReactNode

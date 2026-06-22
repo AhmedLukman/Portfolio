@@ -3,8 +3,9 @@
 import { useNavigation } from "@/lib/contexts/NavigationContext"
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Button } from "@heroui/button"
 import { AnimatePresence, motion } from "framer-motion"
+import { Button } from "@heroui/react"
+import { Ripple } from "m3-ripple"
 import SideNavContent from "./SideNavContent"
 
 const MobileSideNav = () => {
@@ -15,14 +16,15 @@ const MobileSideNav = () => {
       <div className="fixed top-4 right-4 z-50 lg:hidden">
         <Button
           isIconOnly
-          variant="light"
+          variant="tertiary"
           aria-haspopup="menu"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMobileMenuOpen}
           aria-controls="mobile-navigation"
           onPress={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="bg-[#262c35]/80 text-white"
+          className="overflow-hidden bg-[#262c35]/80 text-white"
         >
+          <Ripple />
           <FontAwesomeIcon
             aria-hidden="true"
             icon={isMobileMenuOpen ? faXmark : faBars}

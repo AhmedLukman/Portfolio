@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import { cn } from "@heroui/theme"
+import { cn } from "@heroui/react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import React, { useCallback, useMemo, useRef } from "react"
 import * as THREE from "three"

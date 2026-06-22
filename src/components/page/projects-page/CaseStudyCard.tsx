@@ -2,7 +2,7 @@
 
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { cn } from "@heroui/theme"
+import { cn } from "@heroui/react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer"

@@ -2,8 +2,9 @@
 
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Button } from "@heroui/button"
 import { AnimatePresence, motion } from "framer-motion"
+import { Button } from "@heroui/react"
+import { Ripple } from "m3-ripple"
 import Image, { StaticImageData } from "next/image"
 import { useCallback, useEffect, useState } from "react"
 
@@ -13,6 +14,10 @@ type Testimonial = {
   designation: string
   src: StaticImageData
 }
+
+const testimonialButtonClassName =
+  "group/button size-10 min-w-10 overflow-hidden rounded-xl bg-zinc-300 text-black transition-opacity hover:bg-zinc-300 hover:opacity-80 active:bg-zinc-300 data-[hovered=true]:bg-zinc-300 data-[hovered=true]:opacity-80 data-[pressed=true]:bg-zinc-300"
+
 export const AnimatedTestimonials = ({
   testimonials,
   autoplay = false,
@@ -117,7 +122,7 @@ export const AnimatedTestimonials = ({
               ease: "easeInOut",
             }}
           >
-            <h3 className="purple-gradient! inline-block text-xl font-bold">
+            <h3 className="inline-block purple-gradient! text-xl font-bold">
               {testimonials[active].name}
             </h3>
             <p className="text-sm">{testimonials[active].designation}</p>
@@ -152,8 +157,10 @@ export const AnimatedTestimonials = ({
               onPress={handlePrev}
               aria-label="Previous testimonial"
               isIconOnly
-              className="group/button"
+              variant="tertiary"
+              className={testimonialButtonClassName}
             >
+              <Ripple />
               <FontAwesomeIcon
                 icon={faArrowLeft}
                 className="transition-transform duration-300 group-hover/button:rotate-12"
@@ -163,8 +170,10 @@ export const AnimatedTestimonials = ({
               isIconOnly
               onPress={handleNext}
               aria-label="Next testimonial"
-              className="group/button"
+              variant="tertiary"
+              className={testimonialButtonClassName}
             >
+              <Ripple />
               <FontAwesomeIcon
                 icon={faArrowRight}
                 className="transition-transform duration-300 group-hover/button:-rotate-12"

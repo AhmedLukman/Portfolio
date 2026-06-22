@@ -5,8 +5,7 @@ import {
   faLocationArrow,
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Card, CardBody, CardHeader } from "@heroui/card"
-import { cn } from "@heroui/theme"
+import { Card, cn } from "@heroui/react"
 
 const CAPABILITIES = [
   {
@@ -57,8 +56,8 @@ const ChatIntroduction = () => {
       <ul className="grid h-full grid-cols-1 gap-5 sm:grid-cols-2 md:gap-10">
         {CAPABILITIES.map((capability) => (
           <li key={capability.id}>
-            <Card className="h-48 bg-slate-700/20 p-1 sm:h-56">
-              <CardHeader as="header">
+            <Card className="h-48 gap-0! rounded-[14px]! bg-slate-700/20 p-1 sm:h-56">
+              <Card.Header className="flex-row! items-center! justify-start! gap-0! p-3!">
                 <div
                   className={cn(
                     "mr-3 flex h-8 w-8 items-center justify-center rounded-lg",
@@ -72,10 +71,10 @@ const ChatIntroduction = () => {
                   />
                 </div>
                 <h2 className="text-lg font-semibold">{capability.title}</h2>
-              </CardHeader>
-              <CardBody>
+              </Card.Header>
+              <Card.Content className="p-3!">
                 <p>{capability.description}</p>
-              </CardBody>
+              </Card.Content>
             </Card>
           </li>
         ))}

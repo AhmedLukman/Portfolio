@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@heroui/theme"
+import { cn } from "@heroui/react"
 import { motion } from "framer-motion"
 import React from "react"
 

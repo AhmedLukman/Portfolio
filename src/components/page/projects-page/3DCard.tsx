@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import { cn } from "@heroui/theme"
+import { cn } from "@heroui/react"
 import {
   createContext,
   useCallback,

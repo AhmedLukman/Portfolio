@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import { Button as HeroButton } from "@heroui/button"
-import { cn } from "@heroui/theme"
+import { cn } from "@heroui/react"
+import { Ripple } from "m3-ripple"
 import {
   motion,
   useAnimationFrame,
@@ -9,6 +9,7 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion"
+import Link from "next/link"
 import React, { useRef } from "react"
 
 export function BorderButton({
@@ -32,8 +33,7 @@ export function BorderButton({
   [key: string]: any
 }) {
   return (
-    <HeroButton
-      as="a"
+    <Link
       href={`/assets/files/${file}`}
       download={file}
       className={cn(
@@ -61,16 +61,17 @@ export function BorderButton({
 
       <div
         className={cn(
-          "relative flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/80 text-sm text-white antialiased backdrop-blur-xl",
+          "overflow-hidden flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/80 text-sm text-white antialiased backdrop-blur-xl",
           className,
         )}
         style={{
           borderRadius: `calc(${borderRadius} * 0.96)`,
         }}
       >
+        <Ripple />
         {children}
       </div>
-    </HeroButton>
+    </Link>
   )
 }
 

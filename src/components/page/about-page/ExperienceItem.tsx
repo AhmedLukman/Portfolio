@@ -1,6 +1,5 @@
 import { convertDate } from "@/lib/utils"
-import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card"
-import { Chip } from "@heroui/chip"
+import { Card, Chip } from "@heroui/react"
 import { formatDuration, intervalToDuration } from "date-fns"
 import Image, { StaticImageData } from "next/image"
 import ItemWrapper from "../../wrappers/ItemWrapper"
@@ -69,21 +68,22 @@ const ExperienceItem = ({
         className={`w-full lg:w-[45%] ${index % 2 === 0 ? "lg:mr-auto lg:pr-8" : "lg:ml-auto lg:pl-8"}`}
       >
         <ItemWrapper as="div" index={index}>
-          <Card className="border border-slate-500 bg-transparent hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-200">
-            <CardHeader
-              as="header"
-              className="flex flex-wrap justify-between gap-2"
-            >
+          <Card className="gap-0! overflow-hidden! rounded-[14px]! border border-slate-500 bg-transparent p-0! hover:shadow-lg hover:shadow-slate-800 hover:transition-shadow hover:duration-200">
+            <Card.Header className="flex-row! flex-wrap items-start justify-between gap-2 p-3">
               <h3 className="purple-gradient! text-xl">{title}</h3>
-              <Chip variant="bordered" className="text-body">
-                {type}
+              <Chip
+                variant="secondary"
+                className="inline-flex! h-7! w-fit! max-w-fit min-w-min justify-between rounded-full! border-2! border-zinc-300! bg-transparent! px-1! py-0! text-sm! font-normal! text-body!"
+              >
+                <Chip.Label className="flex-1! px-2! text-sm! font-normal! text-inherit!">
+                  {type}
+                </Chip.Label>
               </Chip>
-            </CardHeader>
-            <CardBody as="p">{description}</CardBody>
-            <CardFooter
-              as="footer"
-              className="flex flex-wrap justify-between gap-2"
-            >
+            </Card.Header>
+            <Card.Content className="p-3">
+              <p>{description}</p>
+            </Card.Content>
+            <Card.Footer className="flex flex-wrap justify-between gap-2 p-3">
               <div className="flex items-center gap-2">
                 <Image
                   alt={company}
@@ -92,7 +92,7 @@ const ExperienceItem = ({
                 />
                 <p className="">{company}</p>
               </div>
-              <div className="text-body text-sm lg:mt-0">
+              <div className="text-sm text-body lg:mt-0">
                 <time dateTime={startDate.toISOString()}>
                   {convertDate(startDate)}
                 </time>{" "}
@@ -108,7 +108,7 @@ const ExperienceItem = ({
                   ({calculateDuration(startDate, endOrCurrent)})
                 </span>
               </div>
-            </CardFooter>
+            </Card.Footer>
           </Card>
         </ItemWrapper>
       </div>

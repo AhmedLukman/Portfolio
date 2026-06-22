@@ -1,4 +1,4 @@
-import { Card, CardHeader } from "@heroui/card"
+import { Card } from "@heroui/react"
 import Image from "next/image"
 import BackEndImage from "public/assets/images/backend.jpg"
 import DesignImage from "public/assets/images/design.jpg"
@@ -45,25 +45,23 @@ const Mastery = () => {
       <SectionHeader className="text-center">Mastery</SectionHeader>
       <ul className="flex flex-col gap-5 sm:flex-row">
         {MASTERY.map(({ description, title, src }, index) => (
-          <Card
-            as="li"
-            key={title}
-            className="group h-72 w-full border border-slate-300"
-          >
-            <CardHeader as="h3" className="absolute top-1 z-20 text-xl">
-              {title}
-            </CardHeader>
-            <MasteryBody>{description}</MasteryBody>
-            <div className="absolute inset-0 z-10 bg-black/60" aria-hidden />
-            <Image
-              priority
-              fill
-              alt={title}
-              sizes={getSizesByIndex(index)}
-              className="z-0 object-cover"
-              src={src}
-            />
-          </Card>
+          <li key={title} className="w-full">
+            <Card className="group h-72 w-full gap-0! overflow-hidden! rounded-[14px]! border border-slate-300 p-0!">
+              <Card.Header className="absolute top-1 z-20 w-full p-3 text-xl">
+                <h3>{title}</h3>
+              </Card.Header>
+              <MasteryBody>{description}</MasteryBody>
+              <div className="absolute inset-0 z-10 bg-black/60" aria-hidden />
+              <Image
+                priority
+                fill
+                alt={title}
+                sizes={getSizesByIndex(index)}
+                className="z-0 object-cover"
+                src={src}
+              />
+            </Card>
+          </li>
         ))}
       </ul>
     </SectionWrapper>

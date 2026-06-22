@@ -1,7 +1,6 @@
 "use client"
 
-import { CardBody } from "@heroui/card"
-import { cn } from "@heroui/theme"
+import { Card, cn } from "@heroui/react"
 import { PropsWithChildren } from "react"
 import { useInView } from "react-intersection-observer"
 
@@ -19,7 +18,9 @@ const MasteryBody = ({ children }: PropsWithChildren) => {
         inView ? "opacity-100" : "opacity-0",
       )}
     >
-      <CardBody as="p">{children}</CardBody>
+      <Card.Content className="overflow-y-auto p-3">
+        <p>{children}</p>
+      </Card.Content>
     </div>
   )
 }

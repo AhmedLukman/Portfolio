@@ -1,6 +1,6 @@
-import HeroButton from "@/components/ui/HeroButton"
 import { faMessage } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Link from "next/link"
 import SectionWrapper from "../../wrappers/SectionWrapper"
 import { BackgroundGradient } from "./BackgroundGradient"
 
@@ -16,13 +16,13 @@ const CallToAction = () => {
           just have a chat? Get in touch today!
         </p>
         <footer className="flex justify-center">
-          <HeroButton
+          <Link
             href="/contact"
-            role="link"
-            endContent={<FontAwesomeIcon icon={faMessage} />}
+            className="button button--md button--tertiary h-10 min-w-20 rounded-xl bg-zinc-300 font-normal text-black transition duration-150 hover:bg-zinc-300 hover:opacity-80 active:bg-zinc-300 data-[hovered=true]:bg-zinc-300 data-[hovered=true]:opacity-80 data-[pressed=true]:bg-zinc-300 md:h-10 [&>svg]:mx-0"
           >
             Contact me
-          </HeroButton>
+            <FontAwesomeIcon icon={faMessage} />
+          </Link>
         </footer>
       </BackgroundGradient>
     </SectionWrapper>

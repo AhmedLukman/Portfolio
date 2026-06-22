@@ -1,6 +1,5 @@
 "use client"
-import { Link } from "@heroui/link"
-import { cn } from "@heroui/theme"
+import { Link, cn } from "@heroui/react"
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card"
 import {
   AnimatePresence,
@@ -135,8 +134,9 @@ export const LinkPreview = ({
               >
                 <Link
                   href={url}
-                  className="block rounded-xl border-2 border-transparent bg-white p-1 shadow-sm hover:border-neutral-200 dark:hover:border-neutral-800"
-                  style={{ fontSize: 0 }}
+                  className="block! h-auto! w-fit! rounded-xl! border-2 border-transparent bg-white p-1 text-[0px]! no-underline! shadow-sm hover:border-neutral-200 dark:hover:border-neutral-800"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src={isStatic ? imageSrc : src}

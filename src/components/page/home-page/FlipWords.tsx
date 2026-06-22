@@ -1,5 +1,5 @@
 "use client"
-import { cn } from "@heroui/theme"
+import { cn } from "@heroui/react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useCallback, useEffect, useState } from "react"
 
@@ -57,7 +57,7 @@ export const FlipWords = ({
           position: "absolute",
         }}
         className={cn(
-          "text-heading relative z-10 inline-block text-left",
+          "relative z-10 inline-block text-left text-heading",
           className,
         )}
         key={currentWord}

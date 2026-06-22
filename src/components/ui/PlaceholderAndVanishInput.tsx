@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import { Button } from "@heroui/button"
-import { cn } from "@heroui/react"
+import { Button, cn } from "@heroui/react"
 import { ChatStatus } from "ai"
 import { AnimatePresence, motion } from "framer-motion"
 import { useCallback, useEffect, useRef, useState } from "react"
@@ -187,6 +186,17 @@ export function PlaceholdersAndVanishInput({
     onSubmitAction(e)
     vanishAndSubmit()
   }
+
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (animating) return
+
+    setValue(e.currentTarget.value)
+    onChangeAction(e)
+  }
+
+  const isSubmitDisabled =
+    !value || status === "streaming" || status === "submitted"
+
   return (
     <form
       className={cn(
@@ -213,30 +223,28 @@ export function PlaceholdersAndVanishInput({
           ref={canvasRef}
         />
         <input
-          onChange={(e) => {
-            if (!animating) {
-              setValue(e.target.value)
-              onChangeAction(e)
-            }
-          }}
+          onChange={handleInput}
           onKeyDown={handleKeyDown}
           ref={inputRef}
           value={value}
           type="text"
           className={cn(
-            "text-heading relative z-50 h-full w-full rounded-full border-none bg-transparent pr-20 pl-4 text-sm focus:ring-0 focus:outline-none sm:pl-10 sm:text-base",
+            "relative z-50 h-full w-full rounded-full border-none bg-transparent pr-20 pl-4 text-sm text-heading focus:ring-0 focus:outline-none sm:pl-10 sm:text-base",
             animating && "text-transparent",
           )}
         />
 
         <Button
-          isDisabled={
-            !value || status === "streaming" || status === "submitted"
-          }
+          isDisabled={isSubmitDisabled}
           isIconOnly
           size="sm"
           type="submit"
-          className="absolute top-1/2 right-2 z-50 flex -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-r from-blue-500/80 to-purple-600/80 shadow-lg transition-all duration-200 hover:scale-105 disabled:from-transparent disabled:to-transparent disabled:hover:scale-100"
+          variant="tertiary"
+          className={cn(
+            "absolute top-1/2 right-2 z-50 flex h-8! w-8! min-w-8! -translate-y-1/2 items-center justify-center gap-0! overflow-hidden rounded-full bg-transparent! p-0! shadow-none transition-all duration-200 hover:scale-105 hover:bg-transparent! disabled:hover:scale-100",
+            !isSubmitDisabled &&
+              "bg-gradient-to-r from-blue-500/80 to-purple-600/80 shadow-lg!",
+          )}
         >
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +256,7 @@ export function PlaceholdersAndVanishInput({
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-heading h-4 w-4"
+            className="mx-0! h-4 w-4 text-heading"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <motion.path
