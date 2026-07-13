@@ -1,10 +1,9 @@
 "use client"
 
+import { RippleButton } from "@/components/ui/Ripple"
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { AnimatePresence, motion } from "framer-motion"
-import { Button } from "@heroui/react"
-import { Ripple } from "m3-ripple"
 import Image, { StaticImageData } from "next/image"
 import { useCallback, useEffect, useState } from "react"
 
@@ -153,32 +152,30 @@ export const AnimatedTestimonials = ({
             </motion.p>
           </motion.div>
           <div className="flex justify-center gap-4 pt-12 sm:justify-start md:pt-5">
-            <Button
+            <RippleButton
               onPress={handlePrev}
               aria-label="Previous testimonial"
               isIconOnly
               variant="tertiary"
               className={testimonialButtonClassName}
             >
-              <Ripple />
               <FontAwesomeIcon
                 icon={faArrowLeft}
                 className="transition-transform duration-300 group-hover/button:rotate-12"
               />
-            </Button>
-            <Button
+            </RippleButton>
+            <RippleButton
               isIconOnly
               onPress={handleNext}
               aria-label="Next testimonial"
               variant="tertiary"
               className={testimonialButtonClassName}
             >
-              <Ripple />
               <FontAwesomeIcon
                 icon={faArrowRight}
                 className="transition-transform duration-300 group-hover/button:-rotate-12"
               />
-            </Button>
+            </RippleButton>
           </div>
         </div>
       </div>

@@ -1,11 +1,10 @@
 "use client"
 
+import { RippleButton } from "@/components/ui/Ripple"
 import { useNavigation } from "@/lib/contexts/NavigationContext"
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { AnimatePresence, motion } from "framer-motion"
-import { Button } from "@heroui/react"
-import { Ripple } from "m3-ripple"
 import SideNavContent from "./SideNavContent"
 
 const MobileSideNav = () => {
@@ -14,7 +13,7 @@ const MobileSideNav = () => {
   return (
     <>
       <div className="fixed top-4 right-4 z-50 lg:hidden">
-        <Button
+        <RippleButton
           isIconOnly
           variant="tertiary"
           aria-haspopup="menu"
@@ -24,13 +23,12 @@ const MobileSideNav = () => {
           onPress={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="overflow-hidden bg-[#262c35]/80 text-white"
         >
-          <Ripple />
           <FontAwesomeIcon
             aria-hidden="true"
             icon={isMobileMenuOpen ? faXmark : faBars}
             className="h-5 w-5"
           />
-        </Button>
+        </RippleButton>
       </div>
       <AnimatePresence>
         {isMobileMenuOpen && (

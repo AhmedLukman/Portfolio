@@ -1,7 +1,7 @@
 "use client"
 
 import { PlaceholdersAndVanishInput } from "@/components/ui/PlaceholderAndVanishInput"
-import { Ripple } from "m3-ripple"
+import { RippleButton } from "@/components/ui/Ripple"
 import {
   loadChatMessages,
   loadPromptSession,
@@ -13,7 +13,7 @@ import { PAGE_LINKS } from "@/lib/constants"
 import { CERTIFICATIONS } from "@/lib/data"
 import { getAllExternalLinks } from "@/lib/utils"
 import { useChat } from "@ai-sdk/react"
-import { Button, Spinner, toast } from "@heroui/react"
+import { Spinner, toast } from "@heroui/react"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import { z } from "zod"
@@ -148,13 +148,12 @@ const Chat = () => {
       <div className="space-y-4">
         {messages.length > 0 && status === "ready" && (
           <div className="flex justify-center">
-            <Button
+            <RippleButton
               onPress={handleClearChat}
               className="h-10! min-w-20! overflow-hidden rounded-[12px]! border border-gray-600/50 bg-gray-800/70 px-4! text-sm! leading-5! font-normal! text-gray-300 transition-colors! duration-150! hover:bg-gray-700/70 hover:text-white"
             >
-              <Ripple />
               Clear chat
-            </Button>
+            </RippleButton>
           </div>
         )}
         <PlaceholdersAndVanishInput

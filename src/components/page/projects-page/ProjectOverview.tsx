@@ -1,6 +1,5 @@
 import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip"
-import { ClientButton } from "@/components/ui/ClientButton"
-import { ClientRipple } from "@/components/ui/ClientRipple"
+import { RippleButton } from "@/components/ui/Ripple"
 import {
   ClientTooltip,
   ClientTooltipArrow,
@@ -127,27 +126,25 @@ const ProjectOverview = ({
         </div>
         <div className="mt-5 flex gap-5">
           <LinkPreview url={source} className="grow font-bold">
-            <ClientButton
+            <RippleButton
               className="h-10! min-w-20! w-full animate-slide-in-from-left overflow-hidden rounded-[12px]! border-2! border-zinc-300! text-white opacity-0 animation-delay-2000 font-normal! transition-all! duration-[250ms]! ease-[ease]! hover:text-black"
               variant="ghost"
             >
-              <ClientRipple />
               Source code
               <FontAwesomeIcon icon={faGithub} className="mx-0!" />
-            </ClientButton>
+            </RippleButton>
           </LinkPreview>
           {isSitePortfolio && (
             <ClientTooltip delay={0}>
               <ClientTooltipTrigger className="grow">
                 <span className="block">
-                  <ClientButton
+                  <RippleButton
                     className="h-10! min-w-20! w-full animate-slide-in-from-right overflow-hidden rounded-[12px]! bg-zinc-300! text-black! opacity-0 animation-delay-2000 font-normal! transition-all! duration-[250ms]! ease-[ease]! pointer-events-auto! cursor-pointer!"
                     isDisabled
                   >
-                    <ClientRipple disabled />
                     Explore site
                     <FontAwesomeIcon icon={faGlobe} className="mx-0!" />
-                  </ClientButton>
+                  </RippleButton>
                 </span>
               </ClientTooltipTrigger>
               <ClientTooltipContent
@@ -160,13 +157,12 @@ const ProjectOverview = ({
           )}
           {!isSitePortfolio && (
             <LinkPreview url={site} className="grow font-bold">
-              <ClientButton
+              <RippleButton
                 className="h-10! min-w-20! w-full animate-slide-in-from-right overflow-hidden rounded-[12px]! bg-zinc-300! text-black! opacity-0 animation-delay-2000 font-normal! transition-all! duration-[250ms]! ease-[ease]! hover:opacity-80!"
               >
-                <ClientRipple />
                 Explore site
                 <FontAwesomeIcon icon={faGlobe} className="mx-0!" />
-              </ClientButton>
+              </RippleButton>
             </LinkPreview>
           )}
         </div>

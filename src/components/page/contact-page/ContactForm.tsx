@@ -1,12 +1,12 @@
 "use client"
 
+import { RippleButton } from "@/components/ui/Ripple"
 import { sendEmail } from "@/lib/actions"
 import { initialFormState } from "@/lib/constants"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   Alert,
-  Button,
   CloseButton,
   cn,
   FieldError,
@@ -17,7 +17,6 @@ import {
   TextArea,
   TextField,
 } from "@heroui/react"
-import { Ripple } from "m3-ripple"
 import { useActionState, useEffect, useRef, useState } from "react"
 
 const inputClassName =
@@ -92,7 +91,7 @@ const ContactForm = () => {
           <FieldError className={fieldErrorClassName} />
         </TextField>
         <div className="flex w-full justify-center">
-          <Button
+          <RippleButton
             type="submit"
             isPending={isPending}
             size="lg"
@@ -103,7 +102,6 @@ const ContactForm = () => {
               },
             )}
           >
-            <Ripple disabled={isPending} />
             {isPending ? (
               <>
                 <Spinner color="current" size="sm" />
@@ -113,7 +111,7 @@ const ContactForm = () => {
               "Send"
             )}
             <FontAwesomeIcon icon={faEnvelope} className="h-4! w-5!" />
-          </Button>
+          </RippleButton>
         </div>
       </Form>
       {!!db && showAlert && (

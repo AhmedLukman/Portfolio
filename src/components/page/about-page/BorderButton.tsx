@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
+import { RippleSurface } from "@/components/ui/Ripple"
 import { cn } from "@heroui/react"
-import { Ripple } from "m3-ripple"
 import {
   motion,
   useAnimationFrame,
@@ -59,7 +59,7 @@ export function BorderButton({
         </MovingBorder>
       </div>
 
-      <div
+      <RippleSurface
         className={cn(
           "overflow-hidden flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/80 text-sm text-white antialiased backdrop-blur-xl",
           className,
@@ -68,9 +68,8 @@ export function BorderButton({
           borderRadius: `calc(${borderRadius} * 0.96)`,
         }}
       >
-        <Ripple />
         {children}
-      </div>
+      </RippleSurface>
     </Link>
   )
 }

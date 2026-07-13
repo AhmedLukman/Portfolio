@@ -1,13 +1,12 @@
 "use client"
 
+import { RippleLink } from "@/components/ui/Ripple"
 import { useNavigation } from "@/lib/contexts/NavigationContext"
 import { getExternalLinkProps } from "@/lib/utils"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { cn } from "@heroui/react"
-import { Ripple } from "m3-ripple"
-import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useRef } from "react"
 
@@ -35,7 +34,7 @@ const SideNavLinkButton = ({
     link.path === "/" ? pathname === link.path : pathname.startsWith(link.path)
 
   return (
-    <Link
+    <RippleLink
       role="link"
       href={link.path}
       className={cn(
@@ -49,7 +48,6 @@ const SideNavLinkButton = ({
       )}
       {...getExternalLinkProps(isSocial)}
     >
-      <Ripple />
       <FontAwesomeIcon
         className={cn(
           "my-0! mr-1! ml-0! h-4! text-slate-400! transition-all! duration-200! group-hover:text-white!",
@@ -64,7 +62,7 @@ const SideNavLinkButton = ({
           icon={faArrowUpRightFromSquare}
         />
       )}
-    </Link>
+    </RippleLink>
   )
 }
 

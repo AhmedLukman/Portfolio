@@ -1,11 +1,10 @@
 "use client"
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Button } from "@heroui/react"
-import { Ripple } from "m3-ripple"
 import Image from "next/image"
 import ImageTemplate from "public/assets/images/portfolio-image-template.png"
 import { useEffect } from "react"
+import { RippleButton } from "@/components/ui/Ripple"
 
 export default function Error({
   error,
@@ -35,14 +34,13 @@ export default function Error({
           </p>
         </div>
       </div>
-      <Button
+      <RippleButton
         variant="secondary"
         onPress={() => reset()}
         className="h-10! min-w-20! overflow-hidden rounded-[12px]! px-4! text-sm! leading-5! font-medium! text-default-foreground!"
       >
-        <Ripple />
         Try again
-      </Button>
+      </RippleButton>
     </div>
   )
 }

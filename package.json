@@ -27,7 +27,6 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "date-fns": "^4.4.0",
     "framer-motion": "^12.40.0",
-    "m3-ripple": "^1.1.3",
     "next": "16.2.9",
     "qss": "^3.0.0",
     "react": "19.2.7",
