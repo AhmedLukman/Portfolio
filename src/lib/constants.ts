@@ -57,7 +57,7 @@ export const initialFormState = {
 
 export const ProjectStatus = {
   completed: "Completed",
-  pending: "Pending",
+  pending: "In Progress",
   cancelled: "Cancelled",
 } as const
 
