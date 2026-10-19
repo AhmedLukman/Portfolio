@@ -23,11 +23,14 @@ import DeviceWorldVisualizer from "public/assets/images/device-worldvisualizer.p
 import Biome from "public/assets/images/devtools/biome.svg"
 import Claude from "public/assets/images/devtools/claude.svg"
 import Cursor from "public/assets/images/devtools/cursor.svg"
+import Docker from "public/assets/images/devtools/docker.svg"
 import ESLint from "public/assets/images/devtools/eslint.svg"
 import Git from "public/assets/images/devtools/git.svg"
+import GitHubActions from "public/assets/images/devtools/github-actions.svg"
 import GitHub from "public/assets/images/devtools/github.svg"
 import NPM from "public/assets/images/devtools/npm.svg"
 import Prettier from "public/assets/images/devtools/prettier.svg"
+import Rust from "public/assets/images/devtools/rust.svg"
 import Turbopack from "public/assets/images/devtools/turbopack.svg"
 import Vercel from "public/assets/images/devtools/vercel.svg"
 import Vite from "public/assets/images/devtools/vite.svg"
@@ -55,6 +58,7 @@ import Kelvin from "public/assets/images/testimonials/kelvin.jpg"
 import ThomsonReuters from "public/assets/images/thomsonreuters.png"
 import ThreeJS from "public/assets/images/threejs.svg"
 import Trinetium from "public/assets/images/trinetium.jpeg"
+import WekanCLI from "public/assets/images/wekan-cli.svg"
 import WorldVisualizer from "public/assets/images/worldvisualizer.png"
 import Yoonka from "public/assets/images/yoonka.jpeg"
 import { PORTFOLIO_SITE, ProjectStatus } from "./constants"
@@ -136,6 +140,56 @@ const outcomeCaseStudy = {
 }
 
 export const PROJECTS: Project[] = [
+  {
+    overview: {
+      title: "Wekan CLI",
+      description:
+        "An open-source Rust CLI that brings Wekan’s Kanban workflows to the terminal for people and AI agents.",
+      image: WekanCLI,
+      site: "https://github.com/AhmedLukman/wekan-cli/releases/latest",
+      siteLabel: "Download CLI",
+      source: "https://github.com/AhmedLukman/wekan-cli",
+      status: ProjectStatus.pending,
+      startDate: new Date(2026, 7, 21),
+    },
+    image: WekanCLI,
+    deviceImage: WekanCLI,
+    route: "/projects/wekan-cli",
+    slug: "wekan-cli",
+    applicationCategory: "DeveloperApplication",
+    features: [
+      "Manage boards, lists, swimlanes, cards, comments, checklists, and custom fields from the terminal.",
+      "Stable JSON output, documented error codes, and deterministic commands for scripts and AI agents.",
+      "Native operating-system credential storage, hidden password input, and support for multiple server profiles.",
+      "Explicit confirmations for destructive operations and strict validation of Wekan API responses.",
+      "Attachment transfers, native imports and exports, memberships, dependencies, integrations, etc.",
+      "Portable agent skill with detailed workflow guidance embedded in the executable and available offline.",
+    ],
+    caseStudy: [
+      {
+        ...problemCaseStudy,
+        description:
+          "Wekan workflows need a dependable command-line interface for both interactive use and automation.",
+      },
+      {
+        ...solutionCaseStudy,
+        description:
+          "Building a cross-platform Rust CLI with typed commands, stable JSON output, native credential storage, and embedded agent guidance.",
+      },
+      {
+        ...outcomeCaseStudy,
+        title: "Outcome",
+        description:
+          "A CLI to enable users to manage boards, lists, and cards from the terminal and automate routine Kanban tasks through scripts and AI agents.",
+      },
+    ],
+    techStack: [
+      { name: "Rust", src: Rust },
+      { name: "Docker", src: Docker },
+      { name: "GitHub Actions", src: GitHubActions },
+    ],
+    metrics: [],
+  },
   {
     overview: {
       title: "Master Tracker",
@@ -818,6 +872,10 @@ export const BACKEND_TECHS = [
     name: "Elixir",
     src: Elixir,
   },
+  {
+    name: "Rust",
+    src: Rust,
+  },
 ]
 
 export const DEV_TOOLS = [
@@ -832,6 +890,10 @@ export const DEV_TOOLS = [
   {
     name: "Vercel",
     src: Vercel,
+  },
+  {
+    name: "Docker",
+    src: Docker,
   },
   {
     name: "ESLint",
@@ -856,6 +918,10 @@ export const DEV_TOOLS = [
   {
     name: "GitHub",
     src: GitHub,
+  },
+  {
+    name: "GitHub Actions",
+    src: GitHubActions,
   },
   {
     name: "Vite",

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#23113f"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x2="1">
+      <stop stop-color="#c084fc"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="32" fill="url(#background)"/>
+  <rect x="48" y="48" width="1104" height="664" rx="20" fill="#0b1020" stroke="#475569" stroke-width="2"/>
+  <path d="M68 48h1064a20 20 0 0 1 20 20v44H48V68a20 20 0 0 1 20-20Z" fill="#1e293b"/>
+  <circle cx="82" cy="80" r="8" fill="#fb7185"/>
+  <circle cx="110" cy="80" r="8" fill="#fbbf24"/>
+  <circle cx="138" cy="80" r="8" fill="#34d399"/>
+  <text x="600" y="88" text-anchor="middle" font-family="Consolas, monospace" font-size="22" fill="#cbd5e1">wekan / terminal</text>
+  <g font-family="Consolas, monospace">
+    <text x="88" y="198" font-size="54" font-weight="700" fill="url(#accent)">Wekan CLI</text>
+    <text x="88" y="244" font-size="24" fill="#94a3b8">Built for people, scripts, and AI agents.</text>
+    <text x="88" y="330" font-size="27" fill="#e2e8f0"><tspan fill="#c084fc">$ </tspan>cargo install wekan-cli --locked</text>
+    <text x="88" y="382" font-size="23" fill="#94a3b8"># Predictable commands. Structured output.</text>
+    <text x="88" y="434" font-size="27" fill="#e2e8f0"><tspan fill="#c084fc">$ </tspan>wekan --output json board list</text>
+    <text x="88" y="510" font-size="23" fill="#94a3b8"># Agent guidance, available offline.</text>
+    <text x="88" y="562" font-size="27" fill="#e2e8f0"><tspan fill="#c084fc">$ </tspan>wekan skill show</text>
+  </g>
+  <path d="M88 614h1024" stroke="#334155"/>
+  <text x="88" y="662" font-family="Consolas, monospace" font-size="22" fill="#7dd3fc">Rust / Windows / macOS / Linux</text>
+</svg>

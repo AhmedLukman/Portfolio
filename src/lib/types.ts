@@ -8,6 +8,7 @@ export type Project = {
     description: string
     image: StaticImageData
     site: string
+    siteLabel?: string
     source: string
     status: TProjectStatus
     startDate: Date
@@ -17,6 +18,7 @@ export type Project = {
   deviceImage: StaticImageData
   route: string
   slug: string
+  applicationCategory?: "WebApplication" | "DeveloperApplication"
   techStack: {
     name: string
     src: StaticImageData

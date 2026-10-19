@@ -7,6 +7,7 @@ type Props = {
   image?: string
   datePublished?: string
   codeRepository: string
+  applicationCategory?: "WebApplication" | "DeveloperApplication"
 }
 
 export default function ProjectSchema({
@@ -16,6 +17,7 @@ export default function ProjectSchema({
   image,
   datePublished,
   codeRepository,
+  applicationCategory = "WebApplication",
 }: Props) {
   const schema = {
     "@context": "https://schema.org",
@@ -30,7 +32,7 @@ export default function ProjectSchema({
       name: "Ahmed Lukman",
     },
     codeRepository,
-    applicationCategory: "WebApplication",
+    applicationCategory,
     operatingSystem: "All",
   }
 

@@ -6,7 +6,7 @@ export default function ProjectListSchema() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Ahmed Lukman's Projects",
-    description: "A collection of web development projects and case studies.",
+    description: "A collection of software projects and case studies.",
     numberOfItems: PROJECTS.length,
     itemListElement: PROJECTS.map((project, index) => ({
       "@type": "ListItem",
@@ -23,7 +23,7 @@ export default function ProjectListSchema() {
           "@type": "Person",
           name: "Ahmed Lukman",
         },
-        applicationCategory: "WebApplication",
+        applicationCategory: project.applicationCategory ?? "WebApplication",
         operatingSystem: "Any",
       },
     })),

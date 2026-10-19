@@ -8,7 +8,7 @@ const StatusChip = ({ status }: { status: TProjectStatus }) => {
         <Chip
           color="success"
           variant="primary"
-          className="h-7! w-fit! max-w-fit! min-w-min! self-start! justify-between! rounded-full! bg-[#17c964]! px-1! py-0! text-sm! leading-5! font-normal! text-black!"
+          className="h-7! w-fit! max-w-fit! min-w-min! justify-between! self-start! rounded-full! bg-[#17c964]! px-1! py-0! text-sm! leading-5! font-normal! text-black!"
         >
           <Chip.Label className="px-2!">Completed</Chip.Label>
         </Chip>
@@ -17,7 +17,7 @@ const StatusChip = ({ status }: { status: TProjectStatus }) => {
         <Chip
           color="warning"
           variant="primary"
-          className="h-7! w-fit! max-w-fit! min-w-min! self-start! justify-between! rounded-full! bg-[#f5a524]! px-1! py-0! text-sm! leading-5! font-normal! text-black!"
+          className="h-7! w-fit! max-w-fit! min-w-min! justify-between! self-start! rounded-full! bg-[#f5a524]! px-1! py-0! text-sm! leading-5! font-normal! text-black!"
         >
           <Chip.Label className="px-2!">{status}</Chip.Label>
         </Chip>
@@ -26,7 +26,7 @@ const StatusChip = ({ status }: { status: TProjectStatus }) => {
         <Chip
           color="danger"
           variant="primary"
-          className="h-7! w-fit! max-w-fit! min-w-min! self-start! justify-between! rounded-full! bg-[#f31260]! px-1! py-0! text-sm! leading-5! font-normal! text-white!"
+          className="h-7! w-fit! max-w-fit! min-w-min! justify-between! self-start! rounded-full! bg-[#f31260]! px-1! py-0! text-sm! leading-5! font-normal! text-white!"
         >
           <Chip.Label className="px-2!">Cancelled</Chip.Label>
         </Chip>

@@ -46,6 +46,7 @@ const ProjectDetailsPage = async ({
         image={project.overview.image?.src}
         datePublished={project.overview.startDate?.toISOString?.()}
         codeRepository={project.overview.source}
+        applicationCategory={project.applicationCategory}
       />
       <PageHeader>{project.overview.title}</PageHeader>
       <ProjectOverview project={project} />
