@@ -1,19 +1,26 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useState } from "react"
+
+function createPoints() {
+  // A fixed seed gives the server and browser the same animated pattern.
+  let seed = 42
+  const next = () => {
+    seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0
+    return seed / 2 ** 32
+  }
+
+  return Array.from({ length: 30 }, () => ({
+    x: next() * 100,
+    y: next() * 100,
+    intensity: next(),
+    delay: next() * 2,
+  }))
+}
+
+const points = createPoints()
 
 const HeatMap = () => {
-  // Generate points with delays in useState initializer (allowed to be impure)
-  const [points] = useState(() =>
-    Array.from({ length: 30 }, () => ({
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      intensity: Math.random(),
-      delay: Math.random() * 2,
-    })),
-  )
-
   return (
     <div className="relative h-full w-full overflow-hidden bg-transparent">
       {points.map((point, i) => (
