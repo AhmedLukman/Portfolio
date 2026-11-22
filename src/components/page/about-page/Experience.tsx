@@ -7,6 +7,15 @@ const Experience = () => {
     <SectionWrapper>
       <SectionHeader className="text-center">Experience</SectionHeader>
       <ExperienceList />
+      <p className="mt-8 text-center">
+        <a
+          href="/Ahmed-Lukman-Software-Engineer-Resume.pdf"
+          download
+          className="underline underline-offset-4 hover:text-pink-300"
+        >
+          Download my resume
+        </a>
+      </p>
     </SectionWrapper>
   )
 }

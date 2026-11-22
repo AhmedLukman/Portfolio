@@ -945,17 +945,19 @@ export const TESTIMONIALS = [
 
 export const EXPERIENCE = [
   {
-    title: "Front-end Developer",
+    title: "Front-end Engineer",
     type: "Part-Time",
-    description: "To be updated",
+    description:
+      "I work on the front end of Reuters.com and the component library behind it. I maintain the tools our engineers use to build, test, and release changes. I also build AI-assisted workflows, such as those coordinating dependency upgrades across repositories.",
     company: "Thomson Reuters",
     startDate: new Date(2024, 9),
     companyLogo: ThomsonReuters,
   },
   {
-    title: "Front-end Developer",
+    title: "Full-Stack Engineer",
     type: "Part-Time",
-    description: "To be updated",
+    description:
+      "Promoted from Front-end Engineer to Full-Stack Engineer. Built the first prototype of a debugger for Arc XP that helped developers trace failed content requests on published pages. Created a Svelte canvas editor for arranging text and images, and built multi-file uploads that resume after an interruption using Uppy, a Go upload server, and Elixir.",
     company: "Yoonka",
     startDate: new Date(2024, 9),
     companyLogo: Yoonka,
